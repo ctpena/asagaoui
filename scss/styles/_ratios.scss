@@ -1,0 +1,8 @@
+@use "sass:math";
+
+$ratios: (
+        "16x9": math.div(16, 9),
+        "9x16": math.div(9, 16),
+        "3x2": math.div(3, 2),
+        "1x1": math.div(1, 1)
+);

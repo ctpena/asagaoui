@@ -1,0 +1,39 @@
+@use "../styles/color";
+@use "../styles/typography";
+@use "../styles/breakpoint";
+
+.bottomdock {
+  position: fixed;
+  background-color: color.$white;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid map-get(color.$grey, 200);
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-around;
+  @include breakpoint.style(ad) {
+    display: none;
+  }
+
+  &-static {
+    position: static;
+  }
+
+  &-label {
+    text-align: center;
+    @include typography.set(map-get(typography.$text, label-m))
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+  }
+
+  &-item {
+    padding: 8px 0 12px 0;
+    min-width: 44px;
+  }
+}

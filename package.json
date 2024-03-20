@@ -1,0 +1,28 @@
+{
+  "name": "asagaoui",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "author": "Hiroshi ISOBE",
+  "license": "MIT",
+  "scripts": {
+    "gulp": "gulp",
+    "gulp ls": "gulp --tasks",
+    "buildjs": "esbuild ts/asagaoui.ts --bundle --outfile=dist/js/asagaoui.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.20.1",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.71.1",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.3"
+  }
+}

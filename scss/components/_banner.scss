@@ -1,0 +1,75 @@
+@use "../styles/color";
+@use "../styles/typography";
+
+
+// TODO Add mobile pattern
+
+.banner {
+  border-radius: 12px;
+  padding: 24px;
+  border: 3px solid color.$black;
+  background-color: color.$white;
+
+  &-info {
+    border: 3px solid map-get(color.$blue, 900);
+
+    .banner-title {
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiIGZpbGw9IiNmZmYiLz48cGF0aCBmaWxsPSIjMDAxN0MxIiBkPSJNMTggMEM4LjA2NCAwIDAgOC4wNjQgMCAxOHM4LjA2NCAxOCAxOCAxOCAxOC04LjA2NCAxOC0xOFMyNy45MzYgMCAxOCAwWm0xLjggMjdoLTMuNlYxNi4yaDMuNlYyN1ptMC0xNC40aC0zLjZWOWgzLjZ2My42WiIvPjwvc3ZnPg==");
+      }
+    }
+  }
+
+  &-success {
+    border: 3px solid map-get(color.$green, 600);
+
+    .banner-title {
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgZmlsbD0ibm9uZSI+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48Y2lyY2xlIGN4PSIxOCIgY3k9IjE4IiByPSIxOCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGZpbGw9IiMyNTlENjMiIGQ9Ik0xOCAwQzguMDY0IDAgMCA4LjA2NCAwIDE4czguMDY0IDE4IDE4IDE4IDE4LTguMDY0IDE4LTE4UzI3LjkzNiAwIDE4IDBabS0zLjYgMjctOS05IDIuNTM4LTIuNTM4IDYuNDYyIDYuNDQ0TDI4LjA2MiA4LjI0NCAzMC42IDEwLjggMTQuNCAyN1oiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDM2djM2SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+");
+      }
+    }
+  }
+
+  &-error {
+    border: 3px solid map-get(color.$red, 800);
+
+    .banner-title {
+      &::before {
+        width: 32px;
+        height: 32px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0VDMDAwMCIgc3Ryb2tlPSIjRUMwMDAwIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0yMi4yNTI1IDMxSDkuNzQ3NTVMMSAyMi4yNTI1VjkuNzQ3NTVMOS43NDc1NSAxSDIyLjI1MjVMMzEgOS43NDc1NVYyMi4yNTI1TDIyLjI1MjUgMzFaIi8+PHBhdGggZmlsbD0iI2ZmZiIgZD0ibTkgMTAuNDE0MyAxLjQxNDItMS40MTQyMjYgMTMuMTA1NDYyMTEgMTMuMTA1NzAzMDUtMS40MTQyIDEuNDE0MjI2eiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Im0xMC40MTQxIDIzLjUyLTEuNDE0Mi0xLjQxNDIyNkwyMi4xMDUzNjIxMSA5LjAwMDA3MDk1bDEuNDE0MiAxLjQxNDIyNnoiLz48L3N2Zz4=");
+      }
+    }
+  }
+
+  &-warning {
+    border: 3px solid map-get(color.$yellow, 700);
+
+    .banner-title {
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE4IDMuMDAwOTggMzYgMzQuMDkxSDBMMTggMy4wMDA5OFoiLz48cGF0aCBmaWxsPSIjQjc4RjAwIiBkPSJNMCAzNC4wOTA5aDM2TDE4IDMgMCAzNC4wOTA5Wm0xOS42MzY0LTQuOTA5MWgtMy4yNzI4di0zLjI3MjdoMy4yNzI4djMuMjcyN1ptMC02LjU0NTRoLTMuMjcyOHYtNi41NDU1aDMuMjcyOHY2LjU0NTVaIi8+PC9zdmc+");
+      }
+    }
+  }
+}
+
+.banner-title {
+  @include typography.set(map-get(typography.$text, 'banner'));
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 36px;
+    height: 36px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiIGZpbGw9IiNmZmYiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMTggMEM4LjA2NCAwIDAgOC4wNjQgMCAxOHM4LjA2NCAxOCAxOCAxOCAxOC04LjA2NCAxOC0xOFMyNy45MzYgMCAxOCAwWm0xLjggMjdoLTMuNlYxNi4yaDMuNlYyN1ptMC0xNC40aC0zLjZWOWgzLjZ2My42WiIvPjwvc3ZnPg==");
+  }
+}
+
+.banner-text {
+  margin: 0;
+  padding-left: 56px;
+}

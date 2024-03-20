@@ -1,0 +1,57 @@
+baseURL = 'https://asagaoui.com'
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true
+title = 'AsagaoUI'
+
+[languages]
+[languages.ja]
+contentDir = 'content/ja'
+title = "AsagaoUI"
+weight = 1
+languageName = "日本語"
+[languages.en]
+contentDir = 'content/en'
+title = "AsagaoUI"
+weight = 2
+languageName = "English"
+
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
+
+[module]
+[module.hugoVersion]
+extended = false
+min = "0.116.0"
+
+[markup]
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+hl_Lines = ''
+hl_inline = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'github'
+tabWidth = 4
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true

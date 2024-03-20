@@ -1,0 +1,14 @@
+[menu]
+other = "menu"
+
+[close]
+other = "close"
+
+[document]
+other = "Document"
+
+[document-toc]
+other = "document-toc"
+
+[slogan]
+other = "CSS framework based on Japan's Digital Agency design system"

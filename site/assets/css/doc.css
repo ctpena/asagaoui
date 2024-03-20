@@ -1,0 +1,57 @@
+@media screen and (min-width: 992px) {
+    .doc-container {
+        display: grid;
+        grid-template-columns: minmax(288px, 288px) 1fr;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .doc-container {
+        grid-template-columns: minmax(288px, 288px) 1fr;
+    }
+}
+
+.doc-nav {
+    order: 0;
+    padding: 0 1rem;
+}
+
+.doc-main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1280px) {
+    .doc-main {
+        overflow: visible;
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1280px) {
+    .doc-main {
+        display: grid;
+        grid-template-columns: 1fr minmax(288px, 288px);
+    }
+}
+
+.doc-main article {
+    padding: 0 1rem;
+    overflow: hidden;
+    order: 1;
+}
+
+@media screen and (min-width: 1280px) {
+    .doc-main article {
+        order: 0;
+    }
+}
+
+.doc-toc {
+    padding: 0 1rem;
+}
+
+/**/

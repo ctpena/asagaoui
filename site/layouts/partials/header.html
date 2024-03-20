@@ -1,0 +1,77 @@
+<header class="header">
+    <nav class="header-full">
+        <a class="header-logo h4" href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
+        <div class="header-button">
+            <button class="hamburger-btn v open" data-asagaoui-target="#mobile-menu">
+                <div class="hamburger-btn-open">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_1685_8644)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M21 5.5H3V7H21V5.5ZM21 11.2998H3V12.7998H21V11.2998ZM3 17H21V18.5H3V17Z"
+                                  fill="#1A1A1A"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1685_8644">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>{{ i18n "menu" }}</span>
+                </div>
+                <div class="hamburger-btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_1685_8677" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="24" height="24">
+                            <rect width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_1685_8677)">
+                            <path d="M6.39961 18.6496L5.34961 17.5996L10.9496 11.9996L5.34961 6.39961L6.39961 5.34961L11.9996 10.9496L17.5996 5.34961L18.6496 6.39961L13.0496 11.9996L18.6496 17.5996L17.5996 18.6496L11.9996 13.0496L6.39961 18.6496Z"
+                                  fill="#1A1A1A"/>
+                        </g>
+                    </svg>
+                    <span>{{ i18n "menu" }}</span>
+                </div>
+            </button>
+        </div>
+        <div class="header-item">
+            <ul class="utilitylink-units">
+                <li class="utilitylink-item"><a class="utilitylink" href="https://github.com/ctpena/asagaoui">GitHub</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-menu">
+            <ul class="globalmenu">
+                <li class="globalmenu-item"><a class="globalmenu-link active" href="">{{ i18n "document" }}</a></li>
+            </ul>
+        </div>
+        {{/* Add Mobile MENU*/}}
+        <div class="header-drawer drawer drawer-right" id="mobile-menu">
+            <div class="drawer-header">
+                <button class="hamburger-btn v close" data-asagaoui-target="#mobile-menu">
+                    <div class="hamburger-btn-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <mask id="mask0_1685_8677" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                  width="24" height="24">
+                                <rect width="24" height="24" fill="#D9D9D9"></rect>
+                            </mask>
+                            <g mask="url(#mask0_1685_8677)">
+                                <path d="M6.39961 18.6496L5.34961 17.5996L10.9496 11.9996L5.34961 6.39961L6.39961 5.34961L11.9996 10.9496L17.5996 5.34961L18.6496 6.39961L13.0496 11.9996L18.6496 17.5996L17.5996 18.6496L11.9996 13.0496L6.39961 18.6496Z"
+                                      fill="#1A1A1A"></path>
+                            </g>
+                        </svg>
+                        <span>{{ i18n "close" }}</span>
+                    </div>
+                </button>
+            </div>
+            <div class="drawer-body">
+                <ul class="mobilemenu">
+                    <li class="mobilemenu-item"><a class="mobilemenu-link" href="">{{ i18n "document" }}</a></li>
+                </ul>
+                <ul class="mobilemenu">
+                    <li class="mobilemenu-item"><a class="mobilemenu-link" href="https://github.com/ctpena/asagaoui">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="drawer-backdrop"></div>
+    </nav>
+</header>

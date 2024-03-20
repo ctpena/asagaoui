@@ -1,0 +1,65 @@
+@mixin set($fontData) {
+  font-size: nth($fontData, 1);
+  font-weight: nth($fontData, 2);
+  line-height: nth($fontData, 3);
+  letter-spacing: nth($fontData, 4);
+}
+
+$fs-6xl: 3.5625rem; // 57px
+$fs-5xl: 2.8125rem; //45px
+$fs-4xl: 2.25rem; // 36px
+$fs-3xl: 2rem; // 32px
+$fs-2xl: 1.75rem; // 28px
+$fs-xl: 1.5rem; // 24px
+$fs-lg: 1.25rem; // 20px
+$fs-md: 1rem; // 16px
+$fs-sm: .875rem; // 14px
+$fs-2xs: .75rem; // 12px
+$fs-xs: .625rem; //10px
+
+$fw-r: 400;
+$fw-m: 500;
+$fw-b: 700;
+
+$lh-xs: 1.0;
+$lh-s: 1.4;
+$lh-m: 1.5;
+$lh-l: 1.7;
+
+$ls-s: 0.02rem;
+$ls-m: 0.04rem;
+
+// font-size font-weight line-height letter-spacing
+$heading: (
+        xxl: ($fs-6xl, $fw-r, $lh-s, $ls-m),
+        xl: ($fs-5xl, $fw-r, $lh-s, $ls-m),
+        l: ($fs-4xl, $fw-r, $lh-s, $ls-m),
+        lm: ($fs-3xl, $fw-m, $lh-m, $ls-m),
+        m: ($fs-3xl, $fw-r, $lh-m, $ls-m),
+        mm: ($fs-2xl, $fw-m, $lh-m, $ls-m),
+        s: ($fs-2xl, $fw-r, $lh-m, $ls-m),
+        sm: ($fs-xl, $fw-m, $lh-m, $ls-m),
+        xs: ($fs-xl, $fw-r, $lh-m, $ls-m),
+        xsm: ($fs-lg, $fw-m, $lh-m, $ls-m),
+        xxs: ($fs-lg, $fw-r, $lh-m, $ls-m),
+        xxsm: ($fs-md, $fw-m, $lh-l, $ls-m),
+);
+
+$text: (
+        text-l: ($fs-md, $fw-r, $lh-l, $ls-m),
+        text-m: ($fs-sm, $fw-r, $lh-l, $ls-m),
+        label-l: ($fs-sm, $fw-m, $lh-m, $ls-m),
+        label-m: ($fs-2xs, $fw-m, $lh-m, $ls-m),
+        description-l: ($fs-2xs, $fw-r, $lh-l, $ls-s),
+        description-m: ($fs-xs, $fw-r, $lh-l, $ls-s),
+        banner: ($fs-lg, $fw-b, $lh-s, $ls-m),
+        emergency-banner: ($fs-xl, $fw-b, $lh-s, $ls-m),
+        accordion: ($fs-lg, $fw-r, $lh-m, $ls-m),
+);
+
+$button: (
+        large:($fs-md, $fw-b, $lh-m, $ls-m),
+        medium:($fs-md, $fw-b, $lh-m, $ls-m),
+        small:($fs-md, $fw-b, $lh-m, $ls-m),
+        x-small:($fs-sm, $fw-b, $lh-xs, $ls-s),
+);

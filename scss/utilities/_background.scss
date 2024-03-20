@@ -1,0 +1,31 @@
+@use "../styles/color";
+
+$colors: (
+        "white": color.$white,
+        "black": color.$black,
+        "grey": color.$grey,
+        "blue": color.$blue,
+        "lightblue": color.$lightblue,
+        "cyan": color.$cyan,
+        "green": color.$green,
+        "lime": color.$lime,
+        "yellow": color.$yellow,
+        "orange": color.$orange,
+        "red": color.$red,
+        "magenta": color.$magenta,
+        "purple": color.$purple,
+);
+
+@each $color-name, $color-values in $colors {
+  @if type-of($color-values) == "map" {
+    @each $shade, $color in $color-values {
+      .bg-#{$color-name}-#{$shade} {
+        background-color: $color;
+      }
+    }
+  } @else {
+    .bg-#{$color-name} {
+      background-color: $color-values;
+    }
+  }
+}

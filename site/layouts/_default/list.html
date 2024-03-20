@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <article class="noui-main-main content">
+        <h1 class="mt-0">{{ .Title }}</h1>
+        {{ .Content }}
+        {{ range .Pages }}
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ .Summary }}
+        {{ end }}
+    </article>
+    <div class="noui-toc">
+        <nav>
+            <h3>{{ i18n "document-toc" }}</h3>
+            {{ .TableOfContents }}
+        </nav>
+    </div>
+{{ end }}

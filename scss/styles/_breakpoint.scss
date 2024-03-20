@@ -1,0 +1,12 @@
+// Breakpoints defined by Japan's Digital Agency design system
+$style-breakpoint: (
+        d: 768px,
+        ad: 992px
+);
+
+@mixin style($bp) {
+  $mq-data: map-get($style-breakpoint, $bp);
+  @media screen and (min-width: $mq-data) {
+    @content;
+  }
+}

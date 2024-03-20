@@ -1,0 +1,24 @@
+@use "../styles/typography";
+@use "../styles/color";
+
+.utilitylink {
+  @include typography.set(map-get(typography.$text, 'text-m'));
+  text-decoration: underline;
+
+  &:hover {
+    background-color: map-get(color.$grey, 50);
+  }
+
+  &:focus {
+    border-radius: 4px;
+    outline: 2px solid map-get(color.$yellow, 700);
+  }
+}
+
+.utilitylink-item {
+}
+
+.utilitylink-units {
+  display: flex;
+  gap: 1rem;
+}

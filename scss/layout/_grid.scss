@@ -1,0 +1,98 @@
+@use "sass:math";
+@use "../styles/spacing";
+@use "../utilities/breakpoint";
+
+/*
+You can choose two display layouts.
+*/
+// TODO add layout
+/* Grid Layout */
+.garden {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: map-get(spacing.$spacers, 4);
+}
+
+.plot {
+  grid-column: span 3;
+}
+
+
+/* Flex Layout */
+.arbor {
+  display: flex;
+}
+
+.bloom {
+  flex: 1 0 0;
+}
+
+@for $i from 1 through 12 {
+  .bloom-#{$i} {
+    flex: 0 0 auto;
+    width: math.div(100%, 12) * $i;
+  }
+}
+
+@include breakpoint.breakpoint(sm) {
+  @for $i from 1 through 12 {
+    .bloom-sm-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(md) {
+  @for $i from 1 through 12 {
+    .bloom-md-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(lg) {
+  @for $i from 1 through 12 {
+    .bloom-lg-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(xl) {
+  @for $i from 1 through 12 {
+    .bloom-xl-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(xxl) {
+  @for $i from 1 through 12 {
+    .bloom-xxl-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(xxxl) {
+  @for $i from 1 through 12 {
+    .bloom-xxxl-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(x4k) {
+  @for $i from 1 through 12 {
+    .bloom-x4k-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, 12) * $i;
+    }
+  }
+}

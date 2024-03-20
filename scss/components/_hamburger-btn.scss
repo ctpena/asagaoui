@@ -1,0 +1,52 @@
+@use "../styles/typography";
+
+.hamburger-btn {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.open {
+    .hamburger-btn-open {
+    }
+
+    .hamburger-btn-close {
+      display: none;
+    }
+  }
+
+  &.close {
+    .hamburger-btn-open {
+      display: none;
+    }
+
+    .hamburger-btn-close {
+    }
+  }
+
+  .hamburger-btn-close,
+  .hamburger-btn-open {
+    display: flex;
+    align-items: center;
+  }
+
+
+  &.h { //yoko
+    .hamburger-btn-close,
+    .hamburger-btn-open {
+      flex-direction: row;
+      gap: 4px;
+      @include typography.set(map-get(typography.$text, 'description-l'));
+    }
+  }
+
+  &.v { // tate
+    .hamburger-btn-close,
+    .hamburger-btn-open {
+      flex-direction: column;
+      //gap: 2px;
+      @include typography.set(map-get(typography.$text, 'description-m'));
+    }
+  }
+}

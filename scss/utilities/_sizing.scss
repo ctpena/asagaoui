@@ -1,0 +1,123 @@
+@use "breakpoint";
+
+// width settings
+$width: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+);
+
+@each $direction, $value in $width {
+  .w-#{$direction} {
+    width: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $width {
+      .w-#{$bp}-#{$direction} {
+        width: $value;
+      }
+    }
+  }
+}
+
+$max-width: map-remove($width, auto);
+
+@each $direction, $value in $max-width {
+  .max-w-#{$direction} {
+    max-width: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $max-width {
+      .max-w-#{$bp}-#{$direction} {
+        max-width: $value;
+      }
+    }
+  }
+}
+
+$min-width: map-remove($width, auto);
+
+@each $direction, $value in $min-width {
+  .min-w-#{$direction} {
+    min-width: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $min-width {
+      .min-w-#{$bp}-#{$direction} {
+        min-width: $value;
+      }
+    }
+  }
+}
+
+// height settings
+$height: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+);
+
+@each $direction, $value in $height {
+  .h-#{$direction} {
+    height: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $height {
+      .h-#{$bp}-#{$direction} {
+        height: $value;
+      }
+    }
+  }
+}
+
+$max-height: map-remove($height, auto);
+
+@each $direction, $value in $max-height {
+  .max-h-#{$direction} {
+    max-height: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $max-height {
+      .max-h-#{$bp}-#{$direction} {
+        max-height: $value;
+      }
+    }
+  }
+}
+
+$min-height: map-remove($height, auto);
+
+@each $direction, $value in $min-height {
+  .min-h-#{$direction} {
+    min-height: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $min-height {
+      .min-h-#{$bp}-#{$direction} {
+        min-height: $value;
+      }
+    }
+  }
+}

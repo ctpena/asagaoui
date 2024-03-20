@@ -1,0 +1,76 @@
+@use "../styles/color";
+
+.drawer {
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  //
+  position: absolute;
+  // FIXME Doc drawer padding
+  padding: 0 !important;
+  background-color: color.$white;
+  //
+  &-header {
+    display: none;
+  }
+
+  &.show {
+    clip: auto;
+    height: auto;
+
+    .drawer-body {
+      overflow: auto;
+      height: calc(100dvh - 69px);
+      padding: 1rem;
+    }
+
+    position: fixed;
+    width: 100%;
+    max-width: 320px;
+    z-index: 600;
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      height: 69px;
+      border-bottom: 1px dashed map-get(color.$grey, 200);
+    }
+  }
+
+  &-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    // FIXME z-index
+    z-index: 500;
+  }
+}
+
+.drawer.show + .drawer-backdrop {
+  display: block;
+}
+
+.drawer-right {
+  &.show {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+  }
+}
+
+.drawer-left {
+  &.show {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+  }
+}

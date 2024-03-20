@@ -1,0 +1,54 @@
+@use "../utilities/link" as *;
+@use "../utilities/typography" as *;
+@use "../components/table" as *;
+@use "../styles/spacing";
+
+.content {
+  a {
+    @extend .link;
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  table {
+    @extend .table
+  }
+
+  h1 {
+    @extend .h1;
+    margin-top: map-get(spacing.$spacers, 6);
+    margin-bottom: map-get(spacing.$spacers, 4);
+  }
+
+  h2 {
+    @extend .h2;
+    margin-top: map-get(spacing.$spacers, 6);
+    margin-bottom: map-get(spacing.$spacers, 4);
+  }
+
+  h3 {
+    @extend .h3;
+    margin-top: map-get(spacing.$spacers, 5);
+    margin-bottom: map-get(spacing.$spacers, 4);
+  }
+
+  h4 {
+    @extend .h4;
+    margin-top: map-get(spacing.$spacers, 5);
+    margin-bottom: map-get(spacing.$spacers, 3);
+  }
+
+  h5 {
+    @extend .h5;
+    margin-top: map-get(spacing.$spacers, 5);
+    margin-bottom: map-get(spacing.$spacers, 3);
+  }
+
+  h6 {
+    margin-top: map-get(spacing.$spacers, 4);
+    margin-bottom: map-get(spacing.$spacers, 3);
+  }
+}

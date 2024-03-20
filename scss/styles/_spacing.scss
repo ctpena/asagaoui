@@ -1,0 +1,17 @@
+@use "sass:math";
+
+$spacer: .5rem;
+
+$spacers: (
+        0: 0,
+        1: math.div($spacer, 2),
+        2: $spacer,
+        3: $spacer * 2,
+        4: $spacer * 3,
+        5: $spacer * 5,
+        6: $spacer * 8,
+        7: $spacer * 13,
+        8: $spacer * 21,
+        9: $spacer * 34,
+        auto: auto,
+);

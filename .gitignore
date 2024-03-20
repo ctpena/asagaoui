@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+.idea
+test/
+demo/
+site/public
+site/.hugo_build.lock
+site/assets/css/asagaoui.css
+site/assets/css/asagaoui.min.css
+site/assets/js/asagaoui.js
+site/assets/js/asagaoui.min.js
+dist/icon/symbol

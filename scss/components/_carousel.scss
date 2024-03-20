@@ -1,0 +1,54 @@
+@use "../styles/color";
+
+.carousel {
+  position: relative;
+  // image set
+  &-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-item {
+    display: none;
+
+    &.active {
+      position: relative;
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &-caption {
+    // position
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    //
+    padding: .5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.50);
+    color: color.$white;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}

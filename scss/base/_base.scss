@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "../styles/typography";
+@use "../styles/theme";
+
+.body {
+  font-family: "Noto Sans JP", sans-serif;
+  @include typography.set(map.get(typography.$text, text-l));
+  color: theme.get(text, body);
+  font-size: 100%;
+
+  button,
+  a {
+    cursor: pointer;
+  }
+
+  pre {
+    font-size: 1rem;
+    overflow: auto;
+    outline: none;
+  }
+}

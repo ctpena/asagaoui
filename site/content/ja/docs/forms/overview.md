@@ -1,0 +1,32 @@
++++
+title = 'フォームグループ'
+draft = false
++++
+
+フォームをデザインするときに、ラベルやinputをきれいに囲って表示するためのグループ
+
+```scss
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .form-label {
+    order: 1;
+  }
+
+  .form-select,
+  .form-textarea,
+  .form-input {
+    order: 3;
+  }
+
+  .form-help {
+    order: 2;
+  }
+
+  .form-error-feedback {
+    order: 4;
+  }
+}
+```

@@ -1,0 +1,152 @@
+@use "../styles/theme";
+@use "../styles/typography";
+@use "../styles/rounding";
+@use "sass:map";
+
+$btn-size: (
+        l: (
+                text:large,
+                py:1rem,
+                px:1rem,
+                mw:136px,
+                h:56px
+        ),
+        m: (
+                text:medium,
+                py:.75rem,
+                px:1rem,
+                mw:96px,
+                h:48px
+        ),
+        s: (
+                text:small,
+                py:.375rem,
+                px:.75rem,
+                mw:80px,
+                h:36px
+        ),
+        xs: (
+                text:x-small,
+                py:.44rem,
+                px:.5rem,
+                mw:72px,
+                h:28px
+        ),
+);
+
+@mixin btn-size($size) {
+  $btn-values: map.get($btn-size, $size);
+  @include typography.set(map.get(typography.$button, map.get($btn-values, text)));
+  padding: map.get($btn-values, py) map.get($btn-values, px);
+  min-width: map.get($btn-values, mw);
+  height: map.get($btn-values, h);
+}
+
+
+@mixin btn-style($type) {
+  @if $type == base {
+    // common
+    border-radius: map-get(rounding.$rounding, 'm');
+    user-select: none;
+    border: 1px solid transparent;
+    text-align: center;
+    // end common
+    &:hover {
+    }
+    &:focus {
+      outline: 2px solid theme.get(button, base, focused);
+    }
+    &:active {
+    }
+    &:disabled {
+    }
+  }
+  @if $type == primary {
+    color: theme.get(button, primary, color);
+    background-color: theme.get(button, primary, background);
+    &:hover {
+      background-color: theme.get(button, primary, hover-background);
+      text-decoration: underline;
+    }
+    &:active {
+      background-color: theme.get(button, primary, active-background);
+      text-decoration: underline;
+    }
+    &:disabled {
+      background-color: theme.get(button, primary, disabled-background);
+      cursor: auto;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: 2px solid theme.get(button, primary, focused);
+      outline-offset: 2px;
+      text-decoration: underline;
+    }
+  }
+  @if $type == secondary {
+    border: 1px solid theme.get(button, secondary, border);
+    background-color: theme.get(button, secondary, background);
+    color: theme.get(button, secondary, color);
+    &:hover {
+      background-color: theme.get(button, secondary, hover-background);
+      border: 1px solid theme.get(button, secondary, hover-border);
+      color: theme.get(button, secondary, hover-color);
+      text-decoration: underline;
+    }
+    &:active {
+      background-color: theme.get(button, secondary, active-background);
+      border: 1px solid theme.get(button, secondary, active-border);
+      color: theme.get(button, secondary, active-color);
+      text-decoration: underline;
+    }
+    &:disabled {
+      background-color: theme.get(button, secondary, disabled-background);
+      border: 1px solid theme.get(button, secondary, disabled-border);
+      color: theme.get(button, secondary, disabled-color);
+      cursor: auto;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: 2px solid theme.get(button, secondary, focused);
+      text-decoration: underline;
+      outline-offset: 2px;
+    }
+  }
+  @if $type == tertiary {
+    color: theme.get(button, tertiary, color);
+    text-decoration: underline;
+    &:hover {
+      background-color: theme.get(button, tertiary, hover-background);
+      color: theme.get(button, tertiary, hover-color);
+    }
+    &:active {
+      background-color: theme.get(button, tertiary, active-background);
+      color: theme.get(button, tertiary, active-color);
+    }
+    &:disabled {
+      color: theme.get(button, tertiary, disabled-color);
+      cursor: auto;
+    }
+    &:focus {
+      outline: 2px solid theme.get(button, tertiary, focused);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.btn {
+  @include btn-style(base);
+  @include btn-size(m);
+}
+
+@each $type in primary, secondary, tertiary {
+  .btn-#{$type} {
+    @include btn-style($type);
+  }
+}
+
+@each $size in l, m, s, xs {
+  .btn-#{$size} {
+    @include btn-size($size);
+  }
+}

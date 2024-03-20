@@ -1,0 +1,14 @@
+[menu]
+other = "メニュー"
+
+[close]
+other = "閉じる"
+
+[document]
+other = "ドキュメント"
+
+[document-toc]
+other = "目次"
+
+[slogan]
+other = "デジタル庁デザインシステムを基にしたCSSフレームワーク"

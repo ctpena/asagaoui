@@ -1,0 +1,153 @@
+@use "../utilities/breakpoint";
+
+// base
+%container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+// FIXME: Optimize this for efficiency and clarity.
+.container {
+  @extend %container;
+  width: 100%;
+  @include breakpoint.breakpoint(sm) {
+    width: 768px;
+  }
+  @include breakpoint.breakpoint(md) {
+    width: 992px;
+  }
+  @include breakpoint.breakpoint(lg) {
+    width: 1280px;
+  }
+  @include breakpoint.breakpoint(xl) {
+    width: 1440px;
+  }
+  @include breakpoint.breakpoint(xxl) {
+    width: 1920px;
+  }
+  @include breakpoint.breakpoint(xxxl) {
+    width: 2560px;
+  }
+  @include breakpoint.breakpoint(x4k) {
+    width: 3840px;
+  }
+
+  &-fluid {
+    @extend %container;
+    width: 100%;
+  }
+
+  &-sm {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+  }
+
+  &-md {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+    @include breakpoint.breakpoint(md) {
+      width: 992px;
+    }
+  }
+
+  &-lg {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+    @include breakpoint.breakpoint(md) {
+      width: 992px;
+    }
+    @include breakpoint.breakpoint(lg) {
+      width: 1280px;
+    }
+  }
+
+  &-xl {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+    @include breakpoint.breakpoint(md) {
+      width: 992px;
+    }
+    @include breakpoint.breakpoint(lg) {
+      width: 1280px;
+    }
+    @include breakpoint.breakpoint(xl) {
+      width: 1440px;
+    }
+  }
+
+  &-xxl {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+    @include breakpoint.breakpoint(md) {
+      width: 992px;
+    }
+    @include breakpoint.breakpoint(lg) {
+      width: 1280px;
+    }
+    @include breakpoint.breakpoint(xl) {
+      width: 1440px;
+    }
+    @include breakpoint.breakpoint(xxl) {
+      width: 1920px;
+    }
+  }
+
+  &-xxxl {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+    @include breakpoint.breakpoint(md) {
+      width: 992px;
+    }
+    @include breakpoint.breakpoint(lg) {
+      width: 1280px;
+    }
+    @include breakpoint.breakpoint(xl) {
+      width: 1440px;
+    }
+    @include breakpoint.breakpoint(xxl) {
+      width: 1920px;
+    }
+    @include breakpoint.breakpoint(xxxl) {
+      width: 2560px;
+    }
+  }
+
+  &-x4k {
+    @extend %container;
+    @include breakpoint.breakpoint(sm) {
+      width: 768px;
+    }
+    @include breakpoint.breakpoint(md) {
+      width: 992px;
+    }
+    @include breakpoint.breakpoint(lg) {
+      width: 1280px;
+    }
+    @include breakpoint.breakpoint(xl) {
+      width: 1440px;
+    }
+    @include breakpoint.breakpoint(xxl) {
+      width: 1920px;
+    }
+    @include breakpoint.breakpoint(xxxl) {
+      width: 2560px;
+    }
+    @include breakpoint.breakpoint(x4k) {
+      width: 3840px;
+    }
+  }
+}
