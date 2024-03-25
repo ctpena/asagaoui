@@ -8,7 +8,7 @@ AsagaoUI is in the early stages of development and may be unstable.
 
 ## Documentation
 
-AsagaoUI documentation is located in the `site` folder of the project.
+AsagaoUI documentation is located in the site folder of the project.
 The documentation site is built with [HUGO](https://gohugo.io) and is hosted at https://asagaoui.com.
 
 ## Quickstart
@@ -21,11 +21,32 @@ git clone https://github.com/ctpena/asagaoui.git
 cd asagaoui
 ```
 
-`/dist/css/asagaoui.css` is the compiled CSS. You can use it in any way you prefer.
+`dist/css/asagaoui.css` is the compiled CSS. You can use it in any way you prefer.
+
+The compiled JavaScript is located at `dist/js/asagaoui.js`.
+
+The following HTML is required
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AsagaoUI demo</title>
+    <link rel="stylesheet" href="dist/css/asagaoui.css">
+</head>
+<body class="body">
+<h1>AsagaoUI</h1>
+<script src="dist/js/asagaoui.js"></script>
+</body>
+</html>
+```
 
 ## License
 
 AsagaoUI is licensed under the MIT License.
+
 AsagaoUI also includes several external libraries. For all licenses, please see the LICENSE file.
 
-The documentation located under `site/content/` is licensed under the CC BY 4.0.
+The documentation located under site/content/ is licensed under the CC BY 4.0.

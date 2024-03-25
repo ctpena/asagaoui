@@ -10,8 +10,10 @@ AsagaoUIのディレクトリ構成は、直感的で使いやすく設計され
 ```text
 asagaoui
 ├── dist
-│   └── css
-│       └── asagaoui.css
+│   ├── css
+│   │   └── asagaoui.css
+│   └── js
+│       └── asagaoui.js
 ├── scss
 │   ├── asagaoui.scss
 │   ├── base/
@@ -29,6 +31,8 @@ asagaoui
 
 `dist/css/asagaoui.css`:これはAsagaoUIのコンパイル済みCSSファイルで、すぐにウェブプロジェクトに組み込んで使用できます。通常、このファイルだけでAsagaoUIの全てのスタイルを適用できます。
 
+`dist/js/asagaoui.js`:これはAsagaoUIのコンパイル済みJSファイルで、一部のコンポーネントで必要です。
+
 `scss`:ここにはAsagaoUIを構成するSCSSファイルが全て含まれており、カスタマイズや詳細なスタイリングに役立ちます。asagaoui.scssはエントリーポイントであり、他のすべてのスタイルファイル（base/,
 components/, forms/, layout/, styles/, utilities/）がここからインポートされます。
 
@@ -39,5 +43,6 @@ components/, forms/, layout/, styles/, utilities/）がここからインポー�
 ## まとめ
 
 AsagaoUIのディレクトリ構成は、プロジェクトの簡単な導入から詳細なカスタマイズまで対応しています。
-基本的にはdistディレクトリ内のasagaoui.cssを使用することで、AsagaoUIの全てのスタイルを適用できます。より深いカスタマイズが必要な場合は、ドキュメントの[カスタマイズ]()の項目を参照してください。
+基本的にはdistディレクトリ内のasagaoui.cssを使用することで、AsagaoUIの全てのスタイルを適用できます。より深いカスタマイズが必要な場合は、ドキュメントの[カスタマイズ]()
+の項目を参照してください。
 

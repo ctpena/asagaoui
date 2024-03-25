@@ -18,9 +18,11 @@ CSSフレームワークであり、美しく効率的なウェブ開発を実�
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AsagaoUI demo</title>
+    <link rel="stylesheet" href="dist/css/asagaoui.css">
 </head>
 <body class="body">
-<h1>Hello, world!</h1>
+<h1>AsagaoUI</h1>
+<script src="dist/js/asagaoui.js"></script>
 </body>
 </html>
 ```
@@ -31,10 +33,12 @@ CSSフレームワークであり、美しく効率的なウェブ開発を実�
 がコンパイル済みのCSSです。
 お好みの方法で使用できます。
 
-### スタイルの使用例
+### JSの使用
+
+`/dist/js/asagaoui.js`がコンパイル済みのJSです。
 
 ```html
-<link rel="stylesheet" href="asagaoui.css">
+<script src="dist/js/asagaoui.js"></script>
 ```
 
 ## CSSリセット
