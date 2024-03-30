@@ -1,153 +1,103 @@
 @use "../utilities/breakpoint";
 
-// base
+$container-padding: 1rem;
+
 %container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  width: 100%;
 }
 
-// FIXME: Optimize this for efficiency and clarity.
 .container {
   @extend %container;
-  width: 100%;
-  @include breakpoint.breakpoint(sm) {
-    width: 768px;
-  }
-  @include breakpoint.breakpoint(md) {
-    width: 992px;
-  }
-  @include breakpoint.breakpoint(lg) {
-    width: 1280px;
-  }
-  @include breakpoint.breakpoint(xl) {
-    width: 1440px;
-  }
-  @include breakpoint.breakpoint(xxl) {
-    width: 1920px;
-  }
-  @include breakpoint.breakpoint(xxxl) {
-    width: 2560px;
-  }
-  @include breakpoint.breakpoint(x4k) {
-    width: 3840px;
-  }
 
   &-fluid {
     @extend %container;
-    width: 100%;
+    max-width: none;
+  }
+
+  @each $bp, $width in breakpoint.$breakpoints {
+    @include breakpoint.breakpoint($bp) {
+      max-width: $width;
+    }
   }
 
   &-sm {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 
   &-md {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
-    }
-    @include breakpoint.breakpoint(md) {
-      width: 992px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 
   &-lg {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
-    }
-    @include breakpoint.breakpoint(md) {
-      width: 992px;
-    }
-    @include breakpoint.breakpoint(lg) {
-      width: 1280px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 
   &-xl {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
-    }
-    @include breakpoint.breakpoint(md) {
-      width: 992px;
-    }
-    @include breakpoint.breakpoint(lg) {
-      width: 1280px;
-    }
-    @include breakpoint.breakpoint(xl) {
-      width: 1440px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 
   &-xxl {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
-    }
-    @include breakpoint.breakpoint(md) {
-      width: 992px;
-    }
-    @include breakpoint.breakpoint(lg) {
-      width: 1280px;
-    }
-    @include breakpoint.breakpoint(xl) {
-      width: 1440px;
-    }
-    @include breakpoint.breakpoint(xxl) {
-      width: 1920px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl or $bp == xxl {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 
   &-xxxl {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
-    }
-    @include breakpoint.breakpoint(md) {
-      width: 992px;
-    }
-    @include breakpoint.breakpoint(lg) {
-      width: 1280px;
-    }
-    @include breakpoint.breakpoint(xl) {
-      width: 1440px;
-    }
-    @include breakpoint.breakpoint(xxl) {
-      width: 1920px;
-    }
-    @include breakpoint.breakpoint(xxxl) {
-      width: 2560px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl or $bp == xxl or $bp == xxxl {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 
   &-x4k {
     @extend %container;
-    @include breakpoint.breakpoint(sm) {
-      width: 768px;
-    }
-    @include breakpoint.breakpoint(md) {
-      width: 992px;
-    }
-    @include breakpoint.breakpoint(lg) {
-      width: 1280px;
-    }
-    @include breakpoint.breakpoint(xl) {
-      width: 1440px;
-    }
-    @include breakpoint.breakpoint(xxl) {
-      width: 1920px;
-    }
-    @include breakpoint.breakpoint(xxxl) {
-      width: 2560px;
-    }
-    @include breakpoint.breakpoint(x4k) {
-      width: 3840px;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl or $bp == xxl or $bp == xxxl or $bp == x4k {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 }

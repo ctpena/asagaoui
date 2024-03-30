@@ -124,186 +124,184 @@
     margin-left: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-  .container {
     width: 100%;
+  }
+  .container-fluid {
+    max-width: none;
   }
   @media screen and (min-width: 768px) {
     .container {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 1280px) {
     .container {
-      width: 1280px;
+      max-width: 1280px;
     }
   }
   @media screen and (min-width: 1440px) {
     .container {
-      width: 1440px;
+      max-width: 1440px;
     }
   }
   @media screen and (min-width: 1920px) {
     .container {
-      width: 1920px;
+      max-width: 1920px;
     }
   }
   @media screen and (min-width: 2560px) {
     .container {
-      width: 2560px;
+      max-width: 2560px;
     }
   }
   @media screen and (min-width: 3840px) {
     .container {
-      width: 3840px;
+      max-width: 3840px;
     }
-  }
-  .container-fluid {
-    width: 100%;
   }
   @media screen and (min-width: 768px) {
     .container-sm {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 768px) {
     .container-md {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container-md {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 768px) {
     .container-lg {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container-lg {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 1280px) {
     .container-lg {
-      width: 1280px;
+      max-width: 1280px;
     }
   }
   @media screen and (min-width: 768px) {
     .container-xl {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container-xl {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 1280px) {
     .container-xl {
-      width: 1280px;
+      max-width: 1280px;
     }
   }
   @media screen and (min-width: 1440px) {
     .container-xl {
-      width: 1440px;
+      max-width: 1440px;
     }
   }
   @media screen and (min-width: 768px) {
     .container-xxl {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container-xxl {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 1280px) {
     .container-xxl {
-      width: 1280px;
+      max-width: 1280px;
     }
   }
   @media screen and (min-width: 1440px) {
     .container-xxl {
-      width: 1440px;
+      max-width: 1440px;
     }
   }
   @media screen and (min-width: 1920px) {
     .container-xxl {
-      width: 1920px;
+      max-width: 1920px;
     }
   }
   @media screen and (min-width: 768px) {
     .container-xxxl {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container-xxxl {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 1280px) {
     .container-xxxl {
-      width: 1280px;
+      max-width: 1280px;
     }
   }
   @media screen and (min-width: 1440px) {
     .container-xxxl {
-      width: 1440px;
+      max-width: 1440px;
     }
   }
   @media screen and (min-width: 1920px) {
     .container-xxxl {
-      width: 1920px;
+      max-width: 1920px;
     }
   }
   @media screen and (min-width: 2560px) {
     .container-xxxl {
-      width: 2560px;
+      max-width: 2560px;
     }
   }
   @media screen and (min-width: 768px) {
     .container-x4k {
-      width: 768px;
+      max-width: 768px;
     }
   }
   @media screen and (min-width: 992px) {
     .container-x4k {
-      width: 992px;
+      max-width: 992px;
     }
   }
   @media screen and (min-width: 1280px) {
     .container-x4k {
-      width: 1280px;
+      max-width: 1280px;
     }
   }
   @media screen and (min-width: 1440px) {
     .container-x4k {
-      width: 1440px;
+      max-width: 1440px;
     }
   }
   @media screen and (min-width: 1920px) {
     .container-x4k {
-      width: 1920px;
+      max-width: 1920px;
     }
   }
   @media screen and (min-width: 2560px) {
     .container-x4k {
-      width: 2560px;
+      max-width: 2560px;
     }
   }
   @media screen and (min-width: 3840px) {
     .container-x4k {
-      width: 3840px;
+      max-width: 3840px;
     }
   }
   /*
