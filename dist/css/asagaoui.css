@@ -1372,18 +1372,41 @@
     }
   }
   .header-slim {
-    height: 79px;
+    height: 68px;
     margin: 0 auto;
     max-width: 1280px;
     display: flex;
+    gap: 1rem;
     flex-wrap: wrap;
-    padding-inline: 5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    .header-slim {
+      height: 79px;
+    }
   }
   .header-slim .header-logo {
     height: 100%;
     margin-right: auto;
     display: flex;
     align-items: center;
+  }
+  .header-slim .header-button {
+    order: 4;
+    display: flex;
+    align-items: center;
+  }
+  .header-slim .header-menu {
+    order: 3;
+    display: none;
+    height: 100%;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    .header-slim .header-menu {
+      display: flex;
+    }
   }
   .langsel {
     position: relative;

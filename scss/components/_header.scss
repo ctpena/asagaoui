@@ -76,19 +76,41 @@
   }
 }
 
-// TODO Add slim styles
 .header-slim {
-  height: 79px;
+  height: 68px;
+  @include breakpoint.style(d) {
+    height: 79px;
+  }
   margin: 0 auto;
   max-width: 1280px;
   display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
-  padding-inline: 5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 
   .header-logo {
     height: 100%;
     margin-right: auto;
     display: flex;
     align-items: center;
+  }
+
+  .header-button {
+    order: 4;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-menu {
+    order: 3;
+    display: none;
+    height: 100%;
+    align-items: center;
+    @include breakpoint.style(d) {
+      display: flex;
+    }
+    @include breakpoint.style(ad) {
+    }
   }
 }
