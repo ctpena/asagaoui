@@ -13,7 +13,7 @@ function generateSVGSIcon() {
     const config = {
         mode: {
             symbol: {
-                sprite: "../icon.svg",
+                sprite: "../asagaoui.svg",
                 example: true
             }
         }
