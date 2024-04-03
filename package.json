@@ -32,6 +32,8 @@
     "dist/css",
     "dist/js",
     "dist/icon/asagaoui.svg",
+    "scss",
+    "ts",
     "LICENSE",
     "README.md"
   ]
