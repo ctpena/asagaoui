@@ -1,8 +1,8 @@
 {
   "name": "asagaoui",
   "description": "AsagaoUI is a CSS framework based on Japan's Digital Agency design system.",
-  "version": "0.0.1",
-  "homepage": "https://asagaoui.com/",
+  "version": "0.1.0",
+  "homepage": "https://asagaoui.com",
   "author": "Hiroshi ISOBE",
   "license": "MIT",
   "main": "dist/js/asagaoui.min.js",
