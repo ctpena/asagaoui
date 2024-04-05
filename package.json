@@ -5,6 +5,21 @@
   "homepage": "https://asagaoui.com",
   "author": "Hiroshi ISOBE",
   "license": "MIT",
+  "keywords": [
+    "css",
+    "scss",
+    "front-end",
+    "framework",
+    "css-framework",
+    "scss-framework"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctpena/asagaoui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ctpena/asagaoui/issues"
+  },
   "main": "dist/js/asagaoui.min.js",
   "style": "dist/css/asagaoui.min.css",
   "scripts": {

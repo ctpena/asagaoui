@@ -13,17 +13,23 @@ The documentation site is built with [HUGO](https://gohugo.io) and is hosted at 
 
 ## Quickstart
 
-```bash
-git clone https://github.com/ctpena/asagaoui.git
-```
+### Clone repository
 
 ```bash
-cd asagaoui
+git clone https://github.com/ctpena/asagaoui.git
 ```
 
 `dist/css/asagaoui.css` is the compiled CSS. You can use it in any way you prefer.
 
 The compiled JavaScript is located at `dist/js/asagaoui.js`.
+
+### Install with NPM
+
+```bash
+npm i asagaoui
+```
+
+### Minimum HTML
 
 The following HTML is required
 
