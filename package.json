@@ -36,8 +36,8 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.72.0",
-    "typescript": "^5.4.3"
+    "sass": "^1.75.0",
+    "typescript": "^5.4.5"
   },
   "dependencies": {},
   "peerDependencies": {

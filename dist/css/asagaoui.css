@@ -1386,6 +1386,12 @@
       height: 79px;
     }
   }
+  @media screen and (min-width: 992px) {
+    .header-slim {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+  }
   .header-slim .header-logo {
     height: 100%;
     margin-right: auto;

@@ -88,6 +88,10 @@
   flex-wrap: wrap;
   padding-right: 1rem;
   padding-left: 1rem;
+  @include breakpoint.style(ad) {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
 
   .header-logo {
     height: 100%;
