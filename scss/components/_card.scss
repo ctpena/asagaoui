@@ -31,6 +31,22 @@
   @include typography.set(map-get(typography.$card, text));
 }
 
+.card-img-top,
+.card-img-bottom {
+  display: block;
+  width: 100%;
+}
+
+.card-img-top {
+  border-top-right-radius: map-get(rounding.$rounding, m);
+  border-top-left-radius: map-get(rounding.$rounding, m);
+}
+
+.card-img-bottom {
+  border-bottom-right-radius: map-get(rounding.$rounding, m);
+  border-bottom-left-radius: map-get(rounding.$rounding, m);
+}
+
 .card-header {
 }
 
