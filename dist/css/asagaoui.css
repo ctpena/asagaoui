@@ -1149,6 +1149,33 @@
     min-width: 72px;
     height: 28px;
   }
+  .card {
+    border: 1px solid #949494;
+    border-radius: 8px;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: 0.04rem;
+  }
+  .card-title:last-child {
+    margin-bottom: 0;
+  }
+  .card-text {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.04rem;
+  }
+  .card-text:last-child {
+    margin-bottom: 0;
+  }
   .carousel {
     position: relative;
   }

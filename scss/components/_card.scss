@@ -1,0 +1,38 @@
+@use "../styles/color";
+@use "../styles/rounding";
+@use "../styles/typography";
+
+.card {
+  border: 1px solid map-get(color.$grey, 420);
+  border-radius: map-get(rounding.$rounding, m);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  margin-bottom: .5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include typography.set(map-get(typography.$card, title));
+}
+
+.card-text {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include typography.set(map-get(typography.$card, text));
+}
+
+.card-header {
+}
+
+.card-footer {
+}

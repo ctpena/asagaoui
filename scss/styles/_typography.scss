@@ -63,3 +63,8 @@ $button: (
         small:($fs-md, $fw-b, $lh-m, $ls-m),
         x-small:($fs-sm, $fw-b, $lh-xs, $ls-s),
 );
+
+$card: (
+        title:($fs-lg, $fw-b, $lh-l, $ls-m),
+        text:($fs-md, $fw-r, $lh-l, $ls-m),
+);
