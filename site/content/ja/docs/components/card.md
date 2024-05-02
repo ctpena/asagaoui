@@ -50,3 +50,31 @@ draft = false
 ```
 
 ## ヘッダーとフッター
+
+<div class="card">
+    <div class="card-header">
+        ヘッダー
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">カードタイトル</h5>
+        <p class="card-text">カードテキスト</p>
+    </div>
+    <div class="card-footer">
+        フッター
+    </div>
+</div>
+
+```html
+<div class="card">
+    <div class="card-header">
+        ヘッダー
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">カードタイトル</h5>
+        <p class="card-text">カードテキスト</p>
+    </div>
+    <div class="card-footer">
+        フッター
+    </div>
+</div>
+```

@@ -27,12 +27,21 @@
     return getOppositeAxis(getSideAxis(placement));
   }
   function rectToClientRect(rect) {
+    const {
+      x,
+      y,
+      width,
+      height
+    } = rect;
     return {
-      ...rect,
-      top: rect.y,
-      left: rect.x,
-      right: rect.x + rect.width,
-      bottom: rect.y + rect.height
+      width,
+      height,
+      top: y,
+      left: x,
+      right: x + width,
+      bottom: y + height,
+      x,
+      y
     };
   }
 
@@ -228,9 +237,8 @@
     while (isHTMLElement(currentNode) && !isLastTraversableNode(currentNode)) {
       if (isContainingBlock(currentNode)) {
         return currentNode;
-      } else {
-        currentNode = getParentNode(currentNode);
       }
+      currentNode = getParentNode(currentNode);
     }
     return null;
   }
@@ -670,12 +678,14 @@
   var getElementRects = async function(data) {
     const getOffsetParentFn = this.getOffsetParent || getOffsetParent;
     const getDimensionsFn = this.getDimensions;
+    const floatingDimensions = await getDimensionsFn(data.floating);
     return {
       reference: getRectRelativeToOffsetParent(data.reference, await getOffsetParentFn(data.floating), data.strategy),
       floating: {
         x: 0,
         y: 0,
-        ...await getDimensionsFn(data.floating)
+        width: floatingDimensions.width,
+        height: floatingDimensions.height
       }
     };
   };
