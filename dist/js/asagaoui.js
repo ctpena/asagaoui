@@ -243,8 +243,7 @@
     return null;
   }
   function isWebKit() {
-    if (typeof CSS === "undefined" || !CSS.supports)
-      return false;
+    if (typeof CSS === "undefined" || !CSS.supports) return false;
     return CSS.supports("-webkit-backdrop-filter", "none");
   }
   function isLastTraversableNode(node) {
@@ -424,10 +423,10 @@
     });
   }
   var topLayerSelectors = [":popover-open", ":modal"];
-  function isTopLayer(floating) {
+  function isTopLayer(element) {
     return topLayerSelectors.some((selector) => {
       try {
-        return floating.matches(selector);
+        return element.matches(selector);
       } catch (e) {
         return false;
       }
@@ -593,7 +592,7 @@
       rootBoundary,
       strategy
     } = _ref;
-    const elementClippingAncestors = boundary === "clippingAncestors" ? getClippingElementAncestors(element, this._c) : [].concat(boundary);
+    const elementClippingAncestors = boundary === "clippingAncestors" ? isTopLayer(element) ? [] : getClippingElementAncestors(element, this._c) : [].concat(boundary);
     const clippingAncestors = [...elementClippingAncestors, rootBoundary];
     const firstClippingAncestor = clippingAncestors[0];
     const clippingRect = clippingAncestors.reduce((accRect, clippingAncestor) => {
@@ -652,6 +651,9 @@
       height: rect.height
     };
   }
+  function isStaticPositioned(element) {
+    return getComputedStyle(element).position === "static";
+  }
   function getTrueOffsetParent(element, polyfill) {
     if (!isHTMLElement(element) || getComputedStyle(element).position === "fixed") {
       return null;
@@ -662,18 +664,28 @@
     return element.offsetParent;
   }
   function getOffsetParent(element, polyfill) {
-    const window2 = getWindow(element);
-    if (!isHTMLElement(element) || isTopLayer(element)) {
-      return window2;
+    const win = getWindow(element);
+    if (isTopLayer(element)) {
+      return win;
+    }
+    if (!isHTMLElement(element)) {
+      let svgOffsetParent = getParentNode(element);
+      while (svgOffsetParent && !isLastTraversableNode(svgOffsetParent)) {
+        if (isElement(svgOffsetParent) && !isStaticPositioned(svgOffsetParent)) {
+          return svgOffsetParent;
+        }
+        svgOffsetParent = getParentNode(svgOffsetParent);
+      }
+      return win;
     }
     let offsetParent = getTrueOffsetParent(element, polyfill);
-    while (offsetParent && isTableElement(offsetParent) && getComputedStyle(offsetParent).position === "static") {
+    while (offsetParent && isTableElement(offsetParent) && isStaticPositioned(offsetParent)) {
       offsetParent = getTrueOffsetParent(offsetParent, polyfill);
     }
-    if (offsetParent && (getNodeName(offsetParent) === "html" || getNodeName(offsetParent) === "body" && getComputedStyle(offsetParent).position === "static" && !isContainingBlock(offsetParent))) {
-      return window2;
+    if (offsetParent && isLastTraversableNode(offsetParent) && isStaticPositioned(offsetParent) && !isContainingBlock(offsetParent)) {
+      return win;
     }
-    return offsetParent || getContainingBlock(element) || window2;
+    return offsetParent || getContainingBlock(element) || win;
   }
   var getElementRects = async function(data) {
     const getOffsetParentFn = this.getOffsetParent || getOffsetParent;
