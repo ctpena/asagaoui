@@ -5,6 +5,7 @@
 .card {
   border: 1px solid map-get(color.$grey, 420);
   border-radius: map-get(rounding.$rounding, m);
+  position: relative;
 }
 
 .card-body {
@@ -51,4 +52,19 @@
 }
 
 .card-footer {
+}
+
+.card-link {
+  position: static;
+  &:before {
+    content: "";
+    cursor: inherit;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

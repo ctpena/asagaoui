@@ -78,3 +78,21 @@ draft = false
     </div>
 </div>
 ```
+## カードリンク
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><a class="card-link" href="">カードリンク</a></h5>
+        <p class="card-text">カードテキスト</p>
+    </div>
+    <img src="" class="card-img-bottom" alt="">
+</div>
+
+```html
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title"><a class="card-link" href="">カードリンク</a></h5>
+        <p class="card-text">カードテキスト</p>
+    </div>
+</div>
+```
