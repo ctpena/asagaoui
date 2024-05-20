@@ -5,7 +5,7 @@
 /*
 You can choose two display layouts.
 */
-// TODO add layout
+// TODO code duplication
 /* Grid Layout */
 .garden {
   display: grid;
@@ -14,9 +14,70 @@ You can choose two display layouts.
 }
 
 .plot {
-  grid-column: span 3;
+  grid-column: span 12;
 }
 
+@for $i from 1 through 12 {
+  .plot-#{$i} {
+    grid-column: span $i;
+  }
+}
+
+@include breakpoint.breakpoint(sm) {
+  @for $i from 1 through 12 {
+    .plot-sm-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(md) {
+  @for $i from 1 through 12 {
+    .plot-md-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(lg) {
+  @for $i from 1 through 12 {
+    .plot-lg-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(xl) {
+  @for $i from 1 through 12 {
+    .plot-xl-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(xxl) {
+  @for $i from 1 through 12 {
+    .plot-xxl-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(xxxl) {
+  @for $i from 1 through 12 {
+    .plot-xxxl-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@include breakpoint.breakpoint(x4k) {
+  @for $i from 1 through 12 {
+    .plot-x4k-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
 
 /* Flex Layout */
 .arbor {

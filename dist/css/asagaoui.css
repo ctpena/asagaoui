@@ -314,7 +314,309 @@
     row-gap: 1.5rem;
   }
   .plot {
+    grid-column: span 12;
+  }
+  .plot-1 {
+    grid-column: span 1;
+  }
+  .plot-2 {
+    grid-column: span 2;
+  }
+  .plot-3 {
     grid-column: span 3;
+  }
+  .plot-4 {
+    grid-column: span 4;
+  }
+  .plot-5 {
+    grid-column: span 5;
+  }
+  .plot-6 {
+    grid-column: span 6;
+  }
+  .plot-7 {
+    grid-column: span 7;
+  }
+  .plot-8 {
+    grid-column: span 8;
+  }
+  .plot-9 {
+    grid-column: span 9;
+  }
+  .plot-10 {
+    grid-column: span 10;
+  }
+  .plot-11 {
+    grid-column: span 11;
+  }
+  .plot-12 {
+    grid-column: span 12;
+  }
+  @media screen and (min-width: 768px) {
+    .plot-sm-1 {
+      grid-column: span 1;
+    }
+    .plot-sm-2 {
+      grid-column: span 2;
+    }
+    .plot-sm-3 {
+      grid-column: span 3;
+    }
+    .plot-sm-4 {
+      grid-column: span 4;
+    }
+    .plot-sm-5 {
+      grid-column: span 5;
+    }
+    .plot-sm-6 {
+      grid-column: span 6;
+    }
+    .plot-sm-7 {
+      grid-column: span 7;
+    }
+    .plot-sm-8 {
+      grid-column: span 8;
+    }
+    .plot-sm-9 {
+      grid-column: span 9;
+    }
+    .plot-sm-10 {
+      grid-column: span 10;
+    }
+    .plot-sm-11 {
+      grid-column: span 11;
+    }
+    .plot-sm-12 {
+      grid-column: span 12;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .plot-md-1 {
+      grid-column: span 1;
+    }
+    .plot-md-2 {
+      grid-column: span 2;
+    }
+    .plot-md-3 {
+      grid-column: span 3;
+    }
+    .plot-md-4 {
+      grid-column: span 4;
+    }
+    .plot-md-5 {
+      grid-column: span 5;
+    }
+    .plot-md-6 {
+      grid-column: span 6;
+    }
+    .plot-md-7 {
+      grid-column: span 7;
+    }
+    .plot-md-8 {
+      grid-column: span 8;
+    }
+    .plot-md-9 {
+      grid-column: span 9;
+    }
+    .plot-md-10 {
+      grid-column: span 10;
+    }
+    .plot-md-11 {
+      grid-column: span 11;
+    }
+    .plot-md-12 {
+      grid-column: span 12;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .plot-lg-1 {
+      grid-column: span 1;
+    }
+    .plot-lg-2 {
+      grid-column: span 2;
+    }
+    .plot-lg-3 {
+      grid-column: span 3;
+    }
+    .plot-lg-4 {
+      grid-column: span 4;
+    }
+    .plot-lg-5 {
+      grid-column: span 5;
+    }
+    .plot-lg-6 {
+      grid-column: span 6;
+    }
+    .plot-lg-7 {
+      grid-column: span 7;
+    }
+    .plot-lg-8 {
+      grid-column: span 8;
+    }
+    .plot-lg-9 {
+      grid-column: span 9;
+    }
+    .plot-lg-10 {
+      grid-column: span 10;
+    }
+    .plot-lg-11 {
+      grid-column: span 11;
+    }
+    .plot-lg-12 {
+      grid-column: span 12;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .plot-xl-1 {
+      grid-column: span 1;
+    }
+    .plot-xl-2 {
+      grid-column: span 2;
+    }
+    .plot-xl-3 {
+      grid-column: span 3;
+    }
+    .plot-xl-4 {
+      grid-column: span 4;
+    }
+    .plot-xl-5 {
+      grid-column: span 5;
+    }
+    .plot-xl-6 {
+      grid-column: span 6;
+    }
+    .plot-xl-7 {
+      grid-column: span 7;
+    }
+    .plot-xl-8 {
+      grid-column: span 8;
+    }
+    .plot-xl-9 {
+      grid-column: span 9;
+    }
+    .plot-xl-10 {
+      grid-column: span 10;
+    }
+    .plot-xl-11 {
+      grid-column: span 11;
+    }
+    .plot-xl-12 {
+      grid-column: span 12;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .plot-xxl-1 {
+      grid-column: span 1;
+    }
+    .plot-xxl-2 {
+      grid-column: span 2;
+    }
+    .plot-xxl-3 {
+      grid-column: span 3;
+    }
+    .plot-xxl-4 {
+      grid-column: span 4;
+    }
+    .plot-xxl-5 {
+      grid-column: span 5;
+    }
+    .plot-xxl-6 {
+      grid-column: span 6;
+    }
+    .plot-xxl-7 {
+      grid-column: span 7;
+    }
+    .plot-xxl-8 {
+      grid-column: span 8;
+    }
+    .plot-xxl-9 {
+      grid-column: span 9;
+    }
+    .plot-xxl-10 {
+      grid-column: span 10;
+    }
+    .plot-xxl-11 {
+      grid-column: span 11;
+    }
+    .plot-xxl-12 {
+      grid-column: span 12;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .plot-xxxl-1 {
+      grid-column: span 1;
+    }
+    .plot-xxxl-2 {
+      grid-column: span 2;
+    }
+    .plot-xxxl-3 {
+      grid-column: span 3;
+    }
+    .plot-xxxl-4 {
+      grid-column: span 4;
+    }
+    .plot-xxxl-5 {
+      grid-column: span 5;
+    }
+    .plot-xxxl-6 {
+      grid-column: span 6;
+    }
+    .plot-xxxl-7 {
+      grid-column: span 7;
+    }
+    .plot-xxxl-8 {
+      grid-column: span 8;
+    }
+    .plot-xxxl-9 {
+      grid-column: span 9;
+    }
+    .plot-xxxl-10 {
+      grid-column: span 10;
+    }
+    .plot-xxxl-11 {
+      grid-column: span 11;
+    }
+    .plot-xxxl-12 {
+      grid-column: span 12;
+    }
+  }
+  @media screen and (min-width: 3840px) {
+    .plot-x4k-1 {
+      grid-column: span 1;
+    }
+    .plot-x4k-2 {
+      grid-column: span 2;
+    }
+    .plot-x4k-3 {
+      grid-column: span 3;
+    }
+    .plot-x4k-4 {
+      grid-column: span 4;
+    }
+    .plot-x4k-5 {
+      grid-column: span 5;
+    }
+    .plot-x4k-6 {
+      grid-column: span 6;
+    }
+    .plot-x4k-7 {
+      grid-column: span 7;
+    }
+    .plot-x4k-8 {
+      grid-column: span 8;
+    }
+    .plot-x4k-9 {
+      grid-column: span 9;
+    }
+    .plot-x4k-10 {
+      grid-column: span 10;
+    }
+    .plot-x4k-11 {
+      grid-column: span 11;
+    }
+    .plot-x4k-12 {
+      grid-column: span 12;
+    }
   }
   /* Flex Layout */
   .arbor {
