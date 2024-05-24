@@ -1,7 +1,71 @@
+@use "../styles/typography";
+
 $text-align: (right, left, center);
 
 @each $align in $text-align {
   .text-#{$align} {
     text-align: $align;
   }
+}
+
+// FIXME Optimize code
+
+// font-weight
+
+.fw-r {
+  font-weight: typography.$fw-r;
+}
+
+.fw-m {
+  font-weight: typography.$fw-m;
+}
+
+.fw-b {
+  font-weight: typography.$fw-b;
+}
+
+// font-size
+
+.fs-6xl {
+  font-size: typography.$fs-6xl;
+}
+
+.fs-5xl {
+  font-size: typography.$fs-5xl;
+}
+
+.fs-4xl {
+  font-size: typography.$fs-4xl;
+}
+
+.fs-3xl {
+  font-size: typography.$fs-3xl;
+}
+
+.fs-2xl {
+  font-size: typography.$fs-2xl;
+}
+
+.fs-xl {
+  font-size: typography.$fs-xl;
+}
+
+.fs-lg {
+  font-size: typography.$fs-lg;
+}
+
+.fs-md {
+  font-size: typography.$fs-md;
+}
+
+.fs-sm {
+  font-size: typography.$fs-sm;
+}
+
+.fs-2xs {
+  font-size: typography.$fs-2xs;
+}
+
+.fs-xs {
+  font-size: typography.$fs-xs;
 }

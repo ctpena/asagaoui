@@ -3,7 +3,7 @@
 @use "../styles/theme";
 
 .body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", "Roboto", sans-serif;
   @include typography.set(map.get(typography.$text, text-l));
   color: theme.get(text, body);
   font-size: 100%;

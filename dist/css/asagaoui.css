@@ -100,7 +100,7 @@
 }
 @layer base {
   .body {
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Roboto", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.7;
@@ -5047,6 +5047,48 @@
   }
   .text-center {
     text-align: center;
+  }
+  .fw-r {
+    font-weight: 400;
+  }
+  .fw-m {
+    font-weight: 500;
+  }
+  .fw-b {
+    font-weight: 700;
+  }
+  .fs-6xl {
+    font-size: 3.5625rem;
+  }
+  .fs-5xl {
+    font-size: 2.8125rem;
+  }
+  .fs-4xl {
+    font-size: 2.25rem;
+  }
+  .fs-3xl {
+    font-size: 2rem;
+  }
+  .fs-2xl {
+    font-size: 1.75rem;
+  }
+  .fs-xl {
+    font-size: 1.5rem;
+  }
+  .fs-lg {
+    font-size: 1.25rem;
+  }
+  .fs-md {
+    font-size: 1rem;
+  }
+  .fs-sm {
+    font-size: 0.875rem;
+  }
+  .fs-2xs {
+    font-size: 0.75rem;
+  }
+  .fs-xs {
+    font-size: 0.625rem;
   }
   .link {
     color: #00118F;
