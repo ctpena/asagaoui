@@ -12,3 +12,18 @@ other = "document-toc"
 
 [slogan]
 other = "CSS framework based on Japan's Digital Agency design system"
+
+[getting-started]
+other = "Getting started"
+
+[customize]
+other = "Customize"
+
+[layout]
+other = "Layout"
+
+[components]
+other = "Components"
+
+[forms]
+other = "Forms"

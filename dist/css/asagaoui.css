@@ -2078,6 +2078,11 @@
     outline: 3px solid #B78F00;
     border: 1px solid #B78F00;
   }
+  .form-input[type=password] {
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 0.04rem;
+  }
   .form-help {
     color: #666666;
     font-size: 0.875rem;

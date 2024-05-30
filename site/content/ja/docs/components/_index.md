@@ -1,0 +1,4 @@
++++
+title = 'コンポーネント'
+draft = false
++++

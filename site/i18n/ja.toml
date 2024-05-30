@@ -12,3 +12,18 @@ other = "目次"
 
 [slogan]
 other = "デジタル庁デザインシステムを基にしたCSSフレームワーク"
+
+[getting-started]
+other = "はじめに"
+
+[customize]
+other = "カスタマイズ"
+
+[layout]
+other = "レイアウト"
+
+[components]
+other = "コンポーネント"
+
+[forms]
+other = "フォーム"
