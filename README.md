@@ -6,12 +6,11 @@ AsagaoUI is a CSS framework based on Japan's Digital Agency design system.
 
 AsagaoUI is in the early stages of development and may be unstable.
 
-## Documentation
-
-AsagaoUI documentation is located in the site folder of the project.
-The documentation site is built with [HUGO](https://gohugo.io) and is hosted at https://asagaoui.com.
-
 ## Quickstart
+
+### CDN
+
+[https://www.jsdelivr.com/package/npm/asagaoui](https://www.jsdelivr.com/package/npm/asagaoui)
 
 ### Clone repository
 
@@ -48,6 +47,11 @@ The following HTML is required
 </body>
 </html>
 ```
+
+## Documentation
+
+AsagaoUI documentation is located in the site folder of the project.
+The documentation site is built with [HUGO](https://gohugo.io) and is hosted at https://asagaoui.com.
 
 ## License
 

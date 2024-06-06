@@ -18,20 +18,35 @@ CSSフレームワークであり、美しく効率的なウェブ開発を実�
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AsagaoUI demo</title>
-    <link rel="stylesheet" href="dist/css/asagaoui.css">
+    <link href="https://cdn.jsdelivr.net/npm/asagaoui/dist/css/asagaoui.min.css" rel="stylesheet">
 </head>
 <body class="body">
 <h1>AsagaoUI</h1>
-<script src="dist/js/asagaoui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
 </body>
 </html>
+```
+
+## CDN
+
+AsagaoUIは[jsDelivr](https://www.jsdelivr.com/package/npm/asagaoui)から入手できます。
+
+## npm
+
+AsagaoUIは[npm](https://www.npmjs.com/package/asagaoui)から入手できます。
+
+```bash
+npm i asagaoui
 ```
 
 ## スタイルの使用
 
 [AsagaoUIのレポジトリ](https://github.com/ctpena/asagaoui)からソースファイルをダウンロードしてください。`/dist/css/asagaoui.css`
 がコンパイル済みのCSSです。
-お好みの方法で使用できます。
+
+```html
+<link rel="stylesheet" href="dist/css/asagaoui.css">
+```
 
 ### JSの使用
 
