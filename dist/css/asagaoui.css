@@ -1657,6 +1657,9 @@
     max-width: 1280px;
     display: flex;
     flex-wrap: wrap;
+    padding-inline: 1rem;
+    justify-content: space-between;
+    column-gap: 1rem;
   }
   @media screen and (min-width: 992px) {
     .header-full .header-drawer {
@@ -1666,19 +1669,13 @@
   .header-full .header-logo {
     order: 1;
     height: 68px;
-    margin-right: auto;
     display: flex;
     align-items: center;
-    margin-left: 1rem;
+    margin-right: auto;
   }
   @media screen and (min-width: 768px) {
     .header-full .header-logo {
       height: 80px;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .header-full .header-logo {
-      margin-left: 2.5rem;
     }
   }
   .header-full .header-item {
@@ -1691,12 +1688,6 @@
       align-items: center;
       height: 80px;
       padding-right: 0;
-      margin-right: 1rem;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .header-full .header-item {
-      margin-right: 2.5rem;
     }
   }
   .header-full .header-menu {
@@ -1705,28 +1696,16 @@
     width: 100%;
     height: 55px;
     align-items: center;
-    padding-inline: 1rem;
   }
   @media screen and (min-width: 768px) {
     .header-full .header-menu {
       display: flex;
     }
   }
-  @media screen and (min-width: 992px) {
-    .header-full .header-menu {
-      padding-inline: 2.5rem;
-    }
-  }
   .header-full .header-button {
     order: 3;
     display: flex;
     align-items: center;
-    padding-right: 1rem;
-  }
-  @media screen and (min-width: 768px) {
-    .header-full .header-button {
-      display: none;
-    }
   }
   .header-slim {
     height: 68px;
