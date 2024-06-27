@@ -21,6 +21,7 @@
     align-items: center;
     height: 100%;
     padding: 0 1rem;
+    cursor: pointer;
 
     &:hover {
       background-color: map-get(color.$grey, 50),
