@@ -9,4 +9,10 @@
         {{ .Content }}
         {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </article>
+    <div class="doc-toc">
+        <div>
+            <h3>{{ i18n "document-toc" }}</h3>
+            {{ .TableOfContents }}
+        </div>
+    </div>
 {{ end }}

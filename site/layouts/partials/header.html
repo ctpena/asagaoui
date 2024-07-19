@@ -2,7 +2,7 @@
     <nav class="header-full">
         <a class="header-logo h4" href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
         <div class="header-button">
-            <button class="hamburger-btn v open" data-asagaoui-target="#mobile-menu">
+            <button class="d-sm-none hamburger-btn v open" data-asagaoui-target="#mobile-menu">
                 <div class="hamburger-btn-open">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clip-path="url(#clip0_1685_8644)">
@@ -41,11 +41,16 @@
         </div>
         <div class="header-menu">
             <ul class="globalmenu">
-                <li class="globalmenu-item"><a class="globalmenu-link" href="{{ "/docs/getting-started/" | relLangURL }}">{{ i18n "getting-started" }}</a></li>
-                <li class="globalmenu-item"><a class="globalmenu-link" href="{{ "/docs/customize/" | relLangURL }}">{{ i18n "customize" }}</a></li>
-                <li class="globalmenu-item"><a class="globalmenu-link" href="{{ "/docs/layout/" | relLangURL }}">{{ i18n "layout" }}</a></li>
-                <li class="globalmenu-item"><a class="globalmenu-link" href="{{ "/docs/components/" | relLangURL }}">{{ i18n "components" }}</a></li>
-                <li class="globalmenu-item"><a class="globalmenu-link" href="{{ "/docs/forms/" | relLangURL }}">{{ i18n "forms" }}</a></li>
+                <li class="globalmenu-item"><a class="globalmenu-link"
+                                               href="{{ "/docs/" | relLangURL }}">{{ i18n "document" }}</a></li>
+                <!--
+                <li class="globalmenu-item"><a class="globalmenu-link"
+                                               href="{{ "/examples/" | relLangURL }}">{{ i18n "examples" }}</a></li>
+                <li class="globalmenu-item"><a class="globalmenu-link"
+                                               href="{{ "/icons/" | relLangURL }}">{{ i18n "icons" }}</a></li>
+                <li class="globalmenu-item"><a class="globalmenu-link"
+                                               href="{{ "/blog/" | relLangURL }}">{{ i18n "blog" }}</a></li>
+                                               -->
             </ul>
         </div>
         {{/* Add Mobile MENU*/}}
@@ -69,10 +74,12 @@
             </div>
             <div class="drawer-body">
                 <ul class="mobilemenu">
-                    <li class="mobilemenu-item"><a class="mobilemenu-link" href="">{{ i18n "document" }}</a></li>
+                    <li class="mobilemenu-item"><a class="mobilemenu-link"
+                                                   href="{{ "/docs/" | relLangURL }}">{{ i18n "document" }}</a></li>
                 </ul>
                 <ul class="mobilemenu">
-                    <li class="mobilemenu-item"><a class="mobilemenu-link" href="https://github.com/ctpena/asagaoui">GitHub</a></li>
+                    <li class="mobilemenu-item"><a class="mobilemenu-link" href="https://github.com/ctpena/asagaoui">GitHub</a>
+                    </li>
                 </ul>
             </div>
         </div>

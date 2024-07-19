@@ -48,6 +48,9 @@
     @include ub.breakpoint(sm) {
       padding-right: 1rem;
     }
+    @include ub.breakpoint(sm) {
+      padding-right: 0;
+    }
   }
 
   .header-menu {
@@ -68,9 +71,6 @@
     display: flex;
     align-items: center;
     padding-right: 1rem;
-    @include ub.breakpoint(sm) {
-      display: none;
-    }
   }
 }
 

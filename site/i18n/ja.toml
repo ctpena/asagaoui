@@ -27,3 +27,12 @@ other = "コンポーネント"
 
 [forms]
 other = "フォーム"
+
+[blog]
+other = "ブログ"
+
+[examples]
+other = "サンプル"
+
+[icons]
+other = "アイコン"

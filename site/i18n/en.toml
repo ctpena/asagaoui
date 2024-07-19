@@ -27,3 +27,12 @@ other = "Components"
 
 [forms]
 other = "Forms"
+
+[blog]
+other = "Blog"
+
+[examples]
+other = "Examples"
+
+[icons]
+other = "Icons"

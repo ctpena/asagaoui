@@ -1696,6 +1696,11 @@
       padding-right: 1rem;
     }
   }
+  @media screen and (min-width: 768px) {
+    .header-full .header-item {
+      padding-right: 0;
+    }
+  }
   .header-full .header-menu {
     order: 4;
     display: none;
@@ -1713,11 +1718,6 @@
     display: flex;
     align-items: center;
     padding-right: 1rem;
-  }
-  @media screen and (min-width: 768px) {
-    .header-full .header-button {
-      display: none;
-    }
   }
   .header-slim {
     height: 68px;
@@ -2098,11 +2098,6 @@
   .form-input.error:focus {
     outline: 3px solid #B78F00;
     border: 1px solid #B78F00;
-  }
-  .form-input[type=password] {
-    font-size: 1.5rem;
-    line-height: 1;
-    letter-spacing: 0.04rem;
   }
   .form-help {
     color: #666666;
@@ -2669,6 +2664,188 @@
   }
   .d-inline-flex {
     display: inline-flex;
+  }
+  @media screen and (min-width: 768px) {
+    .d-sm-none {
+      display: none;
+    }
+    .d-sm-inline {
+      display: inline;
+    }
+    .d-sm-inline-block {
+      display: inline-block;
+    }
+    .d-sm-block {
+      display: block;
+    }
+    .d-sm-grid {
+      display: grid;
+    }
+    .d-sm-inline-grid {
+      display: inline-grid;
+    }
+    .d-sm-flex {
+      display: flex;
+    }
+    .d-sm-inline-flex {
+      display: inline-flex;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .d-md-none {
+      display: none;
+    }
+    .d-md-inline {
+      display: inline;
+    }
+    .d-md-inline-block {
+      display: inline-block;
+    }
+    .d-md-block {
+      display: block;
+    }
+    .d-md-grid {
+      display: grid;
+    }
+    .d-md-inline-grid {
+      display: inline-grid;
+    }
+    .d-md-flex {
+      display: flex;
+    }
+    .d-md-inline-flex {
+      display: inline-flex;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .d-lg-none {
+      display: none;
+    }
+    .d-lg-inline {
+      display: inline;
+    }
+    .d-lg-inline-block {
+      display: inline-block;
+    }
+    .d-lg-block {
+      display: block;
+    }
+    .d-lg-grid {
+      display: grid;
+    }
+    .d-lg-inline-grid {
+      display: inline-grid;
+    }
+    .d-lg-flex {
+      display: flex;
+    }
+    .d-lg-inline-flex {
+      display: inline-flex;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .d-xl-none {
+      display: none;
+    }
+    .d-xl-inline {
+      display: inline;
+    }
+    .d-xl-inline-block {
+      display: inline-block;
+    }
+    .d-xl-block {
+      display: block;
+    }
+    .d-xl-grid {
+      display: grid;
+    }
+    .d-xl-inline-grid {
+      display: inline-grid;
+    }
+    .d-xl-flex {
+      display: flex;
+    }
+    .d-xl-inline-flex {
+      display: inline-flex;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .d-xxl-none {
+      display: none;
+    }
+    .d-xxl-inline {
+      display: inline;
+    }
+    .d-xxl-inline-block {
+      display: inline-block;
+    }
+    .d-xxl-block {
+      display: block;
+    }
+    .d-xxl-grid {
+      display: grid;
+    }
+    .d-xxl-inline-grid {
+      display: inline-grid;
+    }
+    .d-xxl-flex {
+      display: flex;
+    }
+    .d-xxl-inline-flex {
+      display: inline-flex;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .d-xxxl-none {
+      display: none;
+    }
+    .d-xxxl-inline {
+      display: inline;
+    }
+    .d-xxxl-inline-block {
+      display: inline-block;
+    }
+    .d-xxxl-block {
+      display: block;
+    }
+    .d-xxxl-grid {
+      display: grid;
+    }
+    .d-xxxl-inline-grid {
+      display: inline-grid;
+    }
+    .d-xxxl-flex {
+      display: flex;
+    }
+    .d-xxxl-inline-flex {
+      display: inline-flex;
+    }
+  }
+  @media screen and (min-width: 3840px) {
+    .d-x4k-none {
+      display: none;
+    }
+    .d-x4k-inline {
+      display: inline;
+    }
+    .d-x4k-inline-block {
+      display: inline-block;
+    }
+    .d-x4k-block {
+      display: block;
+    }
+    .d-x4k-grid {
+      display: grid;
+    }
+    .d-x4k-inline-grid {
+      display: inline-grid;
+    }
+    .d-x4k-flex {
+      display: flex;
+    }
+    .d-x4k-inline-flex {
+      display: inline-flex;
+    }
   }
   .flex-row {
     flex-direction: row;

@@ -1,7 +1,19 @@
+@use "breakpoint";
+
 $values: (none, inline, inline-block, block, grid, inline-grid, flex, inline-flex);
 
 @each $value in $values {
   .d-#{$value} {
     display: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $value in $values {
+      .d-#{$bp}-#{$value} {
+        display: $value;
+      }
+    }
   }
 }

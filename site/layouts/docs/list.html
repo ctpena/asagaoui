@@ -7,4 +7,10 @@
             {{ .Summary }}
         {{ end }}
     </article>
+    <div class="noui-toc">
+        <nav>
+            <h3>{{ i18n "document-toc" }}</h3>
+            {{ .TableOfContents }}
+        </nav>
+    </div>
 {{ end }}

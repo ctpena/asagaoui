@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="body">
+{{ partial "header.html" . }}
+{{ partial "bottomdock.html" . }}
+<div class="container-lg mt-5 px-0 doc-container">
+    {{/*drawer*/}}
+    <aside id="doc-menu" class="doc-nav drawer drawer-left">
+        <div class="drawer-header">
+            <h5 class="h4">要素一覧</h5>
+            <button class="hamburger-btn v close" data-asagaoui-target="#doc-menu">
+                <div class="hamburger-btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <mask id="mask0_1685_8677" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                              width="24" height="24">
+                            <rect width="24" height="24" fill="#D9D9D9"></rect>
+                        </mask>
+                        <g mask="url(#mask0_1685_8677)">
+                            <path d="M6.39961 18.6496L5.34961 17.5996L10.9496 11.9996L5.34961 6.39961L6.39961 5.34961L11.9996 10.9496L17.5996 5.34961L18.6496 6.39961L13.0496 11.9996L18.6496 17.5996L17.5996 18.6496L11.9996 13.0496L6.39961 18.6496Z"
+                                  fill="#1A1A1A"></path>
+                        </g>
+                    </svg>
+                    <span>{{ i18n "close" }}</span>
+                </div>
+            </button>
+        </div>
+        {{ partial "sidenav.html" . }}
+    </aside>
+    <div class="drawer-backdrop"></div>
+    <main class="doc-main">
+        {{ block "main" . }}{{ end }}
+    </main>
+</div>
+{{/*
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+*/}}
+{{ partial "footer.html" . }}
+{{ partialCached "head/js.html" . }}
+</body>
+</html>

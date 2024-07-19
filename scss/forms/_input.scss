@@ -28,11 +28,6 @@
       border: 1px solid map-get(color.$yellow, 700);
     }
   }
-  &[type="password"] {
-    font-size: typography.$fs-xl;
-    line-height: typography.$lh-xs;
-    letter-spacing: typography.$ls-m;
-  }
 }
 
 .form-help {
