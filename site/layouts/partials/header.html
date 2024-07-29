@@ -2,6 +2,22 @@
     <nav class="header-full">
         <a class="header-logo h4" href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
         <div class="header-button">
+            <div class="langsel">
+                <button class="langsel-btn">
+                    Language
+                </button>
+                <ul class="langsel-menu">
+                    {{ range .Site.Languages }}
+                        <li>
+                            <a class="langsel-item{{ if eq . $.Site.Language }} active{{ end }}"
+                               href="{{ relLangURL $.RelPermalink }}"
+                               data-lang="{{ .Lang }}">
+                                {{ .LanguageName }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
             <button class="d-sm-none hamburger-btn v open" data-asagaoui-target="#mobile-menu">
                 <div class="hamburger-btn-open">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

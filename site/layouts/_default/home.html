@@ -1,6 +1,20 @@
 {{ define "main" }}
-    <article class="content">
-        <h1 class="mt-0">{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
+    <main class="mt-5">
+        <article class="">
+            <section class="container-sm">
+                <div class="">
+                    <h1 class="h1 text-center">AsagaoUI</h1>
+                    <h2 class="h1 mt-4 text-center">デジタル庁デザインシステムに基づくCSSフレームワーク</h2>
+                    <h3 class="h3 mt-3 text-center">美しく効率的なウェブ開発を実現</h3>
+                    <div class="d-flex flex-wrap justify-around mt-4 g-2">
+                        <a href="{{ "/docs/" | relLangURL }}" class="btn btn-secondary">ドキュメントを見る</a>
+                        <a href="{{ "/docs/getting-started/introduction/" | relLangURL }}" class="btn btn-primary">はじめる</a>
+                    </div>
+                </div>
+            </section>
+            <section class="content container-sm mt-7">
+                {{ .Content }}
+            </section>
+        </article>
+    </main>
 {{ end }}

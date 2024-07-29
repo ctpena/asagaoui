@@ -6,9 +6,7 @@
 <body class="body">
 {{ partial "header.html" . }}
 {{ partial "bottomdock.html" . }}
-<main class="container-sm mt-5">
-    {{ block "main" . }}{{ end }}
-</main>
+{{ block "main" . }}{{ end }}
 {{/*
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 */}}
