@@ -1,5 +1,5 @@
 /***
-    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
 
@@ -35,6 +35,11 @@ a, button {
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu, summary {
   list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+  counter-reset: revert;
 }
 
 /* For images to not be able to exceed their container */
