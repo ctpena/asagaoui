@@ -39,7 +39,7 @@ $btn-size: (
   @include typography.set(map.get(typography.$button, map.get($btn-values, text)));
   padding: map.get($btn-values, py) map.get($btn-values, px);
   min-width: map.get($btn-values, mw);
-  height: map.get($btn-values, h);
+  min-height: map.get($btn-values, h);
 }
 
 

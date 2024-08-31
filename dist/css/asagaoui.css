@@ -1343,7 +1343,7 @@
     letter-spacing: 0.04rem;
     padding: 0.75rem 1rem;
     min-width: 96px;
-    height: 48px;
+    min-height: 48px;
   }
   .btn:focus {
     outline: 2px solid #B78F00;
@@ -1426,7 +1426,7 @@
     letter-spacing: 0.04rem;
     padding: 1rem 1rem;
     min-width: 136px;
-    height: 56px;
+    min-height: 56px;
   }
   .btn-m {
     font-size: 1rem;
@@ -1435,7 +1435,7 @@
     letter-spacing: 0.04rem;
     padding: 0.75rem 1rem;
     min-width: 96px;
-    height: 48px;
+    min-height: 48px;
   }
   .btn-s {
     font-size: 1rem;
@@ -1444,7 +1444,7 @@
     letter-spacing: 0.04rem;
     padding: 0.375rem 0.75rem;
     min-width: 80px;
-    height: 36px;
+    min-height: 36px;
   }
   .btn-xs {
     font-size: 0.875rem;
@@ -1453,7 +1453,7 @@
     letter-spacing: 0.02rem;
     padding: 0.44rem 0.5rem;
     min-width: 72px;
-    height: 28px;
+    min-height: 28px;
   }
   .card {
     border: 1px solid #949494;
@@ -1828,8 +1828,10 @@
   }
   .mega-menu {
     position: absolute;
+    z-index: 100;
     max-width: 1280px;
     width: 100%;
+    background-color: #ffffff;
     border-bottom: 1px solid #949494;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
@@ -1837,6 +1839,7 @@
     gap: 20px;
     right: 0;
     left: 0;
+    margin-top: 1px;
     padding: 32px 40px 40px 40px;
   }
   .mega-menu-header {
@@ -2066,20 +2069,29 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    align-items: flex-start;
   }
   .form-group .form-label {
     order: 1;
+    width: fit-content;
   }
   .form-group .form-select,
   .form-group .form-textarea,
   .form-group .form-input {
     order: 3;
+    width: 100%;
   }
   .form-group .form-help {
     order: 2;
+    width: fit-content;
   }
   .form-group .form-error-feedback {
     order: 4;
+    width: fit-content;
+  }
+  .form-group .form-support {
+    order: 5;
+    width: fit-content;
   }
   .form-input {
     height: 56px;
@@ -5383,5 +5395,23 @@
       line-height: 1.5;
       letter-spacing: 0.04rem;
     }
+  }
+  .z-hide {
+    z-index: -1;
+  }
+  .z-auto {
+    z-index: auto;
+  }
+  .z-0 {
+    z-index: 0;
+  }
+  .z-1 {
+    z-index: 1;
+  }
+  .z-2 {
+    z-index: 2;
+  }
+  .z-3 {
+    z-index: 3;
   }
 }

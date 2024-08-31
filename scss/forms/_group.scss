@@ -3,22 +3,31 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: flex-start;
 
   .form-label {
     order: 1;
+    width: fit-content;
   }
 
   .form-select,
   .form-textarea,
   .form-input {
     order: 3;
+    width: 100%;
   }
 
   .form-help {
     order: 2;
+    width: fit-content;
   }
 
   .form-error-feedback {
     order: 4;
+    width: fit-content;
+  }
+  .form-support {
+    order: 5;
+    width: fit-content;
   }
 }
