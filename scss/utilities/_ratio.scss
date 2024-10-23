@@ -1,7 +1,0 @@
-@use "../styles/ratios";
-
-@each $ratio, $percentage in ratios.$ratios {
-  .ratio-#{$ratio} {
-    aspect-ratio: $percentage;
-  }
-}

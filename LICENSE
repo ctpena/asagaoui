@@ -1,5 +1,5 @@
 AsagaoUI License
-"""
+
 MIT License
 
 Copyright (c) 2024 Hiroshi ISOBE
@@ -21,7 +21,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-"""
 
 AsagaoUI Documentation License
 The documentation located under site/content/ is licensed under the CC BY 4.0

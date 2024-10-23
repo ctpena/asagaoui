@@ -1,21 +1,5 @@
-@use "sass:map";
-@use "../styles/typography";
-@use "../styles/theme";
-
-.body {
+.body,
+.aui {
   font-family: "Noto Sans JP", "Roboto", sans-serif;
-  @include typography.set(map.get(typography.$text, text-l));
-  color: theme.get(text, body);
   font-size: 100%;
-
-  button,
-  a {
-    cursor: pointer;
-  }
-
-  pre {
-    font-size: 1rem;
-    overflow: auto;
-    outline: none;
-  }
 }

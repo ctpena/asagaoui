@@ -1,4 +1,0 @@
-+++
-title = 'レイアウト'
-draft = false
-+++

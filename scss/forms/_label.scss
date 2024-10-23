@@ -1,5 +1,0 @@
-@use "../styles/typography";
-
-.form-label {
-  @include typography.set(map-get(typography.$text, 'label-l'));
-}

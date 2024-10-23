@@ -1,4 +1,0 @@
-+++
-title = 'フォーム'
-draft = false
-+++

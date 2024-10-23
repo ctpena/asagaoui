@@ -2,7 +2,7 @@
 @use 'sass:meta';
 
 /*!
- * AsagaoUI  v0.1.5
+ * AsagaoUI  v0.2.0
  * Copyright 2024 Hiroshi ISOBE
  * Licensed under MIT
 */
@@ -23,61 +23,16 @@
 
 // Layout
 @layer layout {
-  @include meta.load-css('layout/container');
-  @include meta.load-css('layout/grid');
-  @include meta.load-css('layout/content');
-  @include meta.load-css('layout/stack');
 }
 
 // Components
 @layer components {
-  @include meta.load-css('components/accordion');
-  @include meta.load-css('components/banner');
-  @include meta.load-css('components/bottomdock');
-  @include meta.load-css('components/emergency-banner');
-  @include meta.load-css('components/bottomnav');
-  @include meta.load-css('components/breadcrumb');
-  @include meta.load-css('components/button');
-  @include meta.load-css('components/card');
-  @include meta.load-css('components/carousel');
-  @include meta.load-css('components/drawer');
-  @include meta.load-css('components/dropdown');
-  @include meta.load-css('components/globalmenu');
-  @include meta.load-css('components/header');
-  @include meta.load-css('components/langsel');
-  @include meta.load-css('components/mega-menu');
-  @include meta.load-css('components/menulist');
-  @include meta.load-css('components/mobilemenu');
-  @include meta.load-css('components/pagination');
-  @include meta.load-css('components/scrolltopbtn');
-  @include meta.load-css('components/modaldialog');
-  @include meta.load-css('components/utilitylink');
-  @include meta.load-css('components/table');
-  @include meta.load-css('components/hamburger-btn');
 }
 
 // Forms
 @layer forms {
-  @include meta.load-css('forms/group');
-  @include meta.load-css('forms/input');
-  @include meta.load-css('forms/textarea');
-  @include meta.load-css('forms/radio');
-  @include meta.load-css('forms/check');
-  @include meta.load-css('forms/select');
-  @include meta.load-css('forms/label');
 }
 
 // Utilities
 @layer utilities {
-  @include meta.load-css('utilities/background');
-  @include meta.load-css('utilities/display');
-  @include meta.load-css('utilities/flex');
-  @include meta.load-css('utilities/images');
-  @include meta.load-css('utilities/ratio');
-  @include meta.load-css('utilities/sizing');
-  @include meta.load-css('utilities/spacing');
-  @include meta.load-css('utilities/text');
-  @include meta.load-css('utilities/link');
-  @include meta.load-css('utilities/typography');
-  @include meta.load-css('utilities/z-index');
 }

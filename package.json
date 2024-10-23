@@ -1,7 +1,7 @@
 {
   "name": "asagaoui",
   "description": "AsagaoUI is a CSS framework based on Japan's Digital Agency design system.",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "homepage": "https://asagaoui.com",
   "author": "Hiroshi ISOBE",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "buildjs": "esbuild ts/asagaoui.ts --bundle --outfile=dist/js/asagaoui.js"
   },
   "devDependencies": {
-    "esbuild": "0.23.1",
+    "esbuild": "0.24.0",
     "gulp": "^5.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-rename": "^2.0.0",
@@ -38,10 +38,9 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.79.3",
-    "typescript": "^5.6.2"
+    "sass": "^1.80.3",
+    "typescript": "^5.6.3"
   },
-  "dependencies": {},
   "peerDependencies": {
     "@floating-ui/dom": "^1.6.3"
   },
