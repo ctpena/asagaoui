@@ -29,6 +29,7 @@
 @layer components {
   @include meta.load-css('components/globalmenu');
   @include meta.load-css('components/header');
+  @include meta.load-css('components/utilitylink');
 }
 
 // Forms
