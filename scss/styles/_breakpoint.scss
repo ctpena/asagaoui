@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Breakpoints defined by Japan's Digital Agency design system
 $style-breakpoint: (
         d: 768px,
@@ -5,7 +7,7 @@ $style-breakpoint: (
 );
 
 @mixin style($bp) {
-  $mq-data: map-get($style-breakpoint, $bp);
+  $mq-data: map.get($style-breakpoint, $bp);
   @media screen and (min-width: $mq-data) {
     @content;
   }

@@ -1,8 +1,10 @@
+@use "sass:list";
+
 @mixin set($fontData) {
-  font-size: nth($fontData, 1);
-  font-weight: nth($fontData, 2);
-  line-height: nth($fontData, 3);
-  letter-spacing: nth($fontData, 4);
+  font-size: list.nth($fontData, 1);
+  font-weight: list.nth($fontData, 2);
+  line-height: list.nth($fontData, 3);
+  letter-spacing: list.nth($fontData, 4);
 }
 
 $fs-6xl: 3.5625rem; // 57px

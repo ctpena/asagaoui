@@ -27,6 +27,7 @@
 
 // Components
 @layer components {
+  @include meta.load-css('components/header');
 }
 
 // Forms

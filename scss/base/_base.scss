@@ -1,5 +1,11 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "sass:map";
+
 .body,
 .aui {
   font-family: "Noto Sans JP", "Roboto", sans-serif;
+  @include typography.set(map.get(typography.$text, text-l));
+  color: map.get(color.$grey, 900);
   font-size: 100%;
 }
