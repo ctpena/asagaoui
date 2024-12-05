@@ -34,12 +34,12 @@
     "gulp": "^5.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
+    "gulp-sass": "^6.0.0",
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.80.3",
-    "typescript": "^5.6.3"
+    "sass": "^1.82.0",
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "@floating-ui/dom": "^1.6.3"
