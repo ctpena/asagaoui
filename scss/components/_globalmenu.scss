@@ -1,0 +1,56 @@
+@use "../styles/color";
+@use "../styles/typography";
+@use "sass:map";
+
+.globalmenu-sub {
+  display: flex;
+}
+
+.globalmenu {
+  display: flex;
+  height: 100%;
+
+  &-item {
+    flex: 1 0 auto;
+  }
+
+  &-link {
+    // font
+    font-weight: typography.$fw-b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: map.get(color.$grey, 50),
+    }
+
+    &:hover::after {
+      visibility: visible;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: map.get(color.$grey, 900);
+      visibility: hidden;
+    }
+
+    &.active {
+      color: map.get(color.$blue, 900);
+
+      &::after {
+        visibility: visible;
+        background-color: map.get(color.$blue, 900);
+        height: 4px;
+      }
+    }
+  }
+}
