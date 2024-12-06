@@ -39,4 +39,5 @@
 
 // Utilities
 @layer utilities {
+  @include meta.load-css('utilities/typography.scss');
 }

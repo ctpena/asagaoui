@@ -1,0 +1,45 @@
+@use "../styles/typography";
+@use "../styles/breakpoint";
+@use "sass:map";
+
+.h1 {
+  @include typography.set(map.get(typography.$heading, 'lm'));
+}
+
+.h2 {
+  @include typography.set(map.get(typography.$heading, 'mm'));
+}
+
+.h3 {
+  @include typography.set(map.get(typography.$heading, 'sm'));
+}
+
+.h4 {
+  @include typography.set(map.get(typography.$heading, 'xsm'));
+}
+
+.h5 {
+  @include typography.set(map.get(typography.$heading, 'xxsm'));
+}
+
+@include breakpoint.style(d) {
+  .h1 {
+    @include typography.set(map.get(typography.$heading, 'l'));
+  }
+
+  .h2 {
+    @include typography.set(map.get(typography.$heading, 'm'));
+  }
+
+  .h3 {
+    @include typography.set(map.get(typography.$heading, 's'));
+  }
+
+  .h4 {
+    @include typography.set(map.get(typography.$heading, 'xs'));
+  }
+
+  .h5 {
+    @include typography.set(map.get(typography.$heading, 'xxs'));
+  }
+}
