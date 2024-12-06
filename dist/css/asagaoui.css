@@ -114,7 +114,149 @@
     font-size: 100%;
   }
 }
-@layer layout {}
+@layer layout {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+  @media screen and (min-width: 768px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 768px;
+    }
+    .container-sm {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 768px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 992px;
+    }
+    .container-md {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 992px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 1280px;
+    }
+    .container-lg {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 1280px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 1440px;
+    }
+    .container-xl {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 1440px;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 1920px;
+    }
+    .container-xxl {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 1920px;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 2560px;
+    }
+    .container-xxxl {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 2560px;
+    }
+  }
+  @media screen and (min-width: 3840px) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 3840px;
+    }
+    .container-x4k {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      max-width: 3840px;
+    }
+  }
+}
 @layer components {
   .globalmenu-sub {
     display: flex;

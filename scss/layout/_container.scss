@@ -1,0 +1,42 @@
+@use "../utilities/breakpoint";
+
+$container-padding: 1rem;
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  width: 100%;
+
+  &-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@each $bp, $width in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: $container-padding;
+      padding-right: $container-padding;
+      width: 100%;
+      max-width: $width;
+    }
+
+    .container-#{$bp} {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: $container-padding;
+      padding-right: $container-padding;
+      width: 100%;
+      max-width: $width;
+    }
+  }
+}
