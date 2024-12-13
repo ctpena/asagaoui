@@ -1,0 +1,44 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/spacing";
+@use "../styles/rounding";
+@use "sass:map";
+
+$menulistfont: (
+        link: (typography.$fs-md, typography.$fw-r, typography.$lh-l, typography.$ls-m),
+        title: (typography.$fs-md, typography.$fw-b, typography.$lh-l, typography.$ls-m),
+        active: (typography.$fs-md, typography.$fw-b, typography.$lh-l, typography.$ls-m),
+);
+
+.menulist {
+  &-title {
+    display: block;
+    padding: .525rem 1rem;
+    @include typography.set(map.get($menulistfont, title));
+  }
+
+  &-item {
+  }
+
+  &-link {
+    display: block;
+    padding: .525rem 1rem;
+    @include typography.set(map.get($menulistfont, link));
+    border-radius: map.get(rounding.$rounding, m);
+
+    &:hover {
+      background-color: map.get(color.$grey, 50);
+      text-decoration: underline;
+    }
+
+    &.active {
+      @include typography.set(map.get($menulistfont, active));
+      background-color: map.get(color.$blue, 100);
+      color: map.get(color.$blue, 1000);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

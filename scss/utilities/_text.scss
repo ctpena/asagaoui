@@ -1,0 +1,41 @@
+@use "../styles/typography";
+
+$text-align: (right, left, center);
+
+@each $align in $text-align {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+$font-weights: (
+        r: typography.$fw-r,
+        m: typography.$fw-m,
+        b: typography.$fw-b,
+);
+
+@each $key, $value in $font-weights {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}
+
+$font-sizes: (
+        6xl: typography.$fs-6xl,
+        5xl: typography.$fs-5xl,
+        4xl: typography.$fs-4xl,
+        3xl: typography.$fs-3xl,
+        2xl: typography.$fs-2xl,
+        xl: typography.$fs-xl,
+        lg: typography.$fs-lg,
+        md: typography.$fs-md,
+        sm: typography.$fs-sm,
+        2xs: typography.$fs-2xs,
+        xs: typography.$fs-xs,
+);
+
+@each $key, $value in $font-sizes {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}

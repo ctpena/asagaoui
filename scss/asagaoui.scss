@@ -28,8 +28,10 @@
 
 // Components
 @layer components {
+  @include meta.load-css('components/dropdown');
   @include meta.load-css('components/globalmenu');
   @include meta.load-css('components/header');
+  @include meta.load-css('components/menulist');
   @include meta.load-css('components/utilitylink');
 }
 
@@ -39,5 +41,6 @@
 
 // Utilities
 @layer utilities {
+  @include meta.load-css('utilities/text');
   @include meta.load-css('utilities/typography.scss');
 }
