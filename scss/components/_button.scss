@@ -1,0 +1,158 @@
+@use "sass:map";
+@use "../styles/typography";
+@use "../styles/rounding";
+@use "../styles/color";
+
+$buttonMap: (
+        base:(
+                border: map.get(color.$grey, 900),
+                focused: map.get(color.$yellow, 700),
+        ),
+        primary:(
+                background: map.get(color.$blue, 900),
+                color : color.$white,
+                hover-background: map.get(color.$blue, 1100),
+                active-background: map.get(color.$blue, 1200),
+                disabled-background: map.get(color.$grey, 420),
+                focused: map.get(color.$yellow, 700),
+        ),
+        secondary:(
+                background: color.$white,
+                border: map.get(color.$blue, 900),
+                color: map.get(color.$blue, 900),
+                hover-background: map.get(color.$blue, 200),
+                hover-border: map.get(color.$blue, 1100),
+                hover-color: map.get(color.$blue, 1100),
+                active-background: map.get(color.$blue, 300),
+                active-border: map.get(color.$blue, 1200),
+                active-color: map.get(color.$blue, 1200),
+                disabled-background: color.$white,
+                disabled-border: map.get(color.$grey, 420),
+                disabled-color: map.get(color.$grey, 420),
+                focused: map.get(color.$yellow, 700),
+        ),
+        tertiary:(
+                color: map.get(color.$blue, 900),
+                hover-background: map.get(color.$blue, 200),
+                hover-color: map.get(color.$blue, 1100),
+                active-background: map.get(color.$blue, 300),
+                active-color: map.get(color.$blue, 1200),
+                disabled-color: map.get(color.$grey, 420),
+                focused: map.get(color.$yellow, 700),
+        ),
+);
+
+$btn-size: (
+        l: (
+                text: large,
+                py: 1rem,
+                px: 1rem,
+                mw: 136px,
+                h: 56px
+        ),
+        m: (
+                text: medium,
+                py: 0.75rem,
+                px: 1rem,
+                mw: 96px,
+                h: 48px
+        ),
+        s: (
+                text: small,
+                py: 0.375rem,
+                px: 0.75rem,
+                mw: 80px,
+                h: 36px
+        ),
+        xs: (
+                text: x-small,
+                py: 0.44rem,
+                px: 0.5rem,
+                mw: 72px,
+                h: 28px
+        ),
+);
+
+@mixin btn-size($size) {
+  $btn-values: map.get($btn-size, $size);
+  @include typography.set(map.get(typography.$button, map.get($btn-values, text)));
+  padding: map.get($btn-values, py) map.get($btn-values, px);
+  min-width: map.get($btn-values, mw);
+  min-height: map.get($btn-values, h);
+}
+
+@mixin btn-style($type) {
+  $prefix: map.get($buttonMap, $type);
+
+  @if $type == base {
+    border-radius: map.get(rounding.$rounding, 'm');
+    user-select: none;
+    border: 1px solid map.get($buttonMap, base, border);
+    text-align: center;
+    &:focus {
+      outline: 2px solid map.get($buttonMap, base, focused);
+      outline-offset: 2px;
+    }
+  } @else {
+    color: map.get($prefix, color);
+    background-color: map.get($prefix, background);
+    @if $type != tertiary {
+      border: 1px solid map.get($prefix, border, transparent);
+    }
+
+    @if $type == tertiary {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      background-color: map.get($prefix, hover-background);
+      color: map.get($prefix, hover-color, inherit);
+      @if $type != tertiary {
+        border-color: map.get($prefix, hover-border, transparent);
+      }
+      text-decoration: underline;
+    }
+
+    &:active {
+      background-color: map.get($prefix, active-background);
+      color: map.get($prefix, active-color, inherit);
+      @if $type != tertiary {
+        border-color: map.get($prefix, active-border, transparent);
+      }
+      text-decoration: underline;
+    }
+
+    &:disabled {
+      background-color: map.get($prefix, disabled-background);
+      color: map.get($prefix, disabled-color);
+      @if $type != tertiary {
+        border-color: map.get($prefix, disabled-border, transparent);
+      }
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: 2px solid map.get($prefix, focused);
+      outline-offset: 2px;
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn {
+  @include btn-style(base);
+  @include btn-size(m);
+}
+
+@each $type in primary, secondary, tertiary {
+  .btn-#{$type} {
+    @include btn-style($type);
+  }
+}
+
+@each $size in l, m, s, xs {
+  .btn-#{$size} {
+    @include btn-size($size);
+  }
+}

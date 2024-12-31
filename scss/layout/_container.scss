@@ -2,41 +2,102 @@
 
 $container-padding: 1rem;
 
-.container {
+%container {
   margin-right: auto;
   margin-left: auto;
   padding-left: $container-padding;
   padding-right: $container-padding;
   width: 100%;
-
-  &-fluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: $container-padding;
-    padding-right: $container-padding;
-    width: 100%;
-    max-width: none;
-  }
 }
 
-@each $bp, $width in breakpoint.$breakpoints {
-  @include breakpoint.breakpoint($bp) {
-    .container {
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: $container-padding;
-      padding-right: $container-padding;
-      width: 100%;
+.container {
+  @extend %container;
+
+  &-fluid {
+    @extend %container;
+    max-width: none;
+  }
+
+  @each $bp, $width in breakpoint.$breakpoints {
+    @include breakpoint.breakpoint($bp) {
       max-width: $width;
     }
+  }
 
-    .container-#{$bp} {
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: $container-padding;
-      padding-right: $container-padding;
-      width: 100%;
-      max-width: $width;
+  &-sm {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+
+  &-md {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+
+  &-lg {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+
+  &-xl {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+
+  &-xxl {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl or $bp == xxl {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+
+  &-xxxl {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl or $bp == xxl or $bp == xxxl {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
+    }
+  }
+
+  &-x4k {
+    @extend %container;
+    @each $bp, $width in breakpoint.$breakpoints {
+      @if $bp == sm or $bp == md or $bp == lg or $bp == xl or $bp == xxl or $bp == xxxl or $bp == x4k {
+        @include breakpoint.breakpoint($bp) {
+          max-width: $width;
+        }
+      }
     }
   }
 }

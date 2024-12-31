@@ -1,0 +1,25 @@
+@use "../styles/rounding";
+@use "../styles/color";
+@use "sass:map";
+
+.link {
+  color: map.get(color.$blue, 1000);
+  text-decoration: underline;
+
+  &:hover {
+    background-color: map.get(color.$grey, 50);
+  }
+
+  &:active {
+    color: map.get(color.$orange, 700);
+  }
+
+  &:focus {
+    border-radius: map.get(rounding.$rounding, 's');
+    outline: 2px solid map.get(color.$yellow, 700);
+  }
+
+  &:visited {
+    //color: map.get(color.$magenta, 900);
+  }
+}
