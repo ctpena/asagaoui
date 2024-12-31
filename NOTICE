@@ -1,6 +1,18 @@
+==================================================
+Third-Party License Notice
+This document lists third-party software packages and their respective licenses used in this project.
+==================================================
+
+Japan's Digital Agency design system
+CC BY 4.0
+https://www.figma.com/community/file/1255349027535859598
+
+The New CSS Reset - https://github.com/elad2412/the-new-css-reset
+use scss/base/_reset.scss
+"""
 MIT License
 
-Copyright (c) 2025 Hiroshi ISOBE
+Copyright (c) 2021 Elad Shechter
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +31,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+"""
