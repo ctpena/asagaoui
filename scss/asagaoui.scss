@@ -47,6 +47,8 @@
 // Utilities
 @layer utilities {
   @include meta.load-css('utilities/color');
+  @include meta.load-css('utilities/display');
+  @include meta.load-css('utilities/flex');
   @include meta.load-css('utilities/link');
   @include meta.load-css('utilities/spacing');
   @include meta.load-css('utilities/text');

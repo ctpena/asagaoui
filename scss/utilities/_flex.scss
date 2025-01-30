@@ -1,0 +1,139 @@
+@use "breakpoint";
+// flex settings
+
+$flex-directions: (
+        row: row,
+        row-reverse: row-reverse,
+        col: column,
+        col-reverse: column-reverse,
+);
+
+@each $direction, $value in $flex-directions {
+  .flex-#{$direction} {
+    flex-direction: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $flex-directions {
+      .flex-#{$bp}-#{$direction} {
+        flex-direction: $value;
+      }
+    }
+  }
+}
+
+// ------------------------------
+$justify-contents: (
+        normal: normal,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        between: space-between,
+        around: space-around,
+        evenly: space-evenly,
+        stretch: stretch,
+);
+
+@each $direction, $value in $justify-contents {
+  .justify-#{$direction} {
+    justify-content: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $justify-contents {
+      .justify-#{$bp}-#{$direction} {
+        justify-content: $value;
+      }
+    }
+  }
+}
+
+// ------------------------------
+$align-items: (
+        normal: normal,
+        start: flex-start,
+        end: flex-end,
+        center: center,
+        baseline: baseline,
+        stretch: stretch,
+);
+
+@each $direction, $value in $align-items {
+  .align-items-#{$direction} {
+    align-items: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $align-items {
+      .align-items-#{$bp}-#{$direction} {
+        align-items: $value;
+      }
+    }
+  }
+}
+
+// ------------------------------
+$flex-wrap: (
+        nowrap: nowrap,
+        wrap: wrap,
+        wrap-reverse: wrap-reverse,
+);
+
+@each $direction, $value in $flex-wrap {
+  .flex-#{$direction} {
+    flex-wrap: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $flex-wrap {
+      .flex-#{$bp}-#{$direction} {
+        flex-wrap: $value;
+      }
+    }
+  }
+}
+
+// ------------------------------
+$orders: (
+        first: -9999,
+        last: 9999,
+        none: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+        11: 11,
+        12: 12,
+);
+
+@each $direction, $value in $orders {
+  .order-#{$direction} {
+    order: $value;
+  }
+}
+
+@each $bp, $size in breakpoint.$breakpoints {
+  @include breakpoint.breakpoint($bp) {
+    @each $direction, $value in $orders {
+      .order-#{$bp}-#{$direction} {
+        order: $value;
+      }
+    }
+  }
+}
+
+// ------------------------------
