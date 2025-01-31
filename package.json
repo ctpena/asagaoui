@@ -30,6 +30,7 @@
     "buildjs": "esbuild ts/asagaoui.ts --bundle --outfile=dist/js/asagaoui.js"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "esbuild": "0.24.2",
     "gulp": "^5.0.0",
     "gulp-csso": "^4.0.1",
@@ -38,6 +39,8 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-uglify": "^3.0.2",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^11.0.0",
     "sass": "^1.83.4",
     "typescript": "^5.7.3"
   },
