@@ -2,7 +2,11 @@
 
 AsagaoUI is a CSS framework based on Japan's Digital Agency design system.
 
-## Development Status
+## ⚡ WARNING ⚡
+
+`main` branch is for development and is not stable.
+
+### Development Status
 
 AsagaoUI is in the early stages of development and may be unstable.
 
@@ -41,9 +45,8 @@ The following HTML is required
     <title>AsagaoUI demo</title>
     <link rel="stylesheet" href="dist/css/asagaoui.css">
 </head>
-<body class="body">
+<body class="aui">
 <h1>AsagaoUI</h1>
-<script src="dist/js/asagaoui.js"></script>
 </body>
 </html>
 ```
@@ -57,6 +60,6 @@ The documentation site is built with [HUGO](https://gohugo.io) and is hosted at 
 
 AsagaoUI is licensed under the MIT License.
 
-AsagaoUI also includes several external libraries. For all licenses, please see the LICENSE file.
+AsagaoUI also includes several external libraries. For all licenses, please see the NOTICE file.
 
 The documentation located under site/content/ is licensed under the CC BY 4.0.
