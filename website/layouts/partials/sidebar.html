@@ -1,0 +1,43 @@
+{{ $currentPage := . }}
+{{ $section := .Section }}
+
+<nav class="">
+    {{ if eq $section "" }}
+        {{ range .Site.Sections }}
+            <ul class="menulist">
+                <li class="menulist-item">
+                    <strong class="menulist-title">{{ .Title }}</strong>
+                    <a href="{{ .RelPermalink }}" class="menulist-link {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+                        {{ .Title }}
+                    </a>
+                </li>
+            </ul>
+        {{ end }}
+    {{ else }}
+        {{ $currentSection := .Site.GetPage $section }}
+        <ul class="menulist">
+            {{ template "section-tree" dict "sect" $currentSection "currentPage" $currentPage }}
+        </ul>
+    {{ end }}
+</nav>
+
+{{ define "section-tree" }}
+    {{ if .sect.Pages }}
+        {{ range .sect.Pages }}
+            {{ if .IsSection }}
+                <li class="menulist-item">
+                    <a href="{{ .RelPermalink }}" class="menulist-title">{{ .Title }}</a>
+                    <ul class="menulist">
+                        {{ template "section-tree" dict "sect" . "currentPage" $.currentPage }}
+                    </ul>
+                </li>
+            {{ else }}
+                <li class="menulist-item">
+                    <a href="{{ .RelPermalink }}" class="menulist-link {{ if eq $.currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+                        {{ .Title }}
+                    </a>
+                </li>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}

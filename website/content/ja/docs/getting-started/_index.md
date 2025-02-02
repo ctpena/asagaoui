@@ -1,11 +1,7 @@
----
-title: はじめに
-weight: 10
----
-
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
++++
+title = 'はじめに'
+weight = 10
++++
 
 Information in this section helps your user try your project themselves.
 

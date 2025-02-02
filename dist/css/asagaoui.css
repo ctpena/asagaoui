@@ -1335,6 +1335,40 @@
   }
 }
 @layer components {
+  .breadcrumb {
+    display: flex;
+    gap: 8px;
+  }
+  .breadcrumb-item {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.04rem;
+    color: #333333;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    margin-right: 8px;
+    content: "";
+    width: 12px;
+    height: 13px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSI+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjMUExQTFBIiBkPSJtNC41MDA3OCAxLjgwMDA1LS43LjcgNCA0LTQgMy45OTk5NS43LjcgNC43LTQuNjk5OTUtNC43LTQuN1oiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAuNWgxMnYxMkgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==");
+  }
+  .breadcrumb-item .breadcrumb-link {
+    color: #00118F;
+    text-decoration: underline;
+  }
+  .breadcrumb-item .breadcrumb-link:hover {
+    color: #0017C1;
+    background-color: #f2f2f2;
+  }
+  .breadcrumb-item .breadcrumb-link:focus {
+    border-radius: 4px;
+    outline: 2px solid #B78F00;
+  }
+  .breadcrumb-item .breadcrumb-link:active {
+    color: #E25100;
+  }
   .btn {
     border-radius: 8px;
     user-select: none;

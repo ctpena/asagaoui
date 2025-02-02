@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="aui">
+{{ partial "header.html" . }}
+<div class="container-lg mt-5 px-0 custom-layout-grid">
+    <aside class="custom-side-menu">
+        {{ partial "sidebar.html" . }}
+    </aside>
+    <main class="custom-main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    <aside class="custom-toc">
+        <p>目次</p>
+    </aside>
+</div>
+{{ partial "footer.html" . }}
+</body>
+</html>

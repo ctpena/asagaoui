@@ -1,6 +1,4 @@
----
-title: ドキュメント
-linkTitle: ドキュメント
-type: docs
-menu: {main: {weight: 10}}
----
++++
+title = 'ドキュメント'
+weight = 20
++++

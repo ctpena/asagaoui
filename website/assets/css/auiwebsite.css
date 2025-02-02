@@ -1,0 +1,22 @@
+
+.custom-layout-grid {
+    display: grid;
+    grid-template-areas: "side main toc";
+    grid-template-columns: 288px 704px 288px;
+    gap: 0;
+}
+
+.custom-side-menu {
+    grid-area: side;
+    padding: 0 1rem;
+}
+
+.custom-main-content {
+    grid-area: main;
+    padding: 0 1rem;
+}
+
+.custom-toc {
+    grid-area: toc;
+    padding: 0 1rem;
+}
