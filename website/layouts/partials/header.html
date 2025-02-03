@@ -1,6 +1,9 @@
 <header class="header">
     <nav class="header-full">
-        <a class="header-logo h4" href="{{ .Site.Home.RelPermalink }}">{{ site.Title }}</a>
+        <a class="header-logo" href="{{ .Site.Home.RelPermalink }}">
+            {{ $logo := resources.Get "img/AsagaoUILogo.svg" }}
+            <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" width="175" height="56">
+        </a>
         <div class="header-button">
         </div>
         <div class="header-items">
