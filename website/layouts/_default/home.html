@@ -1,33 +1,40 @@
 {{ define "main" }}
-    <main class="mt-5">
+    <main class="">
         <article class="">
-            <section class="container-sm">
-                <h1 class="h1">AsagaoUI</h1>
-                <p class="mt-1"><a class="link" href="https://design.digital.go.jp">デジタル庁デザインシステムに</a>基づくCSSフレームワーク</p>
-                <h3 class="h3 mt-3">柔軟で軽量かつ美しいUI</h3>
+            <section class="custom-hero py-7">
+                <div class="container-md">
+                    <div class="d-flex justify-center">
+                        {{ $logono := resources.Get "img/AsagaoUISymbolNOMargin.svg" }}
+                        <img class="d-block" src="{{ $logono.RelPermalink }}" alt="{{ .Site.Title }}" width="80px" height="80px">
+                    </div>
+                    <h1 class="fs-6xl fw-b text-center">AsagaoUI</h1>
+                    <h2 class="mt-3 fs-4xl fw-b text-center">デジタルサービスのために設計されたシンプルで美しいUI</h2>
+                    <p class="mt-3 text-center">
+                        <a href="https://design.digital.go.jp">デジタル庁デザインシステム</a>を基に、拡張性と汎用性を向上させて再設計されたCSSフレームワークです。カスタマイズ性の高いSassで構築され、クラスを用いた直感的な状態管理によってJS環境でのスムーズな統合を実現。さらにバニラJSコンポーネントを搭載し、各種テンプレートエンジンでもインタラクティブなUIを実現できます。
+                    </p>
+                </div>
+                <div class="container-sm mt-5 d-flex justify-center g-4">
+                    <a href="" class="d-inline-block btn btn-secondary">GitHub</a>
+                    <a href="" class="d-inline-block btn btn-primary">ドキュメントを見る</a>
+                </div>
             </section>
-            <section class="content container-sm mt-7">
-                <p>AsagaoUIは<a
-                            href="https://design.digital.go.jp">デジタル庁デザインシステム</a>
-                    に基づいて構築されたUIコンポーネントを持つ
-                    CSSフレームワークであり、美しく効率的なウェブ開発を実現します。</p>
-                <h2 id="主な特徴">主な特徴</h2>
-                <h3 id="デジタル庁デザインシステムに準拠">デジタル庁デザインシステムに準拠</h3>
+            <section class="container-md my-7 content">
+                <h2 class="h2">主な特徴</h2>
+                <h3 class="h3">デジタル庁デザインシステムに準拠</h3>
                 <p>AsagaoUIは<a class="link" href="https://design.digital.go.jp">デジタル庁デザインシステムに</a>に基づいて設計されています。ただし<a class="link" href="https://design.digital.go.jp">デジタル庁デザインシステムに</a>に100%準拠しているわけではありません。
                     より効率的に実装するために改変しています。</p>
-                <h3 id="htmlマークアップファースト">HTMLマークアップファースト</h3>
+                <h3 class="h3">HTMLマークアップファースト</h3>
                 <p>AsagaoUIはHTMLを最も重要視しています。HTMLネイティブ要素を使用した<code>アコーディオン</code>コンポーネントや、
                     <code>モーダルダイアログ</code>がその例です。これによりコンテンツが適切にマークアップされ、最小限の基本的なアクセシビリティを提供します。
                 </p>
-                <h3 id="クラス操作での状態管理">クラス操作での状態管理</h3>
+                <h3 class="h3">クラス操作での状態管理</h3>
                 <p>AsagaoUIは要素の状態変化をクラスの追加と削除で管理します。
                     このアプローチにより、AsagaoUIをさまざまなフロントエンドフレームワークに最小限の手間で統合できます。</p>
-                <h3 id="scssで構築">SCSSで構築</h3>
-                <p>SCSSを使用することで、
+                <h3 class="h3">Sassで構築</h3>
+                <p>Sassを使用することで、
                     AsagaoUIのスタイルを自由にカスタマイズできます。
                     AsagaoUIには<code>styles</code>フォルダがあり、デザインシステムの基本事項がすべて定義されています。
                 </p>
-
             </section>
         </article>
     </main>

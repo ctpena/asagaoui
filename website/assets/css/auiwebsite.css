@@ -22,3 +22,7 @@
 }
 
 /* Home */
+.custom-hero {
+    background: #DEE6FF;
+    background: linear-gradient(315deg, #DEE6FF, #F4EAFF);
+}
