@@ -66,7 +66,6 @@
   }
   /* preformatted text - use only for this feature */
   :where(pre) {
-    all: revert;
     box-sizing: border-box;
   }
   /* reset default text opacity of input placeholder */
