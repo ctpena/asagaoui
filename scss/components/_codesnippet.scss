@@ -1,0 +1,42 @@
+@use "../styles/typography";
+@use "../styles/breakpoint";
+@use "../styles/spacing";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.codesnippet {
+}
+
+.codesnippet-preview {
+  border-radius: map.get(rounding.$rounding, m) map.get(rounding.$rounding, m) 0 0;
+  padding: map.get(spacing.$spacers, 4);
+  border-top: 1px solid map.get(color.$grey, 200);
+  border-right: 1px solid map.get(color.$grey, 200);
+  border-left: 1px solid map.get(color.$grey, 200);
+}
+
+.codesnippet-area {
+}
+
+.codesnippet-header {
+  //padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4);
+  //background-color: map.get(color.$blue, 100);
+  padding: map.get(spacing.$spacers, 1) map.get(spacing.$spacers, 3);
+  border-top: 1px solid map.get(color.$grey, 200);
+  border-right: 1px solid map.get(color.$grey, 200);
+  border-left: 1px solid map.get(color.$grey, 200);
+}
+
+.codesnippet-lang {
+}
+
+.codesnippet-code {
+  pre {
+    overflow: auto;
+  }
+  padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4);
+  //background-color: map.get(color.$cyan, 50);
+  border: 1px solid map.get(color.$grey, 200);
+  border-radius: 0 0 map.get(rounding.$rounding, m) map.get(rounding.$rounding, m);
+}

@@ -5,6 +5,7 @@ function compileSass() {
     return gulp.src('./scss/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./website/assets/css'));
 }
 
 // Watch tasks
