@@ -21,3 +21,8 @@ languageName = "English"
 contentDir = "content/en"
 weight = 2
 [languages.en.params]
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
