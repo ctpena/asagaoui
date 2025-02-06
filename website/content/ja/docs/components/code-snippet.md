@@ -1,6 +1,5 @@
 +++
-title = 'TEST code-snippet'
-weight = 10
+title = 'コードスニペット'
 +++
 
 {{% code-snippet lang="html" %}}

@@ -1564,6 +1564,11 @@
     border-radius: 0 0 8px 8px;
   }
   .codesnippet-code pre {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.04rem;
     overflow: auto;
   }
   .dropdown-area {
