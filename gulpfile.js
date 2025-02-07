@@ -1,9 +1,12 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+import gulp from 'gulp';
+import sass from 'gulp-sass';
+import dartSass from 'sass';
+
+const sassCompiler = sass(dartSass);
 
 function compileSass() {
     return gulp.src('./scss/**/*.scss')
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sassCompiler.sync().on('error', sassCompiler.logError))
         .pipe(gulp.dest('./dist/css'))
         .pipe(gulp.dest('./website/assets/css'));
 }
@@ -14,6 +17,6 @@ function watchFiles() {
     // gulp.watch('./ts/**/*.ts', buildJS);
 }
 
-// exports.setup = setupTasks;
-exports.default = gulp.series(compileSass, watchFiles);
-// exports.prod = gulp.series(setupTasks, productionTask);
+// Export tasks
+export default gulp.series(compileSass, watchFiles);
+// export const prod = gulp.series(setupTasks, productionTask);

@@ -10,3 +10,15 @@
     {{- end }}
   {{- end }}
 {{- end }}
+{{- with resources.Get "js/asagaoui.js" }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | js.Build }}
+      <script type="module" src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- else }}
+    {{- $optsa := dict "minify" true }}
+    {{- with . | js.Build $optsa | fingerprint }}
+      <script type="module" src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}

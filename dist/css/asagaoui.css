@@ -1579,6 +1579,63 @@
     letter-spacing: 0.04rem;
     overflow: auto;
   }
+  .drawer {
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    background-color: #ffffff;
+  }
+  .drawer-header {
+    display: none;
+  }
+  .drawer.show {
+    clip: auto;
+    height: auto;
+    position: fixed;
+    width: 100%;
+    max-width: 320px;
+    z-index: 600;
+  }
+  .drawer.show .drawer-body {
+    overflow: auto;
+    height: calc(100dvh - 69px);
+    padding: 1rem;
+  }
+  .drawer.show .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 69px;
+    border-bottom: 1px dashed #cccccc;
+  }
+  .drawer-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 500;
+  }
+  .drawer.show + .drawer-backdrop {
+    display: block;
+  }
+  .drawer-right.show {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+  }
+  .drawer-left.show {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+  }
   .dropdown-area {
     position: relative;
   }
@@ -1632,6 +1689,42 @@
     visibility: visible;
     background-color: #0017C1;
     height: 4px;
+  }
+  .hamburger-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .hamburger-btn.open .hamburger-btn-close {
+    display: none;
+  }
+  .hamburger-btn.close .hamburger-btn-open {
+    display: none;
+  }
+  .hamburger-btn .hamburger-btn-close,
+  .hamburger-btn .hamburger-btn-open {
+    display: flex;
+    align-items: center;
+  }
+  .hamburger-btn.h .hamburger-btn-close,
+  .hamburger-btn.h .hamburger-btn-open {
+    flex-direction: row;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
+  }
+  .hamburger-btn.v .hamburger-btn-close,
+  .hamburger-btn.v .hamburger-btn-open {
+    flex-direction: column;
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
   }
   .header {
     border-bottom: 1px solid #949494;
@@ -1733,6 +1826,14 @@
   }
   .menulist-link.active:hover {
     text-decoration: none;
+  }
+  .mobilemenu {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobilemenu-link {
+    display: flex;
+    padding: 8px 20px;
   }
   .table {
     border-collapse: collapse;

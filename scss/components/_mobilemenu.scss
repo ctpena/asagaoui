@@ -1,0 +1,15 @@
+@use "../styles/color";
+
+// TODO mobilemenu styles
+.mobilemenu {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+  }
+
+  &-link {
+    display: flex;
+    padding: 8px 20px;
+  }
+}

@@ -35,10 +35,13 @@
   @include meta.load-css('components/button');
   @include meta.load-css('components/card');
   @include meta.load-css('components/codesnippet');
+  @include meta.load-css('components/drawer');
   @include meta.load-css('components/dropdown');
   @include meta.load-css('components/globalmenu');
+  @include meta.load-css('components/hamburger-btn');
   @include meta.load-css('components/header');
   @include meta.load-css('components/menulist');
+  @include meta.load-css('components/mobilemenu');
   @include meta.load-css('components/table');
   @include meta.load-css('components/utilitylink');
 }
