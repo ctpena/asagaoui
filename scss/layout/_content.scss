@@ -1,3 +1,4 @@
+@use "../styles/typography";
 @use "../utilities/link" as *;
 @use "../utilities/typography" as *;
 @use "../components/table" as *;
@@ -51,5 +52,11 @@
   h6 {
     margin-top: map.get(spacing.$spacers, 4);
     margin-bottom: map.get(spacing.$spacers, 3);
+  }
+
+  pre {
+    margin: 0;
+    @include typography.set(map.get(typography.$text, text-l));
+    overflow: auto;
   }
 }

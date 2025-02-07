@@ -5,8 +5,7 @@
                 <div class="container-md">
                     <div class="d-flex justify-center">
                         {{ $logono := resources.Get "img/AsagaoUISymbolNOMargin.svg" }}
-                        <img class="d-block" src="{{ $logono.RelPermalink }}" alt="{{ .Site.Title }}" width="80px"
-                             height="80px">
+                        <img class="d-block" src="{{ $logono.RelPermalink }}" alt="{{ .Site.Title }}" width="80px" height="80px">
                     </div>
                     <h1 class="fs-6xl fw-b text-center">AsagaoUI</h1>
                     <h2 class="mt-3 fs-4xl fw-b text-center">デジタルサービスのために設計されたシンプルで美しいUI</h2>
@@ -19,38 +18,68 @@
                     <a href="" class="d-inline-block btn btn-primary">ドキュメントを見る</a>
                 </div>
             </section>
-            <section class="container-sm my-7 content">
-                <h2>主な特徴</h2>
-                <h3>デジタル庁デザインシステムに準拠</h3>
-                <p>AsagaoUIは<a class="link" href="https://design.digital.go.jp">デジタル庁デザインシステム</a>の設計原則を継承しながら、より実践的な実装を提供します。スタイルガイドラインを踏襲しつつ、開発効率を高めるための最適化を行っています。
-                </p>
-                <ul class="mt-3">
-                    <li>デジタル庁が定める色彩システムとタイポグラフィの完全サポート</li>
-                    <li>レスポンシブデザインの統一的な実装</li>
-                </ul>
-                <h3>HTMLマークアップファースト</h3>
-                <p>
-                    HTML構造を重視したUIコンポーネントを提供します。JavaScriptに依存せず、HTMLネイティブ要素の機能を最大限に活用することで、堅牢で保守性の高い実装を実現します。</p>
-                <h3>Sassによる強力なカスタマイズ機能</h3>
-                <p>
-                    Sassの機能を最大限に活用し、プロジェクトのニーズに合わせた柔軟なカスタマイズを可能にします。変数とミックスインを活用することで、効率的なスタイル定義とテーマのカスタマイズが可能です。</p>
-                <ul>
-                    <li>カスタム変数による容易なテーマ調整</li>
-                    <li>ミックスインによる再利用可能なスタイル定義</li>
-                    <li>モジュール式の構成による柔軟な拡張</li>
-                </ul>
-                <h3>強力なJSで拡張</h3>
-                <p>
-                    独自のJavaScriptを提供してJSフレームワークの有無に関わらず高度なUIを実現できます。各JSフレームワークと統合することも、バニラJSとして単独で使用することも可能です。</p>
-                <ul>
-                    <li>フレームワークに依存しない柔軟なコンポーネント設計</li>
-                    <li>Web Componentsによる高い互換性と再利用性</li>
-                </ul>
+            <section class="container-md my-7 garden g-md-6">
+                <div class="card plot plot-md-6">
+                    {{ $sass := resources.Get "img/api.svg" }}
+                    <img class="card-img-top my-3" src="{{ $sass.RelPermalink }}" alt="" width="50px" height="50px">
+                    <div class="card-body">
+                        <h2 class="card-title">デジタル庁デザインシステムに準拠</h2>
+                        <p class="card-text"><a href="" class="link">デジタル庁デザインシステムに対する<br>AsagaoUIの考え方</a></p>
+                        <p class="card-text">AsagaoUIは<a class="link" href="https://design.digital.go.jp">デジタル庁デザインシステム</a>の設計原則を継承しながら、より実践的な実装を提供します。スタイルガイドラインを踏襲しつつ、開発効率を高めるための最適化を行っています。</p>
+                        <ul class="mt-3">
+                            <li>デジタル庁が定める色彩システムとタイポグラフィの完全サポート</li>
+                            <li>レスポンシブデザインの統一的な実装</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card plot plot-md-6">
+                    {{ $html := resources.Get "img/html.svg" }}
+                    <img class="card-img-top my-3" src="{{ $html.RelPermalink }}" alt="" width="50px" height="50px">
+                    <div class="card-body">
+                        <h2 class="card-title">HTMLマークアップファースト</h2>
+                        <p class="card-text">HTML構造を重視したUIコンポーネントを提供します。JavaScriptに依存せず、HTMLネイティブ要素の機能を最大限に活用することで、堅牢で保守性の高い実装を実現します。</p>
+                    </div>
+                </div>
+                <div class="card plot plot-md-6">
+                    {{ $inbox_customize := resources.Get "img/inbox_customize.svg" }}
+                    <img class="card-img-top my-3" src="{{ $inbox_customize.RelPermalink }}" alt="" width="50px" height="50px">
+                    <div class="card-body">
+                        <h2 class="card-title">Sassによる強力なカスタマイズ機能</h2>
+                        <p class="card-text"><a href="" class="link">カスタマイズ機能の詳細を見る</a></p>
+                        <p class="card-text">Sassの機能を最大限に活用し、プロジェクトのニーズに合わせた柔軟なカスタマイズを可能にします。変数とミックスインを活用することで、効率的なスタイル定義とテーマのカスタマイズが可能です。</p>
+                        <ul>
+                            <li>カスタム変数による容易なテーマ調整</li>
+                            <li>ミックスインによる再利用可能なスタイル定義</li>
+                            <li>モジュール式の構成による柔軟な拡張</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card plot plot-md-6">
+                    {{ $js := resources.Get "img/javascript.svg" }}
+                    <img class="card-img-top my-3" src="{{ $js.RelPermalink }}" alt="" width="50px" height="50px">
+                    <div class="card-body">
+                        <h2 class="card-title">強力なJavaScriptで拡張</h2>
+                        <p class="card-text"><a href="" class="link">JavaScriptの詳細を見る</a></p>
+                        <p class="card-text">独自のJavaScriptを提供してJSフレームワークの有無に関わらず高度なUIを実現できます。各JSフレームワークと統合することも、バニラJSとして単独で使用することも可能です。</p>
+                        <ul>
+                            <li>フレームワークに依存しない柔軟なコンポーネント設計</li>
+                            <li>Web Componentsによる高い互換性と再利用性</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <section class="container-sm my-7">
-                <code-snippet lang="HTML" preview>
-                    <button class="btn btn-primary">ドキュメントを見る</button>
-                </code-snippet>
+            <section class="container-md my-7 text-center content">
+                <h2>AsagaoUIを使用した例</h2>
+                <h2>🤔🤔🤔</h2>
+                <h3>このウェブサイトはAsagaoUIを使用して作られています<br>😊</h3>
+            </section>
+            <section class="container-sm my-7 text-center">
+                <h2 class="h2">貢献する</h2>
+                <p class="my-3">AsagaoUIは、オープンソースで公開されているため、<br>コードの品質向上やドキュメントの改善など、さまざまな形で貢献できます。</p>
+                <div class="d-flex justify-center g-4">
+                    <a href="" class="d-inline-block btn btn-secondary">GitHub</a>
+                    <a href="" class="d-inline-block btn btn-primary">貢献ガイドを見る</a>
+                </div>
             </section>
         </article>
     </main>
