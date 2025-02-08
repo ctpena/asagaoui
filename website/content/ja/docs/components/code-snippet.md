@@ -2,7 +2,7 @@
 title = 'コードスニペット'
 +++
 
-{{% code-snippet lang="html" %}}
+{{% code-snippet lang="html" preview="true" %}}
 <div class="card">
     <img src="" class="card-img-top" alt="">
     <div class="card-body">

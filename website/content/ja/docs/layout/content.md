@@ -8,11 +8,11 @@ title: コンテンツ
 
 コード
 
-```html
+{{% code-snippet lang="html" preview="false" %}}
 <article class="content">
     <h1>AsagaoUI</h1>
     <h2>コンテンツ</h2>
     <p>AsagaoUIは<a href="https://www.digital.go.jp/policies/servicedesign/designsystem">デジタル庁デザインシステム</a>に基づいて構築されたUIコンポーネントを持つ
         CSSフレームワークであり、美しく効率的なウェブ開発を実現します。</p>
 </article>
-```
+{{% /code-snippet %}}

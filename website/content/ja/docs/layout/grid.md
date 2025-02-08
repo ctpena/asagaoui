@@ -10,7 +10,7 @@ AsagaoUIには特徴的なグリッドシステムが２つあります。
 
 コード例
 
-```html
+{{% code-snippet lang="html" preview="false" %}}
 <div class="garden">
     <div class="plot">
         <!-- 区画1 -->
@@ -19,13 +19,13 @@ AsagaoUIには特徴的なグリッドシステムが２つあります。
         <!-- 区画2 -->
     </div>
 </div>
-```
+{{% /code-snippet %}}
 
 ## arbor
 
 `display: flex;`が割り当てられた`arbor`は12カラムのグリッドレイアウトを提供します。
 
-```html
+{{% code-snippet lang="html" preview="false" %}}
 <div class="arbor">
     <div class="bloom">
         <!-- アイテム1 -->
@@ -34,7 +34,7 @@ AsagaoUIには特徴的なグリッドシステムが２つあります。
         <!-- アイテム2 -->
     </div>
 </div>
-```
+{{% /code-snippet %}}
 
 ## gardenとarborの違いは
 

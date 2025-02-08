@@ -1,15 +1,14 @@
 class CodeSnippet extends HTMLElement {
     static observedAttributes = ['lang', 'preview'];
-    isAttributePresent(value) {
-        return value !== null;
-    }
     connectedCallback() {
         // Fixme Is this an appropriate process?
         setTimeout(() => {
             const content = this.innerHTML.trim();
             // Clear the original content
             this.innerHTML = '';
-            if (this.hasAttribute('preview')) {
+            // Only show preview if preview attribute is "true"
+            const showPreview = this.getAttribute('preview') === 'true';
+            if (showPreview) {
                 const previewDiv = document.createElement('div');
                 previewDiv.classList.add('codesnippet-preview');
                 previewDiv.innerHTML = content;
@@ -38,11 +37,6 @@ class CodeSnippet extends HTMLElement {
             areaDiv.appendChild(codeDiv);
             this.appendChild(areaDiv);
         }, 0);
-    }
-    attributeChangedCallback(name, oldValue, newValue) {
-        if (this.isAttributePresent(oldValue)) {
-            console.log(`Attribute ${name} changed from ${oldValue} to ${newValue}`);
-        }
     }
 }
 customElements.define('code-snippet', CodeSnippet);

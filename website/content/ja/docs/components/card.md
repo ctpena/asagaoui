@@ -5,20 +5,20 @@ title: カード
 
 ## タイトルとテキスト
 
-```html
+{{% code-snippet lang="html" preview="true" %}}
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">カードタイトル</h5>
         <p class="card-text">カードテキスト</p>
     </div>
 </div>
-```
+{{% /code-snippet %}}
 
 ## 画像
 
 ### 上
 
-```html
+{{% code-snippet lang="html" preview="true" %}}
 <div class="card">
     <img src="" class="card-img-top" alt="">
     <div class="card-body">
@@ -26,11 +26,11 @@ title: カード
         <p class="card-text">カードテキスト</p>
     </div>
 </div>
-```
+{{% /code-snippet %}}
 
 ### 下
 
-```html
+{{% code-snippet lang="html" preview="true" %}}
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">カードタイトル</h5>
@@ -38,11 +38,11 @@ title: カード
     </div>
     <img src="" class="card-img-bottom" alt="">
 </div>
-```
+{{% /code-snippet %}}
 
 ## ヘッダーとフッター
 
-```html
+{{% code-snippet lang="html" preview="true" %}}
 <div class="card">
     <div class="card-header">
         ヘッダー
@@ -55,14 +55,15 @@ title: カード
         フッター
     </div>
 </div>
-```
+{{% /code-snippet %}}
+
 ## カードリンク
 
-```html
+{{% code-snippet lang="html" preview="true" %}}
 <div class="card">
     <div class="card-body">
         <h5 class="card-title"><a class="card-link" href="">カードリンク</a></h5>
         <p class="card-text">カードテキスト</p>
     </div>
 </div>
-```
+{{% /code-snippet %}}

@@ -11,11 +11,11 @@ title: コンテナ
 
 以下は、`.container`クラスを使用した基本的なHTML構造の例です。このコンテナは、内包するコンテンツを適切に中央揃えし、レスポンシブデザインの原則に従ってサイズを調整します。
 
-```html
+{{% code-snippet lang="html" preview="false" %}}
 <div class="container">
     <!-- ここにコンテンツを追加 -->
 </div>
-```
+{{% /code-snippet %}}
 
 ## コンテナの大きさ
 
@@ -32,18 +32,18 @@ title: コンテナ
 
 また、次のように最大サイズを指定できます。
 
-```html
+{{% code-snippet lang="html" preview="false" %}}
 <div class="container-md">
     <!-- 992px以上に広がりません -->
 </div>
-```
+{{% /code-snippet %}}
 
 ## 100%スタイル
 
 `container-fluid`を使用することで、どのような画面幅でも常に100%になります。
 
-```html
+{{% code-snippet lang="html" preview="false" %}}
 <div class="container-fluid">
     <!-- ここにコンテンツを追加 -->
 </div>
-```
+{{% /code-snippet %}}
