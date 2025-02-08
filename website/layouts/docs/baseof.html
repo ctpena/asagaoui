@@ -14,7 +14,7 @@
         {{ block "main" . }}{{ end }}
     </main>
     <aside class="custom-toc">
-        <p>目次</p>
+        {{ partial "toc.html" . }}
     </aside>
 </div>
 {{ partial "footer.html" . }}
