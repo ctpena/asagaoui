@@ -1,3 +1,24 @@
+.custom-layout-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.custom-side-menu {
+    display: none;
+    padding: 0 1rem;
+}
+
+.custom-main-content {
+    order: 2;
+    padding: 0 1rem;
+}
+
+.custom-toc {
+    order: 1;
+    padding: 0 1rem;
+}
+
 @media screen and (min-width: 1300px) {
     .custom-layout-grid {
         display: grid;
@@ -7,6 +28,7 @@
     }
 
     .custom-side-menu {
+        display: block;
         grid-area: side;
         padding: 0 1rem;
     }
