@@ -64,3 +64,7 @@ AsagaoUI is licensed under the MIT License.
 AsagaoUI also includes several external libraries. For all licenses, please see the NOTICE file.
 
 The documentation located under site/content/ is licensed under the CC BY 4.0.
+
+## Contact
+
+If you have any questions or suggestions, please email:`aui@asagaoui.com`
