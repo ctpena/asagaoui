@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "../styles/color";
+
+.mega-menu-area {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  z-index: 100;//FIXME reset z-index
+  max-width: 1280px;
+  width: 100%;
+  //
+  background-color: color.$white;
+  border-bottom: 1px solid map.get(color.$grey, 420);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  //
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  right: 0;
+  left: 0;
+  //
+  margin-top: 1px;
+  padding: 32px 40px 40px 40px;
+}
+
+.mega-menu-header {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  border-right: 1px solid map.get(color.$grey, 200);
+  padding-right: .5rem;
+}
+
+.mega-menu-header {
+  flex: 0 0 auto;
+  width: 25%
+}
+.mega-menu-content {
+  flex: 1 0 0;
+}

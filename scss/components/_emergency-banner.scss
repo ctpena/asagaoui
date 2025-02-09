@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "../styles/color";
+@use "../styles/typography";
+
+.emergency-banner {
+  border: 6px solid map.get(color.$red, 800);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emergency-banner-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emergency-banner-title {
+  @include typography.set(map.get(typography.$text, 'emergency-banner'));
+  color: map.get(color.$red, 800);
+}
+
+.emergency-banner-date {
+}
+
+.emergency-banner-text {
+}
