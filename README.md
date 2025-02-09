@@ -1,5 +1,5 @@
 
-# <img width="30px" src="brand/AsagaoUISymbolNOMargin.svg" alt="AsagaoUISymbol"> AsagaoUI
+# <img width="30px" src="assets/brand/AsagaoUISymbolNOMargin.svg" alt="AsagaoUISymbol"> AsagaoUI
 
 AsagaoUI is a CSS framework based on Japan's [Digital Agency design system](https://design.digital.go.jp).
 
