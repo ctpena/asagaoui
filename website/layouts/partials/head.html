@@ -3,9 +3,7 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
-<!-- OGP -->
-<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://asagaoui.com{{ .RelPermalink }}" />
 {{ partialCached "head/meta.html" . }}
-{{ partialCached "head/schema-org.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/twitter_cards.html" . }}

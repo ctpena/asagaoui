@@ -26,3 +26,8 @@ weight = 2
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+
+[params]
+description = 'デジタル庁デザインシステムを基にしたCSSフレームワーク'
+images = ['AsagaoUIOGP.png']
+title = 'AsagaoUI'
