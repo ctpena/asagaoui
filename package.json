@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",
+    "fantasticon": "^3.0.0",
     "gulp": "^5.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-rename": "^2.0.0",
