@@ -25,7 +25,8 @@
 
   &-title {
     margin: 0;
-    @include typography.set(map.get(typography.$heading, 'sm'));
+    // FIXME typography
+    //@include typography.set(map.get(typography.$heading, 'sm'));
   }
 
   &-subtext {

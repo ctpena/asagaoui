@@ -3,7 +3,8 @@
 @use "sass:map";
 
 .utilitylink {
-  @include typography.set(map.get(typography.$text, 'text-m'));
+  // FIXME typography
+  //@include typography.set(map.get(typography.$text, 'text-m'));
   text-decoration: underline;
 
   &:hover {

@@ -56,7 +56,6 @@
 
   pre {
     margin: 0;
-    @include typography.set(map.get(typography.$text, text-l));
     overflow: auto;
   }
 }

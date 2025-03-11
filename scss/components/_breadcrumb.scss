@@ -5,12 +5,10 @@
 
 .breadcrumb {
   display: flex;
-  // FIXME Modify value to variable
   gap: 8px;
 }
 
 .breadcrumb-item {
-  @include typography.set(map.get(typography.$text, text-m));
   color: map.get(color.$grey, 800);
 
   & + &::before {
@@ -19,7 +17,6 @@
     content: "";
     width: 12px;
     height: 13px;
-    //background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSI+PGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjMUExQTFBIiBkPSJtNC41MDA3OCAxLjgwMDA1LS43LjcgNCA0LTQgMy45OTk5NS43LjcgNC43LTQuNjk5OTUtNC43LTQuN1oiLz48L2c+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAuNWgxMnYxMkgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==");
   }
 
   .breadcrumb-link {
@@ -41,7 +38,6 @@
     }
 
     &:visited {
-      //color: map.get(color.$blue, 1000);
     }
   }
 }

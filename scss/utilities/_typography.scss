@@ -3,43 +3,43 @@
 @use "sass:map";
 
 .h1 {
-  @include typography.set(map.get(typography.$heading, 'lm'));
+  @include typography.set(map.get(typography.$std, std-32b-150));
 }
 
 .h2 {
-  @include typography.set(map.get(typography.$heading, 'mm'));
+  @include typography.set(map.get(typography.$std, std-28b-150));
 }
 
 .h3 {
-  @include typography.set(map.get(typography.$heading, 'sm'));
+  @include typography.set(map.get(typography.$std, std-24b-150));
 }
 
 .h4 {
-  @include typography.set(map.get(typography.$heading, 'xsm'));
+  @include typography.set(map.get(typography.$std, std-20b-150));
 }
 
 .h5 {
-  @include typography.set(map.get(typography.$heading, 'xxsm'));
+  @include typography.set(map.get(typography.$std, std-16b-170));
 }
 
 @include breakpoint.style(d) {
   .h1 {
-    @include typography.set(map.get(typography.$heading, 'l'));
+    @include typography.set(map.get(typography.$std, std-36b-140));
   }
 
   .h2 {
-    @include typography.set(map.get(typography.$heading, 'm'));
+    @include typography.set(map.get(typography.$std, std-32b-150));
   }
 
   .h3 {
-    @include typography.set(map.get(typography.$heading, 's'));
+    @include typography.set(map.get(typography.$std, std-28b-150));
   }
 
   .h4 {
-    @include typography.set(map.get(typography.$heading, 'xs'));
+    @include typography.set(map.get(typography.$std, std-24b-150));
   }
 
   .h5 {
-    @include typography.set(map.get(typography.$heading, 'xxs'));
+    @include typography.set(map.get(typography.$std, std-20b-150));
   }
 }

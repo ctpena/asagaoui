@@ -17,7 +17,8 @@
 }
 
 .emergency-banner-title {
-  @include typography.set(map.get(typography.$text, 'emergency-banner'));
+  // FIXME typography
+  //@include typography.set(map.get(typography.$text, 'emergency-banner'));
   color: map.get(color.$red, 800);
 }
 

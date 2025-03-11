@@ -75,7 +75,8 @@ $btn-size: (
 
 @mixin btn-size($size) {
   $btn-values: map.get($btn-size, $size);
-  @include typography.set(map.get(typography.$button, map.get($btn-values, text)));
+  // FIXME typography
+  //@include typography.set(map.get(typography.$button, map.get($btn-values, text)));
   padding: map.get($btn-values, py) map.get($btn-values, px);
   min-width: map.get($btn-values, mw);
   min-height: map.get($btn-values, h);

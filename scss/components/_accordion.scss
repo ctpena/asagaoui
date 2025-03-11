@@ -1,15 +1,16 @@
 @use "sass:map";
 @use "../styles/color";
+@use "../styles/breakpoint";
 @use "../styles/typography";
+@use "../styles/spacing";
 
 .accordion {
   border-bottom: 1px solid map.get(color.$grey, 420);
 
   &-header {
-    @include typography.set(map.get(typography.$text, 'accordion'));
-    padding: 1rem 1rem 1rem 0;
-    background-repeat: no-repeat;
-    background-position: right 1.5rem center;
+    @include typography.set(map.get(typography.$std, 'std-16n-170'));
+
+    padding: map.get(spacing.$spacers, 1) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 4);
 
     &:hover {
       background-color: map.get(color.$grey, 50);
@@ -21,15 +22,28 @@
     }
 
     &:after {
-      //content: "";
+      //TODO set icon
     }
   }
 
-  &[open] {
-    padding-bottom: 2.5rem;
+  &-body {
+    @include typography.set(map.get(typography.$std, 'std-16n-170'));
+    padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4);
+  }
 
-    .accordion-header {
-      margin-bottom: 24px;
+  &[open] {
+  }
+}
+
+@include breakpoint.style(d) {
+  .accordion {
+    &-header {
+      @include typography.set(map.get(typography.$std, 'std-18n-160'));
+      padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 5);
+    }
+
+    &-body {
+      padding: map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 6) map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 5);
     }
   }
 }

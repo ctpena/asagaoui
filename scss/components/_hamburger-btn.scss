@@ -39,7 +39,8 @@
     .hamburger-btn-open {
       flex-direction: row;
       gap: 4px;
-      @include typography.set(map.get(typography.$text, 'description-l'));
+      // FIXME typography
+      //@include typography.set(map.get(typography.$text, 'description-l'));
     }
   }
 
@@ -48,7 +49,8 @@
     .hamburger-btn-open {
       flex-direction: column;
       //gap: 2px;
-      @include typography.set(map.get(typography.$text, 'description-m'));
+      // FIXME typography
+      //@include typography.set(map.get(typography.$text, 'description-m'));
     }
   }
 }

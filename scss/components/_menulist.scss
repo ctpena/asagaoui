@@ -4,17 +4,11 @@
 @use "../styles/rounding";
 @use "sass:map";
 
-$menulistfont: (
-        link: (typography.$fs-md, typography.$fw-r, typography.$lh-l, typography.$ls-m),
-        title: (typography.$fs-md, typography.$fw-b, typography.$lh-l, typography.$ls-m),
-        active: (typography.$fs-md, typography.$fw-b, typography.$lh-l, typography.$ls-m),
-);
-
 .menulist {
   &-title {
     display: block;
     padding: .525rem 1rem;
-    @include typography.set(map.get($menulistfont, title));
+    @include typography.set(map.get(typography.$dns, 'dns-16b-120'));
   }
 
   &-item {
@@ -23,7 +17,7 @@ $menulistfont: (
   &-link {
     display: block;
     padding: .525rem 1rem;
-    @include typography.set(map.get($menulistfont, link));
+    @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
     border-radius: map.get(rounding.$rounding, m);
 
     &:hover {
@@ -32,7 +26,7 @@ $menulistfont: (
     }
 
     &.active {
-      @include typography.set(map.get($menulistfont, active));
+      @include typography.set(map.get(typography.$dns, 'dns-16b-130'));
       background-color: map.get(color.$blue, 100);
       color: map.get(color.$blue, 1000);
 

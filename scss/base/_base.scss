@@ -4,8 +4,7 @@
 
 .body,
 .aui {
-  font-family: "Noto Sans JP", "Roboto", sans-serif;
-  @include typography.set(map.get(typography.$text, text-l));
+  font-family: "Noto Sans JP", sans-serif;
   color: map.get(color.$grey, 900);
-  font-size: 100%;
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
 }

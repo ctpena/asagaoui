@@ -7,66 +7,118 @@
   letter-spacing: list.nth($fontData, 4);
 }
 
-$fs-6xl: 3.5625rem; // 57px
-$fs-5xl: 2.8125rem; //45px
-$fs-4xl: 2.25rem; // 36px
-$fs-3xl: 2rem; // 32px
-$fs-2xl: 1.75rem; // 28px
-$fs-xl: 1.5rem; // 24px
-$fs-lg: 1.25rem; // 20px
-$fs-md: 1rem; // 16px
-$fs-sm: .875rem; // 14px
-$fs-2xs: .75rem; // 12px
-$fs-xs: .625rem; //10px
+$fs-64: 4rem;
+$fs-57: 3.5625rem;
+$fs-48: 3rem;
+$fs-45: 2.8125rem;
+$fs-36: 2.25rem;
+$fs-32: 2rem;
+$fs-28: 1.75rem;
+$fs-26: 1.625rem;
+$fs-24: 1.5rem;
+$fs-22: 1.375rem;
+$fs-20: 1.25rem;
+$fs-18: 1.125rem;
+$fs-17: 1.0625rem;
+$fs-16: 1rem;
+$fs-14: .875rem;
 
-$fw-r: 400;
-$fw-m: 500;
+$fw-n: 400;
 $fw-b: 700;
 
-$lh-xs: 1.0;
-$lh-s: 1.4;
-$lh-m: 1.5;
-$lh-l: 1.7;
+$lh-100: 1.0;
+$lh-120: 1.2;
+$lh-130: 1.3;
+$lh-140: 1.4;
+$lh-150: 1.5;
+$lh-160: 1.6;
+$lh-170: 1.7;
+$lh-175: 1.75;
 
-$ls-s: 0.02rem;
-$ls-m: 0.04rem;
+$ls-0: 0;
+$ls-1: .01rem;
+$ls-2: .02rem;
 
-// font-size font-weight line-height letter-spacing
-$heading: (
-        xxl: ($fs-6xl, $fw-r, $lh-s, $ls-m),
-        xl: ($fs-5xl, $fw-r, $lh-s, $ls-m),
-        l: ($fs-4xl, $fw-r, $lh-s, $ls-m),
-        lm: ($fs-3xl, $fw-m, $lh-m, $ls-m),
-        m: ($fs-3xl, $fw-r, $lh-m, $ls-m),
-        mm: ($fs-2xl, $fw-m, $lh-m, $ls-m),
-        s: ($fs-2xl, $fw-r, $lh-m, $ls-m),
-        sm: ($fs-xl, $fw-m, $lh-m, $ls-m),
-        xs: ($fs-xl, $fw-r, $lh-m, $ls-m),
-        xsm: ($fs-lg, $fw-m, $lh-m, $ls-m),
-        xxs: ($fs-lg, $fw-r, $lh-m, $ls-m),
-        xxsm: ($fs-md, $fw-m, $lh-l, $ls-m),
+// Display (Dsp)
+
+$dsp: (
+        dsp-64n-140: ($fs-64, $fw-n, $lh-140, $ls-0),
+        dsp-57n-140: ($fs-57, $fw-n, $lh-140, $ls-0),
+        dsp-48n-140: ($fs-48, $fw-n, $lh-140, $ls-0),
 );
 
-$text: (
-        text-l: ($fs-md, $fw-r, $lh-l, $ls-m),
-        text-m: ($fs-sm, $fw-r, $lh-l, $ls-m),
-        label-l: ($fs-sm, $fw-m, $lh-m, $ls-m),
-        label-m: ($fs-2xs, $fw-m, $lh-m, $ls-m),
-        description-l: ($fs-2xs, $fw-r, $lh-l, $ls-s),
-        description-m: ($fs-xs, $fw-r, $lh-l, $ls-s),
-        banner: ($fs-lg, $fw-b, $lh-s, $ls-m),
-        emergency-banner: ($fs-xl, $fw-b, $lh-s, $ls-m),
-        accordion: ($fs-lg, $fw-r, $lh-m, $ls-m),
+// Standard (Std)
+
+$std: (
+        // Bold
+        std-45b-140: ($fs-45, $fw-b, $lh-140, $ls-0),
+        std-36b-140: ($fs-36, $fw-b, $lh-140, $ls-1),
+        std-32b-150: ($fs-32, $fw-b, $lh-150, $ls-1),
+        std-28b-150: ($fs-28, $fw-b, $lh-150, $ls-1),
+        std-26b-150: ($fs-26, $fw-b, $lh-150, $ls-2),
+        std-24b-150: ($fs-24, $fw-b, $lh-150, $ls-2),
+        std-22b-150: ($fs-22, $fw-b, $lh-150, $ls-2),
+        std-20b-150: ($fs-20, $fw-b, $lh-150, $ls-2),
+        std-18b-160: ($fs-18, $fw-b, $lh-160, $ls-2),
+        std-17b-170: ($fs-17, $fw-b, $lh-170, $ls-2),
+        std-16b-170: ($fs-16, $fw-b, $lh-170, $ls-2),
+        std-16b-175: ($fs-16, $fw-b, $lh-175, $ls-2),
+        // Normal
+        std-45n-140: ($fs-45, $fw-n, $lh-140, $ls-0),
+        std-36n-140: ($fs-36, $fw-n, $lh-140, $ls-1),
+        std-32n-150: ($fs-32, $fw-n, $lh-150, $ls-1),
+        std-28n-150: ($fs-28, $fw-n, $lh-150, $ls-1),
+        std-26n-150: ($fs-26, $fw-n, $lh-150, $ls-2),
+        std-24n-150: ($fs-24, $fw-n, $lh-150, $ls-2),
+        std-22n-150: ($fs-22, $fw-n, $lh-150, $ls-2),
+        std-20n-150: ($fs-20, $fw-n, $lh-150, $ls-2),
+        std-18n-160: ($fs-18, $fw-n, $lh-160, $ls-2),
+        std-17n-170: ($fs-17, $fw-n, $lh-170, $ls-2),
+        std-16n-170: ($fs-16, $fw-n, $lh-170, $ls-2),
+        std-16n-175: ($fs-16, $fw-n, $lh-175, $ls-2),
 );
 
-$button: (
-        large:($fs-md, $fw-b, $lh-m, $ls-m),
-        medium:($fs-md, $fw-b, $lh-m, $ls-m),
-        small:($fs-md, $fw-b, $lh-m, $ls-m),
-        x-small:($fs-sm, $fw-b, $lh-xs, $ls-s),
+// Dense (Dns)
+
+$dns: (
+        // Bold
+        dns-17b-130: ($fs-17, $fw-b, $lh-130, $ls-0),
+        dns-17b-120: ($fs-17, $fw-b, $lh-120, $ls-0),
+        dns-16b-130: ($fs-16, $fw-b, $lh-130, $ls-0),
+        dns-16b-120: ($fs-16, $fw-b, $lh-120, $ls-0),
+        dns-14b-130: ($fs-14, $fw-b, $lh-130, $ls-0),
+        dns-14b-120: ($fs-14, $fw-b, $lh-120, $ls-0),
+        // Normal
+        dns-17n-130: ($fs-17, $fw-n, $lh-130, $ls-0),
+        dns-17n-120: ($fs-17, $fw-n, $lh-120, $ls-0),
+        dns-16n-130: ($fs-16, $fw-n, $lh-130, $ls-0),
+        dns-16n-120: ($fs-16, $fw-n, $lh-120, $ls-0),
+        dns-14n-130: ($fs-14, $fw-n, $lh-130, $ls-0),
+        dns-14n-120: ($fs-14, $fw-n, $lh-120, $ls-0),
 );
 
-$card: (
-        title:($fs-lg, $fw-b, $lh-l, $ls-m),
-        text:($fs-md, $fw-r, $lh-l, $ls-m),
+// Oneline (Oln)
+
+$oln: (
+        // Bold
+        oln-17b-100: ($fs-17, $fw-b, $lh-100, $ls-2),
+        oln-16b-100: ($fs-16, $fw-b, $lh-100, $ls-2),
+        oln-14b-100: ($fs-14, $fw-b, $lh-100, $ls-2),
+        // Normal
+        oln-17n-100: ($fs-17, $fw-n, $lh-100, $ls-2),
+        oln-16n-100: ($fs-16, $fw-n, $lh-100, $ls-2),
+        oln-14n-100: ($fs-14, $fw-n, $lh-100, $ls-2),
+);
+
+// Mono
+
+$mono: (
+        // Bold
+        mono-17b-150: ($fs-17, $fw-b, $lh-150, $ls-0),
+        mono-16b-150: ($fs-16, $fw-b, $lh-150, $ls-0),
+        mono-14b-150: ($fs-14, $fw-b, $lh-150, $ls-0),
+        // Normal
+        mono-17n-150: ($fs-17, $fw-n, $lh-150, $ls-0),
+        mono-16n-150: ($fs-16, $fw-n, $lh-150, $ls-0),
+        mono-14n-150: ($fs-14, $fw-n, $lh-150, $ls-0),
 );

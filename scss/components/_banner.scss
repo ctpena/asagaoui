@@ -1,75 +1,35 @@
 @use "../styles/color";
-@use "sass:map";
 @use "../styles/typography";
-
-// TODO Add mobile pattern
+@use "../styles/spacing";
+@use "../styles/rounding";
+@use "sass:map";
 
 .banner {
-  border-radius: 12px;
-  padding: 24px;
-  border: 3px solid color.$black;
-  background-color: color.$white;
+  border: solid map.get(color.$grey, 536) 3px;
+  padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3);
+  border-radius: map.get(rounding.$rounding, l);
+  display: flex;
+  flex-direction: column;
+  gap: map.get(spacing.$spacers, 2);
 
-  &-info {
-    border: 3px solid map.get(color.$blue, 900);
-
-    .banner-title {
-      &::before {
-        // background-image: url("");
-      }
-    }
-  }
-
-  &-success {
-    border: 3px solid map.get(color.$green, 600);
-
-    .banner-title {
-      &::before {
-        // background-image: url("");
-      }
-    }
-  }
-
-  &-error {
-    border: 3px solid map.get(color.$red, 800);
-
-    .banner-title {
-      &::before {
-        width: 32px;
-        height: 32px;
-        // background-image: url("");
-      }
-    }
-  }
-
-  &-warning {
-    border: 3px solid map.get(color.$yellow, 700);
-
-    .banner-title {
-      &::before {
-        // background-image: url("");
-      }
-    }
+  &-chip {
+    border-radius: 0;
+    border-top: solid map.get(color.$grey, 536) 2px;
+    border-right: solid map.get(color.$grey, 536) 2px;
+    border-bottom: solid map.get(color.$grey, 536) 2px;
+    border-left: solid map.get(color.$grey, 536) 10px;
   }
 }
 
 .banner-title {
-  @include typography.set(map.get(typography.$text, 'banner'));
-  margin: 0 0 16px 0;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-
-  &::before {
-    display: inline-block;
-    content: "";
-    width: 36px;
-    height: 36px;
-    // background-image: url("");
-  }
+  display: block;
+  @include typography.set(map.get(typography.$std, 'std-17b-170'));
 }
 
-.banner-text {
-  margin: 0;
-  padding-left: 56px;
+.banner-description,
+.banner-date {
+  display: block;
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
 }
+
+// TODO make banner

@@ -35,7 +35,7 @@
   pre {
     // TODO fix reset css
     margin: 0;
-    @include typography.set(map.get(typography.$text, text-l));
+    font-family: 'Noto Sans Mono', monospace;
     overflow: auto;
   }
   padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4);

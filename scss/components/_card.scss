@@ -19,8 +19,8 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  @include typography.set(map.get(typography.$card, title));
+  // FIXME typography
+  //@include typography.set(map.get(typography.$card, title));
 }
 
 .card-text {
@@ -29,8 +29,8 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  @include typography.set(map.get(typography.$card, text));
+  // FIXME typography
+  //@include typography.set(map.get(typography.$card, text));
 }
 
 .card-img-top,
