@@ -1,10 +1,10 @@
 import gulp from 'gulp';
-import {generateFonts} from 'fantasticon';
-import sass from 'gulp-sass';
+import { generateFonts } from 'fantasticon';
+import gulpSass from 'gulp-sass';
 import svgSprite from 'gulp-svg-sprite';
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 
-const sassCompiler = sass(dartSass);
+const sassCompiler = gulpSass(dartSass);
 
 /**********************************************************************
  Setup Tasks
