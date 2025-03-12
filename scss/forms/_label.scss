@@ -1,0 +1,25 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+
+.form-label {
+  @include typography.set(map.get(typography.$std, 'std-17b-170'));
+}
+
+.form-necessity {
+  @include typography.set(map.get(typography.$oln, 'oln-16n-100'));
+  color: map.get(color.$red, 800);
+  margin-left: 8px;
+}
+
+.form-support {
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+  color: map.get(color.$grey, 600);
+}
+
+.form-error {
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+  color: map.get(color.$red, 800);
+}

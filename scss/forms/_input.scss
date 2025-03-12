@@ -1,0 +1,21 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.form-input {
+  padding: .938rem 1rem;
+  display: block;
+  //width: 100%;
+  border: solid 1px map.get(color.$grey, 600);
+  border-radius: map.get(rounding.$rounding, m);
+  @include typography.set(map.get(typography.$oln, 'oln-16n-100'));
+
+  &:hover {
+    border: solid 1px color.$black;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+}
