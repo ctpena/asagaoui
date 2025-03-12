@@ -1,8 +1,8 @@
 {{ define "main" }}
     <h1 class="h1 mb-4">{{ .Title }}</h1>
-    <div class="d-flex g-3">
+    <div class="garden g-3">
         {{ range .Pages }}
-            <article class="card">
+            <article class="card plot plot-md-4">
                 <div class="card-body">
                     <h2 class="card-title"><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                 </div>
