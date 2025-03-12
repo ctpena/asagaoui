@@ -7,17 +7,20 @@
 .menulist {
   &-title {
     display: block;
-    padding: .525rem 1rem;
+    padding: .776rem 1rem;
     @include typography.set(map.get(typography.$dns, 'dns-16b-120'));
   }
 
   &-item {
+    .menulist-item {
+      margin-left: 1rem;
+    }
   }
 
   &-link {
     display: block;
-    padding: .525rem 1rem;
-    @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
+    padding: .776rem 1rem;
+    @include typography.set(map.get(typography.$dns, 'dns-16n-120'));
     border-radius: map.get(rounding.$rounding, m);
 
     &:hover {
@@ -25,13 +28,19 @@
       text-decoration: underline;
     }
 
+    &:focus {
+      background-color: map.get(color.$yellow, 300);
+      box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+    }
+
     &.active {
-      @include typography.set(map.get(typography.$dns, 'dns-16b-130'));
+      @include typography.set(map.get(typography.$dns, 'dns-16b-120'));
       background-color: map.get(color.$blue, 100);
       color: map.get(color.$blue, 1000);
 
       &:hover {
-        text-decoration: none;
+        background-color: map.get(color.$blue, 50);
+        color: map.get(color.$blue, 900);
       }
     }
   }
