@@ -5508,6 +5508,51 @@
   .fw-b {
     font-weight: 700;
   }
+  .fs-64 {
+    font-size: 4rem;
+  }
+  .fs-57 {
+    font-size: 3.5625rem;
+  }
+  .fs-48 {
+    font-size: 3rem;
+  }
+  .fs-45 {
+    font-size: 2.8125rem;
+  }
+  .fs-36 {
+    font-size: 2.25rem;
+  }
+  .fs-32 {
+    font-size: 2rem;
+  }
+  .fs-28 {
+    font-size: 1.75rem;
+  }
+  .fs-26 {
+    font-size: 1.625rem;
+  }
+  .fs-24 {
+    font-size: 1.5rem;
+  }
+  .fs-22 {
+    font-size: 1.375rem;
+  }
+  .fs-20 {
+    font-size: 1.25rem;
+  }
+  .fs-18 {
+    font-size: 1.125rem;
+  }
+  .fs-17 {
+    font-size: 1.0625rem;
+  }
+  .fs-16 {
+    font-size: 1rem;
+  }
+  .fs-14 {
+    font-size: 0.875rem;
+  }
   .h1 {
     font-size: 2rem;
     font-weight: 700;
