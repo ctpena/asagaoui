@@ -1699,7 +1699,10 @@
     flex: 1 0 auto;
   }
   .globalmenu-link {
+    font-size: 1rem;
     font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -1730,6 +1733,11 @@
     visibility: visible;
     background-color: #0017C1;
     height: 4px;
+  }
+  .globalmenu-link:focus {
+    border-radius: 2px;
+    background-color: #FFD43D;
+    box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }
   .hamburger-btn {
     min-width: 44px;

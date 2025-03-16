@@ -15,8 +15,7 @@
   }
 
   &-link {
-    // font
-    font-weight: typography.$fw-b;
+    @include typography.set(map.get(typography.$dns, 'dns-16b-130'));
     position: relative;
     display: flex;
     align-items: center;
@@ -51,6 +50,12 @@
         background-color: map.get(color.$blue, 900);
         height: 4px;
       }
+    }
+
+    &:focus {
+      border-radius: 2px;
+      background-color: map.get(color.$yellow, 300);
+      box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
     }
   }
 }
