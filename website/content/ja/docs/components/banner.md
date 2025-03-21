@@ -39,14 +39,43 @@ weight: 20
 
 ### サクセス
 
+{{% code-snippet lang="html" preview="true" %}}
+<div class="banner banner-success">
+    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <time class="banner-date">2025年4月1日</time>
+    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+</div>
+{{% /code-snippet %}}
+
 ### エラー
+
+{{% code-snippet lang="html" preview="true" %}}
+<div class="banner banner-error">
+    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <time class="banner-date">2025年4月1日</time>
+    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+</div>
+{{% /code-snippet %}}
 
 ### 警告
 
-### 情報提示1
+{{% code-snippet lang="html" preview="true" %}}
+<div class="banner banner-warning">
+    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <time class="banner-date">2025年4月1日</time>
+    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+</div>
+{{% /code-snippet %}}
 
-### 情報提示2
+### 情報
 
+{{% code-snippet lang="html" preview="true" %}}
+<div class="banner banner-info">
+    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <time class="banner-date">2025年4月1日</time>
+    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+</div>
+{{% /code-snippet %}}
 
 ## 緊急時バナー
 

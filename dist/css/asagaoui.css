@@ -1376,11 +1376,16 @@
   }
   .banner {
     border: solid #767676 3px;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    .banner {
+      padding: 1.5rem;
+    }
   }
   .banner-chip {
     border-radius: 0;
@@ -1389,12 +1394,86 @@
     border-bottom: solid #767676 2px;
     border-left: solid #767676 10px;
   }
+  @media screen and (min-width: 768px) {
+    .banner-chip {
+      border-left: solid #767676 18px;
+    }
+  }
+  .banner-success {
+    border: solid #197A4B 3px;
+  }
+  .banner-success.banner-chip {
+    border-radius: 0;
+    border-top: solid #197A4B 2px;
+    border-right: solid #197A4B 2px;
+    border-bottom: solid #197A4B 2px;
+    border-left: solid #197A4B 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .banner-success.banner-chip {
+      border-left: solid #197A4B 18px;
+    }
+  }
+  .banner-error {
+    border: solid #EC0000 3px;
+  }
+  .banner-error.banner-chip {
+    border-radius: 0;
+    border-top: solid #EC0000 2px;
+    border-right: solid #EC0000 2px;
+    border-bottom: solid #EC0000 2px;
+    border-left: solid #EC0000 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .banner-error.banner-chip {
+      border-left: solid #EC0000 18px;
+    }
+  }
+  .banner-warning {
+    border: solid #927200 3px;
+  }
+  .banner-warning.banner-chip {
+    border-radius: 0;
+    border-top: solid #927200 2px;
+    border-right: solid #927200 2px;
+    border-bottom: solid #927200 2px;
+    border-left: solid #927200 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .banner-warning.banner-chip {
+      border-left: solid #927200 18px;
+    }
+  }
+  .banner-info {
+    border: solid #0017C1 3px;
+  }
+  .banner-info.banner-chip {
+    border-radius: 0;
+    border-top: solid #0017C1 2px;
+    border-right: solid #0017C1 2px;
+    border-bottom: solid #0017C1 2px;
+    border-left: solid #0017C1 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .banner-info.banner-chip {
+      border-left: solid #0017C1 18px;
+    }
+  }
   .banner-title {
     display: block;
     font-size: 1.0625rem;
     font-weight: 700;
     line-height: 1.7;
     letter-spacing: 0.02rem;
+  }
+  @media screen and (min-width: 768px) {
+    .banner-title {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.02rem;
+    }
   }
   .banner-description,
   .banner-date {

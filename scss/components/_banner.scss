@@ -2,28 +2,58 @@
 @use "../styles/typography";
 @use "../styles/spacing";
 @use "../styles/rounding";
+@use "../styles/breakpoint";
 @use "sass:map";
+
+@mixin banner-chip-style($color, $left-width: 10px, $left-width-lg: 18px) {
+  border-radius: 0;
+  border-top: solid $color 2px;
+  border-right: solid $color 2px;
+  border-bottom: solid $color 2px;
+  border-left: solid $color $left-width;
+  @include breakpoint.style(d) {
+    border-left: solid $color $left-width-lg;
+  }
+}
+
+@mixin banner-variant($variant, $color) {
+  &-#{$variant} {
+    border: solid $color 3px;
+    &.banner-chip {
+      @include banner-chip-style($color);
+    }
+  }
+}
 
 .banner {
   border: solid map.get(color.$grey, 536) 3px;
-  padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3);
+  padding: map.get(spacing.$spacers, 3);
   border-radius: map.get(rounding.$rounding, l);
   display: flex;
   flex-direction: column;
   gap: map.get(spacing.$spacers, 2);
 
-  &-chip {
-    border-radius: 0;
-    border-top: solid map.get(color.$grey, 536) 2px;
-    border-right: solid map.get(color.$grey, 536) 2px;
-    border-bottom: solid map.get(color.$grey, 536) 2px;
-    border-left: solid map.get(color.$grey, 536) 10px;
+  @include breakpoint.style(d) {
+    padding: map.get(spacing.$spacers, 4);
   }
+
+  &-chip {
+    @include banner-chip-style(map.get(color.$grey, 536));
+  }
+
+  @include banner-variant("success", map.get(color.$green, 800));
+  @include banner-variant("error", map.get(color.$red, 800));
+  @include banner-variant("warning", map.get(color.$yellow, 900));
+  @include banner-variant("info", map.get(color.$blue, 900));
 }
 
 .banner-title {
   display: block;
   @include typography.set(map.get(typography.$std, 'std-17b-170'));
+  @include breakpoint.style(d) {
+    margin-bottom: 8px;
+    @include typography.set(map.get(typography.$std, 'std-20b-150'));
+  }
 }
 
 .banner-description,
@@ -31,5 +61,3 @@
   display: block;
   @include typography.set(map.get(typography.$std, 'std-16n-170'));
 }
-
-// TODO make banner
