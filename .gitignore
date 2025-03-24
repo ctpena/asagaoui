@@ -9,5 +9,6 @@ website/assets/css/asagaoui.css
 website/assets/css/asagaoui.min.css
 website/assets/js/asagaoui.js
 website/assets/js/asagaoui.min.js
+website/layouts/partials/head/analytics.html
 dist/icon/symbol
 dist/js/asagaoui.js.*

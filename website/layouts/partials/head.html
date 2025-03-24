@@ -4,6 +4,9 @@
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 {{ partialCached "head/meta.html" . }}
+{{ if templates.Exists "partials/head/analytics.html" }}
+{{ partialCached "head/analytics.html" . }}
+{{ end }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
