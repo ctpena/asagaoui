@@ -1618,26 +1618,39 @@
     border: 1px solid #949494;
     border-radius: 8px;
     position: relative;
+    display: flex;
   }
   .card-body {
+    width: 75%;
     padding: 1rem;
   }
   .card-title {
     margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02rem;
   }
   .card-title:last-child {
     margin-bottom: 0;
   }
   .card-text {
     margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
   }
   .card-text:last-child {
     margin-bottom: 0;
   }
+  .card-img-right,
+  .card-img-left,
   .card-img-top,
   .card-img-bottom {
     display: block;
-    width: 100%;
+    width: 25%;
+    height: auto;
   }
   .card-img-top {
     border-top-right-radius: 8px;
@@ -1645,6 +1658,14 @@
   }
   .card-img-bottom {
     border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .card-img-right {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .card-img-left {
+    border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
   }
   .card-link {

@@ -7,9 +7,11 @@
   border: 1px solid map.get(color.$grey, 420);
   border-radius: map.get(rounding.$rounding, m);
   position: relative;
+  display: flex;
 }
 
 .card-body {
+  width: 75%;
   padding: 1rem;
 }
 
@@ -19,8 +21,7 @@
   &:last-child {
     margin-bottom: 0;
   }
-  // FIXME typography
-  //@include typography.set(map.get(typography.$card, title));
+  @include typography.set(map.get(typography.$std, 'std-20b-150'));
 }
 
 .card-text {
@@ -29,14 +30,15 @@
   &:last-child {
     margin-bottom: 0;
   }
-  // FIXME typography
-  //@include typography.set(map.get(typography.$card, text));
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
 }
-
+.card-img-right,
+.card-img-left,
 .card-img-top,
 .card-img-bottom {
   display: block;
-  width: 100%;
+  width: 25%;
+  height: auto;
 }
 
 .card-img-top {
@@ -46,6 +48,16 @@
 
 .card-img-bottom {
   border-bottom-right-radius: map.get(rounding.$rounding, m);
+  border-bottom-left-radius: map.get(rounding.$rounding, m);
+}
+
+.card-img-right {
+  border-bottom-right-radius: map.get(rounding.$rounding, m);
+  border-bottom-left-radius: map.get(rounding.$rounding, m);
+}
+
+.card-img-left {
+  border-top-left-radius: map.get(rounding.$rounding, m);
   border-bottom-left-radius: map.get(rounding.$rounding, m);
 }
 

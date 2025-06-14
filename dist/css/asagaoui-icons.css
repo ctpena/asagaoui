@@ -1,0 +1,506 @@
+/*!
+* AsagaoUI-Icons
+* Copyright 2025 Hiroshi ISOBE
+* Licensed under MIT
+*/
+@font-face {
+  font-family: "asagaoui-icons";
+  src: url("../icons/asagaoui-icons.woff2?9b9bfb5c4bb882635e8bb390e1d0a4c5") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=ail-],
+[class*=" ail-"], [class^=aif-],
+[class*=" aif-"], [class^=ai-],
+[class*=" ai-"] {
+  font-family: "asagaoui-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ail-work:before {
+  content: "\f101";
+}
+
+.ail-update:before {
+  content: "\f102";
+}
+
+.ail-transactions:before {
+  content: "\f103";
+}
+
+.ail-tax:before {
+  content: "\f104";
+}
+
+.ail-stamp:before {
+  content: "\f105";
+}
+
+.ail-specialist:before {
+  content: "\f106";
+}
+
+.ail-smartphone:before {
+  content: "\f107";
+}
+
+.ail-search:before {
+  content: "\f108";
+}
+
+.ail-seal_certificate:before {
+  content: "\f109";
+}
+
+.ail-public_offering:before {
+  content: "\f10a";
+}
+
+.ail-privacy_protection:before {
+  content: "\f10b";
+}
+
+.ail-printer:before {
+  content: "\f10c";
+}
+
+.ail-personal_computer:before {
+  content: "\f10d";
+}
+
+.ail-pension:before {
+  content: "\f10e";
+}
+
+.ail-password:before {
+  content: "\f10f";
+}
+
+.ail-notification:before {
+  content: "\f110";
+}
+
+.ail-new_window:before {
+  content: "\f111";
+}
+
+.ail-municipality:before {
+  content: "\f112";
+}
+
+.ail-mother_and_child:before {
+  content: "\f113";
+}
+
+.ail-money:before {
+  content: "\f114";
+}
+
+.ail-menu:before {
+  content: "\f115";
+}
+
+.ail-medicine:before {
+  content: "\f116";
+}
+
+.ail-me:before {
+  content: "\f117";
+}
+
+.ail-mailing:before {
+  content: "\f118";
+}
+
+.ail-luggage:before {
+  content: "\f119";
+}
+
+.ail-laws:before {
+  content: "\f11a";
+}
+
+.ail-itinerary:before {
+  content: "\f11b";
+}
+
+.ail-invoice:before {
+  content: "\f11c";
+}
+
+.ail-information:before {
+  content: "\f11d";
+}
+
+.ail-income:before {
+  content: "\f11e";
+}
+
+.ail-inbox:before {
+  content: "\f11f";
+}
+
+.ail-immunization:before {
+  content: "\f120";
+}
+
+.ail-house:before {
+  content: "\f121";
+}
+
+.ail-history:before {
+  content: "\f122";
+}
+
+.ail-help:before {
+  content: "\f123";
+}
+
+.ail-health:before {
+  content: "\f124";
+}
+
+.ail-fillable_card:before {
+  content: "\f125";
+}
+
+.ail-fast_track:before {
+  content: "\f126";
+}
+
+.ail-family:before {
+  content: "\f127";
+}
+
+.ail-expenditure:before {
+  content: "\f128";
+}
+
+.ail-e_application:before {
+  content: "\f129";
+}
+
+.ail-download:before {
+  content: "\f12a";
+}
+
+.ail-documents:before {
+  content: "\f12b";
+}
+
+.ail-departure:before {
+  content: "\f12c";
+}
+
+.ail-copy:before {
+  content: "\f12d";
+}
+
+.ail-complete:before {
+  content: "\f12e";
+}
+
+.ail-code_reader:before {
+  content: "\f12f";
+}
+
+.ail-child:before {
+  content: "\f130";
+}
+
+.ail-certification_with_seal:before {
+  content: "\f131";
+}
+
+.ail-certification:before {
+  content: "\f132";
+}
+
+.ail-bank_account:before {
+  content: "\f133";
+}
+
+.ail-authentication:before {
+  content: "\f134";
+}
+
+.ail-attention:before {
+  content: "\f135";
+}
+
+.ail-arrow_up:before {
+  content: "\f136";
+}
+
+.ail-arrow_right:before {
+  content: "\f137";
+}
+
+.ail-arrow_left:before {
+  content: "\f138";
+}
+
+.ail-arrow_down:before {
+  content: "\f139";
+}
+
+.ail-arrival:before {
+  content: "\f13a";
+}
+
+.ail-application:before {
+  content: "\f13b";
+}
+
+.ail-add:before {
+  content: "\f13c";
+}
+
+.aif-work:before {
+  content: "\f13d";
+}
+
+.aif-update:before {
+  content: "\f13e";
+}
+
+.aif-transactions:before {
+  content: "\f13f";
+}
+
+.aif-tax:before {
+  content: "\f140";
+}
+
+.aif-stamp:before {
+  content: "\f141";
+}
+
+.aif-specialist:before {
+  content: "\f142";
+}
+
+.aif-smartphone:before {
+  content: "\f143";
+}
+
+.aif-search:before {
+  content: "\f144";
+}
+
+.aif-seal_certificate:before {
+  content: "\f145";
+}
+
+.aif-public_offering:before {
+  content: "\f146";
+}
+
+.aif-privacy_protection:before {
+  content: "\f147";
+}
+
+.aif-printer:before {
+  content: "\f148";
+}
+
+.aif-personal_computer:before {
+  content: "\f149";
+}
+
+.aif-pension:before {
+  content: "\f14a";
+}
+
+.aif-password:before {
+  content: "\f14b";
+}
+
+.aif-notification:before {
+  content: "\f14c";
+}
+
+.aif-new_window:before {
+  content: "\f14d";
+}
+
+.aif-municipality:before {
+  content: "\f14e";
+}
+
+.aif-mother_and_child:before {
+  content: "\f14f";
+}
+
+.aif-money:before {
+  content: "\f150";
+}
+
+.aif-menu:before {
+  content: "\f151";
+}
+
+.aif-medicine:before {
+  content: "\f152";
+}
+
+.aif-me:before {
+  content: "\f153";
+}
+
+.aif-mailing:before {
+  content: "\f154";
+}
+
+.aif-luggage:before {
+  content: "\f155";
+}
+
+.aif-laws:before {
+  content: "\f156";
+}
+
+.aif-itinerary:before {
+  content: "\f157";
+}
+
+.aif-invoice:before {
+  content: "\f158";
+}
+
+.aif-information:before {
+  content: "\f159";
+}
+
+.aif-income:before {
+  content: "\f15a";
+}
+
+.aif-inbox:before {
+  content: "\f15b";
+}
+
+.aif-immunization:before {
+  content: "\f15c";
+}
+
+.aif-house:before {
+  content: "\f15d";
+}
+
+.aif-history:before {
+  content: "\f15e";
+}
+
+.aif-help:before {
+  content: "\f15f";
+}
+
+.aif-health:before {
+  content: "\f160";
+}
+
+.aif-fillable_card:before {
+  content: "\f161";
+}
+
+.aif-fast_track:before {
+  content: "\f162";
+}
+
+.aif-family:before {
+  content: "\f163";
+}
+
+.aif-expenditure:before {
+  content: "\f164";
+}
+
+.aif-e_application:before {
+  content: "\f165";
+}
+
+.aif-download:before {
+  content: "\f166";
+}
+
+.aif-documents:before {
+  content: "\f167";
+}
+
+.aif-departure:before {
+  content: "\f168";
+}
+
+.aif-copy:before {
+  content: "\f169";
+}
+
+.aif-complete:before {
+  content: "\f16a";
+}
+
+.aif-code_reader:before {
+  content: "\f16b";
+}
+
+.aif-child:before {
+  content: "\f16c";
+}
+
+.aif-certification_with_seal:before {
+  content: "\f16d";
+}
+
+.aif-certification:before {
+  content: "\f16e";
+}
+
+.aif-bank_account:before {
+  content: "\f16f";
+}
+
+.aif-authentication:before {
+  content: "\f170";
+}
+
+.aif-attention:before {
+  content: "\f171";
+}
+
+.aif-arrow_up:before {
+  content: "\f172";
+}
+
+.aif-arrow_right:before {
+  content: "\f173";
+}
+
+.aif-arrow_left:before {
+  content: "\f174";
+}
+
+.aif-arrow_down:before {
+  content: "\f175";
+}
+
+.aif-arrival:before {
+  content: "\f176";
+}
+
+.aif-application:before {
+  content: "\f177";
+}
+
+.aif-add:before {
+  content: "\f178";
+}

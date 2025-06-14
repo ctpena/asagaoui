@@ -1,0 +1,46 @@
+/*!
+* AsagaoUI-Icons
+* Copyright 2025 Hiroshi ISOBE
+* Licensed under MIT
+*/
+
+@font-face {
+font-family: "{{ name }}";
+src: {{{ fontSrc }}};
+font-weight: normal;
+font-style: normal;
+font-display: block;
+}
+
+%icon-base {
+font-family: "{{ name }}" !important;
+speak: never;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ai-"],
+[class*=" ai-"] {
+@extend %icon-base;
+}
+
+[class^="aif-"],
+[class*=" aif-"] {
+@extend %icon-base;
+}
+
+[class^="ail-"],
+[class*=" ail-"] {
+@extend %icon-base;
+}
+
+{{# each codepoints }}
+    {{ tag }}.{{ @key }}:before {
+    content: "\\{{ codepoint this }}";
+    }
+{{/ each }}
