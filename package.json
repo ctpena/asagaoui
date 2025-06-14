@@ -49,8 +49,8 @@
   },
   "files": [
     "dist/css",
+    "dist/icons/asagaoui-icons.woff2",
     "dist/js",
-    "dist/icon/asagaoui.svg",
     "scss",
     "ts",
     "NOTICE",
