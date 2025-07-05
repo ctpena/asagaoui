@@ -1,80 +1,77 @@
+@use "../styles/color";
 @use "sass:map";
 
 .carousel {
+  position: relative;
+  display: grid;
+  grid-template-areas: "item item item" "left markers right";
+  grid-template-columns: 1fr 2fr 1fr;
+  row-gap: 1rem;
+}
+
+.carousel-inner {
+  grid-area: item;
   display: flex;
-  gap: 1.5rem;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   scroll-marker-group: after;
 
   &::scroll-button(*) {
-    border: 0;
-    font-size: 2rem;
-    background: none;
-    color: rgb(0 0 0 / 0.7);
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-      color: rgb(0 0 0 / 1);
-    }
-
-    &:active {
-    }
-
-    &:disabled {
-      color: rgb(0 0 0 / 0.2);
-      cursor: unset;
-    }
-  }
-
-  &::scroll-button(left) {
-    font-family: "asagaoui-icons" !important;
-    content: "\f138";
-  }
-
-  &::scroll-button(right) {
-    font-family: "asagaoui-icons" !important;
-    content: "\f137";
-  }
-
-  &::scroll-marker-group {
-    position: absolute;
-    position-anchor: --myCarousel;
-    top: calc(anchor(bottom) - 70px);
-    justify-self: anchor-center;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-}
-
-.carousel-item {
-  scroll-snap-align: center;
-  flex: 0 0 100%;
-
-  &::scroll-marker {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border: 2px solid black;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
   }
 
-  &::scroll-marker:target-current {
-    background-color: black;
+  &::scroll-button(left) {
+    content: "◀" / "前へ";
+    grid-area: left;
+    justify-self: end;
+  }
+
+  &::scroll-button(right) {
+    content: "▶" / "次へ";
+    grid-area: right;
+  }
+
+  &::scroll-marker-group {
+    grid-area: markers;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+
+  scroll-snap-align: center;
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    object-position: center;
-    display: block;
+  }
 
-    &:hover img {
-      transform: scale(1.05);
-    }
+  &::scroll-marker {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: map.get(color.$grey, 200);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &::scroll-marker:target-current {
+    background-color: map.get(color.$blue, 600);
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * AsagaoUI  v0.1.6
  * Copyright 2025 Hiroshi ISOBE
@@ -1683,67 +1684,66 @@
     height: 100%;
   }
   .carousel {
+    position: relative;
+    display: grid;
+    grid-template-areas: "item item item" "left markers right";
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 1rem;
+  }
+  .carousel-inner {
+    grid-area: item;
     display: flex;
-    gap: 1.5rem;
-    overflow-x: scroll;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     scroll-marker-group: after;
   }
-  .carousel::scroll-button(*) {
-    border: 0;
-    font-size: 2rem;
-    background: none;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+  .carousel-inner::scroll-button(*) {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
   }
-  .carousel::scroll-button(*):focus, .carousel::scroll-button(*):hover {
-    color: rgb(0, 0, 0);
+  .carousel-inner::scroll-button(left) {
+    content: "◀"/"前へ";
+    grid-area: left;
+    justify-self: end;
   }
-  .carousel::scroll-button(*):disabled {
-    color: rgba(0, 0, 0, 0.2);
-    cursor: unset;
+  .carousel-inner::scroll-button(right) {
+    content: "▶"/"次へ";
+    grid-area: right;
   }
-  .carousel::scroll-button(left) {
-    font-family: "asagaoui-icons" !important;
-    content: "\f138";
-  }
-  .carousel::scroll-button(right) {
-    font-family: "asagaoui-icons" !important;
-    content: "\f137";
-  }
-  .carousel::scroll-marker-group {
-    position: absolute;
-    position-anchor: --myCarousel;
-    top: calc(anchor(bottom) - 70px);
-    justify-self: anchor-center;
+  .carousel-inner::scroll-marker-group {
+    grid-area: markers;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
+    align-items: center;
   }
   .carousel-item {
+    flex-shrink: 0;
+    display: flex;
+    width: 100%;
+    height: auto;
     scroll-snap-align: center;
-    flex: 0 0 100%;
+  }
+  .carousel-item:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+  .carousel-item img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
   .carousel-item::scroll-marker {
     content: "";
+    display: block;
     width: 16px;
     height: 16px;
-    background-color: transparent;
-    border: 2px solid black;
+    background-color: #cccccc;
     border-radius: 50%;
+    flex-shrink: 0;
   }
   .carousel-item::scroll-marker:target-current {
-    background-color: black;
-  }
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-  .carousel-item img:hover img {
-    transform: scale(1.05);
+    background-color: #3460FB;
   }
   .codesnippet-preview {
     border-radius: 8px 8px 0 0;
