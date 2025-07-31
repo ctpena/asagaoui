@@ -387,6 +387,30 @@
   .table th {
     background-color: #f8f8fb;
   }
+  .list, .list-ordered, .content ol, .list-unordered, .content ul {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .list-unordered, .content ul {
+    list-style-type: disc;
+  }
+  .list-ordered, .content ol {
+    list-style-type: decimal;
+  }
+  .code, .content code:not([class]) {
+    padding: 0.1rem 0.25rem;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    color: #CE0000;
+  }
+  .content ul,
+  .content ol,
   .content p {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -2177,6 +2201,12 @@
   }
 }
 @layer utilities {
+  .code {
+    padding: 0.1rem 0.25rem;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    color: #CE0000;
+  }
   .bg-white {
     background-color: #ffffff;
   }
@@ -4198,6 +4228,22 @@
   .link:focus {
     border-radius: 4px;
     outline: 2px solid #B78F00;
+  }
+  .list, .list-ordered, .list-unordered {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .list-unordered {
+    list-style-type: disc;
+  }
+  .list-ordered {
+    list-style-type: decimal;
   }
   .ratio-16x9 {
     aspect-ratio: 1.7777777778;

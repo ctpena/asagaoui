@@ -7,11 +7,15 @@ CSSフレームワークであり、美しく効率的なウェブ開発を実�
 
 ## クイックスタート
 
-簡単にAsagaoUIを使用できます。レスポンシブデザインに対応するために`viewport`を追加する必要があります。そしてbodyタグにクラスbodyを追加するのを
-忘れないでください。`<body class="body"></body>`
+AsagaoUIを使い始めるために、以下の2つの重要な設定を必ず行ってください。
+
+1. `viewport`メタタグを追加してください。
+2. ルートクラス`aui`を追加してください。
+
+クイックスタート用のテンプレートHTMLは次の通りです。
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
@@ -19,29 +23,18 @@ CSSフレームワークであり、美しく効率的なウェブ開発を実�
     <title>AsagaoUI demo</title>
     <link href="https://cdn.jsdelivr.net/npm/asagaoui/dist/css/asagaoui.min.css" rel="stylesheet">
 </head>
-<body class="body">
+<body class="aui">
 <h1>AsagaoUI</h1>
 <script src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
 </body>
 </html>
 ```
 
-## CDN
+## ダウンロード
 
-AsagaoUIは[jsDelivr](https://www.jsdelivr.com/package/npm/asagaoui)から入手できます。
+すべての入手方法は[リソース](/about/resources/)ページをご覧ください。
 
-## npm
-
-AsagaoUIは[npm](https://www.npmjs.com/package/asagaoui)から入手できます。
-
-```bash
-npm i asagaoui
-```
-
-## スタイルの使用
-
-[AsagaoUIのレポジトリ](https://github.com/ctpena/asagaoui)からソースファイルをダウンロードしてください。`/dist/css/asagaoui.css`
-がコンパイル済みのCSSです。
+### スタイルの使用
 
 ```html
 <link rel="stylesheet" href="dist/css/asagaoui.css">
@@ -55,21 +48,26 @@ npm i asagaoui
 <script src="dist/js/asagaoui.js"></script>
 ```
 
-## CSSリセット
+## コード要件
 
-AsagaoUIはすべてのデフォルトCSSをリセットするために[The New CSS Reset](https://github.com/elad2412/the-new-css-reset)
-を使用しています。
+### HTML
 
-## フォント
+AsagaoUIはHTML Living Standardに準拠したHTMLマークアップを前提として設計されています。
 
-AsagaoUIで使用するフォントは「Noto Sans Japanese」が設定されています。使用されるフォントウェイトは、通常のテキスト用の400、少し太いテキスト用の500、強調表示や見出し用の700です。
+### CSSリセット
+
+AsagaoUIは一貫したスタイリングを実現するため、[The New CSS Reset](https://github.com/elad2412/the-new-css-reset)を使用してすべてのデフォルトCSSをリセットしています。
+
+### フォント
+
+AsagaoUIで使用するフォントは「Noto Sans Japanese」が設定されています。使用されるフォントウェイトは、通常のテキスト用の400、強調表示や見出し用の700です。
 
 フォントをウェブサイトに適用するには、Google Fontsなどから読み込むか、フォントファイルをセルフホストしてください。
 
 デフォルトの設定
 
 ```css
-.body {
+.aui {
     font-family: "Noto Sans JP", sans-serif;
 }
 ```

@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "sass:meta";
+@use "../styles/color";
+
+.code {
+  padding: .1rem .25rem;
+  border-radius: 4px;
+  background-color: map.get(color.$grey, 100);
+  color: map.get(color.$red, 900);
+}

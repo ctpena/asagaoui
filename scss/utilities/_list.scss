@@ -1,0 +1,22 @@
+@use "../styles/rounding";
+@use "../styles/typography";
+@use "../styles/color";
+@use "sass:map";
+
+.list {
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-unordered {
+  @extend .list;
+  list-style-type: disc;
+}
+
+.list-ordered {
+  @extend .list;
+  list-style-type: decimal
+}

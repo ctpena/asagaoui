@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="container-lg mt-5 pb-4 custom-blog-header">
+    <h1 class="h1 mb-4">{{ .Title }}</h1>
+    {{ .Content }}
+</div>
+<div class="container-lg px-0 custom-blog-layout">
+    <main class="custom-blog-main">
+        {{ range .Paginator.Pages }}
+        <article class="">
+            <div class="">
+            </div>
+            <h2 class=""><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Description | truncate 120 }}</p>
+            <time>{{ .Date.Format "2006年1月2日" }}</time>
+        </article>
+        {{ end }}
+    </main>
+    <aside class="custom-blog-side">
+    </aside>
+</div>
+{{ end }}

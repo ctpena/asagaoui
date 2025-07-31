@@ -1,8 +1,20 @@
+import Prism from 'prismjs';
+// Import Prism CSS theme
+import './codesnippet.css';
+// Import common languages
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-scss';
+
 class CodeSnippet extends HTMLElement {
     static readonly observedAttributes: string[] = ['lang', 'preview'];
 
     connectedCallback(): void {
-        // Fixme Is this an appropriate process?
+        // Use setTimeout to ensure the component is fully rendered
         setTimeout(() => {
 
             const content = this.innerHTML.trim();
@@ -27,8 +39,8 @@ class CodeSnippet extends HTMLElement {
 
             const langSpan = document.createElement('span');
             langSpan.classList.add('codesnippet-lang');
-            const language = this.getAttribute('lang') || 'HTML';
-            langSpan.textContent = language;
+            const language = this.getAttribute('lang') || 'html';
+            langSpan.textContent = language.toUpperCase();
             headerDiv.appendChild(langSpan);
 
             const codeDiv = document.createElement('div');
@@ -38,6 +50,7 @@ class CodeSnippet extends HTMLElement {
             const code = document.createElement('code');
             code.textContent = content;
 
+            // Add the appropriate language class for Prism.js
             if (language) {
                 code.classList.add(`language-${language.toLowerCase()}`);
             }
@@ -47,6 +60,9 @@ class CodeSnippet extends HTMLElement {
             areaDiv.appendChild(headerDiv);
             areaDiv.appendChild(codeDiv);
             this.appendChild(areaDiv);
+
+            // Apply syntax highlighting with Prism.js
+            Prism.highlightElement(code);
         }, 0);
     }
 }

@@ -58,6 +58,7 @@ function compileSass() {
     return gulp.src('./scss/**/*.scss')
         .pipe(sassCompiler.sync().on('error', sassCompiler.logError))
         .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('/home/ctpena/Documents/jonstage/src/assets/'))
         .pipe(gulp.dest('./website/assets/css'));
 }
 

@@ -2,6 +2,8 @@
 @use "../utilities/link" as *;
 @use "../utilities/typography" as *;
 @use "../components/table" as *;
+@use "../utilities/list" as *;
+@use "../utilities/code" as *;
 @use "../styles/spacing";
 @use "sass:map";
 
@@ -10,6 +12,8 @@
     @extend .link;
   }
 
+  ul,
+  ol,
   p {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -57,5 +61,17 @@
   pre {
     margin: 0;
     overflow: auto;
+  }
+
+  ul {
+    @extend .list-unordered
+  }
+
+  ol {
+    @extend .list-ordered
+  }
+
+  code:not([class]) {
+    @extend .code;
   }
 }

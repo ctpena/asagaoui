@@ -65,11 +65,13 @@
 
 // Utilities
 @layer utilities {
+  @include meta.load-css('utilities/code');
   @include meta.load-css('utilities/color');
   @include meta.load-css('utilities/display');
   @include meta.load-css('utilities/flex');
   @include meta.load-css('utilities/images');
   @include meta.load-css('utilities/link');
+  @include meta.load-css('utilities/list');
   @include meta.load-css('utilities/ratio');
   @include meta.load-css('utilities/sizing');
   @include meta.load-css('utilities/spacing');
