@@ -1,8 +1,7 @@
 @use "../styles/color";
 
-.table {
+@mixin table {
   border-collapse: collapse;
-
 
   th,
   td {
@@ -13,7 +12,8 @@
   th {
     background-color: #f8f8fb;
   }
+}
 
-  td {
-  }
+.table {
+  @include table;
 }

@@ -20,7 +20,7 @@
   }
 
   table {
-    @extend .table
+    @include table;
   }
 
   h1 {

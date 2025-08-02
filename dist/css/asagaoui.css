@@ -376,7 +376,7 @@
       letter-spacing: 0.02rem;
     }
   }
-  .table, .content table {
+  .table {
     border-collapse: collapse;
   }
   .table th,
@@ -414,6 +414,17 @@
   .content p {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+  .content table {
+    border-collapse: collapse;
+  }
+  .content table th,
+  .content table td {
+    border: 1px solid #949497;
+    padding: 0.5rem;
+  }
+  .content table th {
+    background-color: #f8f8fb;
   }
   .content h1 {
     margin-top: 4rem;
