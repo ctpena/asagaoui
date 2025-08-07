@@ -9,8 +9,11 @@
 
   &-header {
     @include typography.set(map.get(typography.$std, 'std-16n-170'));
+    display: flex;
+    gap: .8rem;
+    align-items: center;
 
-    padding: map.get(spacing.$spacers, 1) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 4);
+    padding: map.get(spacing.$spacers, 1) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 1);
 
     &:hover {
       background-color: map.get(color.$grey, 50);
@@ -21,8 +24,27 @@
       border-radius: 8px;
     }
 
-    &:after {
-      //TODO set icon
+    &:before {
+      font-family: "asagaoui-icons" !important;
+      speak: never;
+      font-style: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      content: "\f139";
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: map.get(color.$blue, 1000);
+      border: 1px solid map.get(color.$blue, 1000);
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:hover::before {
+      border: 2px solid map.get(color.$blue, 1000);
     }
   }
 
@@ -32,6 +54,11 @@
   }
 
   &[open] {
+    .accordion-header {
+      &::before {
+        content: "\f136";
+      }
+    }
   }
 }
 
@@ -39,11 +66,11 @@
   .accordion {
     &-header {
       @include typography.set(map.get(typography.$std, 'std-18n-160'));
-      padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 5);
+      padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 1);
     }
 
     &-body {
-      padding: map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 6) map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 5);
+      padding: map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 6);
     }
   }
 }

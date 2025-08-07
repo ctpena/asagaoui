@@ -13,3 +13,4 @@ website/assets/js/asagaoui.min.js
 website/layouts/partials/head/analytics.html
 dist/icon/symbol
 dist/js/asagaoui.js.*
+/website/static/icons/asagaoui-icons.woff2

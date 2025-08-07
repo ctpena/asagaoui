@@ -1382,7 +1382,10 @@
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.02rem;
-    padding: 0.25rem 0.5rem 0.5rem 1.5rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 0.25rem 0.5rem 0.5rem 0.25rem;
   }
   .accordion-header:hover {
     background-color: #f2f2f2;
@@ -1391,6 +1394,27 @@
     outline: 2px solid #B78F00;
     border-radius: 8px;
   }
+  .accordion-header:before {
+    font-family: "asagaoui-icons" !important;
+    speak: never;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    content: "\f139";
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #00118F;
+    border: 1px solid #00118F;
+    width: 2rem;
+    height: 2rem;
+  }
+  .accordion-header:hover::before {
+    border: 2px solid #00118F;
+  }
   .accordion-body {
     font-size: 1rem;
     font-weight: 400;
@@ -1398,16 +1422,19 @@
     letter-spacing: 0.02rem;
     padding: 1rem 0.5rem 1rem 1.5rem;
   }
+  .accordion[open] .accordion-header::before {
+    content: "\f136";
+  }
   @media screen and (min-width: 768px) {
     .accordion-header {
       font-size: 1.125rem;
       font-weight: 400;
       line-height: 1.6;
       letter-spacing: 0.02rem;
-      padding: 1rem 1rem 1rem 2.5rem;
+      padding: 1rem 1rem 1rem 0.25rem;
     }
     .accordion-body {
-      padding: 1.5rem 4rem 1.5rem 2.5rem;
+      padding: 1.5rem 1rem 1.5rem 4rem;
     }
   }
   .banner {
