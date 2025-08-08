@@ -1,0 +1,67 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.form-check {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: .5rem;
+  padding: .5rem 0;
+
+  @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
+}
+
+.form-check-input {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 12.5%;
+
+  position: relative;
+
+  background-color: color.$white;
+  border: .125rem solid map.get(color.$grey, 600);
+
+  &:hover {
+    border: .125rem solid color.$black;
+    outline: .125rem solid map.get(color.$grey, 600);
+  }
+
+  &:checked {
+    background-color: map.get(color.$blue, 900);
+    border: .125rem solid map.get(color.$blue, 900);
+
+    &:focus {
+      border: .125rem solid map.get(color.$blue, 900);
+    }
+  }
+
+  &::after {
+    opacity: 0;
+    font-family: "asagaoui-icons" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    //TODO change icon
+    content: "\f139";
+    color: color.$white;
+  }
+
+  &:checked::after {
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+    outline: none;
+    border: .125rem solid color.$black;
+  }
+}
