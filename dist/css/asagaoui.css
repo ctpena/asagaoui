@@ -1548,15 +1548,25 @@
   }
   .breadcrumb {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .breadcrumb-item {
     color: #333333;
   }
   .breadcrumb-item + .breadcrumb-item::before {
+    font-family: "asagaoui-icons" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: inline-block;
     margin-right: 8px;
-    content: "";
+    content: "\f137";
     width: 12px;
     height: 13px;
   }
