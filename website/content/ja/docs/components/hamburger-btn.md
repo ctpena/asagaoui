@@ -11,15 +11,15 @@ weight: 90
 
 <div class="hstack g-4">
     <button
-        class="hamburger-btn"
+        class="hamburger-iconbtn"
         type="button">
-        <i class="hamburger-btn-icon"></i>
+        <i class="hamburger-icon"></i>
         メニュー
     </button>
     <button
         class="hamburger-btn"
         type="button">
-        <i class="hamburger-btn-icon"></i>
+        <i class="hamburger-icon"></i>
         メニュー
     </button>
 </div>

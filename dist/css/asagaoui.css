@@ -113,6 +113,17 @@
     line-height: 1.7;
     letter-spacing: 0.02rem;
   }
+  html {
+    scrollbar-gutter: stable;
+  }
+  html:has(:modal) {
+    overflow: clip;
+    scrollbar-gutter: auto;
+  }
+  body:has(:modal) {
+    overflow: auto;
+    scrollbar-gutter: stable;
+  }
 }
 @layer layout {
   .container-x4k, .container-xxxl, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container-fluid, .container {
@@ -1840,73 +1851,35 @@
     font-family: "Noto Sans Mono", monospace;
     overflow: auto;
   }
-  .drawer {
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    background-color: #ffffff;
-  }
-  .drawer-header {
-    display: none;
-  }
-  .drawer.show {
-    clip: auto;
-    height: auto;
-    position: fixed;
-    width: 100%;
-    max-width: 320px;
-    z-index: 600;
-  }
-  .drawer.show .drawer-body {
-    overflow: auto;
-    height: calc(100dvh - 69px);
-    padding: 1rem;
-  }
-  .drawer.show .drawer-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    height: 69px;
-    border-bottom: 1px dashed #cccccc;
-  }
-  .drawer-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    z-index: 500;
-  }
-  .drawer.show + .drawer-backdrop {
-    display: block;
-  }
-  .drawer-right.show {
-    top: 0;
-    bottom: 0;
-    right: 0;
+  .drawer[open] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 18rem;
+    min-height: 100dvh;
     left: auto;
   }
-  .drawer-left.show {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: auto;
+  .drawer-header {
+    padding: 1.25rem 1rem;
+  }
+  .dropdown {
+    height: 100%;
   }
   .dropdown-area {
     position: relative;
   }
   .dropdown-menu {
+    display: flex;
+    flex-direction: column;
     min-width: 200px;
     position: absolute;
     z-index: 100;
     background-color: #ffffff;
     border: 1px solid #949494;
     padding: 16px 8px 24px 8px;
+  }
+  .dropdown-link {
+    padding: 8px 20px;
   }
   .emergency-banner {
     border: 6px solid #EC0000;
@@ -1974,7 +1947,51 @@
     background-color: #FFD43D;
     box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }
+  .globalmenu-dropdown {
+    position: relative;
+    height: 100%;
+  }
+  .globalmenu-dropdown-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    width: max-content;
+    z-index: 100;
+    background-color: #ffffff;
+    border: 1px solid #949494;
+    box-shadow: 0 4px 16px 0 rgba(26, 26, 28, 0.2);
+    padding: 16px 8px 24px 8px;
+  }
+  .globalmenu-dropdown-link {
+    display: block;
+    padding: 8px 20px;
+  }
+  .globalmenu-dropdown-link:hover {
+    background-color: #f2f2f2;
+  }
   .hamburger-btn {
+    min-height: 36px;
+    padding: 0 12px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  .hamburger-btn:hover {
+    text-decoration: underline;
+    background-color: #f2f2f2;
+  }
+  .hamburger-btn:active {
+    background-color: #FFD43D;
+    box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
+  }
+  .hamburger-iconbtn {
     min-width: 44px;
     min-height: 44px;
     gap: 5px;
@@ -1989,20 +2006,20 @@
     line-height: 1;
     letter-spacing: 0;
   }
-  .hamburger-btn:hover {
+  .hamburger-iconbtn:hover {
     box-shadow: inset 0 0 0 1px #000000;
     background-color: #f2f2f2;
   }
-  .hamburger-btn:active {
+  .hamburger-iconbtn:active {
     background-color: #FFD43D;
     box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }
-  .hamburger-btn-icon {
+  .hamburger-icon {
     width: 24px;
     height: 18px;
     position: relative;
   }
-  .hamburger-btn-icon::before {
+  .hamburger-icon::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -2157,6 +2174,10 @@
     flex-direction: column;
   }
   .mobilemenu-link {
+    display: flex;
+    padding: 8px 20px;
+  }
+  .mobilemenu-accordion {
     display: flex;
     padding: 8px 20px;
   }

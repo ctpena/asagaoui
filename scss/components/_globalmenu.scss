@@ -59,3 +59,31 @@
     }
   }
 }
+
+.globalmenu-dropdown {
+  position: relative;
+  height: 100%;
+}
+
+.globalmenu-dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  width: max-content;
+  z-index: 100; //FIXME reset z-index
+  background-color: color.$white;
+  border: 1px solid #949494;
+  box-shadow: 0 4px 16px 0 rgba(26, 26, 28, 0.20);
+  //
+  padding: 16px 8px 24px 8px;
+}
+
+.globalmenu-dropdown-link {
+  display: block;
+  padding: 8px 20px;
+
+  &:hover {
+    background-color: map.get(color.$grey, 50);
+  }
+}

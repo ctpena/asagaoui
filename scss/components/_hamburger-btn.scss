@@ -4,6 +4,28 @@
 @use "../styles/rounding";
 
 .hamburger-btn {
+  min-height: 36px;
+  padding: 0 12px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: map.get(rounding.$rounding, s);
+  // font-set
+  @include typography.set(map.get(typography.$dns, 'dns-16n-120'));
+
+  &:hover {
+    text-decoration: underline;
+    background-color: map.get(color.$grey, 50);
+  }
+
+  &:active {
+    background-color: map.get(color.$yellow, 300);
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+}
+
+.hamburger-iconbtn {
   min-width: 44px;
   min-height: 44px;
   gap: 5px;
@@ -30,7 +52,7 @@
   }
 }
 
-.hamburger-btn-icon {
+.hamburger-icon {
   width: 24px;
   height: 18px;
   position: relative;
