@@ -2200,6 +2200,53 @@
   .modaldialog-title {
     margin: 0;
   }
+  .spinner {
+    background-color: white;
+    width: 48px;
+    aspect-ratio: 1;
+    border: 4px solid #4979F5;
+    border-right-color: #00118F;
+    border-bottom-color: #00118F;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  .progress {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #4979F5 !important;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #00118F;
+    border-radius: 4px;
+    transform: translateX(-100%);
+    animation: move 1s linear infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
   .table {
     border-collapse: collapse;
   }

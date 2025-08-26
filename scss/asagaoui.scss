@@ -48,6 +48,7 @@
   @include meta.load-css('components/menulist');
   @include meta.load-css('components/mobilemenu');
   @include meta.load-css('components/modaldialog');
+  @include meta.load-css('components/progress');
   @include meta.load-css('components/table');
   @include meta.load-css('components/utilitylink');
 }
