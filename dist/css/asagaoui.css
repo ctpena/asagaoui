@@ -1977,30 +1977,38 @@
   .hamburger-btn {
     min-width: 44px;
     min-height: 44px;
+    gap: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.52rem;
+    line-height: 1;
+    letter-spacing: 0;
   }
-  .hamburger-btn.open .hamburger-btn-close {
-    display: none;
+  .hamburger-btn:hover {
+    box-shadow: inset 0 0 0 1px #000000;
+    background-color: #f2f2f2;
   }
-  .hamburger-btn.close .hamburger-btn-open {
-    display: none;
+  .hamburger-btn:active {
+    background-color: #FFD43D;
+    box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }
-  .hamburger-btn .hamburger-btn-close,
-  .hamburger-btn .hamburger-btn-open {
-    display: flex;
-    align-items: center;
+  .hamburger-btn-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
   }
-  .hamburger-btn.h .hamburger-btn-close,
-  .hamburger-btn.h .hamburger-btn-open {
-    flex-direction: row;
-    gap: 4px;
-  }
-  .hamburger-btn.v .hamburger-btn-close,
-  .hamburger-btn.v .hamburger-btn-open {
-    flex-direction: column;
+  .hamburger-btn-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    box-shadow: 0 8px 0 #000000, 0 16px 0 #000000;
   }
   .header {
     border-bottom: 1px solid #949494;

@@ -1,56 +1,46 @@
 @use "sass:map";
+@use "../styles/color";
 @use "../styles/typography";
+@use "../styles/rounding";
 
 .hamburger-btn {
   min-width: 44px;
   min-height: 44px;
+  gap: 5px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border-radius: map.get(rounding.$rounding, s);
+  // font-set
+  font-weight: 700;
+  font-size: .52rem;
+  line-height: 1;
+  letter-spacing: 0;
 
-  &.open {
-    .hamburger-btn-open {
-    }
-
-    .hamburger-btn-close {
-      display: none;
-    }
+  &:hover {
+    box-shadow: inset 0 0 0 1px color.$black;
+    background-color: map.get(color.$grey, 50);
   }
 
-  &.close {
-    .hamburger-btn-open {
-      display: none;
-    }
-
-    .hamburger-btn-close {
-    }
+  &:active {
+    background-color: map.get(color.$yellow, 300);
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
   }
+}
 
-  .hamburger-btn-close,
-  .hamburger-btn-open {
-    display: flex;
-    align-items: center;
-  }
+.hamburger-btn-icon {
+  width: 24px;
+  height: 18px;
+  position: relative;
 
-
-  &.h { //yoko
-    .hamburger-btn-close,
-    .hamburger-btn-open {
-      flex-direction: row;
-      gap: 4px;
-      // FIXME typography
-      //@include typography.set(map.get(typography.$text, 'description-l'));
-    }
-  }
-
-  &.v { // tate
-    .hamburger-btn-close,
-    .hamburger-btn-open {
-      flex-direction: column;
-      //gap: 2px;
-      // FIXME typography
-      //@include typography.set(map.get(typography.$text, 'description-m'));
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: color.$black;
+    box-shadow: 0 8px 0 color.$black, 0 16px 0 color.$black;
   }
 }
