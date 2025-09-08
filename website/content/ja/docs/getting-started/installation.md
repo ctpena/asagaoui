@@ -1,8 +1,10 @@
----
-title: インストール
----
++++
+title = 'インストール'
+weight = 30
++++
 
-AsagaoUIは[デジタル庁デザインシステム](https://www.digital.go.jp/policies/servicedesign/designsystem)に基づいて構築されたUIコンポーネントを持つ
+AsagaoUIは[デジタル庁デザインシステム](https://www.digital.go.jp/policies/servicedesign/designsystem)
+に基づいて構築されたUIコンポーネントを持つ
 CSSフレームワークであり、美しく効率的なウェブ開発を実現します。
 
 ## クイックスタート
@@ -37,6 +39,7 @@ AsagaoUIを使い始めるために、以下の2つの重要な設定を必ず�
 ### スタイルの使用
 
 ```html
+
 <link rel="stylesheet" href="dist/css/asagaoui.css">
 ```
 
@@ -45,6 +48,7 @@ AsagaoUIを使い始めるために、以下の2つの重要な設定を必ず�
 `/dist/js/asagaoui.js`がコンパイル済みのJSです。
 
 ```html
+
 <script src="dist/js/asagaoui.js"></script>
 ```
 
@@ -56,7 +60,8 @@ AsagaoUIはHTML Living Standardに準拠したHTMLマークアップを前提と
 
 ### CSSリセット
 
-AsagaoUIは一貫したスタイリングを実現するため、[The New CSS Reset](https://github.com/elad2412/the-new-css-reset)を使用してすべてのデフォルトCSSをリセットしています。
+AsagaoUIは一貫したスタイリングを実現するため、[The New CSS Reset](https://github.com/elad2412/the-new-css-reset)
+を使用してすべてのデフォルトCSSをリセットしています。
 
 ### フォント
 

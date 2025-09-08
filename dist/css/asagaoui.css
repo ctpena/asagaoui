@@ -1779,6 +1779,8 @@
   .carousel-inner {
     grid-area: item;
     display: flex;
+    flex-direction: row;
+    gap: 0;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
