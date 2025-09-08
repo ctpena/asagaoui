@@ -115,3 +115,7 @@
     grid-area: side;
     padding: 0 1rem;
 }
+
+.content h1:first-child {
+    margin-top: 0;
+}
