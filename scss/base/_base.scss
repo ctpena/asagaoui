@@ -9,10 +9,6 @@
   @include typography.set(map.get(typography.$std, 'std-16n-170'));
 }
 
-html {
-  scrollbar-gutter: stable;
-}
-
 html:has(:modal) {
   overflow: clip;
   scrollbar-gutter: auto;

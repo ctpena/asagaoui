@@ -5,12 +5,9 @@
             <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" width="150" height="60">
         </a>
         <div class="header-button">
-            <button class="hamburger-btn v open d-sm-none" data-aui-target="#mobile-menu">
-                <div class="hamburger-btn-open">
-                    {{ $menu := resources.Get "img/menu.svg" }}
-                    <img src="{{ $menu.Permalink }}" alt="" width="24px" height="24px">
-                    <span>メニュー</span>
-                </div>
+            <button class="hamburger-iconbtn" type="button" command="show-modal" commandfor="header-dialog-menu">
+                <i class="hamburger-icon"></i>
+                メニュー
             </button>
         </div>
         <div class="header-items">
@@ -22,26 +19,24 @@
         <div class="header-menu">
             {{ partial "menu.html" . }}
         </div>
-        <div class="header-drawer drawer drawer-right" id="mobile-menu">
-            <div class="drawer-header">
-                <button class="hamburger-btn v close" data-aui-target="#mobile-menu">
-                    <div class="hamburger-btn-close">
-                        {{ $close := resources.Get "img/close.svg" }}
-                        <img src="{{ $close.Permalink }}" alt="" width="24px" height="24px">
-                        <span>閉じる</span>
-                    </div>
-                </button>
-            </div>
-            <div class="drawer-body">
-                <ul class="mobilemenu">
-                    {{ range .Site.Sections }}
-                        <li class="mobilemenu-item">
-                            <a class="mobilemenu-link {{ if hasPrefix $.RelPermalink .RelPermalink }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
-        <div class="drawer-backdrop"></div>
     </nav>
 </header>
+<dialog id="header-dialog-menu" class="drawer">
+    <div class="drawer-header d-flex justify-end">
+        <button class="hamburger-btn" type="button" command="close" commandfor="header-dialog-menu">
+            <i class="hamburger-icon"></i>
+            閉じる
+        </button>
+    </div>
+    <div class="drawer-body">
+        <ul class="mobilemenu">
+            {{ range .Site.Sections }}
+                <li class="mobilemenu-item">
+                    <a class="mobilemenu-link {{ if hasPrefix $.RelPermalink .RelPermalink }}active{{ end }}"
+                       href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+    <div class="drawer-footer"></div>
+</dialog>

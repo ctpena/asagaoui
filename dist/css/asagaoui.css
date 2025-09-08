@@ -113,9 +113,6 @@
     line-height: 1.7;
     letter-spacing: 0.02rem;
   }
-  html {
-    scrollbar-gutter: stable;
-  }
   html:has(:modal) {
     overflow: clip;
     scrollbar-gutter: auto;
@@ -315,13 +312,13 @@
     color: #00118F;
     text-decoration: underline;
   }
-  .link:hover {
+  .link:hover, .content a:hover {
     background-color: #f2f2f2;
   }
-  .link:active {
+  .link:active, .content a:active {
     color: #E25100;
   }
-  .link:focus {
+  .link:focus, .content a:focus {
     border-radius: 4px;
     outline: 2px solid #B78F00;
   }
@@ -1601,13 +1598,15 @@
     user-select: none;
     border: 1px solid #1a1a1a;
     text-align: center;
-    padding: 0.75rem 1rem;
-    min-width: 96px;
-    min-height: 48px;
   }
   .btn:focus {
     outline: 2px solid #B78F00;
     outline-offset: 2px;
+  }
+  .btn {
+    padding: 0.75rem 1rem;
+    min-width: 96px;
+    min-height: 48px;
   }
   .btn-primary {
     color: #ffffff;
@@ -1710,23 +1709,27 @@
   }
   .card-title {
     margin: 0 0 0.5rem 0;
+  }
+  .card-title:last-child {
+    margin-bottom: 0;
+  }
+  .card-title {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 0.02rem;
   }
-  .card-title:last-child {
+  .card-text {
+    margin: 0 0 0.5rem 0;
+  }
+  .card-text:last-child {
     margin-bottom: 0;
   }
   .card-text {
-    margin: 0 0 0.5rem 0;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.02rem;
-  }
-  .card-text:last-child {
-    margin-bottom: 0;
   }
   .card-img-right,
   .card-img-left,
@@ -1841,15 +1844,15 @@
     border-right: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
   }
-  .codesnippet-code {
-    padding: 1rem 1.5rem;
-    border: 1px solid #cccccc;
-    border-radius: 0 0 8px 8px;
-  }
   .codesnippet-code pre {
     margin: 0;
     font-family: "Noto Sans Mono", monospace;
     overflow: auto;
+  }
+  .codesnippet-code {
+    padding: 1rem 1.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 0 0 8px 8px;
   }
   .drawer[open] {
     margin: 0;
@@ -2183,6 +2186,11 @@
   }
   .modaldialog {
     outline: none;
+  }
+  .modaldialog::backdrop {
+    background-color: rgba(153, 153, 153, 0.75);
+  }
+  .modaldialog {
     position: fixed;
     inset: 0;
     margin: auto;
@@ -2193,9 +2201,6 @@
     border: 1px solid #cccccc;
     background-color: #ffffff;
     z-index: 1000;
-  }
-  .modaldialog::backdrop {
-    background-color: rgba(153, 153, 153, 0.75);
   }
   .modaldialog-title {
     margin: 0;
