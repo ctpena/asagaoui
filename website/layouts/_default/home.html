@@ -8,14 +8,14 @@
                         <img class="d-block" src="{{ $logono.RelPermalink }}" alt="{{ .Site.Title }}" width="80px" height="80px">
                     </div>
                     <h1 class="fs-57 fw-b text-center">AsagaoUI</h1>
-                    <h2 class="fs-36 mt-3 fw-b text-center">デジタルサービスのために設計されたシンプルで美しいUI</h2>
+                    <h2 class="fs-36 mt-3 fw-b text-center">{{ i18n "hero-title" }}</h2>
                     <p class="mt-3 text-center">
-                        <a href="https://design.digital.go.jp">デジタル庁デザインシステム</a>を基に、拡張性と汎用性を向上させて再設計されたCSSフレームワークです。カスタマイズ性の高いSassで構築され、クラスを用いた直感的な状態管理によってJS環境でのスムーズな統合を実現。さらにバニラJSコンポーネントを搭載し、各種テンプレートエンジンでもインタラクティブなUIを実現できます。
+                        {{ i18n "hero-description" }}
                     </p>
                 </div>
                 <div class="container-sm mt-5 d-flex justify-center g-4">
                     <a href="https://github.com/ctpena/asagaoui" class="d-inline-block btn btn-secondary">GitHub</a>
-                    <a href="" class="d-inline-block btn btn-primary">ドキュメントを見る</a>
+                    <a href="" class="d-inline-block btn btn-primary">{{ i18n "document" }}</a>
                 </div>
             </section>
             <section class="container-md my-7 garden g-md-6">
@@ -23,12 +23,11 @@
                     {{ $sass := resources.Get "img/api.svg" }}
                     <img class="card-img-top my-3" src="{{ $sass.RelPermalink }}" alt="" width="50px" height="50px">
                     <div class="card-body">
-                        <h2 class="card-title">デジタル庁デザインシステムに準拠</h2>
-                        <p class="card-text"><a href="" class="link">デジタル庁デザインシステムに対する<br>AsagaoUIの考え方</a></p>
-                        <p class="card-text">AsagaoUIは<a class="link" href="https://design.digital.go.jp">デジタル庁デザインシステム</a>の設計原則を継承しながら、より実践的な実装を提供します。スタイルガイドラインを踏襲しつつ、開発効率を高めるための最適化を行っています。</p>
+                        <h2 class="card-title">{{ i18n "hero1-title" }}</h2>
+                        <p class="card-text">{{ i18n "hero1-description" }}</p>
                         <ul class="mt-3">
-                            <li>デジタル庁が定める色彩システムとタイポグラフィの完全サポート</li>
-                            <li>レスポンシブデザインの統一的な実装</li>
+                            <li>{{ i18n "hero1-list1" }}</li>
+                            <li>{{ i18n "hero1-list2" }}</li>
                         </ul>
                     </div>
                 </div>
@@ -36,8 +35,8 @@
                     {{ $html := resources.Get "img/html.svg" }}
                     <img class="card-img-top my-3" src="{{ $html.RelPermalink }}" alt="" width="50px" height="50px">
                     <div class="card-body">
-                        <h2 class="card-title">HTMLマークアップファースト</h2>
-                        <p class="card-text">HTML構造を重視したUIコンポーネントを提供します。JavaScriptに依存せず、HTMLネイティブ要素の機能を最大限に活用することで、堅牢で保守性の高い実装を実現します。</p>
+                        <h2 class="card-title">{{ i18n "hero2-title" }}</h2>
+                        <p class="card-text">{{ i18n "hero2-description" }}</p>
                     </div>
                 </div>
                 <div class="card plot plot-md-6">

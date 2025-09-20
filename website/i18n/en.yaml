@@ -1,0 +1,18 @@
+# NAV
+hamburger-iconbtn: "MENU"
+close-iconbtn: "CLOSE"
+
+
+
+# INDEX
+hero-title: "Sophisticated UI Designed for Digital service"
+hero-description: "Based on the Digital Agency Design System and improved the extendability and universal use. Built with highly costomizable Saas, it enables intuitive state management using classes in JavaScript environments."
+document: "Document"
+
+hero1-title: "Compliant with the Digital Agency System"
+hero1-description: "AsagaoUI inherits the design principals of the Digital Agency Design System,  providing a more real-world implementation."
+hero1-list1: "Perfect support of color system and typography ruled by the Digital Agency"
+hero1-list2: "Consistent implentetion of responsive design"
+
+hero2-title: "HTML Mark-up-first"
+hero2-description: "UI component that focuses on an organized HTML structure"
