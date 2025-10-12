@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
-    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-node-resolve": "^16.0.2",
     "@rollup/plugin-typescript": "^12.1.4",
     "@types/prismjs": "^1.26.5",
     "fantasticon": "^3.0.0",
@@ -42,12 +42,12 @@
     "gulp-sass": "^6.0.1",
     "gulp-uglify": "^3.0.2",
     "prismjs": "^1.30.0",
-    "rollup": "^4.50.0",
+    "rollup": "^4.52.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.92.1",
+    "sass": "^1.93.2",
     "svgo": "^4.0.0",
     "tslib": "^2.8.1",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "@floating-ui/dom": "^1.6.3"
