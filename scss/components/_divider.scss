@@ -1,0 +1,31 @@
+@use "../styles/color";
+@use "sass:map";
+
+.divider {
+  border: 0;
+  border-top: map.get(color.$grey, 420) solid 1px;
+}
+
+.divider-dashed {
+  border-top-style: dashed;
+}
+
+.divider-solid {
+  border-top-style: solid;
+}
+
+.divider-w1 {
+  border-top-width: 1px;
+}
+
+.divider-w2 {
+  border-top-width: 2px;
+}
+
+.divider-w3 {
+  border-top-width: 3px;
+}
+
+.divider-w4 {
+  border-top-width: 4px;
+}

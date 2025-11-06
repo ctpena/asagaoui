@@ -1856,6 +1856,28 @@
     border: 1px solid #cccccc;
     border-radius: 0 0 8px 8px;
   }
+  .divider {
+    border: 0;
+    border-top: #949494 solid 1px;
+  }
+  .divider-dashed {
+    border-top-style: dashed;
+  }
+  .divider-solid {
+    border-top-style: solid;
+  }
+  .divider-w1 {
+    border-top-width: 1px;
+  }
+  .divider-w2 {
+    border-top-width: 2px;
+  }
+  .divider-w3 {
+    border-top-width: 3px;
+  }
+  .divider-w4 {
+    border-top-width: 4px;
+  }
   .drawer[open] {
     margin: 0;
     padding: 0;
