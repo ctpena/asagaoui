@@ -65,4 +65,22 @@
     background-color: color.$black;
     box-shadow: 0 8px 0 color.$black, 0 16px 0 color.$black;
   }
+
+  &.close {
+    &::before {
+      box-shadow: none;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: color.$black;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
 }

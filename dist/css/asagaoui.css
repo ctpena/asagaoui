@@ -2032,6 +2032,20 @@
     background-color: #000000;
     box-shadow: 0 8px 0 #000000, 0 16px 0 #000000;
   }
+  .hamburger-icon.close::before {
+    box-shadow: none;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .hamburger-icon.close::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
   .header {
     border-bottom: 1px solid #949494;
   }
@@ -2197,15 +2211,29 @@
     inset: 0;
     margin: auto;
     width: 496px;
-    height: 350px;
-    padding: 40px 56px;
+    padding: 0;
     border-radius: 12px;
     border: 1px solid #cccccc;
     background-color: #ffffff;
     z-index: 1000;
   }
+  .modaldialog-header {
+    padding: 1rem;
+  }
+  .modaldialog-header .hamburger-iconbtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  .modaldialog-body {
+    padding: 1rem;
+  }
   .modaldialog-title {
     margin: 0;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02rem;
   }
   .spinner {
     background-color: white;

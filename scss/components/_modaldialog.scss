@@ -4,10 +4,12 @@
 
 .modaldialog {
   outline: none;
+
   &::backdrop {
     // #999999 75%
     background-color: rgba(153, 153, 153, 0.75);
   }
+
   // center
   position: fixed;
   inset: 0;
@@ -15,18 +17,34 @@
   // display
   // size
   width: 496px;
-  height: 350px;
   // style
-  padding: 40px 56px;
+  padding: 0;
   border-radius: 12px;
   border: 1px solid map.get(color.$grey, 200);
   background-color: color.$white;
   z-index: 1000;
 
+  &-header {
+    padding: 1rem;
+    .hamburger-iconbtn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+
+  }
+
+  &-body{
+    padding: 1rem;
+  }
+
+  &-footer {
+
+  }
+
   &-title {
     margin: 0;
-    // FIXME typography
-    //@include typography.set(map.get(typography.$heading, 'sm'));
+    @include typography.set(map.get(typography.$std, 'std-22b-150'));
   }
 
   &-subtext {
