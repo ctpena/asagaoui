@@ -2014,7 +2014,7 @@
     text-decoration: underline;
     background-color: #f2f2f2;
   }
-  .hamburger-btn:active {
+  .hamburger-btn:focus, .hamburger-btn:active {
     background-color: #FFD43D;
     box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }
@@ -2037,7 +2037,7 @@
     box-shadow: inset 0 0 0 1px #000000;
     background-color: #f2f2f2;
   }
-  .hamburger-iconbtn:active {
+  .hamburger-iconbtn:focus, .hamburger-iconbtn:active {
     background-color: #FFD43D;
     box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }

@@ -19,6 +19,7 @@
     background-color: map.get(color.$grey, 50);
   }
 
+  &:focus,
   &:active {
     background-color: map.get(color.$yellow, 300);
     box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
@@ -46,6 +47,7 @@
     background-color: map.get(color.$grey, 50);
   }
 
+  &:focus,
   &:active {
     background-color: map.get(color.$yellow, 300);
     box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
