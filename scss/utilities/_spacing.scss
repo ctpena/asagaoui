@@ -132,16 +132,28 @@
     .g-#{$size} {
       gap: $value;
     }
+    .g-x-#{$size} {
+      column-gap: $value;
+    }
+    .g-y-#{$size} {
+      row-gap: $value;
+    }
   }
 }
 
-//
+// Responsive gap utilities
 @each $bp, $size in breakpoint.$breakpoints {
   @include breakpoint.breakpoint($bp) {
     @each $size, $value in spacing.$spacers {
       @if $size != 'auto' {
         .g-#{$bp}-#{$size} {
           gap: $value;
+        }
+        .g-x-#{$bp}-#{$size} {
+          column-gap: $value;
+        }
+        .g-y-#{$bp}-#{$size} {
+          row-gap: $value;
         }
       }
     }

@@ -5,26 +5,25 @@
 
 $grid-columns: 12;
 
-.garden {
+.grid {
   display: grid;
   grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
   width: 100%;
-  row-gap: map.get(spacing.$spacers, 5);
 }
 
-.plot {
+.col {
   grid-column: span 12;
 }
 
 @for $i from 1 through 12 {
-  .plot-#{$i} {
+  .col-#{$i} {
     grid-column: span $i;
   }
 }
 
 @include breakpoint.breakpoint(sm) {
   @for $i from 1 through 12 {
-    .plot-sm-#{$i} {
+    .col-sm-#{$i} {
       grid-column: span $i;
     }
   }
@@ -32,7 +31,7 @@ $grid-columns: 12;
 
 @include breakpoint.breakpoint(md) {
   @for $i from 1 through 12 {
-    .plot-md-#{$i} {
+    .col-md-#{$i} {
       grid-column: span $i;
     }
   }
@@ -40,7 +39,7 @@ $grid-columns: 12;
 
 @include breakpoint.breakpoint(lg) {
   @for $i from 1 through 12 {
-    .plot-lg-#{$i} {
+    .col-lg-#{$i} {
       grid-column: span $i;
     }
   }
@@ -48,7 +47,7 @@ $grid-columns: 12;
 
 @include breakpoint.breakpoint(xl) {
   @for $i from 1 through 12 {
-    .plot-xl-#{$i} {
+    .col-xl-#{$i} {
       grid-column: span $i;
     }
   }
@@ -56,7 +55,7 @@ $grid-columns: 12;
 
 @include breakpoint.breakpoint(xxl) {
   @for $i from 1 through 12 {
-    .plot-xxl-#{$i} {
+    .col-xxl-#{$i} {
       grid-column: span $i;
     }
   }
@@ -64,7 +63,7 @@ $grid-columns: 12;
 
 @include breakpoint.breakpoint(xxxl) {
   @for $i from 1 through 12 {
-    .plot-xxxl-#{$i} {
+    .col-xxxl-#{$i} {
       grid-column: span $i;
     }
   }
@@ -72,105 +71,8 @@ $grid-columns: 12;
 
 @include breakpoint.breakpoint(x4k) {
   @for $i from 1 through 12 {
-    .plot-x4k-#{$i} {
+    .col-x4k-#{$i} {
       grid-column: span $i;
-    }
-  }
-}
-
-.arbor {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.bloom {
-  flex: 1 0 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-@for $i from 1 through 12 {
-  .bloom-#{$i} {
-    flex: 0 0 auto;
-    width: math.div(100%, 12) * $i;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-@include breakpoint.breakpoint(sm) {
-  @for $i from 1 through 12 {
-    .bloom-sm-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-  }
-}
-
-@include breakpoint.breakpoint(md) {
-  @for $i from 1 through 12 {
-    .bloom-md-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-  }
-}
-
-@include breakpoint.breakpoint(lg) {
-  @for $i from 1 through 12 {
-    .bloom-lg-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-  }
-}
-
-@include breakpoint.breakpoint(xl) {
-  @for $i from 1 through 12 {
-    .bloom-xl-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-  }
-}
-
-@include breakpoint.breakpoint(xxl) {
-  @for $i from 1 through 12 {
-    .bloom-xxl-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-  }
-}
-
-@include breakpoint.breakpoint(xxxl) {
-  @for $i from 1 through 12 {
-    .bloom-xxxl-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-  }
-}
-
-@include breakpoint.breakpoint(x4k) {
-  @for $i from 1 through 12 {
-    .bloom-x4k-#{$i} {
-      flex: 0 0 auto;
-      width: math.div(100%, 12) * $i;
-      padding-right: 1rem;
-      padding-left: 1rem;
     }
   }
 }
