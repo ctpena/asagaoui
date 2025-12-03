@@ -3,13 +3,13 @@
         {{ .Content }}
         {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </article>
-    <div class="garden g-3">
+    <aside class="mt-5 grid g-3">
         {{ range .Pages }}
-            <article class="card plot plot-md-4">
+            <article class="card col-12 col-md-6">
                 <div class="card-body">
                     <h2 class="card-title"><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                 </div>
             </article>
         {{ end }}
-    </div>
+    </aside>
 {{ end }}

@@ -2,44 +2,27 @@
 title: グリッド
 ---
 
-AsagaoUIには特徴的なグリッドシステムが２つあります。
+AsagaoUIには特徴的なグリッドシステムがあります。
 
-## garden
+## grid
 
-`display: grid;`が割り当てられた`garden`は12カラムのグリッドレイアウトを提供します。
+`display: grid;`が割り当てられた`grid`は12カラムのグリッドレイアウトを提供します。
 
 コード例
 
-{{% code-snippet lang="html" preview="false" %}}
-<div class="garden">
-    <div class="plot">
-        <!-- 区画1 -->
+{{% code-snippet lang="html" preview="true" %}}
+<div class="grid g-1">
+    <div class="p-4 bg-magenta-500">
     </div>
-    <div class="plot">
-        <!-- 区画2 -->
+    <div class="p-4 bg-magenta-500">
     </div>
-</div>
-{{% /code-snippet %}}
-
-## arbor
-
-`display: flex;`が割り当てられた`arbor`は12カラムのグリッドレイアウトを提供します。
-
-{{% code-snippet lang="html" preview="false" %}}
-<div class="arbor">
-    <div class="bloom">
-        <!-- アイテム1 -->
+    <div class="p-4 bg-magenta-500">
     </div>
-    <div class="bloom">
-        <!-- アイテム2 -->
+    <div class="col-2 p-4 bg-magenta-500">
+    </div>
+    <div class="p-4 bg-magenta-500">
+    </div>
+    <div class="p-4 bg-magenta-500">
     </div>
 </div>
 {{% /code-snippet %}}
-
-## gardenとarborの違いは
-
-`display: grid;`か`display: flex;`です。
-
-単純な水平方向のグリッドシステムでは、`arbor`が適している場合がほとんどですし、
-水平方向と垂直方保に配置する必要がある場合は、`garden`が適してます。
-どちらを使用するかは、特定のデザインのニーズや要件によって異なります。
