@@ -1,5 +1,8 @@
 {{ define "main" }}
     <article class="content">
+        <header>
+            <h1 class="mt-0">{{ .Title }}</h1>
+        </header>
         {{ .Content }}
         {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </article>
