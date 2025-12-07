@@ -5,9 +5,24 @@
         </nav>
     </aside>
         <hr class="mt-6">
-    <main class="container-md">
+    <main class="container-sm">
         <div>
             <h1 class="h1">{{ .Title }}</h1>
+            <div class="hstack g-4 mt-3">
+                <input id="test" type="text" class="form-input w-100" required="" placeholder="新しいタスクを入力...">
+                <button class="btn btn-primary">追加</button>
+            </div>
+            <div class="hstack g-3 mt-3">
+                <button class="btn">
+                    すべて(0)
+                </button>
+                <button class="btn">
+                    未完了(0)
+                </button>
+                <button class="btn">
+                    完了(0)
+                </button>
+            </div>
         </div>
     </main>
 {{ end }}
