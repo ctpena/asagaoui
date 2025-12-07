@@ -16,7 +16,14 @@
                 {{ if .Params.pngUrl }}
                     <a class="mt-2 btn btn-s btn-primary d-inline-block" href="{{ .Params.pngUrl | relURL }}" download>ダウンロード PNG</a>
                 {{ end }}
-                <h3 class="mt-4 h3">別のバージョン</h3>
+                {{ if .Params.png1x1Url }}
+                    <h3 class="mt-4 h3">別のバージョン</h3>
+                    <a class="mt-2 btn btn-s btn-primary d-inline-block" href="{{ .Params.pngUrl | relURL }}" download>ダウンロード 1:1 PNG</a>
+                {{ end }}
+                {{ if .Params.pngBgUrl }}
+                    <h3 class="mt-4 h3">別のバージョン</h3>
+                    <a class="mt-2 btn btn-s btn-primary d-inline-block" href="{{ .Params.pngBgUrl | relURL }}" download>ダウンロード背景色付 PNG</a>
+                {{ end }}
             </div>
         </article>
     </main>

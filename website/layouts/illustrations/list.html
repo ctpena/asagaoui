@@ -16,7 +16,7 @@
             <h2 class="h2">イラストレーション一覧</h2>
             <div class="mt-4 grid">
                 {{ range .Pages }}
-                    <article class="custom-illustrations-box col-3">
+                    <article class="custom-illustrations-box col-6 col-sm-4 col-md-3">
                         <img src="{{ .Params.pngUrl | relURL }}" alt="{{ .Title }}" loading="lazy">
                         <h3 class="text-center"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                     </article>
