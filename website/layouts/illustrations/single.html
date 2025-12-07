@@ -1,0 +1,23 @@
+{{ define "main" }}
+    <main class="container-lg mt-5">
+        <article class="grid gy-5 gx-4">
+            <header class="col-12">
+                <p class="hs">イラストレーション</p>
+                <h1 class="h1">{{ .Title }}</h1>
+            </header>
+            <div class="col-8">
+                {{ if .Params.pngUrl }}
+                    <img class="custom-illustrations-area" src="{{ .Params.pngUrl | relURL }}" alt="{{ .Title }}" loading="lazy">
+                {{ end }}
+            </div>
+            <div class="col-4">
+                <h2 class="h2">ダウンロード</h2>
+                <p class="mt-2">png形式をダウンロードして利用します。</p>
+                {{ if .Params.pngUrl }}
+                    <a class="mt-2 btn btn-s btn-primary d-inline-block" href="{{ .Params.pngUrl | relURL }}" download>ダウンロード PNG</a>
+                {{ end }}
+                <h3 class="mt-4 h3">別のバージョン</h3>
+            </div>
+        </article>
+    </main>
+{{ end }}

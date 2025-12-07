@@ -6,9 +6,15 @@ defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
 
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+[[module.mounts]]
+source = "../assets/illustrations/png"
+target = "static/illustrations"
+[[module.mounts]]
+source = "static"
+target = "static"
+[module.hugoVersion]
+extended = false
+min = "0.116.0"
 
 [languages]
 [languages.ja]

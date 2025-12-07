@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <main class="">
+        <section class="container-lg mt-5 grid gy-4">
+            <div class="col-12 col-sm-8 order-2 order-sm-1">
+                <h1 class="h1">{{ .Title }}</h1>
+                <div class="content container-sm m-0 pl-0">
+                    {{ .Content }}
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 order-1 order-sm-2">
+                {{ $img := resources.Get "img/AsagaoUISymbolNOMargin.svg" }}
+                <img src="{{ $img.RelPermalink }}" alt="" style="max-height: 220px; margin: 0 auto;">
+            </div>
+        </section>
+        <section class="container-lg mt-6">
+            <h2 class="h2">イラストレーション一覧</h2>
+            <div class="mt-4 grid">
+                {{ range .Pages }}
+                    <article class="custom-illustrations-box col-3">
+                        <img src="{{ .Params.pngUrl | relURL }}" alt="{{ .Title }}" loading="lazy">
+                        <h3 class="text-center"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    </article>
+                {{ end }}
+            </div>
+        </section>
+    </main>
+{{ end }}
