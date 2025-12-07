@@ -2,6 +2,12 @@
 @use "../styles/breakpoint";
 @use "sass:map";
 
+
+// heading-shoulder
+.hs {
+  @include typography.set(map.get(typography.$std, std-20b-150));
+}
+
 .h1 {
   @include typography.set(map.get(typography.$std, std-32b-150));
 }

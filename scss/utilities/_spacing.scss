@@ -132,10 +132,10 @@
     .g-#{$size} {
       gap: $value;
     }
-    .g-x-#{$size} {
+    .gx-#{$size} {
       column-gap: $value;
     }
-    .g-y-#{$size} {
+    .gy-#{$size} {
       row-gap: $value;
     }
   }
@@ -149,10 +149,10 @@
         .g-#{$bp}-#{$size} {
           gap: $value;
         }
-        .g-x-#{$bp}-#{$size} {
+        .gx-#{$bp}-#{$size} {
           column-gap: $value;
         }
-        .g-y-#{$bp}-#{$size} {
+        .gy-#{$bp}-#{$size} {
           row-gap: $value;
         }
       }
