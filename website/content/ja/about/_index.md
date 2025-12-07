@@ -1,6 +1,6 @@
 +++
-type = "docs"
 title = '概要'
+type = "docs"
 draft = false
 weight = 10
 +++

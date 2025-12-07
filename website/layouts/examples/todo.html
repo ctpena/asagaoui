@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <aside class="bg-grey-50">
+        <nav class="container-lg py-3">
+            <a class="link" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}一覧に戻る</a>
+        </nav>
+    </aside>
+        <hr class="mt-6">
+    <main class="container-md">
+        <div>
+            <h1 class="h1">{{ .Title }}</h1>
+        </div>
+    </main>
+{{ end }}

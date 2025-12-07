@@ -1,0 +1,22 @@
+{{ define "main" }}
+    {{ partial "announcement.html" . }}
+    {{ partial "header.html" . }}
+    <main class="container-lg mt-5">
+        <section class="grid">
+            <h1 class="h1 col-12">{{ .Title }}</h1>
+            <div class="fs-20 col-12 col-sm-10 col-md-9 col-lg-7 py-3">
+                {{ .Content }}
+            </div>
+        </section>
+        <hr class="mt-3 divider" />
+        <section>
+            <h2 class="h2 mt-5">テンプレート</h2>
+            {{ range .Pages }}
+                <article>
+                    <h3 class="mt-3"><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a></h3>
+                </article>
+            {{ end }}
+        </section>
+    </main>
+    {{ partial "footer.html" . }}
+{{ end }}
