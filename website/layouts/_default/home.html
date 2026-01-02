@@ -43,13 +43,13 @@
                     {{ $inbox_customize := resources.Get "img/inbox_customize.svg" }}
                     <img class="card-img-top my-3" src="{{ $inbox_customize.RelPermalink }}" alt="" width="50px" height="50px">
                     <div class="card-body">
-                        <h2 class="card-title">Sassによる強力なカスタマイズ機能</h2>
+                        <h2 class="card-title">{{ i18n "hero3-title" }}</h2>
                         <p class="card-text"><a href="" class="link">カスタマイズ機能の詳細を見る</a></p>
-                        <p class="card-text">Sassの機能を最大限に活用し、プロジェクトのニーズに合わせた柔軟なカスタマイズを可能にします。変数とミックスインを活用することで、効率的なスタイル定義とテーマのカスタマイズが可能です。</p>
+                        <p class="card-text">{{ i18n "hero3-description" }}</p>
                         <ul>
-                            <li>カスタム変数による容易なテーマ調整</li>
-                            <li>ミックスインによる再利用可能なスタイル定義</li>
-                            <li>モジュール式の構成による柔軟な拡張</li>
+                            <li>{{ i18n "hero3-list1" }}</li>
+                            <li>{{ i18n "hero3-list2" }}</li>
+                            <li>{{ i18n "hero3-list3" }}</li>
                         </ul>
                     </div>
                 </div>

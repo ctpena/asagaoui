@@ -16,3 +16,14 @@ hero1-list2: "レスポンシブデザインの統一的な実装"
 
 hero2-title: "HTMLマークアップファースト"
 hero2-description: "HTML構造を重視したUIコンポーネントを提供します。JavaScriptに依存せず、HTMLネイティブ要素の機能を最大限に活用することで、堅牢で保守性の高い実装を実現します。"
+
+hero3-title: ""
+hero3-description: ""
+hero3-list1: ""
+hero3-list2: ""
+hero3-list3: ""
+
+
+hero4-title: ""
+hero4-description: ""
+

@@ -1754,6 +1754,10 @@
     background-color: #f8f8fb;
   }
   .utilitylink {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
     text-decoration: underline;
   }
   .utilitylink:hover {
