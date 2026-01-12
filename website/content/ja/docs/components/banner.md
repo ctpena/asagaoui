@@ -21,9 +21,12 @@ weight: 20
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner">
+    <i class="banner-icon aif-information"></i>
     <span class="banner-title">AsagaoUIはメンテナンス中です</span>
-    <time class="banner-date">2025年4月1日</time>
-    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    <div class="banner-body">
+        <time class="banner-date">2025年4月1日</time>
+        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    </div>
 </div>
 {{% /code-snippet %}}
 
@@ -31,9 +34,12 @@ weight: 20
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-chip">
+    <i class="banner-icon aif-information"></i>
     <span class="banner-title">AsagaoUIはメンテナンス中です</span>
-    <time class="banner-date">2025年4月1日</time>
-    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    <div class="banner-body">
+        <time class="banner-date">2025年4月1日</time>
+        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    </div>
 </div>
 {{% /code-snippet %}}
 
@@ -41,9 +47,12 @@ weight: 20
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-success">
+    <i class="banner-icon aif-complete"></i>
     <span class="banner-title">AsagaoUIはメンテナンス中です</span>
-    <time class="banner-date">2025年4月1日</time>
-    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    <div class="banner-body">
+        <time class="banner-date">2025年4月1日</time>
+        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    </div>
 </div>
 {{% /code-snippet %}}
 
@@ -51,9 +60,12 @@ weight: 20
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-error">
+    <i class="banner-icon aif-error"></i>
     <span class="banner-title">AsagaoUIはメンテナンス中です</span>
-    <time class="banner-date">2025年4月1日</time>
-    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    <div class="banner-body">
+        <time class="banner-date">2025年4月1日</time>
+        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    </div>
 </div>
 {{% /code-snippet %}}
 
@@ -61,9 +73,12 @@ weight: 20
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-warning">
+    <i class="banner-icon aif-warning"></i>
     <span class="banner-title">AsagaoUIはメンテナンス中です</span>
-    <time class="banner-date">2025年4月1日</time>
-    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    <div class="banner-body">
+        <time class="banner-date">2025年4月1日</time>
+        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    </div>
 </div>
 {{% /code-snippet %}}
 
@@ -71,11 +86,13 @@ weight: 20
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-info">
+    <i class="banner-icon aif-information"></i>
     <span class="banner-title">AsagaoUIはメンテナンス中です</span>
-    <time class="banner-date">2025年4月1日</time>
-    <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    <div class="banner-body">
+        <time class="banner-date">2025年4月1日</time>
+        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+    </div>
 </div>
 {{% /code-snippet %}}
 
 ## 緊急時バナー
-

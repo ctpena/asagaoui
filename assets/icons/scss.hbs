@@ -1,9 +1,3 @@
-/*!
-* AsagaoUI-Icons
-* Copyright 2025 Hiroshi ISOBE
-* Licensed under MIT
-*/
-
 @font-face {
 font-family: "{{ name }}";
 src: {{{ fontSrc }}};
@@ -20,8 +14,13 @@ font-weight: normal;
 font-variant: normal;
 text-transform: none;
 line-height: 1;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+
+&:before {
+display: block;
+width: 1em;
+height: 1em;
+line-height: 1;
+}
 }
 
 [class^="ai-"],

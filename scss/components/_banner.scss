@@ -5,59 +5,106 @@
 @use "../styles/breakpoint";
 @use "sass:map";
 
-@mixin banner-chip-style($color, $left-width: 10px, $left-width-lg: 18px) {
-  border-radius: 0;
-  border-top: solid $color 2px;
-  border-right: solid $color 2px;
-  border-bottom: solid $color 2px;
-  border-left: solid $color $left-width;
-  @include breakpoint.style(d) {
-    border-left: solid $color $left-width-lg;
-  }
-}
 
-@mixin banner-variant($variant, $color) {
-  &-#{$variant} {
-    border: solid $color 3px;
-    &.banner-chip {
-      @include banner-chip-style($color);
+.banner {
+  border: 3px solid map.get(color.$grey, 536);
+  border-radius: map.get(rounding.$rounding, l);
+  padding: map.get(spacing.$spacers, 3);
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: min-content 1fr auto;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-areas:
+    "icon title close"
+    "body body body"
+    "action action action";
+  align-items: center;
+
+  @include breakpoint.style(d) {
+    padding: map.get(spacing.$spacers, 4);
+    grid-template-areas:
+    "icon title close"
+    ". body body"
+    "action action action";
+  }
+
+
+  &-chip {
+    border-radius: 0;
+    border-left-width: 10px;
+
+    @include breakpoint.style(d) {
+      border-left-width: 18px;
+    }
+  }
+
+  &-success {
+    border-color: map.get(color.$green, 800);
+
+    .banner-icon {
+      color: map.get(color.$green, 800);
+    }
+  }
+
+  &-error {
+    border-color: map.get(color.$red, 800);
+
+    .banner-icon {
+      color: map.get(color.$red, 800);
+    }
+  }
+
+  &-warning {
+    border-color: map.get(color.$yellow, 900);
+
+    .banner-icon {
+      color: map.get(color.$yellow, 900);
+    }
+  }
+
+  &-info {
+    border-color: map.get(color.$blue, 900);
+
+    .banner-icon {
+      color: map.get(color.$blue, 900);
     }
   }
 }
 
-.banner {
-  border: solid map.get(color.$grey, 536) 3px;
-  padding: map.get(spacing.$spacers, 3);
-  border-radius: map.get(rounding.$rounding, l);
-  display: flex;
-  flex-direction: column;
-  gap: map.get(spacing.$spacers, 2);
-
-  @include breakpoint.style(d) {
-    padding: map.get(spacing.$spacers, 4);
-  }
-
-  &-chip {
-    @include banner-chip-style(map.get(color.$grey, 536));
-  }
-
-  @include banner-variant("success", map.get(color.$green, 800));
-  @include banner-variant("error", map.get(color.$red, 800));
-  @include banner-variant("warning", map.get(color.$yellow, 900));
-  @include banner-variant("info", map.get(color.$blue, 900));
-}
-
 .banner-title {
   display: block;
+  grid-area: title;
   @include typography.set(map.get(typography.$std, 'std-17b-170'));
+
   @include breakpoint.style(d) {
-    margin-bottom: 8px;
     @include typography.set(map.get(typography.$std, 'std-20b-150'));
+  }
+}
+
+.banner-body {
+  grid-area: body;
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  @include breakpoint.style(d) {
+    margin-top: 16px;
   }
 }
 
 .banner-description,
 .banner-date {
   display: block;
-  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+}
+
+.banner-icon {
+  color: map.get(color.$grey, 536);
+  grid-area: icon;
+  font-size: 24px;
+  margin-right: 12px;
+  @include breakpoint.style(d) {
+    font-size: 36px;
+    margin-right: 24px;
+  }
 }
