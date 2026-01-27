@@ -4,13 +4,13 @@
 @use "../styles/typography";
 
 .breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  color: map.get(color.$grey, 800);
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
 }
 
 .breadcrumb-item {
-  color: map.get(color.$grey, 800);
+  display: inline;
+  overflow-wrap: break-word;
 
   & + &::before {
     font-family: "asagaoui-icons" !important;
@@ -20,34 +20,25 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: inline-block;
-    margin-right: 8px;
     content: "\f137";
-    width: 12px;
-    height: 13px;
   }
+}
 
-  .breadcrumb-link {
+.breadcrumb-link {
+  &:any-link {
     color: map.get(color.$blue, 1000);
     text-decoration: underline;
+    text-decoration-thickness: calc(1 / 16 * 1rem);
+    text-underline-offset: calc(3 / 16 * 1rem);
+  }
 
-    &:hover {
-      color: map.get(color.$blue, 900);
-      background-color: map.get(color.$grey, 50);
-    }
+  &:hover {
+    color: map.get(color.$blue, 900);
+    text-decoration-thickness: calc(3 / 16 * 1rem);
+  }
 
-    &:focus {
-      border-radius: map.get(rounding.$rounding, 's');
-      outline: 2px solid map.get(color.$yellow, 700);
-    }
-
-    &:active {
-      color: map.get(color.$orange, 700);
-    }
-
-    &:visited {
-    }
+  &:active {
+    color: map.get(color.$orange, 800);
+    text-decoration-thickness: calc(1 / 16 * 1rem);
   }
 }

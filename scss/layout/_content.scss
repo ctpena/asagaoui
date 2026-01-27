@@ -8,13 +8,13 @@
 @use "sass:map";
 
 .content {
-  a {
+  a:not([class]) {
     @extend .link;
   }
 
-  ul,
-  ol,
-  p {
+  ul:not([class]),
+  ol:not([class]),
+  p:not([class]) {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -63,11 +63,11 @@
     overflow: auto;
   }
 
-  ul {
+  ul:not([class]) {
     @extend .list-unordered
   }
 
-  ol {
+  ol:not([class]) {
     @extend .list-ordered
   }
 

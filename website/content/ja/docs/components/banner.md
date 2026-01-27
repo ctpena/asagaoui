@@ -5,27 +5,23 @@ weight: 20
 
 重要な情報を目出させるUIです。2種類あります。
 
-## 注意事項
-
-現在、アイコンは実装されていません。今後実装予定です。
-
 ## ノティフィケーションバナー
 
 ノティフィケーションバナーは。ユーザーの操作に関わらず、コンテンツをユーザーに効果的に提示するUIです。
 
 ### デザインスタイル
 
-ノティフィケーションバナーは2種類のデザインスタイルが用意されています。
+ノティフィケーションバナーは2種類のデザインスタイルが用意されています。`banner-chip`を追加することで、デザインスタイルをカラーチップに変更できます。
 
 #### スタンダード
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner">
     <i class="banner-icon aif-information"></i>
-    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <span class="banner-title">登録期間が延長されました</span>
     <div class="banner-body">
         <time class="banner-date">2025年4月1日</time>
-        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+        <span class="banner-description">ダミーテキストは、デザインの作成時に使用される仮の文章です。</span>
     </div>
 </div>
 {{% /code-snippet %}}
@@ -35,64 +31,74 @@ weight: 20
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-chip">
     <i class="banner-icon aif-information"></i>
-    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <span class="banner-title">登録期間が延長されました</span>
     <div class="banner-body">
         <time class="banner-date">2025年4月1日</time>
-        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+        <span class="banner-description">ダミーテキストは、デザインの作成時に使用される仮の文章です。</span>
     </div>
 </div>
 {{% /code-snippet %}}
 
-### サクセス
+### デザインタイプ
+
+#### サクセス
+
+操作等の滞りない完了の通知
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-success">
     <i class="banner-icon aif-complete"></i>
-    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <span class="banner-title">登録手続きは全て完了しました</span>
     <div class="banner-body">
         <time class="banner-date">2025年4月1日</time>
-        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+        <span class="banner-description">ダミーテキストは、デザインの作成時に使用される仮の文章です。</span>
     </div>
 </div>
 {{% /code-snippet %}}
 
-### エラー
+#### エラー
+
+操作等が正しく完了しなかったことの通知
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-error">
     <i class="banner-icon aif-error"></i>
-    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <span class="banner-title">操作を完了できませんでした</span>
     <div class="banner-body">
         <time class="banner-date">2025年4月1日</time>
-        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+        <span class="banner-description">ダミーテキストは、デザインの作成時に使用される仮の文章です。</span>
     </div>
 </div>
 {{% /code-snippet %}}
 
-### 警告
+#### 警告
+
+注意を喚起するための警告、警戒情報等の通知
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-warning">
     <i class="banner-icon aif-warning"></i>
-    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <span class="banner-title">偽SNSアカウントにご注意ください</span>
     <div class="banner-body">
         <time class="banner-date">2025年4月1日</time>
-        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+        <span class="banner-description">ダミーテキストは、デザインの作成時に使用される仮の文章です。</span>
     </div>
 </div>
 {{% /code-snippet %}}
 
-### 情報
+#### 情報
 
 {{% code-snippet lang="html" preview="true" %}}
 <div class="banner banner-info">
     <i class="banner-icon aif-information"></i>
-    <span class="banner-title">AsagaoUIはメンテナンス中です</span>
+    <span class="banner-title">登録期間が延長されました</span>
     <div class="banner-body">
         <time class="banner-date">2025年4月1日</time>
-        <span class="banner-description">これはダミーテキストです。デザイン作成時に使用される仮の文章です。</span>
+        <span class="banner-description">ダミーテキストは、デザインの作成時に使用される仮の文章です。</span>
     </div>
 </div>
 {{% /code-snippet %}}
 
 ## 緊急時バナー
+
+作成中です。
