@@ -43,9 +43,6 @@
     "tslib": "^2.8.1",
     "typescript": "^5.9.3"
   },
-  "peerDependencies": {
-    "@floating-ui/dom": "^1.6.3"
-  },
   "files": [
     "dist/css",
     "dist/icons/asagaoui-icons.woff2",
