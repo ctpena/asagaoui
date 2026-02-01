@@ -26,6 +26,7 @@
   "scripts": {
     "sass": "sass ./scss:./dist/css",
     "watch:sass": "sass ./scss:./dist/css --watch",
+    "dev:web": "sass ./scss:./website/assets/css --watch",
     "min:sass": "sass ./scss/asagaoui.scss:./dist/css/asagaoui.min.css ./scss/asagaoui-icons.scss:./dist/css/asagaoui-icons.min.css --style=compressed --no-source-map",
     "buildjs": "rollup -c"
   },

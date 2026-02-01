@@ -1,0 +1,88 @@
+@use "../styles/color";
+@use "sass:map";
+@use "../styles/typography";
+
+.lang-select {
+  width: fit-content;
+  position: relative;
+}
+
+.lang-select-btn {
+  display: flex;
+  align-items: center;
+  border-radius: .5rem;
+  min-height: 2.25rem;
+  padding: 0 .25rem;
+  column-gap: .25rem;
+  cursor: default;
+
+  &:hover {
+    background-color: map.get(color.$grey, 50);
+
+    .lang-select-label {
+      text-decoration: underline;
+      text-underline-offset: .1875rem;
+    }
+  }
+}
+
+.lang-select-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: max-content;
+  max-height: 18.875rem;
+  overflow-y: auto;
+  border-radius: .5rem 0 0 .5rem;
+  border: 1px solid map.get(color.$grey, 420);
+  background-color: color.$white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .3);
+}
+
+.lang-select-label {
+}
+
+.lang-select-menu {
+
+}
+
+.lang-select-item {
+}
+
+.lang-select-link {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  padding: 10px 1rem;
+  min-height: 2.75rem;
+
+  &:hover {
+    background-color: map.get(color.$grey, 50);
+
+    .lang-select-link-label {
+      text-decoration: underline;
+      text-underline-offset: .1875rem;
+    }
+  }
+
+  i {
+    visibility: hidden;
+  }
+
+  &.active {
+    background-color: map.get(color.$blue, 100);
+    color: map.get(color.$blue, 1000);
+    @include typography.set(map.get(typography.$dns, 'dns-16b-130'));
+
+    &:hover {
+      background-color: map.get(color.$blue, 50);
+      color: map.get(color.$blue, 900);
+    }
+
+    i {
+      visibility: visible;
+    }
+  }
+}

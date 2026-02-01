@@ -7,6 +7,8 @@ website/public
 website/.hugo_build.lock
 website/assets/css/asagaoui.css
 website/assets/css/asagaoui-icons.css
+website/assets/css/asagaoui.css.map
+website/assets/css/asagaoui-icons.css.map
 website/assets/css/asagaoui.min.css
 website/assets/js/asagaoui.js
 website/assets/js/asagaoui.min.js
