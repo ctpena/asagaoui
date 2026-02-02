@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @use 'sass:meta';
 
 /*!
@@ -32,16 +31,17 @@
 // Components
 @layer components {
   @include meta.load-css('components/accordion');
+  @include meta.load-css('components/badge');
   @include meta.load-css('components/banner');
   @include meta.load-css('components/breadcrumb');
   @include meta.load-css('components/button');
   @include meta.load-css('components/card');
   @include meta.load-css('components/carousel');
   @include meta.load-css('components/codesnippet');
+  @include meta.load-css('components/description-list');
   @include meta.load-css('components/divider');
   @include meta.load-css('components/drawer');
   @include meta.load-css('components/dropdown');
-  @include meta.load-css('components/emergency-banner');
   @include meta.load-css('components/globalmenu');
   @include meta.load-css('components/hamburger-btn');
   @include meta.load-css('components/header');

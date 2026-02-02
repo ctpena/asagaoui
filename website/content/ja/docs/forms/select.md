@@ -1,6 +1,6 @@
 +++
-title = 'セレクト'
-weight = 50
+title = 'セレクトボックス'
+weight = 70
 +++
 
 HTMLの`select`タグにクラスを追加するだけで利用可能です。アイコンの表示にはAsagaoUI-Iconsが必要です。
@@ -13,7 +13,3 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。�
     <option value="3">選択肢3</option>
 </select>
 {{% /code-snippet %}}
-
-
-エラーの状態
-

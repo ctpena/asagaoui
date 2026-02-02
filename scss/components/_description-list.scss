@@ -1,0 +1,19 @@
+@use "../styles/typography";
+@use "../styles/breakpoint";
+@use "sass:map";
+
+.description-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-term {
+  @include typography.set(map.get(typography.$std, 'std-16b-170'));
+  @include breakpoint.style(d) {
+    @include typography.set(map.get(typography.$std, 'std-17b-170'));
+  }
+}
+
+.description-details {
+  margin-left: 2rem;
+}

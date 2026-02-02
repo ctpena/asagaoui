@@ -31,7 +31,7 @@
       font-variant: normal;
       text-transform: none;
       line-height: 1;
-      content: "\f139";
+      content: "\f13b";
       display: flex;
       font-weight: bold;
       align-items: center;
@@ -56,7 +56,7 @@
   &[open] {
     .accordion-header {
       &::before {
-        content: "\f136";
+        content: "\f138";
       }
     }
   }

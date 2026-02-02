@@ -101,4 +101,14 @@ weight: 20
 
 ## 緊急時バナー
 
-作成中です。
+ユーザーに最優先して伝えたい情報を表示するためのデザインを用意しています。
+
+{{% code-snippet lang="html" preview="true" %}}
+<div class="banner banner-emergency">
+    <span class="banner-title">[緊急]〇〇地区に避難準備情報が発令されました</span>
+    <div class="banner-body">
+        <time class="banner-date">2026年2月2日 06:00更新</time>
+        <span class="banner-description">1時23分に〇〇地区に対して避難準備情報が発令されました。お年寄りの方等避難に時間のかかる方は、直ちに指定避難所へ移動してください。</span>
+    </div>
+</div>
+{{% /code-snippet %}}

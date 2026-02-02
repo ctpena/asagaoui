@@ -69,6 +69,23 @@
       color: map.get(color.$blue, 900);
     }
   }
+
+  &-emergency {
+    border: 6px solid map.get(color.$orange, 600);
+    border-radius: 0;
+    padding: .875rem .625rem;
+    @include breakpoint.style(d) {
+      padding: map.get(spacing.$spacers, 3);
+    }
+
+    .banner-title {
+      @include typography.set(map.get(typography.$std, 'std-20b-150'));
+
+      @include breakpoint.style(d) {
+        @include typography.set(map.get(typography.$std, 'std-24b-150'));
+      }
+    }
+  }
 }
 
 .banner-title {

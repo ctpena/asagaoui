@@ -2,6 +2,7 @@
 @use "../utilities/link" as *;
 @use "../utilities/typography" as *;
 @use "../components/table" as *;
+@use "../components/description-list" as *;
 @use "../utilities/list" as *;
 @use "../utilities/code" as *;
 @use "../styles/spacing";
@@ -23,37 +24,37 @@
     @include table;
   }
 
-  h1 {
+  h1:not([class]) {
     @extend .h1;
     margin-top: map.get(spacing.$spacers, 6);
     margin-bottom: map.get(spacing.$spacers, 4);
   }
 
-  h2 {
+  h2:not([class]) {
     @extend .h2;
     margin-top: map.get(spacing.$spacers, 6);
     margin-bottom: map.get(spacing.$spacers, 4);
   }
 
-  h3 {
+  h3:not([class]) {
     @extend .h3;
     margin-top: map.get(spacing.$spacers, 5);
     margin-bottom: map.get(spacing.$spacers, 4);
   }
 
-  h4 {
+  h4:not([class]) {
     @extend .h4;
     margin-top: map.get(spacing.$spacers, 5);
     margin-bottom: map.get(spacing.$spacers, 3);
   }
 
-  h5 {
+  h5:not([class]) {
     @extend .h5;
     margin-top: map.get(spacing.$spacers, 5);
     margin-bottom: map.get(spacing.$spacers, 3);
   }
 
-  h6 {
+  h6:not([class]) {
     margin-top: map.get(spacing.$spacers, 4);
     margin-bottom: map.get(spacing.$spacers, 3);
   }
@@ -73,5 +74,15 @@
 
   code:not([class]) {
     @extend .code;
+  }
+
+  dl:not([class]) {
+    @extend .description-list;
+  }
+  dt:not([class]) {
+    @extend .description-term;
+  }
+  dd:not([class]) {
+    @extend .description-details;
   }
 }

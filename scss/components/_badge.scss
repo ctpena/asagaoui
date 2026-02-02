@@ -1,0 +1,18 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.badge {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  align-content: center;
+  box-sizing: border-box;
+  min-height: calc(32 / 16 * 1rem);
+  border-radius: calc(8 / 16 * 1rem);
+  @include typography.set(map.get(typography.$oln, 'oln-16n-100'));
+  overflow-wrap: anywhere;
+  padding: calc(4 / 16 * 1rem) calc(8 / 16 * 1rem);
+  color: color.$black;
+}

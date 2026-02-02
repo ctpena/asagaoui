@@ -1,6 +1,6 @@
 ---
 title: ディバイダー
-weight: 65
+weight: 68
 ---
 
 {{% code-snippet lang="html" preview="true" %}}
