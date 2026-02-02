@@ -5,6 +5,26 @@
             <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" width="150" height="60">
         </a>
         <div class="header-button">
+            <details class="lang-select">
+                <summary class="lang-select-btn">
+                    <i class="ail-language"></i>
+                    <span class="lang-select-label">Language</span>
+                    <i class="ail-arrow_down"></i>
+                </summary>
+                <div class="lang-select-popup">
+                    <ul class="lang-select-menu">
+                        {{ $currentLang := .Lang }}
+                        {{ range .AllTranslations }}
+                            <li class="lang-select-item">
+                                <a class="lang-select-link {{ if eq .Lang $currentLang }}active{{ end }}" href="{{ .RelPermalink }}">
+                                    <i class="ail-check"></i>
+                                    <span class="lang-select-link-label">{{ .Language.LanguageName }}</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </details>
             <button class="hamburger-iconbtn" type="button" command="show-modal" commandfor="header-dialog-menu">
                 <i class="hamburger-icon"></i>
                 {{ i18n "hamburger-iconbtn" }}
