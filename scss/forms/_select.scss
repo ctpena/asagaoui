@@ -3,12 +3,18 @@
 @use "../styles/rounding";
 @use "sass:map";
 
-.form-select {
-  padding: .938rem 1rem;
-  display: block;
+.select {
+  position: relative;
+  width: fit-content;
+  padding: .938rem 2.5rem .938rem 1rem;
   border: solid 1px map.get(color.$grey, 600);
   border-radius: map.get(rounding.$rounding, m);
   @include typography.set(map.get(typography.$oln, 'oln-16n-100'));
+
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.1L3 8L4 7L12 15L20 7L21 8L12 17.1Z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right .8rem center;
 
   &:hover {
     border: solid 1px color.$black;
@@ -19,6 +25,34 @@
     outline: none;
   }
 
-  &::placeholder {
+  &:disabled {
+    background-image: none;
+    border-color: map.get(color.$grey, 300);
+    background-color: map.get(color.$grey, 50);
+    color: map.get(color.$grey, 420);
+  }
+}
+
+.is-sm {
+  &.select {
+    padding: .688rem 2.5rem .688rem 1rem;
+  }
+}
+
+.is-md {
+  &.select {
+    padding: .938rem 2.5rem .938rem 1rem;
+  }
+}
+
+.is-lg {
+  &.select {
+    padding: 1.188rem 2.5rem 1.188rem 1rem;
+  }
+}
+
+.is-error {
+  &.select {
+    border-color: map.get(color.$red, 800);
   }
 }

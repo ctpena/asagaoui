@@ -1,0 +1,100 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.radio {
+  display: flex;
+  align-items: center;
+
+  gap: .5rem;
+  width: fit-content;
+  color: map.get(color.$grey, 800);
+  @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
+  padding: 8px 0;
+  cursor: default;
+}
+
+.is-sm {
+  .radio-input {
+    width: 1.25rem;
+    height: 1.25rem;
+
+    &:before {
+      width: .625rem;
+      height: .625rem;
+    }
+  }
+}
+
+.is-md {
+  .radio-input {
+    width: 1.625rem;
+    height: 1.625rem;
+
+    &:before {
+      width: .75rem;
+      height: .75rem;
+    }
+  }
+}
+
+.is-lg {
+  .radio-input {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    &:before {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+
+.radio-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 0.125rem solid map.get(color.$grey, 600);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: .625rem;
+    height: .625rem;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &:hover {
+    border-color: color.$black;
+    box-shadow: 0 0 0 2px map.get(color.$grey, 420);
+
+    &:before {
+    }
+  }
+
+  &:checked {
+    border-color: map.get(color.$blue, 900);
+
+    &:before {
+      background-color: map.get(color.$blue, 900);
+    }
+
+    &:hover {
+      border-color: map.get(color.$blue, 1100);
+
+      &:before {
+        background-color: map.get(color.$blue, 1100);
+      }
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+}

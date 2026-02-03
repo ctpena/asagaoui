@@ -1,7 +1,18 @@
 
-
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  &:has(.input,.textarea,.select) {
+    .form-error {
+      display: none;
+    }
+  }
+
+  &:has(.input.is-error,.textarea.is-error,.select.is-error) {
+    .form-error {
+      display: block;
+    }
+  }
 }

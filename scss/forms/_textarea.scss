@@ -1,0 +1,40 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.textarea {
+  padding: 1rem;
+  border: solid 1px map.get(color.$grey, 600);
+  border-radius: map.get(rounding.$rounding, m);
+  resize: both;
+  width: fit-content;
+  max-width: 100%;
+  display: inline;
+
+  &:hover {
+    border: solid 1px color.$black;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+
+  &:disabled {
+    border: solid 1px map.get(color.$grey, 300);
+    background-color: map.get(color.$grey, 50);
+    color: map.get(color.$grey, 420);
+    resize: none;
+  }
+
+  &:read-only {
+    border-style: dashed;
+    resize: none;
+  }
+}
+
+.is-error {
+  &.textarea {
+    border-color: map.get(color.$red, 800);
+  }
+}

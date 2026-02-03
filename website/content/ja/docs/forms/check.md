@@ -14,22 +14,22 @@ weight = 20
 
 ## 大きさ
 
-`checkbox-sm`,`checkbox-md`,`checkbox-lg`クラスを追加することによって、チェックボックスのサイズを変更できます。
+`is-sm`,`is-md`,`is-lg`クラスを追加することによって、チェックボックスのサイズを変更できます。
 
 - `sm` デフォルトの大きさ
 - `md`
 - `lg` 
 
 {{% code-snippet lang="html" preview="true" %}}
-<label class="checkbox checkbox-lg">
+<label class="checkbox is-lg">
     <input class="checkbox-input" type="checkbox">
     lgサイズ
 </label>
-<label class="checkbox checkbox-md">
+<label class="checkbox is-md">
     <input class="checkbox-input" type="checkbox">
     mdサイズ
 </label>
-<label class="checkbox checkbox-sm">
+<label class="checkbox is-sm">
     <input class="checkbox-input" type="checkbox">
     smサイズ
 </label>

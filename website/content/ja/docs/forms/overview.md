@@ -22,7 +22,7 @@ weight: 10
         <span class="form-necessity">※必須</span>
     </label>
     <div class="form-support">サポートテキスト</div>
-    <input id="test" type="text" class="form-input" required>
+    <input id="test" type="text" class="input">
     <div class="form-error">＊エラーテキスト</div>
 </div>
 {{% /code-snippet %}}

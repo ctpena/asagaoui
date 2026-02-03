@@ -12,35 +12,37 @@
   color: map.get(color.$grey, 800);
   @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
   padding: 8px 0;
+}
 
-  &-sm {
-    .checkbox-input {
-      width: 18px;
-      height: 18px;
-      &:before {
-        transform: scale(1);
-      }
+.is-sm {
+  .checkbox-input {
+    width: 18px;
+    height: 18px;
+
+    &:before {
+      transform: scale(1);
     }
   }
+}
 
-  &-md {
-    .checkbox-input {
-      width: 24px;
-      height: 24px;
-      &:before {
-        transform: scale(calc(20 / 14));
-      }
+.is-md {
+  .checkbox-input {
+    width: 24px;
+    height: 24px;
+
+    &:before {
+      transform: scale(calc(20 / 14));
     }
   }
+}
 
-  &-lg {
-    .checkbox-input {
-      width: 33px;
-      height: 33px;
+.is-lg {
+  .checkbox-input {
+    width: 33px;
+    height: 33px;
 
-      &:before {
-        transform: scale(calc(27 / 14));
-      }
+    &:before {
+      transform: scale(calc(27 / 14));
     }
   }
 }
