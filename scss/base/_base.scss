@@ -4,9 +4,10 @@
 
 .body,
 .aui {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", "Noto Sans", sans-serif;
   color: map.get(color.$grey, 900);
   @include typography.set(map.get(typography.$std, 'std-16n-170'));
+
   img {
     display: block;
   }

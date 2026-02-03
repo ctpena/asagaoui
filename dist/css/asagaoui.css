@@ -106,7 +106,7 @@
 @layer base {
   .body,
   .aui {
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Noto Sans", sans-serif;
     color: #1a1a1a;
     font-size: 1rem;
     font-weight: 400;
