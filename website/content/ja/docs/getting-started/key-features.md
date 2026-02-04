@@ -1,5 +1,4 @@
 +++
-type = "docs"
 title = '主要な特徴'
 weight = 40
 +++

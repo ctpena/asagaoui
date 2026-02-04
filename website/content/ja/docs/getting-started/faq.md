@@ -1,5 +1,4 @@
 +++
-type = "docs"
 title = 'よくある質問(FAQ)'
 weight = 30
 +++
