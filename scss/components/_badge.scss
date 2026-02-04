@@ -3,6 +3,20 @@
 @use "../styles/rounding";
 @use "sass:map";
 
+$badge-colors: (
+        'gray': color.$grey,
+        'blue': color.$blue,
+        'lightblue': color.$lightblue,
+        'cyan': color.$cyan,
+        'green': color.$green,
+        'lime': color.$lime,
+        'yellow': color.$yellow,
+        'orange': color.$orange,
+        'red': color.$red,
+        'magenta': color.$magenta,
+        'purple': color.$purple
+);
+
 .badge {
   display: inline-grid;
   grid-template-columns: auto auto;
@@ -16,3 +30,71 @@
   padding: calc(4 / 16 * 1rem) calc(8 / 16 * 1rem);
   color: color.$black;
 }
+
+.badge-outline {
+  border: 1px solid color.$black;
+  color: color.$black;
+}
+
+.badge-filled-outline {
+  border: 1px solid color.$black;
+  background-color: map.get(color.$grey, 50);
+  color: color.$black;
+}
+
+.badge-fill {
+  color: color.$white;
+  background-color: map.get(color.$grey, 700);
+}
+
+@mixin badge-color-variant($name, $color-map) {
+  .badge-#{$name} {
+    &.badge {
+      color: map.get($color-map, 700);
+    }
+
+    &.badge-outline {
+      border: 1px solid map.get($color-map, 700);
+      color: map.get($color-map, 700);
+    }
+
+    &.badge-filled-outline {
+      border: 1px solid map.get($color-map, 700);
+      background-color: map.get($color-map, 50);
+      color: map.get($color-map, 800);
+    }
+
+    &.badge-fill {
+      color: color.$white;
+      background-color: map.get($color-map, 700);
+    }
+  }
+}
+
+@each $name, $color-key in $badge-colors {
+  @include badge-color-variant($name, $color-key);
+}
+
+/*
+.badge-blue {
+  &.badge {
+    color: map.get(color.$blue, 700);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$blue, 700);
+    color: map.get(color.$blue, 700);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$blue, 700);
+    background-color: map.get(color.$blue, 50);
+    color: map.get(color.$blue, 800);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$blue, 700);
+  }
+}
+*/

@@ -892,6 +892,218 @@
     padding: 0.25rem 0.5rem;
     color: #000000;
   }
+  .badge-outline {
+    border: 1px solid #000000;
+    color: #000000;
+  }
+  .badge-filled-outline {
+    border: 1px solid #000000;
+    background-color: #f2f2f2;
+    color: #000000;
+  }
+  .badge-fill {
+    color: #ffffff;
+    background-color: #4d4d4d;
+  }
+  .badge-gray.badge {
+    color: #4d4d4d;
+  }
+  .badge-gray.badge-outline {
+    border: 1px solid #4d4d4d;
+    color: #4d4d4d;
+  }
+  .badge-gray.badge-filled-outline {
+    border: 1px solid #4d4d4d;
+    background-color: #f2f2f2;
+    color: #333333;
+  }
+  .badge-gray.badge-fill {
+    color: #ffffff;
+    background-color: #4d4d4d;
+  }
+  .badge-blue.badge {
+    color: #264AF4;
+  }
+  .badge-blue.badge-outline {
+    border: 1px solid #264AF4;
+    color: #264AF4;
+  }
+  .badge-blue.badge-filled-outline {
+    border: 1px solid #264AF4;
+    background-color: #E8F1FE;
+    color: #0031D8;
+  }
+  .badge-blue.badge-fill {
+    color: #ffffff;
+    background-color: #264AF4;
+  }
+  .badge-lightblue.badge {
+    color: #0877D7;
+  }
+  .badge-lightblue.badge-outline {
+    border: 1px solid #0877D7;
+    color: #0877D7;
+  }
+  .badge-lightblue.badge-filled-outline {
+    border: 1px solid #0877D7;
+    background-color: #F0F9FF;
+    color: #0066BE;
+  }
+  .badge-lightblue.badge-fill {
+    color: #ffffff;
+    background-color: #0877D7;
+  }
+  .badge-cyan.badge {
+    color: #008DA6;
+  }
+  .badge-cyan.badge-outline {
+    border: 1px solid #008DA6;
+    color: #008DA6;
+  }
+  .badge-cyan.badge-filled-outline {
+    border: 1px solid #008DA6;
+    background-color: #E6FCFF;
+    color: #008299;
+  }
+  .badge-cyan.badge-fill {
+    color: #ffffff;
+    background-color: #008DA6;
+  }
+  .badge-green.badge {
+    color: #1D8B56;
+  }
+  .badge-green.badge-outline {
+    border: 1px solid #1D8B56;
+    color: #1D8B56;
+  }
+  .badge-green.badge-filled-outline {
+    border: 1px solid #1D8B56;
+    background-color: #E6F5EC;
+    color: #197A4B;
+  }
+  .badge-green.badge-fill {
+    color: #ffffff;
+    background-color: #1D8B56;
+  }
+  .badge-lime.badge {
+    color: #6FA104;
+  }
+  .badge-lime.badge-outline {
+    border: 1px solid #6FA104;
+    color: #6FA104;
+  }
+  .badge-lime.badge-filled-outline {
+    border: 1px solid #6FA104;
+    background-color: #EBFAD9;
+    color: #507500;
+  }
+  .badge-lime.badge-fill {
+    color: #ffffff;
+    background-color: #6FA104;
+  }
+  .badge-yellow.badge {
+    color: #B78F00;
+  }
+  .badge-yellow.badge-outline {
+    border: 1px solid #B78F00;
+    color: #B78F00;
+  }
+  .badge-yellow.badge-filled-outline {
+    border: 1px solid #B78F00;
+    background-color: #FBF5E0;
+    color: #A58000;
+  }
+  .badge-yellow.badge-fill {
+    color: #ffffff;
+    background-color: #B78F00;
+  }
+  .badge-orange.badge {
+    color: #E25100;
+  }
+  .badge-orange.badge-outline {
+    border: 1px solid #E25100;
+    color: #E25100;
+  }
+  .badge-orange.badge-filled-outline {
+    border: 1px solid #E25100;
+    background-color: #FFEEE2;
+    color: #C74700;
+  }
+  .badge-orange.badge-fill {
+    color: #ffffff;
+    background-color: #E25100;
+  }
+  .badge-red.badge {
+    color: #FA0000;
+  }
+  .badge-red.badge-outline {
+    border: 1px solid #FA0000;
+    color: #FA0000;
+  }
+  .badge-red.badge-filled-outline {
+    border: 1px solid #FA0000;
+    background-color: #FDEEEE;
+    color: #EC0000;
+  }
+  .badge-red.badge-fill {
+    color: #ffffff;
+    background-color: #FA0000;
+  }
+  .badge-magenta.badge {
+    color: #C000C0;
+  }
+  .badge-magenta.badge-outline {
+    border: 1px solid #C000C0;
+    color: #C000C0;
+  }
+  .badge-magenta.badge-filled-outline {
+    border: 1px solid #C000C0;
+    background-color: #F3E5F4;
+    color: #AA00AA;
+  }
+  .badge-magenta.badge-fill {
+    color: #ffffff;
+    background-color: #C000C0;
+  }
+  .badge-purple.badge {
+    color: #6F23D0;
+  }
+  .badge-purple.badge-outline {
+    border: 1px solid #6F23D0;
+    color: #6F23D0;
+  }
+  .badge-purple.badge-filled-outline {
+    border: 1px solid #6F23D0;
+    background-color: #F1EAFA;
+    color: #5C10BE;
+  }
+  .badge-purple.badge-fill {
+    color: #ffffff;
+    background-color: #6F23D0;
+  }
+  /*
+  .badge-blue {
+    &.badge {
+      color: map.get(color.$blue, 700);
+    }
+
+    &.badge-outline {
+      border: 1px solid map.get(color.$blue, 700);
+      color: map.get(color.$blue, 700);
+    }
+
+    &.badge-filled-outline {
+      border: 1px solid map.get(color.$blue, 700);
+      background-color: map.get(color.$blue, 50);
+      color: map.get(color.$blue, 800);
+    }
+
+    &.badge-fill {
+      color: color.$white;
+      background-color: map.get(color.$blue, 700);
+    }
+  }
+  */
   .banner {
     border: 3px solid #767676;
     border-radius: 12px;
@@ -1013,6 +1225,16 @@
       font-size: 36px;
       margin-right: 24px;
     }
+  }
+  .blockquote {
+    border-left: 8px solid #767676;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+  }
+  .blockquote > *:first-child {
+    margin-top: 0 !important;
+  }
+  .blockquote > *:last-child {
+    margin-bottom: 0 !important;
   }
   .breadcrumb {
     color: #333333;
@@ -1937,18 +2159,34 @@
     background-color: #f8f8fb;
   }
   .utilitylink {
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    text-wrap: pretty;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0;
     text-decoration: underline;
   }
-  .utilitylink:hover {
-    background-color: #f2f2f2;
-  }
   .utilitylink:focus {
-    border-radius: 4px;
-    outline: 2px solid #B78F00;
+    border-radius: 0.25rem;
+    background-color: #FFD43D;
+    box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
+  }
+  .utilitylink:hover {
+    color: #333333;
+    text-decoration-thickness: 0.1875rem;
+  }
+  .utilitylink[target=_blank]::after, .utilitylink[rel=external]::after {
+    display: inline-block;
+    background-color: #1a1a1a;
+    width: 1em;
+    height: 1em;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.5 19.5H19.5V13H21V21H3V3H11V4.5H4.5V19.5ZM14 4.5V3H21V10H19.5V5.6L10.5 14.5L9.5 13.5L18.4 4.5H14Z"/></svg>');
+    content: "";
+    vertical-align: middle;
+    margin-left: 4px;
   }
   .utilitylink-units {
     display: flex;

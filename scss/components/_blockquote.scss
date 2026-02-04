@@ -1,0 +1,17 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.blockquote {
+  border-left: 8px solid map.get(color.$grey, 536);
+  padding: calc(8 / 16 * 1rem) calc(16 / 16 * 1rem) calc(8 / 16 * 1rem) calc(24 / 16 * 1rem);
+}
+
+.blockquote > *:first-child {
+  margin-top: 0 !important;
+}
+
+.blockquote > *:last-child {
+  margin-bottom: 0 !important;
+}
