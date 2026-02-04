@@ -1,3 +1,9 @@
+.custom-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
 .custom-layout-grid {
     display: grid;
     grid-template-columns: minmax(auto, 704px);
@@ -21,6 +27,14 @@
     margin-top: 2.5rem;
     position: relative;
     height: 100%;
+    nav {
+        position: sticky;
+        top: calc(69px + 2.5rem);
+        z-index: 18;
+        overflow-y: auto;
+        height: 100%;
+        max-height: calc(100dvh - 2.5rem - 69px);
+    }
 }
 
 .custom-toc {
@@ -44,7 +58,7 @@
 
     .custom-toc-container {
         position: sticky;
-        top: 1rem;
+        top: calc(69px + 2.5rem);
     }
 }
 
