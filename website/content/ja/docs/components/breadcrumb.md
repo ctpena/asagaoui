@@ -16,13 +16,3 @@ weight: 30
     <li class="breadcrumb-item">パンくずリスト</li>
 </ol>
 {{% /code-snippet %}}
-
-## アイコンの実装
-
-アイコンの表示にはAsagaoUI-Iconsが必要です。
-
-{{% code-snippet lang="html" preview="true" %}}
-<div>
-    <i class="ail-arrow_right"></i>
-</div>
-{{% /code-snippet %}}

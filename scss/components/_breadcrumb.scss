@@ -13,14 +13,13 @@
   overflow-wrap: break-word;
 
   & + &::before {
-    font-family: "asagaoui-icons" !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    content: "\f139";
+    display: inline-block;
+    background-color: map.get(color.$grey, 900);
+    width: 12px;
+    height: 12px;
+    content: "";
+    clip-path: path("M4.5 11L4 10.5L8 6.5L4 2.5L4.5 2L9 6.5L4.5 11Z");
+    margin: 0 5px 0 4px;
   }
 }
 
