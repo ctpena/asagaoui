@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.custom-side-menu nav');
-    if (!menu) return;
+
+    if (!menu) {
+        sessionStorage.removeItem('menu-scroll-pos');
+        return;
+    }
 
     const savedScrollTop = sessionStorage.getItem('menu-scroll-pos');
     if (savedScrollTop !== null) {
