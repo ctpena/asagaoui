@@ -5,18 +5,18 @@ weight = 70
 
 HTMLの`select`タグにクラスを追加するだけで利用可能です。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <select class="select">
     <option value="">選択してください</option>
     <option value="1">選択肢1</option>
     <option value="2">選択肢2</option>
     <option value="3">選択肢3</option>
 </select>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## 例
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="form-group">
     <label for="test" class="form-label">
         東京23区
@@ -32,7 +32,7 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。
     </select>
     <div class="form-error">＊エラーテキスト</div>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## 大きさ
 
@@ -40,7 +40,7 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。
 - md (デフォルト値)
 - lg
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" pv-layout="flex" >}}
 <select class="select is-sm">
     <option value="">選択してください</option>
     <option value="1">選択肢1</option>
@@ -59,7 +59,7 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。
     <option value="2">選択肢2</option>
     <option value="3">選択肢3</option>
 </select>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## HTML属性
 
@@ -67,14 +67,14 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。
 
 `disabled`属性を追加すると入力がグレーアウトされます。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <select class="select" disabled>
     <option value="">選択してください</option>
     <option value="1">選択肢1</option>
     <option value="2">選択肢2</option>
     <option value="3">選択肢3</option>
 </select>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## 検証とフィードバック
 
@@ -84,18 +84,18 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。
 
 `is-error`クラスを追加するだけです。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <select class="select is-error">
     <option value="">選択してください</option>
     <option value="1">選択肢1</option>
     <option value="2">選択肢2</option>
     <option value="3">選択肢3</option>
 </select>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 `form-group`を使用するとエラーテキストも同時に表示することが可能です。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="form-group">
     <label for="test" class="form-label">
         東京23区
@@ -111,4 +111,4 @@ HTMLの`select`タグにクラスを追加するだけで利用可能です。
     </select>
     <div class="form-error">＊エラーテキスト</div>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}

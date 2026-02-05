@@ -3,7 +3,8 @@ title: アコーディオン
 weight: 10
 ---
 
-アコーディオンは、コンテンツを折りたたんで隠すことが可能なUIを提供します。HTML要素である`<details>`を使用しているため、JavaScriptは必要ありません。
+アコーディオンは、コンテンツを折りたたんで隠すことが可能なUIを提供します。HTML要素である`<details>`
+を使用しているため、JavaScriptは必要ありません。
 
 ## 例
 
@@ -11,7 +12,7 @@ weight: 10
 
 デフォルトで展開されたアコーディオンをレンダリングするには`open`属性を追加してください。
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true">}}
 <details class="accordion">
     <summary class="accordion-header">ダミーテキストとは何ですか？</summary>
     <div class="accordion-body">
@@ -24,7 +25,7 @@ weight: 10
 
 アイコンの表示にはAsagaoUI-Iconsが必要です。
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true">}}
 <div>
     <i class="ail-arrow_down"></i>
     <i class="ail-arrow_up"></i>
@@ -33,7 +34,8 @@ weight: 10
 
 ## デジタル庁デザインシステムとの違い
 
-[デジタル庁デザインシステムv2.10.1](https://design.digital.go.jp/components/accordion/)では、アコーディオン展開時のリターンリンクが実装されていますが、AsagaoUIでは次の理由により実装していません。
+[デジタル庁デザインシステムv2.10.1](https://design.digital.go.jp/components/accordion/)
+では、アコーディオン展開時のリターンリンクが実装されていますが、AsagaoUIでは次の理由により実装していません。
 
 - ユーザビリティの向上: ブラウザ標準のスクロール機能で十分対応可能
 - アクセシビリティの配慮: 追加要素による認知負荷の軽減

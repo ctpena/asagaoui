@@ -5,12 +5,12 @@ weight = 20
 
 チェックボックスは、ユーザーが複数の選択肢から一つまたは複数の項目を選択できるフォーム要素です。AsagaoUIでは、アクセシビリティとユーザビリティを重視した実装を提供しています。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <label class="checkbox">
     <input class="checkbox-input" type="checkbox">
     ラベル
 </label>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## 大きさ
 
@@ -20,7 +20,7 @@ weight = 20
 - `md`
 - `lg` 
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <label class="checkbox is-lg">
     <input class="checkbox-input" type="checkbox">
     lgサイズ
@@ -33,13 +33,13 @@ weight = 20
     <input class="checkbox-input" type="checkbox">
     smサイズ
 </label>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## 例
 
 `form-group`を使用した例で、エラー表示が完結になります。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="form-group">
     <label for="test" class="form-label">
         東京23区
@@ -65,4 +65,4 @@ weight = 20
         </label>
     </div>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}

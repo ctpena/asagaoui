@@ -15,7 +15,7 @@ weight: 20
 
 #### スタンダード
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner">
     <i class="banner-icon aif-information"></i>
     <span class="banner-title">登録期間が延長されました</span>
@@ -28,7 +28,7 @@ weight: 20
 
 #### カラーチップ
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner banner-chip">
     <i class="banner-icon aif-information"></i>
     <span class="banner-title">登録期間が延長されました</span>
@@ -45,7 +45,7 @@ weight: 20
 
 操作等の滞りない完了の通知
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner banner-success">
     <i class="banner-icon aif-complete"></i>
     <span class="banner-title">登録手続きは全て完了しました</span>
@@ -60,7 +60,7 @@ weight: 20
 
 操作等が正しく完了しなかったことの通知
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner banner-error">
     <i class="banner-icon aif-error"></i>
     <span class="banner-title">操作を完了できませんでした</span>
@@ -75,7 +75,7 @@ weight: 20
 
 注意を喚起するための警告、警戒情報等の通知
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner banner-warning">
     <i class="banner-icon aif-warning"></i>
     <span class="banner-title">偽SNSアカウントにご注意ください</span>
@@ -88,7 +88,7 @@ weight: 20
 
 #### 情報
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner banner-info">
     <i class="banner-icon aif-information"></i>
     <span class="banner-title">登録期間が延長されました</span>
@@ -103,7 +103,7 @@ weight: 20
 
 ユーザーに最優先して伝えたい情報を表示するためのデザインを用意しています。
 
-{{< code-snippet lang="html" preview="true" modal="true" >}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="banner banner-emergency">
     <span class="banner-title">[緊急]〇〇地区に避難準備情報が発令されました</span>
     <div class="banner-body">

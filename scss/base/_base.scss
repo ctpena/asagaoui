@@ -13,6 +13,10 @@
   }
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 html:has(:modal) {
   overflow: clip;
   scrollbar-gutter: auto;

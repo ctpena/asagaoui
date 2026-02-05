@@ -3,12 +3,14 @@ title: ディバイダー
 weight: 68
 ---
 
-{{% code-snippet lang="html" preview="true" %}}
+コンテンツを仕切る線
+
+{{< code-snippet lang="html" preview="true" >}}
 <hr class="divider" />
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## カスタム
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <hr class="divider divider-dashed divider-w4" />
-{{% /code-snippet %}}
+{{< /code-snippet >}}
