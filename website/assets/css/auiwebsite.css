@@ -71,6 +71,11 @@
         display: block;
         grid-column: 3;
     }
+
+    .custom-toc-container {
+        position: sticky;
+        top: calc(56px + 2.5rem);
+    }
 }
 
 @media screen and (min-width: 1350px) {
