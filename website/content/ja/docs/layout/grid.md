@@ -10,7 +10,7 @@ AsagaoUIには特徴的なグリッドシステムがあります。
 
 コード例
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="grid g-1">
     <div class="p-4 bg-magenta-500">
     </div>
@@ -25,4 +25,4 @@ AsagaoUIには特徴的なグリッドシステムがあります。
     <div class="p-4 bg-magenta-500">
     </div>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}

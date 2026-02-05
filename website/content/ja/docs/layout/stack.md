@@ -6,18 +6,18 @@ title: スタック
 
 縦に並べる
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="vstack g-3">
     <div class="p-4 bg-magenta-500"></div>
     <div class="p-4 bg-magenta-500"></div>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 横に並べる
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div class="hstack g-3">
     <div class="p-4 bg-magenta-500"></div>
     <div class="p-4 bg-magenta-500"></div>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}

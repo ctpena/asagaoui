@@ -7,7 +7,7 @@ weight: 30
 
 ## 例
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" modal="true" >}}
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a class="breadcrumb-link" href="">ホーム</a></li>
     <li class="breadcrumb-item"><a class="breadcrumb-link" href="">長いページタイトルが入ります長いページタイトルが入ります</a></li>
@@ -15,4 +15,4 @@ weight: 30
     <li class="breadcrumb-item"><a class="breadcrumb-link" href="">長いページタイトルが入ります長いページタイトルが入ります</a></li>
     <li class="breadcrumb-item">パンくずリスト</li>
 </ol>
-{{% /code-snippet %}}
+{{< /code-snippet >}}

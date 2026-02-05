@@ -9,11 +9,11 @@ weight: 40
 
 `btn`クラスは最も基本的な外観を提供するクラスです。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" >}}
 <div>
     <button class="btn" type="button">ボタン</button>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## 大きさ
 
@@ -24,14 +24,12 @@ weight: 40
 - sm
 - xs
 
-{{% code-snippet lang="html" preview="true" %}}
-<div style="display: flex; align-items: start; gap: 1rem;">
-    <button class="btn is-xs btn-fill" type="button">ボタン</button>
-    <button class="btn is-sm btn-fill" type="button">ボタン</button>
-    <button class="btn is-md btn-fill" type="button">ボタン</button>
-    <button class="btn is-lg btn-fill" type="button">ボタン</button>
-</div>
-{{% /code-snippet %}}
+{{< code-snippet lang="html" preview="true" pv-layout="flex" >}}
+<button class="btn is-xs btn-fill" type="button">ボタン</button>
+<button class="btn is-sm btn-fill" type="button">ボタン</button>
+<button class="btn is-md btn-fill" type="button">ボタン</button>
+<button class="btn is-lg btn-fill" type="button">ボタン</button>
+{{< /code-snippet >}}
 
 ## 種類
 
@@ -41,13 +39,11 @@ weight: 40
 - アウトラインボタン
 - テキストボタン
 
-{{% code-snippet lang="html" preview="true" %}}
-<div style="display: flex; align-items: start; gap: 1rem;">
-    <button class="btn btn-fill" type="button">ボタン</button>
-    <button class="btn btn-outline" type="button">ボタン</button>
-    <button class="btn btn-text" type="button">ボタン</button>
-</div>
-{{% /code-snippet %}}
+{{< code-snippet lang="html" preview="true" pv-layout="flex" >}}
+<button class="btn btn-fill" type="button">ボタン</button>
+<button class="btn btn-outline" type="button">ボタン</button>
+<button class="btn btn-text" type="button">ボタン</button>
+{{< /code-snippet >}}
 
 ## アクセシビリティ
 

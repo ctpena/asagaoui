@@ -26,20 +26,56 @@
   border-top: 1px solid map.get(color.$grey, 200);
   border-right: 1px solid map.get(color.$grey, 200);
   border-left: 1px solid map.get(color.$grey, 200);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.codesnippet-modal-close-btn,
+.codesnippet-modal-btn,
+.codesnippet-copy-btn {
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .codesnippet-lang {
+  margin-right: auto;
 }
 
 .codesnippet-code {
   pre {
-    // TODO fix reset css
     margin: 0;
     font-family: 'Noto Sans Mono', monospace;
     overflow: auto;
   }
+
   padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4);
   //background-color: map.get(color.$cyan, 50);
   border: 1px solid map.get(color.$grey, 200);
   border-radius: 0 0 map.get(rounding.$rounding, m) map.get(rounding.$rounding, m);
+}
+
+.codesnippet-modal {
+  max-width: 992px;
+  width: calc(100% - 2rem);
+  border-radius: map.get(rounding.$rounding, m);
+  padding: 0;
+  border: none;
+  top: 7dvh;
+  margin: 0 auto;
+  position: relative;
+
+  &::backdrop {
+    background-color: rgba(24, 49, 83, 0.5);
+  }
+}
+
+.codesnippet-preview-flex {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
 }

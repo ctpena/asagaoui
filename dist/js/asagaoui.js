@@ -2861,6 +2861,10 @@ class CodeSnippet extends HTMLElement {
             if (showPreview) {
                 const previewDiv = document.createElement('div');
                 previewDiv.classList.add('codesnippet-preview');
+                const previewLayout = this.getAttribute('pv-layout');
+                if (previewLayout) {
+                    previewDiv.classList.add(`codesnippet-preview-${previewLayout}`);
+                }
                 previewDiv.innerHTML = content;
                 this.appendChild(previewDiv);
             }
@@ -2873,6 +2877,13 @@ class CodeSnippet extends HTMLElement {
             const language = this.getAttribute('lang') || 'html';
             langSpan.textContent = language.toUpperCase();
             headerDiv.appendChild(langSpan);
+            // Copy Button
+            const copyButton = document.createElement('button');
+            copyButton.classList.add('codesnippet-copy-btn');
+            const copyIcon = document.createElement('i');
+            copyIcon.classList.add('ail-copy');
+            copyButton.appendChild(copyIcon);
+            headerDiv.appendChild(copyButton);
             const codeDiv = document.createElement('div');
             codeDiv.classList.add('codesnippet-code');
             const pre = document.createElement('pre');

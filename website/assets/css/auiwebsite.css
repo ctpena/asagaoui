@@ -27,6 +27,7 @@
     margin-top: 2.5rem;
     position: relative;
     height: 100%;
+
     nav {
         position: sticky;
         top: calc(69px + 2.5rem);

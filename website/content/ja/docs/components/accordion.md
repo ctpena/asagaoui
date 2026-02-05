@@ -11,25 +11,25 @@ weight: 10
 
 デフォルトで展開されたアコーディオンをレンダリングするには`open`属性を追加してください。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" modal="true" >}}
 <details class="accordion">
     <summary class="accordion-header">ダミーテキストとは何ですか？</summary>
     <div class="accordion-body">
         これはダミーテキストです。ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。ダミーテキストを使用すると、デザインの全体像を評価したり、テキストの配置や長さを確認したりすることができます。ダミーテキストは実際の文章ではないので、内容には意味がありません。
     </div>
 </details>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## アイコンの実装
 
 アイコンの表示にはAsagaoUI-Iconsが必要です。
 
-{{% code-snippet lang="html" preview="true" %}}
+{{< code-snippet lang="html" preview="true" modal="true" >}}
 <div>
     <i class="ail-arrow_down"></i>
     <i class="ail-arrow_up"></i>
 </div>
-{{% /code-snippet %}}
+{{< /code-snippet >}}
 
 ## デジタル庁デザインシステムとの違い
 

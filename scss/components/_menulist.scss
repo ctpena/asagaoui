@@ -18,7 +18,8 @@
   }
 
   &-link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: .776rem 1rem;
     @include typography.set(map.get(typography.$dns, 'dns-16n-120'));
     border-radius: map.get(rounding.$rounding, m);
@@ -26,6 +27,7 @@
     &:hover {
       background-color: map.get(color.$grey, 50);
       text-decoration: underline;
+      text-decoration-thickness: .0625rem;
     }
 
     &:focus {
@@ -43,5 +45,18 @@
         color: map.get(color.$blue, 900);
       }
     }
+  }
+}
+
+.is-sm {
+  .menulist-link {
+    min-height: 2.25rem;
+    padding: .375rem 1rem;
+  }
+}
+
+.is-md {
+  .menulist-link {
+    padding: .776rem 1rem;
   }
 }
