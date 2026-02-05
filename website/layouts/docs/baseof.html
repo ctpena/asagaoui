@@ -6,10 +6,10 @@
 <body class="aui">
 {{ partial "announcement.html" . }}
 {{ partial "header.html" . }}
+<aside class="custom-side-menu">
+    {{ partial "sidebar.html" . }}
+</aside>
 <div class="custom-layout-grid">
-    <aside class="custom-side-menu">
-        {{ partial "sidebar.html" . }}
-    </aside>
     <main class="custom-main-content">
         {{ block "main" . }}{{ end }}
     </main>

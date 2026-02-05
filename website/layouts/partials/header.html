@@ -1,8 +1,9 @@
+<div class="custom-header-area"></div>
 <header class="header custom-header">
-    <nav class="header-slim">
+    <nav class="header-fixed">
         <a class="header-logo" href="{{ .Site.Home.RelPermalink }}">
             {{ $logo := resources.Get "img/AsagaoUILogo.svg" }}
-            <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" width="150" height="60">
+            <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" width="137.5" height="55">
         </a>
         <div class="header-button">
             <details class="lang-select">

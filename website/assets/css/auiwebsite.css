@@ -1,71 +1,81 @@
+.custom-header-area {
+    height: 56px;
+}
+
 .custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .custom-layout-grid {
-    display: grid;
-    grid-template-columns: minmax(auto, 704px);
-    grid-template-areas:"main";
+    display: flex;
     justify-content: center;
-    margin: 0 auto;
 }
 
 .custom-main-content {
-    grid-area: main;
-    margin-top: 2.5rem;
-    padding: 0 1rem;
     max-width: 704px;
-    min-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 2.5rem;
 }
 
 .custom-side-menu {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 10;
+    height: calc(100dvh - 56px);
+    padding: 1.5rem .5rem 2.5rem .5rem;
     display: none;
-    padding: 0 1rem;
-    grid-area: side;
-    margin-top: 2.5rem;
-    position: relative;
-    height: 100%;
+    overflow-y: auto;
+    max-width: 300px;
+    width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .custom-toc {
-    padding: 0 1rem;
-    grid-area: toc;
-    margin-top: 2.5rem;
     display: none;
+    margin-top: 2.5rem;
+    padding: 0 1rem;
 }
 
-@media (min-width: 901px) {
+@media screen and (min-width: 1024px) {
     .custom-layout-grid {
-        grid-template-columns: 704px minmax(auto, 256px);
-        grid-template-areas:"main toc";
-    }
-
-    .custom-toc {
-        grid-area: toc;
-        display: block;
-        position: relative;
-    }
-
-    .custom-toc-container {
-        position: sticky;
-        top: 2.5rem;
-    }
-}
-
-@media (min-width: 1100px) {
-    .custom-layout-grid {
-        grid-template-columns: minmax(auto, 288px) 704px minmax(auto, 256px);
-        grid-template-areas:"side main toc";
+        justify-content: right;
+        padding-right: calc((100vw - 704px - 300px) / 2);
+        padding-left: 0;
     }
 
     .custom-side-menu {
+        position: fixed;
+        z-index: 10;
         display: block;
     }
+}
 
-    .custom-side-menu-area {
-        position: sticky;
-        margin-top: 2.5rem;
-        margin-right: 24px;
-        top: 2.5rem;
+@media screen and (min-width: 1280px) {
+    .custom-layout-grid {
+        padding: 0;
+        display: grid;
+        justify-content: right;
+        grid-template-rows: 1fr;
+        grid-template-columns: 256px minmax(auto, 704px) 256px;
+    }
+
+    .custom-main-content {
+        grid-column: 2;
+    }
+
+    .custom-toc {
+        display: block;
+        grid-column: 3;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .custom-layout-grid {
+        justify-content: center;
     }
 }
 
@@ -116,10 +126,6 @@
 .custom-blog-side {
     grid-area: side;
     padding: 0 1rem;
-}
-
-.content h1:first-child {
-    margin-top: 0;
 }
 
 /**/

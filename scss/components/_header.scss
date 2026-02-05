@@ -119,6 +119,7 @@
       padding-right: 0;
     }
   }
+
   .header-menu {
     order: 2;
     display: none;
@@ -129,5 +130,56 @@
     }
     @include breakpoint.style(ad) {
     }
+  }
+}
+
+.header-fixed {
+  margin: 0 auto;
+  max-width: 1920px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  column-gap: 1rem;
+
+  .header-logo {
+    order: 1;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 1rem;
+    @include breakpoint.style(d) {
+      display: flex;
+      margin-right: 0;
+    }
+  }
+
+  .header-menu {
+    order: 2;
+    display: none;
+    align-items: center;
+    @include breakpoint.style(ad) {
+      display: flex;
+      margin-right: auto;
+    }
+  }
+
+  .header-items {
+    display: none;
+    @include breakpoint.style(d) {
+      display: flex;
+      order: 3;
+      align-items: center;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .header-button {
+    order: 4;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    column-gap: 1rem;
   }
 }
