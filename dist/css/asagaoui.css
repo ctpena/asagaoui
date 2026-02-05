@@ -840,7 +840,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    content: "\f13b";
+    content: "\f13d";
     display: flex;
     font-weight: bold;
     align-items: center;
@@ -862,7 +862,7 @@
     padding: 1rem 0.5rem 1rem 1.5rem;
   }
   .accordion[open] .accordion-header::before {
-    content: "\f138";
+    content: "\f13a";
   }
   @media screen and (min-width: 768px) {
     .accordion-header {
