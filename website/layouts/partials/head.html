@@ -1,11 +1,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{ if .IsHome }}
+    <title>{{ site.Title }} - {{ i18n "hero-title" }}</title>
+{{ else if eq .Section "icons" }}
+    {{ if .IsSection }}
+        <title>{{ site.Title }} Icons</title>
+    {{ else }}
+        <title>{{ .Params.display_name | default .Title }} - {{ site.Title }} Icons</title>
+    {{ end }}
+{{ else if eq .Section "illustrations" }}
+    <title>{{ site.Title }} Illustrations</title>
+{{ else if eq .Section "blog" }}
+    <title>{{ .Title }} - {{ site.Title }}</title>
+{{ else if eq .Section "docs" }}
+    {{ if .IsSection -}}
+        <title>{{ .Title }} - {{ site.Title }}</title>
+    {{ else -}}
+        {{ $parent := .Parent -}}
+        {{ if $parent.IsSection -}}
+            <title>{{ .Title }} - {{ $parent.Title }} - {{ site.Title }}</title>
+        {{ else -}}
+            <title>{{ .Title }} - {{ site.Title }}</title>
+        {{ end -}}
+    {{ end -}}
+{{ else}}
+    <title>{{ printf "%s - %s" .Title site.Title }}</title>
+{{ end }}
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
 {{ partialCached "head/meta.html" . }}
 {{ if templates.Exists "partials/head/analytics.html" }}
-{{ partialCached "head/analytics.html" . }}
+    {{ partialCached "head/analytics.html" . }}
 {{ end }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/schema.html" . }}
