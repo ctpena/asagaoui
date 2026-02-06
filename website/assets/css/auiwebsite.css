@@ -43,8 +43,7 @@
 @media screen and (min-width: 1024px) {
     .custom-layout-grid {
         justify-content: right;
-        padding-right: calc((100vw - 704px - 300px) / 2);
-        padding-left: 0;
+        margin-right: calc((100vw - 704px - 300px) / 2);
     }
 
     .custom-side-menu {
@@ -56,11 +55,11 @@
 
 @media screen and (min-width: 1280px) {
     .custom-layout-grid {
-        padding: 0;
         display: grid;
         justify-content: right;
         grid-template-rows: 1fr;
         grid-template-columns: 256px minmax(auto, 704px) 256px;
+        margin-right: calc((100vw - (704px + 256px) - 300px) / 2);
     }
 
     .custom-main-content {
@@ -78,8 +77,9 @@
     }
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1440px) {
     .custom-layout-grid {
+        margin-right: 0;
         justify-content: center;
     }
 }
