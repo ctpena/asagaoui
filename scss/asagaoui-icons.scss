@@ -1,6 +1,6 @@
 @font-face {
 font-family: "asagaoui-icons";
-src: url("../icons/asagaoui-icons.woff2?028a79302aa82ef124425cf630fae3d6") format("woff2");
+src: url("../icons/asagaoui-icons.woff2?45d863468c5fe7dbad90d5caa7192955") format("woff2");
 font-weight: normal;
 font-style: normal;
 font-display: block;
@@ -39,381 +39,381 @@ line-height: 1;
 @extend %icon-base;
 }
 
-    .ail-work:before {
+    .aif-work:before {
     content: "\f101";
     }
-    .ail-update:before {
+    .aif-warning:before {
     content: "\f102";
     }
-    .ail-transactions:before {
+    .aif-update:before {
     content: "\f103";
     }
-    .ail-tax:before {
+    .aif-transactions:before {
     content: "\f104";
     }
-    .ail-stamp:before {
+    .aif-tax:before {
     content: "\f105";
     }
-    .ail-specialist:before {
+    .aif-stamp:before {
     content: "\f106";
     }
-    .ail-smartphone:before {
+    .aif-specialist:before {
     content: "\f107";
     }
-    .ail-search:before {
+    .aif-smartphone:before {
     content: "\f108";
     }
-    .ail-seal_certificate:before {
+    .aif-search:before {
     content: "\f109";
     }
-    .ail-public_offering:before {
+    .aif-seal_certificate:before {
     content: "\f10a";
     }
-    .ail-privacy_protection:before {
+    .aif-public_offering:before {
     content: "\f10b";
     }
-    .ail-printer:before {
+    .aif-privacy_protection:before {
     content: "\f10c";
     }
-    .ail-personal_computer:before {
+    .aif-printer:before {
     content: "\f10d";
     }
-    .ail-pension:before {
+    .aif-personal_computer:before {
     content: "\f10e";
     }
-    .ail-password:before {
+    .aif-pension:before {
     content: "\f10f";
     }
-    .ail-notification:before {
+    .aif-password:before {
     content: "\f110";
     }
-    .ail-new_window:before {
+    .aif-notification:before {
     content: "\f111";
     }
-    .ail-municipality:before {
+    .aif-new_window:before {
     content: "\f112";
     }
-    .ail-mother_and_child:before {
+    .aif-municipality:before {
     content: "\f113";
     }
-    .ail-money:before {
+    .aif-mother_and_child:before {
     content: "\f114";
     }
-    .ail-menu:before {
+    .aif-money:before {
     content: "\f115";
     }
-    .ail-medicine:before {
+    .aif-menu:before {
     content: "\f116";
     }
-    .ail-me:before {
+    .aif-medicine:before {
     content: "\f117";
     }
-    .ail-mailing:before {
+    .aif-me:before {
     content: "\f118";
     }
-    .ail-luggage:before {
+    .aif-mailing:before {
     content: "\f119";
     }
-    .ail-laws:before {
+    .aif-luggage:before {
     content: "\f11a";
     }
-    .ail-language:before {
+    .aif-laws:before {
     content: "\f11b";
     }
-    .ail-itinerary:before {
+    .aif-itinerary:before {
     content: "\f11c";
     }
-    .ail-invoice:before {
+    .aif-invoice:before {
     content: "\f11d";
     }
-    .ail-information:before {
+    .aif-information:before {
     content: "\f11e";
     }
-    .ail-income:before {
+    .aif-income:before {
     content: "\f11f";
     }
-    .ail-inbox:before {
+    .aif-inbox:before {
     content: "\f120";
     }
-    .ail-immunization:before {
+    .aif-immunization:before {
     content: "\f121";
     }
-    .ail-house:before {
+    .aif-house:before {
     content: "\f122";
     }
-    .ail-history:before {
+    .aif-history:before {
     content: "\f123";
     }
-    .ail-help:before {
+    .aif-help:before {
     content: "\f124";
     }
-    .ail-health:before {
+    .aif-health:before {
     content: "\f125";
     }
-    .ail-fillable_card:before {
+    .aif-fillable_card:before {
     content: "\f126";
     }
-    .ail-fast_track:before {
+    .aif-fast_track:before {
     content: "\f127";
     }
-    .ail-family:before {
+    .aif-family:before {
     content: "\f128";
     }
-    .ail-expenditure:before {
+    .aif-expenditure:before {
     content: "\f129";
     }
-    .ail-expand_content:before {
+    .aif-error:before {
     content: "\f12a";
     }
-    .ail-e_application:before {
+    .aif-e_application:before {
     content: "\f12b";
     }
-    .ail-download:before {
+    .aif-download:before {
     content: "\f12c";
     }
-    .ail-documents:before {
+    .aif-documents:before {
     content: "\f12d";
     }
-    .ail-departure:before {
+    .aif-departure:before {
     content: "\f12e";
     }
-    .ail-copy:before {
+    .aif-copy:before {
     content: "\f12f";
     }
-    .ail-complete:before {
+    .aif-complete:before {
     content: "\f130";
     }
-    .ail-collapse_content:before {
+    .aif-code_reader:before {
     content: "\f131";
     }
-    .ail-code_reader:before {
+    .aif-child:before {
     content: "\f132";
     }
-    .ail-child:before {
+    .aif-certification_with_seal:before {
     content: "\f133";
     }
-    .ail-check:before {
+    .aif-certification:before {
     content: "\f134";
     }
-    .ail-certification_with_seal:before {
+    .aif-bank_account:before {
     content: "\f135";
     }
-    .ail-certification:before {
+    .aif-authentication:before {
     content: "\f136";
     }
-    .ail-bank_account:before {
+    .aif-attention:before {
     content: "\f137";
     }
-    .ail-authentication:before {
+    .aif-arrow_up:before {
     content: "\f138";
     }
-    .ail-attention:before {
+    .aif-arrow_right:before {
     content: "\f139";
     }
-    .ail-arrow_up:before {
+    .aif-arrow_left:before {
     content: "\f13a";
     }
-    .ail-arrow_right:before {
+    .aif-arrow_down:before {
     content: "\f13b";
     }
-    .ail-arrow_left:before {
+    .aif-arrival:before {
     content: "\f13c";
     }
-    .ail-arrow_down:before {
+    .aif-application:before {
     content: "\f13d";
     }
-    .ail-arrival:before {
+    .aif-add:before {
     content: "\f13e";
     }
-    .ail-application:before {
+    .ail-work:before {
     content: "\f13f";
     }
-    .ail-add:before {
+    .ail-update:before {
     content: "\f140";
     }
-    .aif-work:before {
+    .ail-transactions:before {
     content: "\f141";
     }
-    .aif-warning:before {
+    .ail-tax:before {
     content: "\f142";
     }
-    .aif-update:before {
+    .ail-stamp:before {
     content: "\f143";
     }
-    .aif-transactions:before {
+    .ail-specialist:before {
     content: "\f144";
     }
-    .aif-tax:before {
+    .ail-smartphone:before {
     content: "\f145";
     }
-    .aif-stamp:before {
+    .ail-search:before {
     content: "\f146";
     }
-    .aif-specialist:before {
+    .ail-seal_certificate:before {
     content: "\f147";
     }
-    .aif-smartphone:before {
+    .ail-public_offering:before {
     content: "\f148";
     }
-    .aif-search:before {
+    .ail-privacy_protection:before {
     content: "\f149";
     }
-    .aif-seal_certificate:before {
+    .ail-printer:before {
     content: "\f14a";
     }
-    .aif-public_offering:before {
+    .ail-personal_computer:before {
     content: "\f14b";
     }
-    .aif-privacy_protection:before {
+    .ail-pension:before {
     content: "\f14c";
     }
-    .aif-printer:before {
+    .ail-password:before {
     content: "\f14d";
     }
-    .aif-personal_computer:before {
+    .ail-notification:before {
     content: "\f14e";
     }
-    .aif-pension:before {
+    .ail-new_window:before {
     content: "\f14f";
     }
-    .aif-password:before {
+    .ail-municipality:before {
     content: "\f150";
     }
-    .aif-notification:before {
+    .ail-mother_and_child:before {
     content: "\f151";
     }
-    .aif-new_window:before {
+    .ail-money:before {
     content: "\f152";
     }
-    .aif-municipality:before {
+    .ail-menu:before {
     content: "\f153";
     }
-    .aif-mother_and_child:before {
+    .ail-medicine:before {
     content: "\f154";
     }
-    .aif-money:before {
+    .ail-me:before {
     content: "\f155";
     }
-    .aif-menu:before {
+    .ail-mailing:before {
     content: "\f156";
     }
-    .aif-medicine:before {
+    .ail-luggage:before {
     content: "\f157";
     }
-    .aif-me:before {
+    .ail-laws:before {
     content: "\f158";
     }
-    .aif-mailing:before {
+    .ail-language:before {
     content: "\f159";
     }
-    .aif-luggage:before {
+    .ail-itinerary:before {
     content: "\f15a";
     }
-    .aif-laws:before {
+    .ail-invoice:before {
     content: "\f15b";
     }
-    .aif-itinerary:before {
+    .ail-information:before {
     content: "\f15c";
     }
-    .aif-invoice:before {
+    .ail-income:before {
     content: "\f15d";
     }
-    .aif-information:before {
+    .ail-inbox:before {
     content: "\f15e";
     }
-    .aif-income:before {
+    .ail-immunization:before {
     content: "\f15f";
     }
-    .aif-inbox:before {
+    .ail-house:before {
     content: "\f160";
     }
-    .aif-immunization:before {
+    .ail-history:before {
     content: "\f161";
     }
-    .aif-house:before {
+    .ail-help:before {
     content: "\f162";
     }
-    .aif-history:before {
+    .ail-health:before {
     content: "\f163";
     }
-    .aif-help:before {
+    .ail-fillable_card:before {
     content: "\f164";
     }
-    .aif-health:before {
+    .ail-fast_track:before {
     content: "\f165";
     }
-    .aif-fillable_card:before {
+    .ail-family:before {
     content: "\f166";
     }
-    .aif-fast_track:before {
+    .ail-expenditure:before {
     content: "\f167";
     }
-    .aif-family:before {
+    .ail-expand_content:before {
     content: "\f168";
     }
-    .aif-expenditure:before {
+    .ail-e_application:before {
     content: "\f169";
     }
-    .aif-error:before {
+    .ail-download:before {
     content: "\f16a";
     }
-    .aif-e_application:before {
+    .ail-documents:before {
     content: "\f16b";
     }
-    .aif-download:before {
+    .ail-departure:before {
     content: "\f16c";
     }
-    .aif-documents:before {
+    .ail-copy:before {
     content: "\f16d";
     }
-    .aif-departure:before {
+    .ail-complete:before {
     content: "\f16e";
     }
-    .aif-copy:before {
+    .ail-collapse_content:before {
     content: "\f16f";
     }
-    .aif-complete:before {
+    .ail-code_reader:before {
     content: "\f170";
     }
-    .aif-code_reader:before {
+    .ail-child:before {
     content: "\f171";
     }
-    .aif-child:before {
+    .ail-check:before {
     content: "\f172";
     }
-    .aif-certification_with_seal:before {
+    .ail-certification_with_seal:before {
     content: "\f173";
     }
-    .aif-certification:before {
+    .ail-certification:before {
     content: "\f174";
     }
-    .aif-bank_account:before {
+    .ail-bank_account:before {
     content: "\f175";
     }
-    .aif-authentication:before {
+    .ail-authentication:before {
     content: "\f176";
     }
-    .aif-attention:before {
+    .ail-attention:before {
     content: "\f177";
     }
-    .aif-arrow_up:before {
+    .ail-arrow_up:before {
     content: "\f178";
     }
-    .aif-arrow_right:before {
+    .ail-arrow_right:before {
     content: "\f179";
     }
-    .aif-arrow_left:before {
+    .ail-arrow_left:before {
     content: "\f17a";
     }
-    .aif-arrow_down:before {
+    .ail-arrow_down:before {
     content: "\f17b";
     }
-    .aif-arrival:before {
+    .ail-arrival:before {
     content: "\f17c";
     }
-    .aif-application:before {
+    .ail-application:before {
     content: "\f17d";
     }
-    .aif-add:before {
+    .ail-add:before {
     content: "\f17e";
     }
