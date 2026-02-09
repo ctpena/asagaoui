@@ -318,16 +318,33 @@
   .link, .content a:not([class]) {
     color: #00118F;
     text-decoration: underline;
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.1875rem;
   }
   .link:hover, .content a:hover:not([class]) {
-    background-color: #f2f2f2;
+    color: #0017C1;
+    text-decoration-thickness: 0.1875rem;
   }
   .link:active, .content a:active:not([class]) {
-    color: #E25100;
+    color: #C74700;
+    text-decoration-thickness: 0.0625rem;
   }
   .link:focus, .content a:focus:not([class]) {
-    border-radius: 4px;
-    outline: 2px solid #B78F00;
+    outline: 0.25rem solid #000000;
+    outline-offset: 0.125rem;
+    border-radius: 0.25rem;
+    background-color: #FFD43D;
+    box-shadow: 0 0 0 0.125rem #FFD43D;
+  }
+  .link[target=_blank]::after, .content a[target=_blank]:not([class])::after, .link[rel=external]::after, .content a[rel=external]:not([class])::after {
+    display: inline-block;
+    background-color: #1a1a1a;
+    width: 1em;
+    height: 1em;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.5 19.5H19.5V13H21V21H3V3H11V4.5H4.5V19.5ZM14 4.5V3H21V10H19.5V5.6L10.5 14.5L9.5 13.5L18.4 4.5H14Z"/></svg>');
+    content: "";
+    margin-left: 4px;
+    vertical-align: -0.15em;
   }
   .hs {
     font-size: 1.25rem;
@@ -4606,16 +4623,33 @@
   .link {
     color: #00118F;
     text-decoration: underline;
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.1875rem;
   }
   .link:hover {
-    background-color: #f2f2f2;
+    color: #0017C1;
+    text-decoration-thickness: 0.1875rem;
   }
   .link:active {
-    color: #E25100;
+    color: #C74700;
+    text-decoration-thickness: 0.0625rem;
   }
   .link:focus {
-    border-radius: 4px;
-    outline: 2px solid #B78F00;
+    outline: 0.25rem solid #000000;
+    outline-offset: 0.125rem;
+    border-radius: 0.25rem;
+    background-color: #FFD43D;
+    box-shadow: 0 0 0 0.125rem #FFD43D;
+  }
+  .link[target=_blank]::after, .link[rel=external]::after {
+    display: inline-block;
+    background-color: #1a1a1a;
+    width: 1em;
+    height: 1em;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.5 19.5H19.5V13H21V21H3V3H11V4.5H4.5V19.5ZM14 4.5V3H21V10H19.5V5.6L10.5 14.5L9.5 13.5L18.4 4.5H14Z"/></svg>');
+    content: "";
+    margin-left: 4px;
+    vertical-align: -0.15em;
   }
   .list, .list-ordered, .list-unordered {
     font-size: 1rem;

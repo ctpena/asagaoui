@@ -5,21 +5,36 @@
 .link {
   color: map.get(color.$blue, 1000);
   text-decoration: underline;
+  text-decoration-thickness: calc(1 / 16 * 1rem);
+  text-underline-offset: calc(3 / 16 * 1rem);
 
   &:hover {
-    background-color: map.get(color.$grey, 50);
+    color: map.get(color.$blue, 900);
+    text-decoration-thickness: calc(3 / 16 * 1rem);
   }
 
   &:active {
-    color: map.get(color.$orange, 700);
+    color: map.get(color.$orange, 800);
+    text-decoration-thickness: calc(1 / 16 * 1rem);
   }
 
   &:focus {
-    border-radius: map.get(rounding.$rounding, 's');
-    outline: 2px solid map.get(color.$yellow, 700);
+    outline: calc(4 / 16 * 1rem) solid color.$black;
+    outline-offset: calc(2 / 16 * 1rem);
+    border-radius: calc(4 / 16 * 1rem);
+    background-color: map.get(color.$yellow, 300);
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) map.get(color.$yellow, 300);
   }
 
-  &:visited {
-    //color: map.get(color.$magenta, 900);
+  &[target="_blank"]::after,
+  &[rel="external"]::after {
+    display: inline-block;
+    background-color: map.get(color.$grey, 900);
+    width: 1em;
+    height: 1em;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.5 19.5H19.5V13H21V21H3V3H11V4.5H4.5V19.5ZM14 4.5V3H21V10H19.5V5.6L10.5 14.5L9.5 13.5L18.4 4.5H14Z"/></svg>');
+    content: "";
+    margin-left: 4px;
+    vertical-align: -0.15em;
   }
 }
