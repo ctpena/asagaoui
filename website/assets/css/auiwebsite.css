@@ -189,6 +189,7 @@
 }
 
 .custom-icons-header-tag {
+    display: flex;
     margin-top: .5rem;
 }
 
