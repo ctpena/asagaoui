@@ -201,14 +201,6 @@
     width: 100%;
     max-width: 1440px;
     gap: 1.5rem;
-    /*
-    display: grid;
-    grid-template-columns: 240px 1fr 375px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    "style preview content"
-    ". example content";
-     */
 }
 
 .custom-icons-canvas {
@@ -241,9 +233,18 @@
     }
 }
 
+@media screen and (min-width: 992px) {
+    .custom-icons-grid {
+        grid-template-columns: 1fr 1fr minmax(auto, 375px);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+                "style preview content"
+                "example example content";
+    }
+}
+
 @media screen and (min-width: 1280px) {
     .custom-icons-grid {
-        display: grid;
         grid-template-columns: 256px 1fr minmax(auto, 375px);
         grid-template-rows: auto auto;
         grid-template-areas:
@@ -312,12 +313,6 @@
 
 .custom-icons-other {
     border-top: 1px solid #949494;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
-    max-width: 1440px;
     padding-top: 1.5rem;
 }
 
