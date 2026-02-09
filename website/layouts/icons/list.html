@@ -2,11 +2,10 @@
     <div class="container-xl mt-5 mb-5">
         <h1 class="h1 mb-3">AsagaoUI Icons</h1>
         <div style="max-width: 672px;">
-            <p>使いやすさのためSVGとアイコンフォント形式で提供され、フレームワークを問わずさまざまなWebプロジェクトで利用できます。行政文脈向けのアイコンには<a
-                        class="link"
-                        href="https://www.digital.go.jp/policies/servicedesign/designsystem/Illustration_Icons">デジタル庁が提供するイラストレーション・アイコン素材</a>をもとに最適化したアイコンを採用し、そのほかにも<a
-                        href="" class="link">Material Symbols</a>や独自のオリジナルアイコンを収録しています。</p>
-            <a href="" class="btn btn-fill mt-4">使い始める</a>
+            <p>デジタルサービスやウェブサイトの表現力を高める、高品質なアイコン素材を提供します。フレームワークを問わず、あらゆるUI/UXデザインに利用可能です。行政・公共分野での利用を想定したアイコンには、
+                <a rel="external" class="link" href="https://www.digital.go.jp/policies/servicedesign/designsystem/Illustration_Icons">デジタル庁イラストレーション・アイコン素材</a>を最適化したアイコンを使用しています。そのほかにも一部の
+                <a rel="external" href="" class="link">Material Symbols</a>や独自のアイコンを収録しています。SVGやウェブフォントを用いて簡単に実装できる設計により、デザイナーやエンジニアの開発効率を高めます。
+            </p>
         </div>
     </div>
     <main class="">
@@ -27,41 +26,6 @@
                 {{ end }}
             </div>
         </section>
-        <section class="container-xl mt-7">
-            <h2 class="h2">インストール</h2>
-            <p class="my-3">
-                AsagaoUI Icons は AsagaoUI に含まれています。
-                <code class="code">dist/css/asagaoui-icons.css</code> にスタイル定義が、
-                <code class="code">dist/icons/asagaoui-icons.woff2</code> にアイコンフォントが含まれています。
-                これらを読み込むことで、追加のビルド設定なしにすぐ利用できます。
-            </p>
-        </section>
-
-        <section class="container-xl mt-7">
-            <h2 class="h2">使用法</h2>
-            <p class="my-3">
-                アイコンフォントを利用する場合は、対応するクラス名をHTML要素に指定するだけで表示できます。
-                SVGアイコンを利用する場合は、用途や実装環境に応じてインラインSVGや
-                <code class="code">&lt;img&gt;</code> 要素として組み込むことも可能です。
-            </p>
-            <p class="my-3">
-                AsagaoUI Icons はフレームワーク非依存で設計されているため、
-                静的サイト、業務システム、SPA など、さまざまな構成のWebプロジェクトで利用できます。
-            </p>
-        </section>
-
-        <section class="container-xl mt-7">
-            <h2 class="h2">アクセシビリティ</h2>
-            <p class="my-3">
-                AsagaoUI Icons は、情報を補助的に伝えるための要素として設計されています。
-                重要な情報や操作をアイコンのみに依存せず、必ずテキストと併用してください。
-            </p>
-            <p class="my-3">
-                SVG やアイコンフォントを使用する場合は、用途に応じて
-                <code class="code">aria-label</code> や
-                <code class="code">aria-hidden</code> を適切に指定し、
-                スクリーンリーダー利用者にも内容が正しく伝わるよう配慮してください。
-            </p>
-        </section>
+        {{ .Content }}
     </main>
 {{ end }}
