@@ -3,7 +3,8 @@
         <article>
             <header class="custom-icons-header">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></li>
+                    <li class="breadcrumb-item"><a class="breadcrumb-link"
+                                                   href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></li>
                     <li class="breadcrumb-item">{{ .Title }}</li>
                 </ol>
                 <h1 class="h1 custom-icons-header-title">{{ .Title }}</h1>
@@ -14,69 +15,71 @@
                     </li>
                 </ul>
             </header>
-            {{ range $index, $variant := .Params.variants }}
-                <section class="custom-icons-grid mt-6">
-                    <h2 id="{{ $variant.name }}" style="scroll-margin-top: calc(64px + 56px + 1.5rem);"
-                        class="visually-hidden">{{ $.Title }} - {{ $variant.label }}スタイル</h2>
-                    <div class="custom-icons-content">
-                        <h3 class="h4 mb-2">アイコンフォント</h3>
-                        <code-snippet lang="html" preview="false">
-                            <i class="{{ $variant.icon_class }}"></i>
-                        </code-snippet>
-                        <h3 class="h4 mt-4 mb-2">コードポイント</h3>
-                        <ul>
-                            <li>Unicode: <code class="code">U+{{ $variant.unicode_hex }}</code></li>
-                            <li>CSS: <code class="code">\{{ $variant.unicode_hex }}</code></li>
-                            <li>JS: <code class="code">\u{{ $variant.unicode_hex }}</code></li>
-                            <li>HTML: <code class="code">&amp;#x{{ $variant.unicode_hex }};</code></li>
-                        </ul>
-                        <h3 class="h4 mt-4 mb-2">ダウンロード</h3>
-                        <p class="my-3">アイコンのSVGをダウンロードして編集できます。</p>
-                        <a class="btn btn-fill is-sm">ダウンロード</a>
-                        <h3 class="h4 mt-4 mb-2">アクセシビリティ</h3>
-                        <p class="my-3">装飾目的の場合は <code>aria-hidden="true"</code> を付与してください。<br>機能を持つ場合は
-                            <code>aria-label="{{ $.Title }}"</code>
-                            を推奨します。
-                        </p>
-                    </div>
-                    <aside class="custom-icons-style">
-                        <p class="h4">スタイル</p>
-                        <ul class="mt-3 menulist">
-                            {{ range $i, $v := $.Params.variants }}
-                                <li class="menulist-item">
-                                    <a href="#{{ $v.name }}"
-                                       class="menulist-link{{ if eq $i $index }} active{{ end }}">
-                                        {{ $v.label }}
-                                    </a>
-                                </li>
-                            {{ end }}
-                        </ul>
-                    </aside>
-                    <div class="custom-icons-preview">
-                        <figure class="custom-icons-canvas">
-                            <i class="{{ $variant.icon_class }}"></i>
-                            <figcaption class="visually-hidden">
-                                {{ $.Title }} - {{ $variant.label }}アイコン
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <aside class="custom-icons-example">
-                        <div class="custom-icons-example-header">
-                            <h3 class="h4">アイコンの使用例</h3>
-                        </div>
-                        <div class="custom-icons-example-area">
-                            <p class="h2"><i class="{{ $variant.icon_class }}"></i>見出しテキスト</p>
-                            <p class="hs"><i class="{{ $variant.icon_class }}"></i>見出しテキスト</p>
-                            <p>インラインテキスト<i class="{{ $variant.icon_class }}"></i></p>
-                            <a class="link" href="">リンクテキスト<i class="{{ $variant.icon_class }}"></i></a>
-                            <button type="button" class="btn btn-outline">
-                                ボタン
+            <div class="vstack g-5 my-5">
+                {{ range $index, $variant := .Params.variants }}
+                    <section class="custom-icons-grid">
+                        <h2 id="{{ $variant.name }}" style="scroll-margin-top: calc(64px + 56px + 1rem);"
+                            class="visually-hidden">{{ $.Title }} - {{ $variant.label }}スタイル</h2>
+                        <div class="custom-icons-content">
+                            <h3 class="h4 mb-2">アイコンフォント</h3>
+                            <code-snippet lang="html" preview="false">
                                 <i class="{{ $variant.icon_class }}"></i>
-                            </button>
+                            </code-snippet>
+                            <h3 class="h4 mt-4 mb-2">コードポイント</h3>
+                            <ul>
+                                <li>Unicode: <code class="code">U+{{ $variant.unicode_hex }}</code></li>
+                                <li>CSS: <code class="code">\{{ $variant.unicode_hex }}</code></li>
+                                <li>JS: <code class="code">\u{{ $variant.unicode_hex }}</code></li>
+                                <li>HTML: <code class="code">&amp;#x{{ $variant.unicode_hex }};</code></li>
+                            </ul>
+                            <h3 class="h4 mt-4 mb-2">ダウンロード</h3>
+                            <p class="mt-2 mb-3">アイコンのSVGをダウンロードして編集できます。</p>
+                            <a class="btn btn-fill is-sm">ダウンロード</a>
+                            <h3 class="h4 mt-4 mb-2">アクセシビリティ</h3>
+                            <p class="mt-2">装飾目的の場合は <code>aria-hidden="true"</code> を付与してください。<br>機能を持つ場合は
+                                <code>aria-label="{{ $.Title }}"</code>
+                                を推奨します。
+                            </p>
                         </div>
-                    </aside>
-                </section>
-            {{ end }}
+                        <aside class="custom-icons-style">
+                            <p class="h4">スタイル</p>
+                            <ul class="mt-3 menulist">
+                                {{ range $i, $v := $.Params.variants }}
+                                    <li class="menulist-item">
+                                        <a href="#{{ $v.name }}"
+                                           class="menulist-link{{ if eq $i $index }} active{{ end }}">
+                                            {{ $v.label }}
+                                        </a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </aside>
+                        <div class="custom-icons-preview">
+                            <figure class="custom-icons-canvas">
+                                <i class="{{ $variant.icon_class }}"></i>
+                                <figcaption class="visually-hidden">
+                                    {{ $.Title }} - {{ $variant.label }}アイコン
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <aside class="custom-icons-example">
+                            <div class="custom-icons-example-header">
+                                <h3 class="h4">アイコンの使用例</h3>
+                            </div>
+                            <div class="custom-icons-example-area">
+                                <p class="h2"><i class="{{ $variant.icon_class }}"></i>見出しテキスト</p>
+                                <p class="hs"><i class="{{ $variant.icon_class }}"></i>見出しテキスト</p>
+                                <p>インラインテキスト<i class="{{ $variant.icon_class }}"></i></p>
+                                <a class="link" href="">リンクテキスト<i class="{{ $variant.icon_class }}"></i></a>
+                                <button type="button" class="btn btn-outline">
+                                    ボタン
+                                    <i class="{{ $variant.icon_class }}"></i>
+                                </button>
+                            </div>
+                        </aside>
+                    </section>
+                {{ end }}
+            </div>
         </article>
     </main>
     <aside class="custom-icons-other">

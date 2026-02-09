@@ -200,7 +200,7 @@
     margin-left: auto;
     width: 100%;
     max-width: 1440px;
-    gap: 2.5rem;
+    gap: 1.5rem;
     /*
     display: grid;
     grid-template-columns: 240px 1fr 375px;
@@ -212,7 +212,7 @@
 }
 
 .custom-icons-canvas {
-    font-size: 32px;
+    font-size: 48px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -222,15 +222,17 @@
     linear-gradient(90deg, #e6e6e6 1px, transparent 1px);
     background-size: 40px 40px;
     background-position: center;
+    padding: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
     .custom-icons-grid {
         display: grid;
-        grid-template-columns: 150px 1fr minmax(auto, 375px);
-        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr minmax(auto, 375px);
+        grid-template-rows: auto auto auto;
         grid-template-areas:
-                "style preview content"
+                "style style content"
+                "preview preview content"
                 "example example example";
     }
 
@@ -262,6 +264,7 @@
 
 .custom-icons-style {
     order: 10;
+    grid-area: style;
 }
 
 .custom-icons-preview {
@@ -315,8 +318,7 @@
     padding-right: 1rem;
     width: 100%;
     max-width: 1440px;
-    margin-top: 6.5rem;
-    padding-top: 4rem;
+    padding-top: 1.5rem;
 }
 
 .custom-icons-other-grid {
