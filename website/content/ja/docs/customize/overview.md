@@ -7,15 +7,23 @@ AsagaoUIは、デジタル庁デザインシステムに基づいた一貫性の
 `scss/styles`フォルダはその核心であり、カラー2.0、タイポグラフィ、余白など、デザインに必要な基本要素がまとめて定義されています。
 
 ```text
-asagaoui
-└── scss
-    ├── asagaoui.scss
-    ├── base/
-    ├── components/
-    ├── forms/
-    ├── layout/
-    ├── styles/
-    └── utilities/
+asagaoui/scss/
+├── asagaoui-icons.scss
+├── asagaoui.scss
+├── base/
+│   ├── _base.scss
+│   └── _reset.scss
+├── components/
+├── forms/
+├── layout/
+├── styles
+│   ├── _breakpoint.scss
+│   ├── _color.scss
+│   ├── _ratios.scss
+│   ├── _rounding.scss
+│   ├── _spacing.scss
+│   └── _typography.scss
+└── utilities/
 ```
 
 ## stylesの効果的な使い方

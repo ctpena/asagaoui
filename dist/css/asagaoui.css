@@ -854,15 +854,12 @@
     border-radius: 8px;
   }
   .accordion-header:before {
-    font-family: "asagaoui-icons" !important;
-    speak: never;
     font-style: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    content: "\f13d";
+    content: "";
     display: flex;
-    font-weight: bold;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -870,6 +867,10 @@
     border: 1px solid #00118F;
     width: 2rem;
     height: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.0016 6.6001L12.0016 14.6001L4.00156 6.6001L2.60156 8.0001L12.0016 17.4001L21.4016 8.0001L20.0016 6.6001Z"/></svg>');
   }
   .accordion-header:hover::before {
     border: 2px solid #00118F;
@@ -882,7 +883,7 @@
     padding: 1rem 0.5rem 1rem 1.5rem;
   }
   .accordion[open] .accordion-header::before {
-    content: "\f13a";
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0016 6.1001L2.60156 15.5001L4.00156 16.9001L12.0016 8.9001L20.0016 16.9001L21.4016 15.5001L12.0016 6.1001Z"/></svg>');
   }
   @media screen and (min-width: 768px) {
     .accordion-header {
