@@ -1,83 +1,141 @@
 {{ define "main" }}
-    <main class="">
-        <article class="">
-            <section class="custom-hero py-7">
-                <div class="container-md">
-                    <div class="d-flex justify-center">
-                        {{ $logono := resources.Get "img/AsagaoUISymbolNOMargin.svg" }}
-                        <img class="d-block" src="{{ $logono.RelPermalink }}" alt="{{ .Site.Title }}" width="80px" height="80px">
+    <main>
+        <article>
+            <section>
+                <div class="container-fluid px-0 grid g-4">
+                    <div class="col-1"></div>
+                    <div class="pt-6 pb-7 col-12 col-md-5">
+                        <h1 class="fs-64 fw-b">AsagaoUI</h1>
+                        <h2 class="fs-48 fw-b mb-3">{{ i18n "hero-title" }}</h2>
+                        <p class="mt-3">
+                            {{ i18n "hero-description" }}
+                        </p>
+                        <div class="d-flex flex-wrap g-2 mt-4">
+                            <span class="badge badge-outline badge-blue">{{ i18n "hero-badge-1" }}</span>
+                            <span class="badge badge-outline badge-cyan">{{ i18n "hero-badge-2" }}</span>
+                            <span class="badge badge-outline badge-green">{{ i18n "hero-badge-3" }}</span>
+                        </div>
+                        <div class="d-flex flex-wrap g-3 mt-5">
+                            <a class="btn btn-outline is-lg" rel="external" href="https://github.com/ctpena/asagaoui">
+                                {{ i18n "hero-secondary-cta" }}
+                            </a>
+                            <a href='{{ "/docs/getting-started/introduction/" | relLangURL }}'
+                               class="btn btn-fill is-lg">{{ i18n "get-started" }}</a>
+                        </div>
                     </div>
-                    <h1 class="fs-57 fw-b text-center">AsagaoUI</h1>
-                    <h2 class="fs-36 mt-3 fw-b text-center">{{ i18n "hero-title" }}</h2>
-                    <p class="mt-3 text-center">
-                        {{ i18n "hero-description" }}
-                    </p>
-                </div>
-                <div class="container-sm mt-5 d-flex justify-center g-4">
-                    <a href="https://github.com/ctpena/asagaoui" class="btn btn-outline">GitHub</a>
-                    <a href="" class="btn btn-fill">{{ i18n "document" }}</a>
-                </div>
-            </section>
-            <section class="container-md my-7 grid gy-4 gx-3">
-                <div class="card col-12 col-md-6">
-                    {{ $sass := resources.Get "img/api.svg" }}
-                    <img class="card-img-top my-3" src="{{ $sass.RelPermalink }}" alt="" width="50px" height="50px">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ i18n "hero1-title" }}</h2>
-                        <p class="card-text">{{ i18n "hero1-description" }}</p>
-                        <ul class="mt-3">
-                            <li>{{ i18n "hero1-list1" }}</li>
-                            <li>{{ i18n "hero1-list2" }}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card col-12 col-md-6">
-                    {{ $html := resources.Get "img/html.svg" }}
-                    <img class="card-img-top my-3" src="{{ $html.RelPermalink }}" alt="" width="50px" height="50px">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ i18n "hero2-title" }}</h2>
-                        <p class="card-text">{{ i18n "hero2-description" }}</p>
-                    </div>
-                </div>
-                <div class="card col-12 col-md-6">
-                    {{ $inbox_customize := resources.Get "img/inbox_customize.svg" }}
-                    <img class="card-img-top my-3" src="{{ $inbox_customize.RelPermalink }}" alt="" width="50px" height="50px">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ i18n "hero3-title" }}</h2>
-                        <p class="card-text"><a href="" class="link">カスタマイズ機能の詳細を見る</a></p>
-                        <p class="card-text">{{ i18n "hero3-description" }}</p>
-                        <ul>
-                            <li>{{ i18n "hero3-list1" }}</li>
-                            <li>{{ i18n "hero3-list2" }}</li>
-                            <li>{{ i18n "hero3-list3" }}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card col-12 col-md-6">
-                    {{ $js := resources.Get "img/javascript.svg" }}
-                    <img class="card-img-top my-3" src="{{ $js.RelPermalink }}" alt="" width="50px" height="50px">
-                    <div class="card-body">
-                        <h2 class="card-title">強力なJavaScriptで拡張</h2>
-                        <p class="card-text"><a href="" class="link">JavaScriptの詳細を見る</a></p>
-                        <p class="card-text">独自のJavaScriptを提供してJSフレームワークの有無に関わらず高度なUIを実現できます。各JSフレームワークと統合することも、バニラJSとして単独で使用することも可能です。</p>
-                        <ul>
-                            <li>フレームワークに依存しない柔軟なコンポーネント設計</li>
-                            <li>Web Componentsによる高い互換性と再利用性</li>
-                        </ul>
+                    <div class="custom-hero col-12 col-md-6">
+                        <div class="vstack g-4 p-4">
+                            {{ $logono := resources.Get "img/AsagaoUISymbolNOMargin.svg" }}
+                            <img class="d-block" src='{{ $logono.RelPermalink }}' alt='{{ .Site.Title }}' width="128px" height="128px">
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="container-md my-7 text-center content">
-                <h2>AsagaoUIを使用した例</h2>
-                <h2>🤔🤔🤔</h2>
-                <h3>このウェブサイトはAsagaoUIを使用して作られています<br>😊</h3>
+            <section class="container-lg mt-7">
+                <p class="hs mb-2">{{ i18n "home-features-kicker" }}</p>
+                <h2 class="h2">{{ i18n "home-features-title" }}</h2>
+                <p class="mt-2">{{ i18n "home-features-description" }}</p>
+                <div class="grid g-3 mt-4">
+                    <article class="card col-12 col-md-4">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">{{ i18n "home-feature-1-title" }}</h3>
+                            <p class="card-text">{{ i18n "home-feature-1-description" }}</p>
+                        </div>
+                    </article>
+                    <article class="card col-12 col-md-4">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">{{ i18n "home-feature-2-title" }}</h3>
+                            <p class="card-text">{{ i18n "home-feature-2-description" }}</p>
+                        </div>
+                    </article>
+                    <article class="card col-12 col-md-4">
+                        <div class="card-body">
+                            <h3 class="h4 mb-2">{{ i18n "home-feature-3-title" }}</h3>
+                            <p class="card-text">{{ i18n "home-feature-3-description" }}</p>
+                        </div>
+                    </article>
+                </div>
             </section>
-            <section class="container-sm my-7 text-center">
-                <h2 class="h2">貢献する</h2>
-                <p class="my-3">AsagaoUIは、オープンソースで公開されているため、<br>コードの品質向上やドキュメントの改善など、さまざまな形で貢献できます。</p>
-                <div class="d-flex justify-center g-4">
-                    <a href="https://github.com/ctpena/asagaoui" class="btn btn-outline">GitHub</a>
-                    <a href="" class="btn btn-fill">貢献ガイドを見る</a>
+            <section class="mt-7 container-lg">
+                <h2 class="h2">{{ i18n "home-audience-title" }}</h2>
+                <p class="mt-3">{{ i18n "home-audience-description" }}</p>
+                <div class="grid">
+                    <div class="col-6 d-flex justify-center align-items-center">
+                        <ul class="list list-unordered fs-18">
+                            <li>{{ i18n "home-audience-item-1" }}</li>
+                            <li>{{ i18n "home-audience-item-2" }}</li>
+                            <li>{{ i18n "home-audience-item-3" }}</li>
+                            <li>{{ i18n "home-audience-item-4" }}</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 d-flex justify-center">
+                        {{ $gov := resources.Get "img/l_01_square_white.avif" }}
+                        <img class="img-fluid" style="max-width: 320px;" src='{{ $gov.RelPermalink }}' alt="" width="5120px" height="5120px">
+                    </div>
+                </div>
+            </section>
+            <section class="mt-7 container-lg">
+                <p class="hs mb-2">{{ i18n "home-quickstart-kicker" }}</p>
+                <h2 class="h2">{{ i18n "home-quickstart-title" }}</h2>
+                <p class="mt-3">{{ i18n "home-quickstart-description" }}</p>
+                <div class="grid g-4 mt-4">
+                    <div class="col-12 col-md-6">
+<code-snippet lang="html" preview="true">
+<div class="banner banner-info">
+    <i class="banner-icon aif-information"></i>
+    <span class="banner-title">{{ i18n "home-snippet-title" }}</span>
+    <div class="banner-body">
+        <span class="banner-description">{{ i18n "home-snippet-description" }}</span>
+    </div>
+</div>
+</code-snippet>
+                    </div>
+                    <div class="col-12 col-md-6 vstack g-3">
+                        <article class="card">
+                            <div class="card-body">
+                                <p class="hs mb-2">{{ i18n "home-quickstart-step-1-title" }}</p>
+                                <p class="card-text">{{ i18n "home-quickstart-step-1-description" }}</p>
+                                <code-snippet lang="html" preview="false">
+                                    <link href="https://cdn.jsdelivr.net/npm/asagaoui/dist/css/asagaoui.min.css" rel="stylesheet">
+                                </code-snippet>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-body">
+                                <p class="hs mb-2">{{ i18n "home-quickstart-step-2-title" }}</p>
+                                <p class="card-text">{{ i18n "home-quickstart-step-2-description" }}</p>
+                                <code-snippet lang="bash" preview="false">
+                                    npm i asagaoui
+                                </code-snippet>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-body">
+                                <p class="hs mb-2">{{ i18n "home-quickstart-step-3-title" }}</p>
+                                <p class="card-text">{{ i18n "home-quickstart-step-3-description" }}</p>
+                                <code-snippet lang="bash" preview="false">
+                                    git clone https://github.com/ctpena/asagaoui.git
+                                </code-snippet>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="mt-7 container-lg">
+                <div class="grid g-3">
+                    <div class="col-12 col-md-6">
+                        <p class="hs mb-2">{{ i18n "home-aui-kicker" }}</p>
+                        <h2 class="h2">{{ i18n "home-aui-title" }}</h2>
+                        <p class="mt-2">{{ i18n "home-aui-description" }}</p>
+                        <p class="mt-2">
+                            <a href='{{ "/icons/" | relLangURL }}'
+                               class="link">{{ i18n "home-aui-cta" }}</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-center align-items-center">
+                        {{ $aui := resources.Get "img/aui.avif" }}
+                        <img class="img-fluid" style="border-radius: 8px;" src='{{ $aui.RelPermalink }}' alt='{{ .Site.Title }}' width="3840px" height="2158px">
+                    </div>
                 </div>
             </section>
         </article>

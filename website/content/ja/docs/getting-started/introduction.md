@@ -45,6 +45,15 @@ AsagaoUIを使い始めるために、以下の2つの重要な設定を必ず�
 <script src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
 ```
 
+<div class="banner banner-info mt-3">
+    <i class="banner-icon aif-information"></i>
+    <span class="banner-title">JavaScriptは必要ですか？</span>
+    <div class="banner-body">
+        <time class="banner-date">2026年2月27日</time>
+        <span class="banner-description">コードスニペットなど一部のコンポーネントの動作に必要ですが、該当のコンポーネントを利用しない場合は完全に不要です。</span>
+    </div>
+</div>
+
 タグの配置した後のHTMLは次の通りです。
 
 ```html
