@@ -4,7 +4,7 @@
             <section>
                 <div class="container-fluid px-0 grid g-4">
                     <div class="col-1"></div>
-                    <div class="pt-6 pb-7 col-12 col-md-5">
+                    <div class="px-3 pt-6 pb-7 col-12 col-md-5">
                         <h1 class="fs-64 fw-b">AsagaoUI</h1>
                         <h2 class="fs-48 fw-b mb-3">{{ i18n "hero-title" }}</h2>
                         <p class="mt-3">
@@ -60,7 +60,7 @@
                 <h2 class="h2">{{ i18n "home-audience-title" }}</h2>
                 <p class="mt-3">{{ i18n "home-audience-description" }}</p>
                 <div class="grid">
-                    <div class="col-6 d-flex justify-center align-items-center">
+                    <div class="col-12 col-md-6 d-flex justify-center align-items-center">
                         <ul class="list list-unordered fs-18">
                             <li>{{ i18n "home-audience-item-1" }}</li>
                             <li>{{ i18n "home-audience-item-2" }}</li>
@@ -68,7 +68,7 @@
                             <li>{{ i18n "home-audience-item-4" }}</li>
                         </ul>
                     </div>
-                    <div class="col-6 d-flex justify-center">
+                    <div class="col-12 col-md-6 d-flex justify-center">
                         {{ $gov := resources.Get "img/l_01_square_white.avif" }}
                         <img class="img-fluid" style="max-width: 320px;" src='{{ $gov.RelPermalink }}' alt="" width="5120px" height="5120px">
                     </div>

@@ -86,14 +86,19 @@
 
 /* Home */
 .custom-hero {
-    background: linear-gradient(315deg, #DEE6FF, #F4EAFF);
-    border: 1px solid #949494;
-    border-top: none;
-    border-right: none;
-    border-bottom-left-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+    .custom-hero {
+        background: linear-gradient(315deg, #DEE6FF, #F4EAFF);
+        border: 1px solid #949494;
+        border-top: none;
+        border-right: none;
+        border-bottom-left-radius: 12px;
+    }
 }
 
 /* Toc */
