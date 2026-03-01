@@ -1,0 +1,18 @@
++++
+title = 'Health'
+icon_name = 'health'
+[[variants]]
+name = "line"
+label = "Line"
+icon_class = "ail-health"
+unicode = "61733"
+unicode_hex = "F125"
+svg_url = ""
+[[variants]]
+name = "fill"
+label = "Fill"
+icon_class = "aif-health"
+unicode = "61797"
+unicode_hex = "F165"
+svg_url = ""
++++

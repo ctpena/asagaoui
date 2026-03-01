@@ -1,0 +1,18 @@
++++
+title = 'Password'
+icon_name = 'password'
+[[variants]]
+name = "line"
+label = "Line"
+icon_class = "ail-password"
+unicode = "61711"
+unicode_hex = "F10F"
+svg_url = ""
+[[variants]]
+name = "fill"
+label = "Fill"
+icon_class = "aif-password"
+unicode = "61776"
+unicode_hex = "F150"
+svg_url = ""
++++
