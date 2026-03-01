@@ -53,3 +53,10 @@ home-aui-kicker: "アイコンも忘れないで！"
 home-aui-title: "AsagaoUI Icons"
 home-aui-description: "デジタルサービスやウェブサイトの表現力を高める、高品質なアイコン素材"
 home-aui-cta: "アイコン一覧を確認する"
+
+# Icons
+icons-hero-a: "デジタルサービスやウェブサイトの表現力を高める、高品質なアイコン素材を提供します。フレームワークを問わず、あらゆるUI/UXデザインに利用可能です。行政・公共分野での利用を想定したアイコンには、"
+icons-hero-b: "を最適化したアイコンを使用しています。そのほかにも一部の"
+icons-hero-c: "や独自のアイコンを収録しています。SVGやウェブフォントを用いて簡単に実装できる設計により、デザイナーやエンジニアの開発効率を高めます。"
+icons-hero-d: "Digital Agency illustration and icon assets"
+icons: "アイコン"

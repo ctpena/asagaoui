@@ -53,3 +53,10 @@ home-aui-kicker: "Don't forget the icons!"
 home-aui-title: "AsagaoUI Icons"
 home-aui-description: "High-quality icon assets to enhance the expressiveness of your digital services and websites."
 home-aui-cta: "Browse Icon Library"
+
+# Icons
+icons-hero-a: "We provide high-quality icon assets to enhance the expressiveness of digital services and websites. Compatible with any framework, they can be used in all UI/UX designs. Icons optimized for"
+icons-hero-b: "are used for those intended for government and public sector use. Additionally, the collection includes select"
+icons-hero-c: "and original icons. Designed for easy implementation using SVG and web fonts, they boost development efficiency for designers and engineers."
+icons-hero-d: "Digital Agency illustration and icon assets"
+icons: "Icons"

@@ -2,15 +2,17 @@
     <div class="container-xl mt-5 mb-5">
         <h1 class="h1 mb-3">AsagaoUI Icons</h1>
         <div style="max-width: 672px;">
-            <p>デジタルサービスやウェブサイトの表現力を高める、高品質なアイコン素材を提供します。フレームワークを問わず、あらゆるUI/UXデザインに利用可能です。行政・公共分野での利用を想定したアイコンには、
-                <a rel="external" class="link" href="https://www.digital.go.jp/policies/servicedesign/designsystem/Illustration_Icons">デジタル庁イラストレーション・アイコン素材</a>を最適化したアイコンを使用しています。そのほかにも一部の
-                <a rel="external" href="" class="link">Material Symbols</a>や独自のアイコンを収録しています。SVGやウェブフォントを用いて簡単に実装できる設計により、デザイナーやエンジニアの開発効率を高めます。
+            <p>{{ i18n "icons-hero-a" }}
+                <a rel="external" class="link" href="https://www.digital.go.jp/policies/servicedesign/designsystem/Illustration_Icons">{{ i18n "icons-hero-d" }}</a>
+                {{ i18n "icons-hero-b" }}
+                <a rel="external" href="" class="link">Material Symbols</a>
+                {{ i18n "icons-hero-c" }}
             </p>
         </div>
     </div>
     <main class="">
         <section class="container-xl custom-icons-other">
-            <h2 class="h2">アイコン</h2>
+            <h2 class="h2">{{ i18n "icons" }}</h2>
             <div class="custom-icons-other-grid">
                 {{ range sort .Pages ".File.LogicalName" }}
                     <figure class="custom-icons-item">
