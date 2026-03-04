@@ -1,0 +1,54 @@
+@use "sass:map";
+@use "../styles/color";
+
+.date-picker {
+  display: inline-flex;
+  max-width: 100%;
+  height: 3rem;
+  padding: .125rem 0 .125rem .125rem;
+  border: 1px solid map.get(color.$grey, 600);
+  border-radius: .5rem;
+  background-color: color.$white;
+  color: map.get(color.$grey, 800);
+
+  &-year,
+  &-month,
+  &-day {
+    display: flex;
+
+    &:last-child {
+      padding-right: 1rem;
+    }
+  }
+
+  &-legend {
+    display: none;
+  }
+
+  &-input {
+    width: 4rem;
+    margin-right: -.25rem;
+    padding-right: .75rem;
+    border-radius: .5rem;
+    text-align: right;
+
+    &:focus {
+      outline: .25rem solid color.$black;
+      outline-offset: .125rem;
+      border: 1px solid map.get(color.$grey, 600);
+      box-shadow: 0 0 0 .125rem map.get(color.$yellow, 300);
+    }
+
+    .date-picker-month &,
+    .date-picker-day & {
+      width: 2.75rem;
+    }
+  }
+
+  &-label {
+    align-self: center;
+    padding: .25rem;
+    line-height: 1;
+    background-color: color.$white;
+  }
+}

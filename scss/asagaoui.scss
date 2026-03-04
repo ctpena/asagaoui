@@ -61,6 +61,7 @@
 // Forms
 @layer forms {
   @include meta.load-css('forms/check');
+  @include meta.load-css('forms/date-picker');
   @include meta.load-css('forms/group');
   @include meta.load-css('forms/input');
   @include meta.load-css('forms/label');

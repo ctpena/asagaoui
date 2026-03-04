@@ -1411,7 +1411,7 @@
     display: flex;
   }
   .card-body {
-    width: 75%;
+    width: 100%;
     padding: 1rem;
   }
   .card-title {
@@ -1569,12 +1569,10 @@
   .codesnippet-lang {
     margin-right: auto;
   }
-  .codesnippet-code pre {
+  .codesnippet-code {
     margin: 0;
     font-family: "Noto Sans Mono", monospace;
     overflow: auto;
-  }
-  .codesnippet-code {
     padding: 1rem 1.5rem;
     border: 1px solid #cccccc;
     border-radius: 0 0 8px 8px;
@@ -1597,6 +1595,107 @@
     align-items: start;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+  .codesnippet-preview-false {
+    display: none;
+  }
+  code[class*=language-],
+  pre[class*=language-] {
+    background: none;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+  }
+  pre[class*=language-]::selection,
+  pre[class*=language-] ::selection,
+  code[class*=language-]::selection,
+  code[class*=language-] ::selection {
+    background: #C5D7FB;
+  }
+  :not(pre) > code[class*=language-] {
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    white-space: normal;
+    background: #f2f2f2;
+    border: 1px solid #e6e6e6;
+  }
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #767676;
+    font-style: italic;
+  }
+  .token.punctuation {
+    color: #4d4d4d;
+  }
+  .token.namespace {
+    color: #666666;
+    opacity: 0.8;
+  }
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #FE3939;
+  }
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #259D63;
+  }
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #FB5B01;
+  }
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #3460FB;
+    font-weight: 500;
+  }
+  .token.function,
+  .token.class-name {
+    color: #8843E1;
+  }
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #D2A400;
+  }
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+  .token.entity {
+    cursor: help;
+  }
+  .line-numbers .line-numbers-rows {
+    border-right: 1px solid #cccccc;
+  }
+  .line-numbers-rows > span:before {
+    color: #b3b3b3;
+  }
+  .line-highlight {
+    background: linear-gradient(to right, #E8F1FE 70%, transparent);
   }
   .description-list {
     display: flex;
@@ -2558,6 +2657,47 @@
     box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
     outline: none;
     border: 0.125rem solid #000000;
+  }
+  .date-picker {
+    display: inline-flex;
+    max-width: 100%;
+    height: 3rem;
+    padding: 0.125rem 0 0.125rem 0.125rem;
+    border: 1px solid #666666;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    color: #333333;
+  }
+  .date-picker-year, .date-picker-month, .date-picker-day {
+    display: flex;
+  }
+  .date-picker-year:last-child, .date-picker-month:last-child, .date-picker-day:last-child {
+    padding-right: 1rem;
+  }
+  .date-picker-legend {
+    display: none;
+  }
+  .date-picker-input {
+    width: 4rem;
+    margin-right: -0.25rem;
+    padding-right: 0.75rem;
+    border-radius: 0.5rem;
+    text-align: right;
+  }
+  .date-picker-input:focus {
+    outline: 0.25rem solid #000000;
+    outline-offset: 0.125rem;
+    border: 1px solid #666666;
+    box-shadow: 0 0 0 0.125rem #FFD43D;
+  }
+  .date-picker-month .date-picker-input, .date-picker-day .date-picker-input {
+    width: 2.75rem;
+  }
+  .date-picker-label {
+    align-self: center;
+    padding: 0.25rem;
+    line-height: 1;
+    background-color: #ffffff;
   }
   .form-group {
     display: flex;

@@ -1,3 +1,17 @@
-<code-snippet lang="{{ .Get "lang" }}" preview="{{ .Get "preview" }}" pv-layout="{{ .Get "pv-layout" }}">
-    {{ .Inner | safeHTML }}
+<code-snippet lang="{{ .Get "lang" }}" preview="{{ .Get "preview" }}">
+    {{- if ne (.Get "preview") "false" }}
+        <div class="codesnippet-preview">
+            {{- .Inner | safeHTML -}}
+        </div>
+    {{- end }}
+    <div class="codesnippet-area">
+        <div class="codesnippet-header">
+            <span class="codesnippet-lang"></span>
+            <button class="codesnippet-copy-btn">
+                <i class="ail-copy"></i>
+            </button>
+        </div>
+        {{- $code := trim .Inner "\n\r " -}}
+        <pre class="codesnippet-code"><code>{{- $code | htmlEscape | safeHTML -}}</code></pre>
+    </div>
 </code-snippet>

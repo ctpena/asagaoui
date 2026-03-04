@@ -28,20 +28,15 @@
     "watch:sass": "sass ./scss:./dist/css --watch",
     "dev:web": "sass ./scss:./website/assets/css --watch",
     "min:sass": "sass ./scss/asagaoui.scss:./dist/css/asagaoui.min.css ./scss/asagaoui-icons.scss:./dist/css/asagaoui-icons.min.css --style=compressed --no-source-map",
-    "buildjs": "rollup -c"
+    "build": "rolldown ts/asagaoui.ts --file dist/js/asagaoui.js",
+    "build:web": "rolldown ts/asagaoui.ts --file website/assets/js/asagaoui.js"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^29.0.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-typescript": "^12.3.0",
+    "prismjs": "^1.30.0",
     "@types/prismjs": "^1.26.6",
     "fantasticon": "^4.1.0",
-    "lightningcss": "^1.31.1",
-    "prismjs": "^1.30.0",
-    "rollup": "^4.59.0",
-    "rollup-plugin-postcss": "^4.0.2",
+    "rolldown": "^1.0.0-rc.6",
     "sass": "^1.97.3",
-    "tslib": "^2.8.1",
     "typescript": "^5.9.3"
   },
   "files": [
