@@ -1620,3 +1620,30 @@ var CodeSnippet = class extends HTMLElement {
 if (!customElements.get("code-snippet")) customElements.define("code-snippet", CodeSnippet);
 
 //#endregion
+//#region ts/forms/textarea.ts
+var Textarea = class extends HTMLTextAreaElement {
+	counter;
+	constructor() {
+		super();
+		this.counter = document.createElement("small");
+		this.counter.className = "textarea-counter";
+	}
+	connectedCallback() {
+		this.after(this.counter);
+		this.addEventListener("input", () => this.updateCount());
+		this.updateCount();
+	}
+	updateCount() {
+		const currentLength = this.value.length;
+		const maxAttr = this.getAttribute("max");
+		const maxLength = maxAttr ? parseInt(maxAttr, 10) : Infinity;
+		const displayMax = isFinite(maxLength) ? maxLength.toString() : "∞";
+		this.counter.textContent = `${currentLength} / ${displayMax}`;
+	}
+	disconnectedCallback() {
+		this.counter.remove();
+	}
+};
+if (!customElements.get("au-textarea")) customElements.define("au-textarea", Textarea, { extends: "textarea" });
+
+//#endregion

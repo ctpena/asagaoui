@@ -38,3 +38,9 @@
     border-color: map.get(color.$red, 800);
   }
 }
+
+.textarea-counter {
+  display: inline-block;
+  color: map.get(color.$grey, 600);
+  @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
+}

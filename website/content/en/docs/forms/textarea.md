@@ -60,3 +60,19 @@ Using `form-group` allows you to display error text at the same time.
     <div class="form-error">* Error text</div>
 </div>
 {{< /code-snippet >}}
+
+## Character Count Counter
+
+JavaScript is required. Specify the custom element with `is=“au-textarea”` to use the character count counter.
+
+{{< code-snippet lang="html" preview="true" >}}
+<div class="form-group">
+    <label for="test" class="form-label">
+        Label
+        <span class="form-necessity">*Required</span>
+    </label>
+    <div class="form-support">Support text</div>
+    <textarea is="au-textarea" id="test" class="textarea"></textarea>
+    <div class="form-error">＊Error text</div>
+</div>
+{{< /code-snippet >}}

@@ -1,17 +1,17 @@
 {
   "name": "asagaoui",
-  "description": "AsagaoUI is a CSS framework based on Japan's Digital Agency design system.",
+  "description": "UI for beautiful and accessible digital services, based on Japan's Digital Agency design system.",
   "version": "0.1.7",
   "homepage": "https://asagaoui.com",
   "author": "Hiroshi ISOBE",
   "license": "MIT",
   "keywords": [
+    "html",
     "css",
-    "scss",
-    "front-end",
-    "framework",
-    "css-framework",
-    "scss-framework"
+    "javascript",
+    "design-system",
+    "ui-library",
+    "css-framework"
   ],
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
     "url": "https://github.com/ctpena/asagaoui/issues"
   },
   "type": "module",
-  "main": "dist/js/asagaoui.min.js",
-  "style": "dist/css/asagaoui.min.css",
+  "main": "./dist/js/asagaoui.js",
+  "style": "./dist/css/asagaoui.css",
   "scripts": {
     "sass": "sass ./scss:./dist/css",
     "watch:sass": "sass ./scss:./dist/css --watch",
@@ -41,10 +41,9 @@
   },
   "files": [
     "dist/css",
-    "dist/icons/asagaoui-icons.woff2",
+    "dist/icons",
     "dist/js",
-    "scss",
-    "ts",
+    "scss/styles",
     "NOTICE",
     "LICENSE",
     "README.md"
