@@ -1,0 +1,53 @@
+{{ define "main" }}
+    <aside class="bg-grey-50">
+        <nav class="container-lg py-3">
+            <a class="link" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}一覧に戻る</a>
+        </nav>
+    </aside>
+    <hr class="mt-6">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div>AsagaoUI</div>
+        </div>
+        <div class="sidebar-nav">
+        </div>
+        <div class="sidebar-footer">
+        </div>
+    </div>
+    <div class="" style="padding-left: 256px;">
+        <header>
+            <div class="header-fixed">
+                <div class="header-logo">
+                    <button class="fs-26" type="button">
+                        <i class="ail-menu"></i>
+                    </button>
+                </div>
+                <div class="header-button">
+                    <button class="hamburger-iconbtn d-md-none" type="button">
+                        <i class="hamburger-icon"></i>
+                        {{ i18n "hamburger-iconbtn" }}
+                    </button>
+                </div>
+                <div class="header-items">
+                </div>
+                <div class="header-menu">
+                    <ul class="utilitylink-units">
+                        <li class="utilitylink-item"><a class="utilitylink" href="">Dashboard</a></li>
+                        <li class="utilitylink-item"><a class="utilitylink" href="">Users</a></li>
+                        <li class="utilitylink-item"><a class="utilitylink" href="">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="height: 40px; display: flex; align-items: center; padding: 0 24px;">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="">ホーム</a></li>
+                    <li class="breadcrumb-item">Dashboard</li>
+                </ol>
+            </div>
+        </header>
+        <main>
+        </main>
+        <footer>
+        </footer>
+    </div>
+{{ end }}
