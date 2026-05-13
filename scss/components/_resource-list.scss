@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "../styles/typography";
+@use "../styles/rounding";
+@use "../styles/color";
+
+.resource-list {
+  display: flex;
+  align-items: center;
+}
+
+.resource-list-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-list-action {
+}
+
+.resource-list-action-btn {
+}
+
+.resource-list-title {
+  @include typography.set(map.get(typography.$std, 'std-20b-150'));
+}
+
+.resource-list-label,
+.resource-list-support {
+  @include typography.set(map.get(typography.$dns, 'dns-16n-130'));
+}
+
+.resource-list-label {
+}
+
+.resource-list-support {
+
+}
+
+.resource-list-sub {
+}

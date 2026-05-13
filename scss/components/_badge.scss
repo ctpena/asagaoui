@@ -3,20 +3,6 @@
 @use "../styles/rounding";
 @use "sass:map";
 
-$badge-colors: (
-        'gray': color.$grey,
-        'blue': color.$blue,
-        'lightblue': color.$lightblue,
-        'cyan': color.$cyan,
-        'green': color.$green,
-        'lime': color.$lime,
-        'yellow': color.$yellow,
-        'orange': color.$orange,
-        'red': color.$red,
-        'magenta': color.$magenta,
-        'purple': color.$purple
-);
-
 .badge {
   display: inline-grid;
   grid-template-columns: auto auto;
@@ -47,35 +33,28 @@ $badge-colors: (
   background-color: map.get(color.$grey, 700);
 }
 
-@mixin badge-color-variant($name, $color-map) {
-  .badge-#{$name} {
-    &.badge {
-      color: map.get($color-map, 700);
-    }
+.badge-gray {
+  &.badge {
+    color: map.get(color.$grey, 700);
+  }
 
-    &.badge-outline {
-      border: 1px solid map.get($color-map, 700);
-      color: map.get($color-map, 700);
-    }
+  &.badge-outline {
+    border: 1px solid map.get(color.$grey, 700);
+    color: map.get(color.$grey, 700);
+  }
 
-    &.badge-filled-outline {
-      border: 1px solid map.get($color-map, 700);
-      background-color: map.get($color-map, 50);
-      color: map.get($color-map, 800);
-    }
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$grey, 700);
+    background-color: map.get(color.$grey, 50);
+    color: map.get(color.$grey, 800);
+  }
 
-    &.badge-fill {
-      color: color.$white;
-      background-color: map.get($color-map, 700);
-    }
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$grey, 700);
   }
 }
 
-@each $name, $color-key in $badge-colors {
-  @include badge-color-variant($name, $color-key);
-}
-
-/*
 .badge-blue {
   &.badge {
     color: map.get(color.$blue, 700);
@@ -97,4 +76,201 @@ $badge-colors: (
     background-color: map.get(color.$blue, 700);
   }
 }
-*/
+
+.badge-lightblue {
+  &.badge {
+    color: map.get(color.$lightblue, 800);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$lightblue, 800);
+    color: map.get(color.$lightblue, 800);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$lightblue, 800);
+    background-color: map.get(color.$lightblue, 50);
+    color: map.get(color.$lightblue, 900);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$lightblue, 800);
+  }
+}
+
+.badge-cyan {
+  &.badge {
+    color: map.get(color.$cyan, 900);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$cyan, 900);
+    color: map.get(color.$cyan, 900);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$cyan, 900);
+    background-color: map.get(color.$cyan, 50);
+    color: map.get(color.$cyan, 1000);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$cyan, 900);
+  }
+}
+
+.badge-green {
+  &.badge {
+    color: map.get(color.$green, 800);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$green, 800);
+    color: map.get(color.$green, 800);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$green, 800);
+    background-color: map.get(color.$green, 50);
+    color: map.get(color.$green, 900);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$green, 800);
+  }
+}
+
+.badge-lime {
+  &.badge {
+    color: map.get(color.$lime, 900);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$lime, 900);
+    color: map.get(color.$lime, 900);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$lime, 900);
+    background-color: map.get(color.$lime, 50);
+    color: map.get(color.$lime, 1000);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$lime, 900);
+  }
+}
+
+.badge-yellow {
+  &.badge {
+    color: map.get(color.$yellow, 1000);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$yellow, 1000);
+    color: map.get(color.$yellow, 1000);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$yellow, 1000);
+    background-color: map.get(color.$yellow, 50);
+    color: map.get(color.$yellow, 1100);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$yellow, 1000);
+  }
+}
+
+.badge-orange {
+  &.badge {
+    color: map.get(color.$orange, 900);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$orange, 900);
+    color: map.get(color.$orange, 900);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$orange, 900);
+    background-color: map.get(color.$orange, 50);
+    color: map.get(color.$orange, 1000);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$orange, 900);
+  }
+}
+
+.badge-red {
+  &.badge {
+    color: map.get(color.$red, 900);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$red, 900);
+    color: map.get(color.$red, 900);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$red, 900);
+    background-color: map.get(color.$red, 50);
+    color: map.get(color.$red, 1000);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$red, 900);
+  }
+}
+
+.badge-magenta {
+  &.badge {
+    color: map.get(color.$magenta, 800);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$magenta, 800);
+    color: map.get(color.$magenta, 800);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$magenta, 800);
+    background-color: map.get(color.$magenta, 50);
+    color: map.get(color.$magenta, 900);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$magenta, 800);
+  }
+}
+
+.badge-purple {
+  &.badge {
+    color: map.get(color.$purple, 800);
+  }
+
+  &.badge-outline {
+    border: 1px solid map.get(color.$purple, 800);
+    color: map.get(color.$purple, 800);
+  }
+
+  &.badge-filled-outline {
+    border: 1px solid map.get(color.$purple, 800);
+    background-color: map.get(color.$purple, 50);
+    color: map.get(color.$purple, 800);
+  }
+
+  &.badge-fill {
+    color: color.$white;
+    background-color: map.get(color.$purple, 800);
+  }
+}

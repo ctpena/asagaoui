@@ -9,13 +9,13 @@
 @use "sass:map";
 
 .content {
-  a:not([class]) {
+  a:not([class]):not(code-snippet *) {
     @extend .link;
   }
 
-  ul:not([class]),
-  ol:not([class]),
-  p:not([class]) {
+  ul:not([class]):not(code-snippet *),
+  ol:not([class]):not(code-snippet *),
+  p:not([class]):not(code-snippet *) {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -24,37 +24,37 @@
     @include table;
   }
 
-  h1:not([class]) {
+  h1:not([class]):not(code-snippet *) {
     @extend .h1;
     margin-top: map.get(spacing.$spacers, 6);
     margin-bottom: map.get(spacing.$spacers, 4);
   }
 
-  h2:not([class]) {
+  h2:not([class]):not(code-snippet *) {
     @extend .h2;
     margin-top: map.get(spacing.$spacers, 6);
     margin-bottom: map.get(spacing.$spacers, 4);
   }
 
-  h3:not([class]) {
+  h3:not([class]):not(code-snippet *) {
     @extend .h3;
     margin-top: map.get(spacing.$spacers, 5);
     margin-bottom: map.get(spacing.$spacers, 4);
   }
 
-  h4:not([class]) {
+  h4:not([class]):not(code-snippet *) {
     @extend .h4;
     margin-top: map.get(spacing.$spacers, 5);
     margin-bottom: map.get(spacing.$spacers, 3);
   }
 
-  h5:not([class]) {
+  h5:not([class]):not(code-snippet *) {
     @extend .h5;
     margin-top: map.get(spacing.$spacers, 5);
     margin-bottom: map.get(spacing.$spacers, 3);
   }
 
-  h6:not([class]) {
+  h6:not([class]):not(code-snippet *) {
     margin-top: map.get(spacing.$spacers, 4);
     margin-bottom: map.get(spacing.$spacers, 3);
   }
@@ -64,25 +64,27 @@
     overflow: auto;
   }
 
-  ul:not([class]) {
+  ul:not([class]):not(code-snippet *) {
     @extend .list-unordered
   }
 
-  ol:not([class]) {
+  ol:not([class]):not(code-snippet *) {
     @extend .list-ordered
   }
 
-  code:not([class]) {
+  code:not([class]):not(code-snippet *) {
     @extend .code;
   }
 
-  dl:not([class]) {
+  dl:not([class]):not(code-snippet *) {
     @extend .description-list;
   }
-  dt:not([class]) {
+
+  dt:not([class]):not(code-snippet *) {
     @extend .description-term;
   }
-  dd:not([class]) {
+
+  dd:not([class]):not(code-snippet *) {
     @extend .description-details;
   }
 }

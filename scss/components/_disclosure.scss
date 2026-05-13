@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "../styles/typography";
+@use "../styles/rounding";
+@use "../styles/color";
+
+.disclosure {
+  &[open] {
+    .disclosure-header {
+      &::before {
+        background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="m12 6.03 12 11.939H0z"/></svg>');
+      }
+
+      &:hover::before {
+        border: 3px solid map.get(color.$blue, 1000);
+        background-color: color.$white;
+        background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="m12 6.03 12 11.939H0z"/></svg>');
+      }
+    }
+  }
+}
+
+.disclosure-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: .5rem;
+  width: fit-content;
+  cursor: default;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: .1875rem;
+  }
+
+  &::before {
+    content: "";
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: map.get(color.$blue, 1000);
+    background-color: map.get(color.$blue, 1000);
+    width: 22px;
+    height: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M12 17.97 24 6.031H0z"/></svg>');
+  }
+
+  &:hover::before {
+    border: 3px solid map.get(color.$blue, 1000);
+    background-color: color.$white;
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="M12 17.97 24 6.031H0z"/></svg>');
+  }
+}
+
+.disclosure-body {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}

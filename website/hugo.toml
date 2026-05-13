@@ -1,0 +1,29 @@
+baseURL = 'https://asagaoui.com/'
+locale = 'en'
+title = 'AsagaoUI'
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+disableDefaultLanguageRedirect = false
+
+[languages]
+[languages.en]
+contentDir = 'content/en'
+label = 'English'
+locale = 'en'
+weight = 1
+[languages.ja]
+contentDir = 'content/ja'
+label = '日本語'
+locale = 'ja'
+weight = 2
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "../dist"
+target = "assets/asagaoui"

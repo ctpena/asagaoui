@@ -1,0 +1,55 @@
+{{ define "main" }}
+    <main>
+        <article class="container-sm mt-5 mb-7">
+            <header>
+                {{ with .GetTerms "categories" }}
+                    {{ range . }}
+                        <span class="mr-2 badge badge-green badge-filled-outline"
+                              style="text-transform: capitalize;">{{ .LinkTitle }}</span>
+                    {{ end }}
+                {{ end }}
+                <time class="" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+            </header>
+            <h1 class="h1 mt-3">{{ .Title }}</h1>
+            {{ range .Params.authors }}
+                <address class="custom-address">
+                    <div class="avatar">
+                        <img class="avatar-img" src="https://www.gravatar.com/avatar/{{ md5 .email }}"
+                             width="32" height="32" alt="" loading="lazy">
+                    </div>
+                    <div class="vstack">
+                        <span class="fs-14">{{ .name }}</span>
+                    </div>
+                </address>
+            {{ end }}
+            <!--
+            <div class="mt-4 banner banner-info">
+                <i class="banner-icon aif-information"></i>
+                <span class="banner-title">このコンテンツはAI・機械翻訳を使用して翻訳されています</span>
+                <div class="banner-body">
+                    <span class="banner-description">翻訳の正確性には十分注意しておりますが、原文と異なる表現が含まれる場合があります。正確な情報は<a href="{{ .Params.original_url }}">原文（英語）</a>をご参照ください。</span>
+                </div>
+            </div>
+            -->
+            <div class="mt-4 content">
+                {{ .Content }}
+            </div>
+            <nav class="page-navigation">
+                {{ with .PrevInSection }}
+                    <a class="page-navigation-item prev" href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                {{ else }}
+                    <span class="page-navigation-item-emp"></span>
+                {{ end }}
+                {{ with .NextInSection }}
+                    <a class="page-navigation-item next" href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                {{ else }}
+                    <span class="page-navigation-item-emp"></span>
+                {{ end }}
+            </nav>
+        </article>
+    </main>
+{{ end }}

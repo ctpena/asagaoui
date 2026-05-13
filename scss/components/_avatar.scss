@@ -1,0 +1,16 @@
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: .8rem;
+  border-radius: 50em;
+}
+
+.avatar-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50em;
+}

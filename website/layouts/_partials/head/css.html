@@ -1,0 +1,60 @@
+{{ if hugo.IsDevelopment }}
+    {{ with resources.Get "asagaoui/css/asagaoui.css" }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ with resources.Get "asagaoui/css/asagaoui.css.map" }}
+        {{ .Publish }}
+    {{ end }}
+    {{ with resources.Get "css/main.css" }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ with resources.Get "asagaoui/css/asagaoui-icons.css" }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ with resources.Get "asagaoui/icons/asagaoui-icons.woff2" }}
+        <style>
+            @font-face {
+                font-family: "asagaoui-icons";
+                src: url("{{ .RelPermalink }}") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: block;
+            }
+        </style>
+    {{ end }}
+{{ else }}
+    {{ with resources.Get "asagaoui/css/asagaoui.css" }}
+        {{ with . | css.Build (dict "minify" true) }}
+            {{ with . | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ with resources.Get "css/main.css" }}
+        {{ with . | css.Build (dict "minify" true) }}
+            {{ with . | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ with resources.Get "asagaoui/css/asagaoui-icons.css" }}
+        {{ with . | css.Build (dict "minify" true) }}
+            {{ with . | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ with resources.Get "asagaoui/icons/asagaoui-icons.woff2" }}
+        {{ with . | fingerprint }}
+            <style>
+                @font-face {
+                    font-family: "asagaoui-icons";
+                    src: url("{{ .RelPermalink }}") format("woff2");
+                    font-weight: normal;
+                    font-style: normal;
+                    font-display: block;
+                }
+            </style>
+        {{ end }}
+    {{ end }}
+{{ end }}

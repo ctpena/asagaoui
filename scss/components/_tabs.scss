@@ -1,0 +1,60 @@
+@use "../styles/color";
+@use "../styles/typography";
+@use "../styles/spacing";
+@use "../styles/rounding";
+@use "../styles/breakpoint";
+@use "sass:map";
+
+.tabs-area {
+  border-left: solid 1px map.get(color.$grey, 420);
+  border-right: solid 1px map.get(color.$grey, 420);
+  border-bottom: solid 1px map.get(color.$grey, 420);
+  border-top: solid 1px map.get(color.$grey, 420);
+  //
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  overflow: hidden;
+}
+
+.tab-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  //
+  border-top: solid 1px map.get(color.$grey, 420);
+  border-left: solid 1px map.get(color.$grey, 420);
+  //border-bottom: solid 1px map.get(color.$grey, 420);
+  @include typography.set(map.get(typography.$dns, 'dns-16n-120'));
+  padding: 1rem;
+  box-shadow: inset 0 5px 0 0 map.get(color.$grey, 50);
+
+  &:last-child {
+    border-right: solid 1px map.get(color.$grey, 420);
+  }
+
+  &:hover {
+    text-underline-offset: .1875rem;
+    text-decoration: underline;
+    background-color: map.get(color.$grey, 50);
+    box-shadow: inset 0 5px 0 0 map.get(color.$grey, 420);
+  }
+
+  &.active {
+    @include typography.set(map.get(typography.$dns, 'dns-16b-120'));
+    border-top: solid 1px map.get(color.$blue, 1000);
+    box-shadow: inset 0 5px 0 0 map.get(color.$blue, 1000);
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-area {
+  padding: 1rem;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  overflow-y: auto;
+}

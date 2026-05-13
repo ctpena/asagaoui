@@ -1,0 +1,33 @@
+{{ $raw := dict }}
+{{ with resources.Get "asagaoui/icons/asagaoui-icons.json" }}
+  {{ $raw = . | transform.Unmarshal }}
+{{ end }}
+
+{{ $styles := slice "ail" "aif" }}
+
+{{ $iconMap := dict }}
+
+{{ range $key, $codepoint := $raw }}
+  {{/* "ail-work" → style="ail", name="work" に分割 */}}
+  {{ $parts := split $key "-" }}
+  {{ $style := index $parts 0 }}
+  {{ $name  := delimit (after 1 $parts) "-" }}
+
+  {{ $existing := index $iconMap $name | default (dict) }}
+  {{ $styles   := merge $existing (dict $style $codepoint) }}
+  {{ $iconMap   = merge $iconMap (dict $name $styles) }}
+{{ end }}
+
+
+{{ range $name, $styleMap := $iconMap }}
+  {{ $content := dict "mediaType" "text/markdown" "value" "" }}
+  {{ $params  := dict "styles" $styleMap "iconName" $name }}
+  {{ $page := dict
+    "content" $content
+    "kind"    "page"
+    "params"  $params
+    "path"    $name
+    "title"   (printf "Icon: %s" $name)
+  }}
+  {{ $.AddPage $page }}
+{{ end }}

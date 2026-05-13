@@ -1,15 +1,66 @@
 @use "../styles/color";
 @use "sass:map";
 
+@property --au-spinner-variable {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 130deg;
+}
+
 .spinner {
-  background-color: white;
+  position: relative;
+  background-color: map.get(color.$blue, 100);
   width: 48px;
   aspect-ratio: 1;
-  border: 4px solid map.get(color.$blue,500);
-  border-right-color: map.get(color.$blue,1000);
-  border-bottom-color: map.get(color.$blue,1000);
+  border: 1px solid map.get(color.$blue, 1200);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: block;
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
+
+  &::after {
+    background-color: color.$white;
+    width: 40px;
+  }
+
+  &::before {
+    width: 48px;
+    background: conic-gradient(
+            map.get(color.$blue, 1200) 0deg var(--au-spinner-variable),
+            transparent var(--au-spinner-variable) 360deg
+    );
+    animation: spin-inner 1s linear infinite;
+  }
+}
+
+@keyframes spin-inner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    --au-spinner-variable: 30deg;
+  }
+  50% {
+    --au-spinner-variable: 330deg;
+  }
+  100% {
+    --au-spinner-variable: 30deg;
+  }
 }
 
 .progress {
@@ -17,8 +68,8 @@
   position: relative;
   width: 100%;
   height: 4px;
-  background-color: map.get(color.$blue,500)!important;
-  border-radius: 4px;
+  background-color: map.get(color.$blue, 100);
+  border-bottom: solid 1px map.get(color.$blue, 1200);
   overflow: hidden;
 }
 
@@ -29,23 +80,16 @@
   left: 0;
   width: 50%;
   height: 100%;
-  background-color: map.get(color.$blue,1000);
-  border-radius: 4px;
+  background-color: map.get(color.$blue, 1200);
   transform: translateX(-100%);
   animation: move 1s linear infinite;
 }
 
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes move {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
 }

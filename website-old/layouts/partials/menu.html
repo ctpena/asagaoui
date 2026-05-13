@@ -1,7 +1,0 @@
-<ul class="globalmenu">
-    {{ range .Site.Sections }}
-        <li class="globalmenu-item">
-            <a class="globalmenu-link {{ if hasPrefix $.RelPermalink .RelPermalink }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-    {{ end }}
-</ul>

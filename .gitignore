@@ -16,3 +16,6 @@ website-old/layouts/partials/head/analytics.html
 dist/icon/symbol
 dist/js/asagaoui.js.*
 /website-old/static/icons/asagaoui-icons.woff2
+
+website/public
+website/.hugo_build.lock

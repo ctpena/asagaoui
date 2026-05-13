@@ -1,0 +1,82 @@
+<header class="header">
+    <nav class="header-fixed">
+        <a class="header-logo fs-24" href="{{ .Site.Home.RelPermalink }}">
+            {{ $asagaouiLogo := resources.Get "images/asagaoui-logo.svg" }}
+            <img class="mr-2" src="{{ $asagaouiLogo.RelPermalink }}" alt="" width="28" height="28">
+            {{ .Site.Title }}
+        </a>
+        <div class="header-button">
+            <details class="lang-select">
+                <summary class="lang-select-btn">
+                    <i class="ail-language"></i>
+                    <span class="lang-select-label">Language</span>
+                    <i class="ail-arrow_down"></i>
+                </summary>
+                <div class="lang-select-popup">
+                    <ul class="lang-select-menu">
+                        {{- $current := . }}
+                        {{- range .AllTranslations }}
+                            <li class="lang-select-item">
+                                <a class="lang-select-link{{ if eq .Language.Lang $current.Language.Lang }} active{{ end }}"
+                                   href="{{ .RelPermalink }}"
+                                   hreflang="{{ .Language.Locale }}">
+                                    <i class="ail-check"></i>
+                                    <span class="lang-select-link-label">{{ .Language.Label }}</span>
+                                </a>
+                            </li>
+                        {{- end }}
+                    </ul>
+                </div>
+            </details>
+            <button class="hamburger-iconbtn" type="button" command="show-modal" commandfor="header-dialog-menu">
+                <i class="hamburger-icon"></i>
+                {{ i18n "menu" }}
+            </button>
+        </div>
+        <div class="header-items">
+            <ul class="utilitylink-units">
+                <li class="utilitylink-item">
+                    <a class="utilitylink" rel="external" href="https://github.com/ctpena/asagaoui">GitHub</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-menu">
+            <ul class="globalmenu">
+                {{ range .Site.Sections }}
+                    <li class="globalmenu-item">
+                        <a class="globalmenu-link {{ if hasPrefix $.RelPermalink .RelPermalink }}active{{ end }}"
+                           href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </nav>
+</header>
+<dialog id="header-dialog-menu" class="drawer">
+    <div class="drawer-header d-flex justify-end">
+        <button class="hamburger-btn" type="button" command="close" commandfor="header-dialog-menu">
+            <i class="hamburger-icon close"></i>
+            {{ i18n "close" }}
+        </button>
+    </div>
+    <div class="drawer-body">
+        <ul class="mobilemenu">
+            {{ range .Site.Sections }}
+                <li class="mobilemenu-item">
+                    <a class="mobilemenu-link"
+                       href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+        <hr class="divider my-4">
+        {{ $pages := slice "tos" "privacy" "license" "contact" }}
+        <ul class="vstack g-3 px-3">
+            {{ range $pages }}
+                {{ with site.GetPage . }}
+                    <li class="utilitylink-item"><a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+    <div class="drawer-footer"></div>
+</dialog>

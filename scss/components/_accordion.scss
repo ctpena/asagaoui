@@ -9,39 +9,46 @@
 
   &-header {
     @include typography.set(map.get(typography.$std, 'std-16n-170'));
+    color: map.get(color.$grey, 800);
     display: flex;
-    gap: .8rem;
+    gap: .5rem;
     align-items: center;
 
-    padding: map.get(spacing.$spacers, 1) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 2) map.get(spacing.$spacers, 1);
+    padding: .5rem map.get(spacing.$spacers, 2) .5rem map.get(spacing.$spacers, 1);
 
     &:hover {
       background-color: map.get(color.$grey, 50);
     }
 
     &:focus {
-      outline: 2px solid map.get(color.$yellow, 700);
+      box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+      background-color: map.get(color.$yellow, 300);
       border-radius: 8px;
     }
 
     &:before {
       content: "";
+      box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       color: map.get(color.$blue, 1000);
       border: 1px solid map.get(color.$blue, 1000);
-      width: 2rem;
-      height: 2rem;
+      width: 1.25rem;
+      height: 1.25rem;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 24px 24px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.0016 6.6001L12.0016 14.6001L4.00156 6.6001L2.60156 8.0001L12.0016 17.4001L21.4016 8.0001L20.0016 6.6001Z"/></svg>');
+      background-size: 1rem 1rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="M12 17.1L3 8L4 7L12 15L20 7L21 8L12 17.1Z"/></svg>');
     }
 
     &:hover::before {
       border: 2px solid map.get(color.$blue, 1000);
+    }
+
+    &:focus::before {
+      background-color: color.$white;
     }
   }
 
@@ -53,7 +60,7 @@
   &[open] {
     .accordion-header {
       &::before {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0016 6.1001L2.60156 15.5001L4.00156 16.9001L12.0016 8.9001L20.0016 16.9001L21.4016 15.5001L12.0016 6.1001Z"/></svg>');
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="M4 16.4999L3 15.4999L12 6.3999L21 15.4999L20 16.4999L12 8.5999L4 16.4999Z"/></svg>');
       }
     }
   }
@@ -63,11 +70,22 @@
   .accordion {
     &-header {
       @include typography.set(map.get(typography.$std, 'std-18n-160'));
-      padding: map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 1);
+      padding: 14px map.get(spacing.$spacers, 3) 14px map.get(spacing.$spacers, 1);
+      gap: .8rem;
+
+      &:before {
+        width: 2rem;
+        height: 2rem;
+        background-size: 24px 24px;
+      }
+
+      &:hover::before {
+        border: 3px solid map.get(color.$blue, 1000);
+      }
     }
 
     &-body {
-      padding: map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 6);
+      padding: map.get(spacing.$spacers, 4) map.get(spacing.$spacers, 3) map.get(spacing.$spacers, 4) 3.25rem;
     }
   }
 }

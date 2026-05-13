@@ -1,0 +1,19 @@
+{{- $lang    := .Type -}}
+{{ $preview := index .Attributes "preview" -}}
+
+<code-snippet lang="{{ $lang }}" preview="{{ $preview }}" highlight="true">
+    {{- if and $preview (ne $preview "false") }}
+        <div class="codesnippet-preview">
+            {{ .Inner | safeHTML }}
+        </div>
+    {{- end }}
+    <div class="codesnippet-area">
+        <div class="codesnippet-header">
+            <span class="codesnippet-lang">{{ $lang }}</span>
+            <button class="codesnippet-copy-btn">
+                <i class="ail-copy"></i>
+            </button>
+        </div>
+        <pre class="codesnippet-code"><code>{{ .Inner }}</code></pre>
+    </div>
+</code-snippet>

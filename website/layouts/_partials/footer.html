@@ -1,0 +1,50 @@
+<footer class="py-5 bg-grey-100">
+    <div class="container-lg custom-footer-grid">
+        <div class="">
+            <div class="hstack g-2" style="align-items: center;">
+                {{ $asagaouiLogo := resources.Get "images/asagaoui-logo.svg" }}
+                <img src="{{ $asagaouiLogo.RelPermalink }}" alt="{{ .Site.Title }}" width="25" height="25">
+                <strong class="fs-24">{{ .Site.Title }}</strong>
+            </div>
+            <p class="mt-2">{{ i18n "footer-description" }}</p>
+            <p class="mt-2"><a class="utilitylink" rel="external" href="https://github.com/ctpena/asagaoui">GitHub</a></p>
+        </div>
+        <div class="d-flex flex-wrap mt-4 justify-between g-3">
+            <ul class="vstack g-1">
+                <li class="mb-1">{{ i18n "projects" }}</li>
+                {{ with site.GetPage "icons" }}
+                    <li><a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                <li><a class="utilitylink" href="">Illustrations</a></li>
+                <li><a class="utilitylink" href="">Admin Dashboard</a></li>
+            </ul>
+            <ul class="vstack g-1">
+                <li class="mb-1">{{ i18n "learn" }}</li>
+                {{ with site.GetPage "docs" }}
+                    <li><a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                <li><a class="utilitylink" href="">Examples</a></li>
+            </ul>
+            <ul class="vstack g-1">
+                <li class="mb-1">{{ i18n "updates" }}</li>
+                {{ with site.GetPage "blog" }}
+                    <li><a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                <li><a class="utilitylink" href="" rel="external">Release</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mt-5 container-lg text-right">
+        {{ $pages := slice "tos" "privacy" "license" "contact" }}
+        <div class="utilitylink-units flex-wrap">
+            {{ range $pages }}
+                {{ with site.GetPage . }}
+                    <a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ end }}
+            {{ end }}
+        </div>
+        <small class="">
+            &copy; {{ now.Year }} {{ .Site.Title }}.
+        </small>
+    </div>
+</footer>

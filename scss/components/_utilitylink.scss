@@ -39,5 +39,6 @@
 
 .utilitylink-units {
   display: flex;
-  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: .5rem;
 }

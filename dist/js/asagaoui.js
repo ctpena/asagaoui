@@ -5,18 +5,14 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __commonJSMin = (cb, mod) => () => (mod || cb((mod = { exports: {} }).exports, mod), mod.exports);
+var __commonJSMin = (cb, mod) => () => (mod || (cb((mod = { exports: {} }).exports, mod), cb = null), mod.exports);
 var __copyProps = (to, from, except, desc) => {
-	if (from && typeof from === "object" || typeof from === "function") {
-		for (var keys = __getOwnPropNames(from), i = 0, n = keys.length, key; i < n; i++) {
-			key = keys[i];
-			if (!__hasOwnProp.call(to, key) && key !== except) {
-				__defProp(to, key, {
-					get: ((k) => from[k]).bind(null, key),
-					enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable
-				});
-			}
-		}
+	if (from && typeof from === "object" || typeof from === "function") for (var keys = __getOwnPropNames(from), i = 0, n = keys.length, key; i < n; i++) {
+		key = keys[i];
+		if (!__hasOwnProp.call(to, key) && key !== except) __defProp(to, key, {
+			get: ((k) => from[k]).bind(null, key),
+			enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable
+		});
 	}
 	return to;
 };
@@ -24,38 +20,120 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 	value: mod,
 	enumerable: true
 }) : target, mod));
-
+/**
+* Prism: Lightweight, robust, elegant syntax highlighting
+*
+* @license MIT <https://opensource.org/licenses/MIT>
+* @author Lea Verou <https://lea.verou.me>
+* @namespace
+* @public
+*/
 //#endregion
-//#region node_modules/prismjs/prism.js
-var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
-	/**
-	* Prism: Lightweight, robust, elegant syntax highlighting
-	*
-	* @license MIT <https://opensource.org/licenses/MIT>
-	* @author Lea Verou <https://lea.verou.me>
-	* @namespace
-	* @public
-	*/
+//#region node_modules/prismjs/components/prism-typescript.js
+var import_prism = /* @__PURE__ */ __toESM((/* @__PURE__ */ __commonJSMin(((exports, module) => {
 	var Prism = function(_self) {
 		var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i;
 		var uniqueId = 0;
 		var plainTextGrammar = {};
 		var _ = {
+			/**
+			* By default, Prism will attempt to highlight all code elements (by calling {@link Prism.highlightAll}) on the
+			* current page after the page finished loading. This might be a problem if e.g. you wanted to asynchronously load
+			* additional languages or plugins yourself.
+			*
+			* By setting this value to `true`, Prism will not automatically highlight all code elements on the page.
+			*
+			* You obviously have to change this value before the automatic highlighting started. To do this, you can add an
+			* empty Prism object into the global scope before loading the Prism script like this:
+			*
+			* ```js
+			* window.Prism = window.Prism || {};
+			* Prism.manual = true;
+			* // add a new <script> to load Prism's script
+			* ```
+			*
+			* @default false
+			* @type {boolean}
+			* @memberof Prism
+			* @public
+			*/
 			manual: _self.Prism && _self.Prism.manual,
+			/**
+			* By default, if Prism is in a web worker, it assumes that it is in a worker it created itself, so it uses
+			* `addEventListener` to communicate with its parent instance. However, if you're using Prism manually in your
+			* own worker, you don't want it to do this.
+			*
+			* By setting this value to `true`, Prism will not add its own listeners to the worker.
+			*
+			* You obviously have to change this value before Prism executes. To do this, you can add an
+			* empty Prism object into the global scope before loading the Prism script like this:
+			*
+			* ```js
+			* window.Prism = window.Prism || {};
+			* Prism.disableWorkerMessageHandler = true;
+			* // Load Prism's script
+			* ```
+			*
+			* @default false
+			* @type {boolean}
+			* @memberof Prism
+			* @public
+			*/
 			disableWorkerMessageHandler: _self.Prism && _self.Prism.disableWorkerMessageHandler,
+			/**
+			* A namespace for utility methods.
+			*
+			* All function in this namespace that are not explicitly marked as _public_ are for __internal use only__ and may
+			* change or disappear at any time.
+			*
+			* @namespace
+			* @memberof Prism
+			*/
 			util: {
 				encode: function encode(tokens) {
 					if (tokens instanceof Token) return new Token(tokens.type, encode(tokens.content), tokens.alias);
 					else if (Array.isArray(tokens)) return tokens.map(encode);
 					else return tokens.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\u00a0/g, " ");
 				},
+				/**
+				* Returns the name of the type of the given value.
+				*
+				* @param {any} o
+				* @returns {string}
+				* @example
+				* type(null)      === 'Null'
+				* type(undefined) === 'Undefined'
+				* type(123)       === 'Number'
+				* type('foo')     === 'String'
+				* type(true)      === 'Boolean'
+				* type([1, 2])    === 'Array'
+				* type({})        === 'Object'
+				* type(String)    === 'Function'
+				* type(/abc+/)    === 'RegExp'
+				*/
 				type: function(o) {
 					return Object.prototype.toString.call(o).slice(8, -1);
 				},
+				/**
+				* Returns a unique number for the given object. Later calls will still return the same number.
+				*
+				* @param {Object} obj
+				* @returns {number}
+				*/
 				objId: function(obj) {
 					if (!obj["__id"]) Object.defineProperty(obj, "__id", { value: ++uniqueId });
 					return obj["__id"];
 				},
+				/**
+				* Creates a deep clone of the given object.
+				*
+				* The main intended use of this function is to clone language definitions.
+				*
+				* @param {T} o
+				* @param {Record<number, any>} [visited]
+				* @returns {T}
+				* @template T
+				*/
 				clone: function deepClone(o, visited) {
 					visited = visited || {};
 					var clone;
@@ -80,6 +158,14 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 						default: return o;
 					}
 				},
+				/**
+				* Returns the Prism language of the given element set by a `language-xxxx` or `lang-xxxx` class.
+				*
+				* If no language is set for the element or the element is `null` or `undefined`, `none` will be returned.
+				*
+				* @param {Element} element
+				* @returns {string}
+				*/
 				getLanguage: function(element) {
 					while (element) {
 						var m = lang.exec(element.className);
@@ -88,10 +174,24 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 					}
 					return "none";
 				},
+				/**
+				* Sets the Prism `language-xxxx` class of the given element.
+				*
+				* @param {Element} element
+				* @param {string} language
+				* @returns {void}
+				*/
 				setLanguage: function(element, language) {
 					element.className = element.className.replace(RegExp(lang, "gi"), "");
 					element.classList.add("language-" + language);
 				},
+				/**
+				* Returns the script element that is currently executing.
+				*
+				* This does __not__ work for line script element.
+				*
+				* @returns {HTMLScriptElement | null}
+				*/
 				currentScript: function() {
 					if (typeof document === "undefined") return null;
 					if (document.currentScript && document.currentScript.tagName === "SCRIPT" && true) return document.currentScript;
@@ -106,6 +206,25 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 						return null;
 					}
 				},
+				/**
+				* Returns whether a given class is active for `element`.
+				*
+				* The class can be activated if `element` or one of its ancestors has the given class and it can be deactivated
+				* if `element` or one of its ancestors has the negated version of the given class. The _negated version_ of the
+				* given class is just the given class with a `no-` prefix.
+				*
+				* Whether the class is active is determined by the closest ancestor of `element` (where `element` itself is
+				* closest ancestor) that has the given class or the negated version of it. If neither `element` nor any of its
+				* ancestors have the given class or the negated version of it, then the default activation will be returned.
+				*
+				* In the paradoxical situation where the closest ancestor contains __both__ the given class and the negated
+				* version of it, the class is considered active.
+				*
+				* @param {Element} element
+				* @param {string} className
+				* @param {boolean} [defaultActivation=false]
+				* @returns {boolean}
+				*/
 				isActive: function(element, className, defaultActivation) {
 					var no = "no-" + className;
 					while (element) {
@@ -117,16 +236,129 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 					return !!defaultActivation;
 				}
 			},
+			/**
+			* This namespace contains all currently loaded languages and the some helper functions to create and modify languages.
+			*
+			* @namespace
+			* @memberof Prism
+			* @public
+			*/
 			languages: {
+				/**
+				* The grammar for plain, unformatted text.
+				*/
 				plain: plainTextGrammar,
 				plaintext: plainTextGrammar,
 				text: plainTextGrammar,
 				txt: plainTextGrammar,
+				/**
+				* Creates a deep copy of the language with the given id and appends the given tokens.
+				*
+				* If a token in `redef` also appears in the copied language, then the existing token in the copied language
+				* will be overwritten at its original position.
+				*
+				* ## Best practices
+				*
+				* Since the position of overwriting tokens (token in `redef` that overwrite tokens in the copied language)
+				* doesn't matter, they can technically be in any order. However, this can be confusing to others that trying to
+				* understand the language definition because, normally, the order of tokens matters in Prism grammars.
+				*
+				* Therefore, it is encouraged to order overwriting tokens according to the positions of the overwritten tokens.
+				* Furthermore, all non-overwriting tokens should be placed after the overwriting ones.
+				*
+				* @param {string} id The id of the language to extend. This has to be a key in `Prism.languages`.
+				* @param {Grammar} redef The new tokens to append.
+				* @returns {Grammar} The new language created.
+				* @public
+				* @example
+				* Prism.languages['css-with-colors'] = Prism.languages.extend('css', {
+				*     // Prism.languages.css already has a 'comment' token, so this token will overwrite CSS' 'comment' token
+				*     // at its original position
+				*     'comment': { ... },
+				*     // CSS doesn't have a 'color' token, so this token will be appended
+				*     'color': /\b(?:red|green|blue)\b/
+				* });
+				*/
 				extend: function(id, redef) {
 					var lang = _.util.clone(_.languages[id]);
 					for (var key in redef) lang[key] = redef[key];
 					return lang;
 				},
+				/**
+				* Inserts tokens _before_ another token in a language definition or any other grammar.
+				*
+				* ## Usage
+				*
+				* This helper method makes it easy to modify existing languages. For example, the CSS language definition
+				* not only defines CSS highlighting for CSS documents, but also needs to define highlighting for CSS embedded
+				* in HTML through `<style>` elements. To do this, it needs to modify `Prism.languages.markup` and add the
+				* appropriate tokens. However, `Prism.languages.markup` is a regular JavaScript object literal, so if you do
+				* this:
+				*
+				* ```js
+				* Prism.languages.markup.style = {
+				*     // token
+				* };
+				* ```
+				*
+				* then the `style` token will be added (and processed) at the end. `insertBefore` allows you to insert tokens
+				* before existing tokens. For the CSS example above, you would use it like this:
+				*
+				* ```js
+				* Prism.languages.insertBefore('markup', 'cdata', {
+				*     'style': {
+				*         // token
+				*     }
+				* });
+				* ```
+				*
+				* ## Special cases
+				*
+				* If the grammars of `inside` and `insert` have tokens with the same name, the tokens in `inside`'s grammar
+				* will be ignored.
+				*
+				* This behavior can be used to insert tokens after `before`:
+				*
+				* ```js
+				* Prism.languages.insertBefore('markup', 'comment', {
+				*     'comment': Prism.languages.markup.comment,
+				*     // tokens after 'comment'
+				* });
+				* ```
+				*
+				* ## Limitations
+				*
+				* The main problem `insertBefore` has to solve is iteration order. Since ES2015, the iteration order for object
+				* properties is guaranteed to be the insertion order (except for integer keys) but some browsers behave
+				* differently when keys are deleted and re-inserted. So `insertBefore` can't be implemented by temporarily
+				* deleting properties which is necessary to insert at arbitrary positions.
+				*
+				* To solve this problem, `insertBefore` doesn't actually insert the given tokens into the target object.
+				* Instead, it will create a new object and replace all references to the target object with the new one. This
+				* can be done without temporarily deleting properties, so the iteration order is well-defined.
+				*
+				* However, only references that can be reached from `Prism.languages` or `insert` will be replaced. I.e. if
+				* you hold the target object in a variable, then the value of the variable will not change.
+				*
+				* ```js
+				* var oldMarkup = Prism.languages.markup;
+				* var newMarkup = Prism.languages.insertBefore('markup', 'comment', { ... });
+				*
+				* assert(oldMarkup !== Prism.languages.markup);
+				* assert(newMarkup === Prism.languages.markup);
+				* ```
+				*
+				* @param {string} inside The property of `root` (e.g. a language id in `Prism.languages`) that contains the
+				* object to be modified.
+				* @param {string} before The key to insert before.
+				* @param {Grammar} insert An object containing the key-value pairs to be inserted.
+				* @param {Object<string, any>} [root] The object containing `inside`, i.e. the object that contains the
+				* object to be modified.
+				*
+				* Defaults to `Prism.languages`.
+				* @returns {Grammar} The new grammar object.
+				* @public
+				*/
 				insertBefore: function(inside, before, insert, root) {
 					root = root || _.languages;
 					var grammar = root[inside];
@@ -163,9 +395,36 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 				}
 			},
 			plugins: {},
+			/**
+			* This is the most high-level function in Prism’s API.
+			* It fetches all the elements that have a `.language-xxxx` class and then calls {@link Prism.highlightElement} on
+			* each one of them.
+			*
+			* This is equivalent to `Prism.highlightAllUnder(document, async, callback)`.
+			*
+			* @param {boolean} [async=false] Same as in {@link Prism.highlightAllUnder}.
+			* @param {HighlightCallback} [callback] Same as in {@link Prism.highlightAllUnder}.
+			* @memberof Prism
+			* @public
+			*/
 			highlightAll: function(async, callback) {
 				_.highlightAllUnder(document, async, callback);
 			},
+			/**
+			* Fetches all the descendants of `container` that have a `.language-xxxx` class and then calls
+			* {@link Prism.highlightElement} on each one of them.
+			*
+			* The following hooks will be run:
+			* 1. `before-highlightall`
+			* 2. `before-all-elements-highlight`
+			* 3. All hooks of {@link Prism.highlightElement} for each element.
+			*
+			* @param {ParentNode} container The root element, whose descendants that have a `.language-xxxx` class will be highlighted.
+			* @param {boolean} [async=false] Whether each element is to be highlighted asynchronously using Web Workers.
+			* @param {HighlightCallback} [callback] An optional callback to be invoked on each element after its highlighting is done.
+			* @memberof Prism
+			* @public
+			*/
 			highlightAllUnder: function(container, async, callback) {
 				var env = {
 					callback,
@@ -177,6 +436,34 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 				_.hooks.run("before-all-elements-highlight", env);
 				for (var i = 0, element; element = env.elements[i++];) _.highlightElement(element, async === true, env.callback);
 			},
+			/**
+			* Highlights the code inside a single element.
+			*
+			* The following hooks will be run:
+			* 1. `before-sanity-check`
+			* 2. `before-highlight`
+			* 3. All hooks of {@link Prism.highlight}. These hooks will be run by an asynchronous worker if `async` is `true`.
+			* 4. `before-insert`
+			* 5. `after-highlight`
+			* 6. `complete`
+			*
+			* Some the above hooks will be skipped if the element doesn't contain any text or there is no grammar loaded for
+			* the element's language.
+			*
+			* @param {Element} element The element containing the code.
+			* It must have a class of `language-xxxx` to be processed, where `xxxx` is a valid language identifier.
+			* @param {boolean} [async=false] Whether the element is to be highlighted asynchronously using Web Workers
+			* to improve performance and avoid blocking the UI when highlighting very large chunks of code. This option is
+			* [disabled by default](https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default).
+			*
+			* Note: All language definitions required to highlight the code must be included in the main `prism.js` file for
+			* asynchronous highlighting to work. You can build your own bundle on the
+			* [Download page](https://prismjs.com/download.html).
+			* @param {HighlightCallback} [callback] An optional callback to be invoked after the highlighting is done.
+			* Mostly useful when `async` is `true`, since in that case, the highlighting is done asynchronously.
+			* @memberof Prism
+			* @public
+			*/
 			highlightElement: function(element, async, callback) {
 				var language = _.util.getLanguage(element);
 				var grammar = _.languages[language];
@@ -222,6 +509,26 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 					}));
 				} else insertHighlightedCode(_.highlight(env.code, env.grammar, env.language));
 			},
+			/**
+			* Low-level function, only use if you know what you’re doing. It accepts a string of text as input
+			* and the language definitions to use, and returns a string with the HTML produced.
+			*
+			* The following hooks will be run:
+			* 1. `before-tokenize`
+			* 2. `after-tokenize`
+			* 3. `wrap`: On each {@link Token}.
+			*
+			* @param {string} text A string with the code to be highlighted.
+			* @param {Grammar} grammar An object containing the tokens to use.
+			*
+			* Usually a language definition like `Prism.languages.markup`.
+			* @param {string} language The name of the language definition passed to `grammar`.
+			* @returns {string} The highlighted HTML.
+			* @memberof Prism
+			* @public
+			* @example
+			* Prism.highlight('var foo = true;', Prism.languages.javascript, 'javascript');
+			*/
 			highlight: function(text, grammar, language) {
 				var env = {
 					code: text,
@@ -234,6 +541,30 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 				_.hooks.run("after-tokenize", env);
 				return Token.stringify(_.util.encode(env.tokens), env.language);
 			},
+			/**
+			* This is the heart of Prism, and the most low-level function you can use. It accepts a string of text as input
+			* and the language definitions to use, and returns an array with the tokenized code.
+			*
+			* When the language definition includes nested tokens, the function is called recursively on each of these tokens.
+			*
+			* This method could be useful in other contexts as well, as a very crude parser.
+			*
+			* @param {string} text A string with the code to be highlighted.
+			* @param {Grammar} grammar An object containing the tokens to use.
+			*
+			* Usually a language definition like `Prism.languages.markup`.
+			* @returns {TokenStream} An array of strings and tokens, a token stream.
+			* @memberof Prism
+			* @public
+			* @example
+			* let code = `var foo = 0;`;
+			* let tokens = Prism.tokenize(code, Prism.languages.javascript);
+			* tokens.forEach(token => {
+			*     if (token instanceof Prism.Token && token.type === 'number') {
+			*         console.log(`Found numeric literal: ${token.content}`);
+			*     }
+			* });
+			*/
 			tokenize: function(text, grammar) {
 				var rest = grammar.rest;
 				if (rest) {
@@ -245,13 +576,39 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 				matchGrammar(text, tokenList, grammar, tokenList.head, 0);
 				return toArray(tokenList);
 			},
+			/**
+			* @namespace
+			* @memberof Prism
+			* @public
+			*/
 			hooks: {
 				all: {},
+				/**
+				* Adds the given callback to the list of callbacks for the given hook.
+				*
+				* The callback will be invoked when the hook it is registered for is run.
+				* Hooks are usually directly run by a highlight function but you can also run hooks yourself.
+				*
+				* One callback function can be registered to multiple hooks and the same hook multiple times.
+				*
+				* @param {string} name The name of the hook.
+				* @param {HookCallback} callback The callback function which is given environment variables.
+				* @public
+				*/
 				add: function(name, callback) {
 					var hooks = _.hooks.all;
 					hooks[name] = hooks[name] || [];
 					hooks[name].push(callback);
 				},
+				/**
+				* Runs a hook invoking all registered callbacks with the given environment variables.
+				*
+				* Callbacks will be invoked synchronously and in the order in which they were registered.
+				*
+				* @param {string} name The name of the hook.
+				* @param {Object<string, any>} env The environment variables of the hook passed to all callbacks registered.
+				* @public
+				*/
 				run: function(name, env) {
 					var callbacks = _.hooks.all[name];
 					if (!callbacks || !callbacks.length) return;
@@ -689,7 +1046,19 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	Prism.hooks.add("wrap", function(env) {
 		if (env.type === "entity") env.attributes["title"] = env.content.replace(/&amp;/, "&");
 	});
-	Object.defineProperty(Prism.languages.markup.tag, "addInlined", { value: function addInlined(tagName, lang) {
+	Object.defineProperty(Prism.languages.markup.tag, "addInlined", { 
+	/**
+	* Adds an inlined language to markup.
+	*
+	* An example of an inlined language is CSS with `<style>` tags.
+	*
+	* @param {string} tagName The name of the tag that contains the inlined language. This name will be treated as
+	* case insensitive.
+	* @param {string} lang The language key.
+	* @example
+	* addInlined('style', 'css');
+	*/
+value: function addInlined(tagName, lang) {
 		var includedCdataInside = {};
 		includedCdataInside["language-" + lang] = {
 			pattern: /(^<!\[CDATA\[)[\s\S]+?(?=\]\]>$)/i,
@@ -716,7 +1085,19 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 		};
 		Prism.languages.insertBefore("markup", "cdata", def);
 	} });
-	Object.defineProperty(Prism.languages.markup.tag, "addAttribute", { value: function(attrName, lang) {
+	Object.defineProperty(Prism.languages.markup.tag, "addAttribute", { 
+	/**
+	* Adds an pattern to highlight languages embedded in HTML attributes.
+	*
+	* An example of an inlined language is CSS with `style` attributes.
+	*
+	* @param {string} attrName The name of the tag that contains the inlined language. This name will be treated as
+	* case insensitive.
+	* @param {string} lang The language key.
+	* @example
+	* addAttribute('style', 'css');
+	*/
+value: function(attrName, lang) {
 		Prism.languages.markup.tag.inside["special-attr"].push({
 			pattern: RegExp(/(^|["'\s])/.source + "(?:" + attrName + ")" + /\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/.source, "i"),
 			lookbehind: true,
@@ -1041,7 +1422,15 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 				});
 			}
 		});
-		Prism.plugins.fileHighlight = { highlight: function highlight(container) {
+		Prism.plugins.fileHighlight = { 
+		/**
+		* Executes the File Highlight plugin for all matching `pre` elements under the given container.
+		*
+		* Note: Elements which are already loaded or currently loading will not be touched by this method.
+		*
+		* @param {ParentNode} [container=document]
+		*/
+highlight: function highlight(container) {
 			var elements = (container || document).querySelectorAll(SELECTOR);
 			for (var i = 0, element; element = elements[i++];) Prism.highlightElement(element);
 		} };
@@ -1055,11 +1444,7 @@ var require_prism = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 			Prism.plugins.fileHighlight.highlight.apply(this, arguments);
 		};
 	})();
-}));
-
-//#endregion
-//#region node_modules/prismjs/components/prism-typescript.js
-var import_prism = /* @__PURE__ */ __toESM(require_prism(), 1);
+})))(), 1);
 (function(Prism) {
 	Prism.languages.typescript = Prism.languages.extend("javascript", {
 		"class-name": {
@@ -1102,7 +1487,6 @@ var import_prism = /* @__PURE__ */ __toESM(require_prism(), 1);
 	});
 	Prism.languages.ts = Prism.languages.typescript;
 })(Prism);
-
 //#endregion
 //#region node_modules/prismjs/components/prism-css.js
 (function(Prism) {
@@ -1162,7 +1546,6 @@ var import_prism = /* @__PURE__ */ __toESM(require_prism(), 1);
 		markup.tag.addAttribute("style", "css");
 	}
 })(Prism);
-
 //#endregion
 //#region node_modules/prismjs/components/prism-markup.js
 Prism.languages.markup = {
@@ -1236,7 +1619,19 @@ Prism.languages.markup["doctype"].inside["internal-subset"].inside = Prism.langu
 Prism.hooks.add("wrap", function(env) {
 	if (env.type === "entity") env.attributes["title"] = env.content.replace(/&amp;/, "&");
 });
-Object.defineProperty(Prism.languages.markup.tag, "addInlined", { value: function addInlined(tagName, lang) {
+Object.defineProperty(Prism.languages.markup.tag, "addInlined", { 
+/**
+* Adds an inlined language to markup.
+*
+* An example of an inlined language is CSS with `<style>` tags.
+*
+* @param {string} tagName The name of the tag that contains the inlined language. This name will be treated as
+* case insensitive.
+* @param {string} lang The language key.
+* @example
+* addInlined('style', 'css');
+*/
+value: function addInlined(tagName, lang) {
 	var includedCdataInside = {};
 	includedCdataInside["language-" + lang] = {
 		pattern: /(^<!\[CDATA\[)[\s\S]+?(?=\]\]>$)/i,
@@ -1263,7 +1658,19 @@ Object.defineProperty(Prism.languages.markup.tag, "addInlined", { value: functio
 	};
 	Prism.languages.insertBefore("markup", "cdata", def);
 } });
-Object.defineProperty(Prism.languages.markup.tag, "addAttribute", { value: function(attrName, lang) {
+Object.defineProperty(Prism.languages.markup.tag, "addAttribute", { 
+/**
+* Adds an pattern to highlight languages embedded in HTML attributes.
+*
+* An example of an inlined language is CSS with `style` attributes.
+*
+* @param {string} attrName The name of the tag that contains the inlined language. This name will be treated as
+* case insensitive.
+* @param {string} lang The language key.
+* @example
+* addAttribute('style', 'css');
+*/
+value: function(attrName, lang) {
 	Prism.languages.markup.tag.inside["special-attr"].push({
 		pattern: RegExp(/(^|["'\s])/.source + "(?:" + attrName + ")" + /\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/.source, "i"),
 		lookbehind: true,
@@ -1294,7 +1701,6 @@ Prism.languages.xml = Prism.languages.extend("markup", {});
 Prism.languages.ssml = Prism.languages.xml;
 Prism.languages.atom = Prism.languages.xml;
 Prism.languages.rss = Prism.languages.xml;
-
 //#endregion
 //#region node_modules/prismjs/components/prism-bash.js
 (function(Prism) {
@@ -1476,7 +1882,6 @@ Prism.languages.rss = Prism.languages.xml;
 	Prism.languages.sh = Prism.languages.bash;
 	Prism.languages.shell = Prism.languages.bash;
 })(Prism);
-
 //#endregion
 //#region node_modules/prismjs/components/prism-json.js
 Prism.languages.json = {
@@ -1504,7 +1909,6 @@ Prism.languages.json = {
 	}
 };
 Prism.languages.webmanifest = Prism.languages.json;
-
 //#endregion
 //#region node_modules/prismjs/components/prism-scss.js
 Prism.languages.scss = Prism.languages.extend("css", {
@@ -1562,20 +1966,52 @@ Prism.languages.insertBefore("scss", "function", {
 	}
 });
 Prism.languages.scss["atrule"].inside.rest = Prism.languages.scss;
-
 //#endregion
 //#region ts/components/codesnippet.ts
 var CodeSnippet = class extends HTMLElement {
-	static observedAttributes = ["lang", "preview"];
+	static observedAttributes = [
+		"lang",
+		"preview",
+		"highlight"
+	];
+	_observer = null;
+	_initialized = false;
 	constructor() {
 		super();
 	}
 	connectedCallback() {
+		if (this.querySelector(".codesnippet-code code")) this._init();
+		else this._waitForChildren();
+	}
+	disconnectedCallback() {
+		this._observer?.disconnect();
+		this._observer = null;
+		this._initialized = false;
+	}
+	attributeChangedCallback(name, oldValue, newValue) {
+		if (oldValue !== newValue && this._initialized) this.render();
+	}
+	_waitForChildren() {
+		this._observer = new MutationObserver(() => {
+			if (this.querySelector(".codesnippet-code code")) {
+				this._observer?.disconnect();
+				this._observer = null;
+				this._init();
+			}
+		});
+		this._observer.observe(this, {
+			childList: true,
+			subtree: true
+		});
+	}
+	_init() {
+		if (this._initialized) return;
+		this._initialized = true;
 		this.render();
 		this.initCopyButton();
 	}
-	attributeChangedCallback(name, oldValue, newValue) {
-		if (oldValue !== newValue) this.render();
+	get isHighlightEnabled() {
+		return this.getAttribute("highlight") !== "false";
 	}
 	render() {
 		const lang = this.getAttribute("lang") || "html";
@@ -1583,10 +2019,11 @@ var CodeSnippet = class extends HTMLElement {
 		const langLabel = this.querySelector(".codesnippet-lang");
 		if (langLabel) langLabel.textContent = lang.toUpperCase();
 		const codeElement = this.querySelector(".codesnippet-code code");
-		if (codeElement) {
+		if (codeElement) if (this.isHighlightEnabled) {
 			codeElement.className = `language-${lang}`;
+			delete codeElement._prismHighlighted;
 			import_prism.default.highlightElement(codeElement);
-		}
+		} else codeElement.className = "";
 		const previewArea = this.querySelector(".codesnippet-preview");
 		if (previewArea) {
 			Array.from(previewArea.classList).forEach((cls) => {
@@ -1618,7 +2055,26 @@ var CodeSnippet = class extends HTMLElement {
 	}
 };
 if (!customElements.get("code-snippet")) customElements.define("code-snippet", CodeSnippet);
-
+//#endregion
+//#region ts/components/dropdown.ts
+const isAuDropdownId = (id) => /^au-dropdown-.+$/.test(id);
+const assignAnchor = (trigger, popover) => {
+	const anchorName = `--${popover.id}`;
+	trigger.style.anchorName = anchorName;
+	popover.style.positionAnchor = anchorName;
+};
+const initDropdowns = () => {
+	document.querySelectorAll("[popovertarget]").forEach((trigger) => {
+		const targetId = trigger.getAttribute("popovertarget");
+		if (!targetId) return;
+		if (!isAuDropdownId(targetId)) return;
+		const popover = document.getElementById(targetId);
+		if (!popover) return;
+		assignAnchor(trigger, popover);
+	});
+};
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initDropdowns);
+else initDropdowns();
 //#endregion
 //#region ts/forms/textarea.ts
 var Textarea = class extends HTMLTextAreaElement {
@@ -1645,5 +2101,33 @@ var Textarea = class extends HTMLTextAreaElement {
 	}
 };
 if (!customElements.get("au-textarea")) customElements.define("au-textarea", Textarea, { extends: "textarea" });
-
+//#endregion
+//#region ts/components/tabs.ts
+const initTabs = () => {
+	const tabItems = document.querySelectorAll(".tab-item");
+	const tabsArea = document.querySelector(".tabs-area");
+	if (!tabItems.length || !tabsArea) return;
+	const activateTab = (tab) => {
+		const targetId = tab.getAttribute("href")?.slice(1);
+		if (!targetId) return;
+		const targetEl = document.getElementById(targetId);
+		if (!targetEl) return;
+		tabItems.forEach((t) => t.classList.remove("active"));
+		tab.classList.add("active");
+		const areaRect = tabsArea.getBoundingClientRect();
+		const elRect = targetEl.getBoundingClientRect();
+		tabsArea.scrollLeft += elRect.left - areaRect.left;
+	};
+	const handleClick = (e) => {
+		e.preventDefault();
+		activateTab(e.currentTarget);
+	};
+	tabItems.forEach((tab) => {
+		tab.addEventListener("click", handleClick);
+	});
+	const firstTab = tabItems[0];
+	if (firstTab && !document.querySelector(".tab-item.active")) firstTab.classList.add("active");
+};
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTabs);
+else initTabs();
 //#endregion

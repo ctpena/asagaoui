@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "../styles/color";
+@use "../styles/typography";
+
+.dialog {
+  outline: none;
+
+  &::backdrop {
+    // #999999 75%
+    background-color: rgba(153, 153, 153, 0.75);
+  }
+
+  // center
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  // display
+  // size
+  width: 496px;
+  // style
+  border-radius: 12px;
+  border: 1px solid map.get(color.$grey, 200);
+  background-color: color.$white;
+  z-index: 1000;
+  padding: 40px;
+
+  &-header {
+    padding: 1rem;
+    .hamburger-iconbtn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+
+  }
+
+  &-body{
+    padding: 1rem;
+  }
+
+  &-footer {
+
+  }
+
+  &-title {
+    margin: 0;
+    @include typography.set(map.get(typography.$std, 'std-22b-150'));
+  }
+
+  &-subtext {
+  }
+}

@@ -13,21 +13,55 @@ import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-scss';
 
 export class CodeSnippet extends HTMLElement {
-    static observedAttributes = ["lang", "preview"];
+    static observedAttributes = ["lang", "preview", "highlight"];
+    private _observer: MutationObserver | null = null;
+    private _initialized = false;
 
     constructor() {
         super();
     }
 
     connectedCallback() {
+        if (this.querySelector(".codesnippet-code code")) {
+            this._init();
+        } else {
+            this._waitForChildren();
+        }
+    }
+
+    disconnectedCallback() {
+        this._observer?.disconnect();
+        this._observer = null;
+        this._initialized = false;
+    }
+
+    attributeChangedCallback(name: string, oldValue: any, newValue: any) {
+        if (oldValue !== newValue && this._initialized) {
+            this.render();
+        }
+    }
+
+    private _waitForChildren() {
+        this._observer = new MutationObserver(() => {
+            if (this.querySelector(".codesnippet-code code")) {
+                this._observer?.disconnect();
+                this._observer = null;
+                this._init();
+            }
+        });
+        this._observer.observe(this, {childList: true, subtree: true});
+    }
+
+    private _init() {
+        if (this._initialized) return;
+        this._initialized = true;
         this.render();
         this.initCopyButton();
     }
 
-    attributeChangedCallback(name: string, oldValue: any, newValue: any) {
-        if (oldValue !== newValue) {
-            this.render();
-        }
+    private get isHighlightEnabled(): boolean {
+        const attr = this.getAttribute("highlight");
+        return attr !== "false";
     }
 
     private render() {
@@ -39,8 +73,13 @@ export class CodeSnippet extends HTMLElement {
 
         const codeElement = this.querySelector<HTMLElement>(".codesnippet-code code");
         if (codeElement) {
-            codeElement.className = `language-${lang}`;
-            Prism.highlightElement(codeElement);
+            if (this.isHighlightEnabled) {
+                codeElement.className = `language-${lang}`;
+                delete (codeElement as any)._prismHighlighted;
+                Prism.highlightElement(codeElement);
+            } else {
+                codeElement.className = "";
+            }
         }
 
         const previewArea = this.querySelector(".codesnippet-preview");
@@ -59,13 +98,11 @@ export class CodeSnippet extends HTMLElement {
     private initCopyButton() {
         const copyBtn = this.querySelector(".codesnippet-copy-btn");
         const codeElement = this.querySelector(".codesnippet-code code");
-
         if (copyBtn && codeElement) {
             copyBtn.addEventListener("click", async () => {
                 const text = codeElement.textContent || "";
                 try {
                     await navigator.clipboard.writeText(text);
-
                     const icon = copyBtn.querySelector("i");
                     if (icon) {
                         icon.classList.replace("ail-copy", "ail-check");
@@ -81,7 +118,6 @@ export class CodeSnippet extends HTMLElement {
             });
         }
     }
-
 }
 
 if (!customElements.get("code-snippet")) {

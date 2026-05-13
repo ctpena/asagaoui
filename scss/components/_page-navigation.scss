@@ -1,0 +1,36 @@
+@use "../components/button" as *;
+
+.page-navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.page-navigation-item {
+  flex: 1;
+  @extend .btn;
+  @extend .btn-outline;
+
+  &.prev,
+  &.next {
+    background-repeat: no-repeat;
+    background-size: 20px;
+  }
+
+  &.prev {
+    justify-content: left;
+    padding-left: 44px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230017C1"><path d="M7.90156 12.0001L15.9016 4.0001L14.5016 2.6001L5.10156 12.0001L14.5016 21.4001L15.9016 20.0001L7.90156 12.0001Z"/></svg>');
+    background-position: left 1rem center;
+  }
+
+  &.next {
+    justify-content: right;
+    padding-right: 44px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230017C1"><path d="M9.00156 2.6001L7.60156 4.0001L15.6016 12.0001L7.60156 20.0001L9.00156 21.4001L18.4016 12.0001L9.00156 2.6001Z"/></svg>');
+    background-position: right 1rem center;
+  }
+}
+
+.page-navigation-item-emp {
+  flex: 1;
+}

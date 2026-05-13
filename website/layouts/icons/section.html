@@ -1,0 +1,71 @@
+{{ define "main" }}
+    <main>
+        <div class="container-xl mt-5 mb-5">
+            <h1 class="h1 mb-3">AsagaoUI Icons</h1>
+            <div style="max-width: 672px;">
+                <p>{{ i18n "icons-hero-1" }}<a rel="external" class="link" href="https://www.digital.go.jp/policies/servicedesign/designsystem/Illustration_Icons">Digital Agency illustration and icon assets</a>{{ i18n "icons-hero-2" }}<a rel="external" href="" class="link">Material Symbols</a>{{ i18n "icons-hero-3" }}</p>
+            </div>
+        </div>
+        <section class="container-xl custom-icons-other">
+            <h2 class="h2">{{ .Title }}{{ i18n "list" }}</h2>
+            <div class="custom-icons-other-grid">
+                {{ range .Pages }}
+                    {{ $page := . }}
+                    {{ $iconName := $page.Params.iconName }}
+                    {{ $preferredStyles := slice "ail" "aif" }}
+                    {{ $chosenStyle := "" }}
+                    {{ range $preferredStyles }}
+                        {{ if and (eq $chosenStyle "") (index $page.Params.styles .) }}
+                            {{ $chosenStyle = . }}
+                        {{ end }}
+                    {{ end }}
+                    {{ if eq $chosenStyle "" }}
+                        {{ range $style, $cp := $page.Params.styles }}
+                            {{ if eq $chosenStyle "" }}
+                                {{ $chosenStyle = $style }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    <figure class="custom-icons-item">
+                        <div class="custom-icons-item-icon">
+                            <i class="{{ $chosenStyle }}-{{ $iconName }}"></i>
+                        </div>
+                        <figcaption class="custom-icons-item-text">
+                            <a class="custom-icons-item-link" href="{{ $page.RelPermalink }}">{{ $iconName }}</a>
+                        </figcaption>
+                    </figure>
+                {{ end }}
+            </div>
+        </section>
+        <article class="container-xl mt-6 mb-7">
+            <h2 class="h2">{{ i18n "install" }}</h2>
+            <p class="mt-3">{{ i18n "icons-install-desc" }}</p>
+            <div class="mt-4 grid g-3">
+                <article class="col-12 col-md-4">
+                    <h3 class="h3">{{ i18n "icons-install-pkg-title" }}</h3>
+                    <p class="my-3">{{ i18n "icons-install-pkg-desc" }}</p>
+                    <code-snippet lang="bash" highlight="true">
+                        <div class="codesnippet-area">
+                            <div class="codesnippet-header">
+                                <span class="codesnippet-lang"></span>
+                                <button class="codesnippet-copy-btn">
+                                    <i class="ail-copy"></i>
+                                </button>
+                            </div>
+                            <pre class="codesnippet-code"><code>npm i asagaoui</code></pre>
+                        </div>
+                    </code-snippet>
+                </article>
+                <article class="col-12 col-md-4">
+                    <h3 class="h3">{{ i18n "icons-install-download-title" }}</h3>
+                    <p class="my-3">{{ i18n "icons-install-download-desc" | safeHTML }}</p>
+                    <a href="" rel="external" class="btn btn-outline">{{ i18n "icons-install-download-btn" }}</a>
+                </article>
+                <article class="col-12 col-md-4">
+                    <h3 class="h3">CDN</h3>
+                    <p class="my-3">{{ i18n "icons-install-cdn-desc" | safeHTML }}</p>
+                </article>
+            </div>
+        </article>
+    </main>
+{{ end }}

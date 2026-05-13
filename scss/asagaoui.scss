@@ -31,6 +31,7 @@
 // Components
 @layer components {
   @include meta.load-css('components/accordion');
+  @include meta.load-css('components/avatar');
   @include meta.load-css('components/badge');
   @include meta.load-css('components/banner');
   @include meta.load-css('components/blockquote');
@@ -38,30 +39,38 @@
   @include meta.load-css('components/button');
   @include meta.load-css('components/card');
   @include meta.load-css('components/carousel');
+  @include meta.load-css('components/chip-tag');
   @include meta.load-css('components/codesnippet');
   @include meta.load-css('components/description-list');
+  @include meta.load-css('components/dialog');
+  @include meta.load-css('components/disclosure');
   @include meta.load-css('components/divider');
   @include meta.load-css('components/drawer');
   @include meta.load-css('components/dropdown');
   @include meta.load-css('components/globalmenu');
   @include meta.load-css('components/hamburger-btn');
   @include meta.load-css('components/header');
+  @include meta.load-css('components/image-slider');
   @include meta.load-css('components/lang-select');
   @include meta.load-css('components/mega-menu');
   @include meta.load-css('components/menulist');
   @include meta.load-css('components/mobilemenu');
-  @include meta.load-css('components/modaldialog');
+  @include meta.load-css('components/page-navigation');
   @include meta.load-css('components/progress');
+  @include meta.load-css('components/resource-list');
   @include meta.load-css('components/search-box');
   @include meta.load-css('components/sidebar');
   @include meta.load-css('components/stat');
   @include meta.load-css('components/table');
+  @include meta.load-css('components/tabs');
+  @include meta.load-css('components/toc');
   @include meta.load-css('components/utilitylink');
 }
 
 // Forms
 @layer forms {
   @include meta.load-css('forms/check');
+  @include meta.load-css('forms/combobox');
   @include meta.load-css('forms/date-picker');
   @include meta.load-css('forms/group');
   @include meta.load-css('forms/input');

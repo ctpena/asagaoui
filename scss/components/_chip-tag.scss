@@ -1,0 +1,66 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "sass:map";
+
+.chip-tag {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @include typography.set(map.get(typography.$oln, 'oln-16n-100'));
+  border-radius: 9999px;
+  border: 1px solid map.get(color.$blue, 900);
+  background-color: map.get(color.$blue, 50);
+  color: map.get(color.$blue, 900);
+  padding: 4px 8px;
+
+  &:hover {
+    color: map.get(color.$blue, 1000);
+
+    .chip-tag-cancel {
+      border: none;
+      background-color: map.get(color.$blue, 1000);
+
+      &::before,
+      &::after {
+        background-color: map.get(color.$blue, 50);
+      }
+    }
+  }
+}
+
+.chip-tag-cancel {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 1px solid map.get(color.$blue, 900);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: map.get(color.$blue, 900);
+    top: 50%;
+    left: 50%;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:active {
+    background-color: map.get(color.$blue, 1200);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+}

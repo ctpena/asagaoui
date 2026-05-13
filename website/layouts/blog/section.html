@@ -1,0 +1,41 @@
+{{ define "main" }}
+    <main>
+        <div class="bg-grey-50 py-5">
+            <section class="container-lg">
+                <h1 class="h1 mb-3">{{ .Title }}</h1>
+                {{ .Content }}
+            </section>
+        </div>
+        <section class="container-lg mt-5 mb-7 grid g-4">
+            {{ range .Pages }}
+                <article class="custom-blog-card col-12 col-sm-6 col-md-4">
+                    <div>
+                        <img class="img-fluid" width="696" height="392" src="/docs/components/carousel/image-4.webp" alt="" loading="lazy"/>
+                    </div>
+                    <div class="pt-5 pb-3">
+                        <h2 class="h3 mb-3"><a class="link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+                        <p class="mt-3">{{ .Summary }}</p>
+                        {{ with .GetTerms "categories" }}
+                            <div class="my-3">
+                                {{ range . }}
+                                    <a class="badge badge-green badge-filled-outline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    </div>
+                    <hr class="divider"/>
+                    <footer class="fs-14 text-right p-3">
+                        {{ range .Params.authors }}
+                            <address>
+                                <a>{{ .name }}</a>
+                            </address>
+                        {{ end }}
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">
+                            {{ .Date.Format "2006-01-02" }}
+                        </time>
+                    </footer>
+                </article>
+            {{ end }}
+        </section>
+    </main>
+{{ end }}

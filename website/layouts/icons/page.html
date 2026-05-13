@@ -1,0 +1,112 @@
+{{ define "main" }}
+    {{ $iconName := .Params.iconName }}
+
+    {{ $styleLabels := dict "ail" (printf "%s (line)" (i18n "icons-style-line")) "aif" (printf "%s (fill)" (i18n "icons-style-fill")) }}
+    {{ $styleOrder := slice "ail" "aif" }}
+    {{ $orderedStyles := slice }}
+    {{ range $styleOrder }}
+        {{ if index $.Params.styles . }}
+            {{ $orderedStyles = append . $orderedStyles }}
+        {{ end }}
+    {{ end }}
+    {{ range $style, $cp := $.Params.styles }}
+        {{ if not (in $styleOrder $style) }}
+            {{ $orderedStyles = append $style $orderedStyles }}
+        {{ end }}
+    {{ end }}
+    <main>
+        <article>
+            <header class="custom-icons-header">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="breadcrumb-link" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></li>
+                    </li>
+                    <li class="breadcrumb-item">{{ $iconName }}</li>
+                </ol>
+                <h1 class="h1 custom-icons-header-title">{{ $iconName }}</h1>
+            </header>
+
+            <div class="vstack g-6 mt-6 mb-7">
+                {{ range $orderedStyles }}
+                    {{ $style := . }}
+                    {{ $cp := index $.Params.styles $style }}
+                    {{ $className := printf "%s-%s" $style $iconName }}
+                    {{ $hex := printf "%X" ($cp | int) }}
+                    {{ $label := index $styleLabels $style | default $style }}
+
+                    <section class="custom-icons-grid">
+                        <h2 id="{{ $style }}" style="scroll-margin-top: calc(64px + 56px + 1rem);" class="visually-hidden">
+                            {{ $iconName }} - {{ $label }}
+                        </h2>
+
+                        <div class="custom-icons-content">
+                            <h3 class="h4 mb-2">{{ i18n "icons-page-usage" }}</h3>
+                            <code-snippet lang="html" highlight="true">
+                                <div class="codesnippet-area">
+                                    <div class="codesnippet-header">
+                                        <span class="codesnippet-lang">html</span>
+                                        <button class="codesnippet-copy-btn">
+                                            <i class="ail-copy"></i>
+                                        </button>
+                                    </div>
+                                    <pre class="codesnippet-code"><code>&lt;i class="{{ $className }}"&gt;&lt;/i&gt;</code></pre>
+                                </div>
+                            </code-snippet>
+
+                            <h3 class="h4 mt-4 mb-2">{{ i18n "icons-page-codepoint" }}</h3>
+                            <ul>
+                                <li>Unicode: <code class="code">U+{{ $hex }}</code></li>
+                                <li>CSS: <code class="code">\{{ $hex }}</code></li>
+                                <li>JS: <code class="code">\u{{ $hex }}</code></li>
+                                <li>HTML: <code class="code">&amp;#x{{ $hex }};</code></li>
+                            </ul>
+
+                            <h3 class="h4 mt-4 mb-2">{{ i18n "icons-page-download" }}</h3>
+                            <p class="mt-2 mb-3">{{ i18n "icons-page-download-desc" }}</p>
+                            <a class="btn btn-fill is-sm">{{ i18n "icons-page-download-btn" }}</a>
+                        </div>
+
+                        <aside class="custom-icons-style">
+                            <p class="h4">{{ i18n "icons-page-styles" }}</p>
+                            <ul class="mt-3 menulist">
+                                {{ range $orderedStyles }}
+                                    {{ $l := index $styleLabels . | default . }}
+                                    <li class="menulist-item">
+                                        <a href="#{{ . }}" class="menulist-link{{ if eq . $style }} active{{ end }}">
+                                            {{ $l }}
+                                        </a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </aside>
+
+                        <div class="custom-icons-preview">
+                            <figure class="custom-icons-canvas">
+                                <i class="{{ $className }}"></i>
+                                <figcaption class="visually-hidden">
+                                    {{ $iconName }} - {{ $label }}
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <aside class="custom-icons-example">
+                            <div class="custom-icons-example-header">
+                                <h3 class="h4">{{ i18n "icons-page-example" }}</h3>
+                            </div>
+                            <div class="custom-icons-example-area">
+                                <p class="h2"><i class="{{ $className }}"></i>{{ i18n "icons-page-example-heading-lg" }}</p>
+                                <p class="hs"><i class="{{ $className }}"></i>{{ i18n "icons-page-example-heading-sm" }}</p>
+                                <p>{{ i18n "icons-page-example-inline" }}<i class="{{ $className }}"></i></p>
+                                <a class="link" href="">{{ i18n "icons-page-example-link" }}<i class="{{ $className }}"></i></a>
+                                <button type="button" class="btn btn-outline">
+                                    {{ i18n "icons-page-example-button" }}
+                                    <i class="{{ $className }}"></i>
+                                </button>
+                            </div>
+                        </aside>
+                    </section>
+                {{ end }}
+            </div>
+        </article>
+    </main>
+{{ end }}

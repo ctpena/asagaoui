@@ -44,6 +44,11 @@
     text-decoration: underline;
     border: none;
   }
+
+  &:disabled {
+    color: map.get(color.$grey, 50);
+    background-color: map.get(color.$grey, 300);
+  }
 }
 
 .btn-outline {
@@ -62,6 +67,12 @@
     text-decoration: underline;
     border: none;
   }
+
+  &:disabled {
+    color: map.get(color.$grey, 300);
+    background-color: color.$white;
+    border: 1px solid map.get(color.$grey, 300);
+  }
 }
 
 .btn-text {
@@ -79,6 +90,11 @@
   &:active {
     background-color: map.get(color.$blue, 100);
     color: map.get(color.$blue, 1200);
+  }
+
+  &:disabled {
+    color: map.get(color.$grey, 300);
+    background-color: color.$white;
   }
 }
 

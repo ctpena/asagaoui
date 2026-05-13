@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://asagaoui.com/sitemap.xml

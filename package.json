@@ -26,18 +26,16 @@
   "scripts": {
     "sass": "sass ./scss:./dist/css",
     "watch:sass": "sass ./scss:./dist/css --watch",
-    "dev:web": "sass ./scss:./website/assets/css --watch",
     "min:sass": "sass ./scss/asagaoui.scss:./dist/css/asagaoui.min.css ./scss/asagaoui-icons.scss:./dist/css/asagaoui-icons.min.css --style=compressed --no-source-map",
-    "build": "rolldown ts/asagaoui.ts --file dist/js/asagaoui.js",
-    "build:web": "rolldown ts/asagaoui.ts --file website/assets/js/asagaoui.js"
+    "build": "rolldown ts/asagaoui.ts --file dist/js/asagaoui.js"
   },
   "devDependencies": {
     "prismjs": "^1.30.0",
     "@types/prismjs": "^1.26.6",
     "fantasticon": "^4.1.0",
-    "rolldown": "^1.0.0-rc.13",
+    "rolldown": "^1.0.0",
     "sass": "^1.99.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "files": [
     "dist/css",

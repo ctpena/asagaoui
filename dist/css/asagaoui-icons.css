@@ -1,10 +1,12 @@
+/*
 @font-face {
-  font-family: "asagaoui-icons";
-  src: url("../icons/asagaoui-icons.woff2?45d863468c5fe7dbad90d5caa7192955") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+font-family: "asagaoui-icons";
+src: url("../icons/asagaoui-icons.woff2?07b499b28063138d84cfd6cab2dcf0ec") format("woff2");
+font-weight: normal;
+font-style: normal;
+font-display: block;
 }
+*/
 [class^=ail-],
 [class*=" ail-"], [class^=aif-],
 [class*=" aif-"], [class^=ai-],
@@ -28,508 +30,516 @@
   line-height: 1;
 }
 
-.aif-work:before {
+.ail-work:before {
   content: "\f101";
 }
 
-.aif-warning:before {
+.ail-update:before {
   content: "\f102";
 }
 
-.aif-update:before {
+.ail-transactions:before {
   content: "\f103";
 }
 
-.aif-transactions:before {
+.ail-texture:before {
   content: "\f104";
 }
 
-.aif-tax:before {
+.ail-tax:before {
   content: "\f105";
 }
 
-.aif-stamp:before {
+.ail-stamp:before {
   content: "\f106";
 }
 
-.aif-specialist:before {
+.ail-specialist:before {
   content: "\f107";
 }
 
-.aif-smartphone:before {
+.ail-smartphone:before {
   content: "\f108";
 }
 
-.aif-search:before {
+.ail-search:before {
   content: "\f109";
 }
 
-.aif-seal_certificate:before {
+.ail-seal_certificate:before {
   content: "\f10a";
 }
 
-.aif-public_offering:before {
+.ail-public_offering:before {
   content: "\f10b";
 }
 
-.aif-privacy_protection:before {
+.ail-privacy_protection:before {
   content: "\f10c";
 }
 
-.aif-printer:before {
+.ail-printer:before {
   content: "\f10d";
 }
 
-.aif-personal_computer:before {
+.ail-personal_computer:before {
   content: "\f10e";
 }
 
-.aif-pension:before {
+.ail-pension:before {
   content: "\f10f";
 }
 
-.aif-password:before {
+.ail-password:before {
   content: "\f110";
 }
 
-.aif-notification:before {
+.ail-notification:before {
   content: "\f111";
 }
 
-.aif-new_window:before {
+.ail-new_window:before {
   content: "\f112";
 }
 
-.aif-municipality:before {
+.ail-municipality:before {
   content: "\f113";
 }
 
-.aif-mother_and_child:before {
+.ail-mother_and_child:before {
   content: "\f114";
 }
 
-.aif-money:before {
+.ail-more_vert:before {
   content: "\f115";
 }
 
-.aif-menu:before {
+.ail-money:before {
   content: "\f116";
 }
 
-.aif-medicine:before {
+.ail-menu:before {
   content: "\f117";
 }
 
-.aif-me:before {
+.ail-medicine:before {
   content: "\f118";
 }
 
-.aif-mailing:before {
+.ail-me:before {
   content: "\f119";
 }
 
-.aif-luggage:before {
+.ail-mailing:before {
   content: "\f11a";
 }
 
-.aif-laws:before {
+.ail-luggage:before {
   content: "\f11b";
 }
 
-.aif-itinerary:before {
+.ail-laws:before {
   content: "\f11c";
 }
 
-.aif-invoice:before {
+.ail-language:before {
   content: "\f11d";
 }
 
-.aif-information:before {
+.ail-itinerary:before {
   content: "\f11e";
 }
 
-.aif-income:before {
+.ail-invoice:before {
   content: "\f11f";
 }
 
-.aif-inbox:before {
+.ail-information:before {
   content: "\f120";
 }
 
-.aif-immunization:before {
+.ail-income:before {
   content: "\f121";
 }
 
-.aif-house:before {
+.ail-inbox:before {
   content: "\f122";
 }
 
-.aif-history:before {
+.ail-immunization:before {
   content: "\f123";
 }
 
-.aif-help:before {
+.ail-house:before {
   content: "\f124";
 }
 
-.aif-health:before {
+.ail-history:before {
   content: "\f125";
 }
 
-.aif-fillable_card:before {
+.ail-help:before {
   content: "\f126";
 }
 
-.aif-fast_track:before {
+.ail-health:before {
   content: "\f127";
 }
 
-.aif-family:before {
+.ail-fillable_card:before {
   content: "\f128";
 }
 
-.aif-expenditure:before {
+.ail-fast_track:before {
   content: "\f129";
 }
 
-.aif-error:before {
+.ail-family:before {
   content: "\f12a";
 }
 
-.aif-e_application:before {
+.ail-expenditure:before {
   content: "\f12b";
 }
 
-.aif-download:before {
+.ail-expand_content:before {
   content: "\f12c";
 }
 
-.aif-documents:before {
+.ail-e_application:before {
   content: "\f12d";
 }
 
-.aif-departure:before {
+.ail-download:before {
   content: "\f12e";
 }
 
-.aif-copy:before {
+.ail-documents:before {
   content: "\f12f";
 }
 
-.aif-complete:before {
+.ail-departure:before {
   content: "\f130";
 }
 
-.aif-code_reader:before {
+.ail-copy:before {
   content: "\f131";
 }
 
-.aif-child:before {
+.ail-complete:before {
   content: "\f132";
 }
 
-.aif-certification_with_seal:before {
+.ail-collapse_content:before {
   content: "\f133";
 }
 
-.aif-certification:before {
+.ail-code_reader:before {
   content: "\f134";
 }
 
-.aif-bank_account:before {
+.ail-child:before {
   content: "\f135";
 }
 
-.aif-authentication:before {
+.ail-check:before {
   content: "\f136";
 }
 
-.aif-attention:before {
+.ail-certification_with_seal:before {
   content: "\f137";
 }
 
-.aif-arrow_up:before {
+.ail-certification:before {
   content: "\f138";
 }
 
-.aif-arrow_right:before {
+.ail-bank_account:before {
   content: "\f139";
 }
 
-.aif-arrow_left:before {
+.ail-authentication:before {
   content: "\f13a";
 }
 
-.aif-arrow_down:before {
+.ail-attention:before {
   content: "\f13b";
 }
 
-.aif-arrival:before {
+.ail-arrow_up:before {
   content: "\f13c";
 }
 
-.aif-application:before {
+.ail-arrow_right:before {
   content: "\f13d";
 }
 
-.aif-add:before {
+.ail-arrow_left:before {
   content: "\f13e";
 }
 
-.ail-work:before {
+.ail-arrow_down:before {
   content: "\f13f";
 }
 
-.ail-update:before {
+.ail-arrival:before {
   content: "\f140";
 }
 
-.ail-transactions:before {
+.ail-application:before {
   content: "\f141";
 }
 
-.ail-tax:before {
+.ail-add:before {
   content: "\f142";
 }
 
-.ail-stamp:before {
+.aif-work:before {
   content: "\f143";
 }
 
-.ail-specialist:before {
+.aif-warning:before {
   content: "\f144";
 }
 
-.ail-smartphone:before {
+.aif-update:before {
   content: "\f145";
 }
 
-.ail-search:before {
+.aif-transactions:before {
   content: "\f146";
 }
 
-.ail-seal_certificate:before {
+.aif-tax:before {
   content: "\f147";
 }
 
-.ail-public_offering:before {
+.aif-stamp:before {
   content: "\f148";
 }
 
-.ail-privacy_protection:before {
+.aif-specialist:before {
   content: "\f149";
 }
 
-.ail-printer:before {
+.aif-smartphone:before {
   content: "\f14a";
 }
 
-.ail-personal_computer:before {
+.aif-search:before {
   content: "\f14b";
 }
 
-.ail-pension:before {
+.aif-seal_certificate:before {
   content: "\f14c";
 }
 
-.ail-password:before {
+.aif-public_offering:before {
   content: "\f14d";
 }
 
-.ail-notification:before {
+.aif-privacy_protection:before {
   content: "\f14e";
 }
 
-.ail-new_window:before {
+.aif-printer:before {
   content: "\f14f";
 }
 
-.ail-municipality:before {
+.aif-personal_computer:before {
   content: "\f150";
 }
 
-.ail-mother_and_child:before {
+.aif-pension:before {
   content: "\f151";
 }
 
-.ail-money:before {
+.aif-password:before {
   content: "\f152";
 }
 
-.ail-menu:before {
+.aif-notification:before {
   content: "\f153";
 }
 
-.ail-medicine:before {
+.aif-new_window:before {
   content: "\f154";
 }
 
-.ail-me:before {
+.aif-municipality:before {
   content: "\f155";
 }
 
-.ail-mailing:before {
+.aif-mother_and_child:before {
   content: "\f156";
 }
 
-.ail-luggage:before {
+.aif-money:before {
   content: "\f157";
 }
 
-.ail-laws:before {
+.aif-menu:before {
   content: "\f158";
 }
 
-.ail-language:before {
+.aif-medicine:before {
   content: "\f159";
 }
 
-.ail-itinerary:before {
+.aif-me:before {
   content: "\f15a";
 }
 
-.ail-invoice:before {
+.aif-mailing:before {
   content: "\f15b";
 }
 
-.ail-information:before {
+.aif-luggage:before {
   content: "\f15c";
 }
 
-.ail-income:before {
+.aif-laws:before {
   content: "\f15d";
 }
 
-.ail-inbox:before {
+.aif-itinerary:before {
   content: "\f15e";
 }
 
-.ail-immunization:before {
+.aif-invoice:before {
   content: "\f15f";
 }
 
-.ail-house:before {
+.aif-information:before {
   content: "\f160";
 }
 
-.ail-history:before {
+.aif-income:before {
   content: "\f161";
 }
 
-.ail-help:before {
+.aif-inbox:before {
   content: "\f162";
 }
 
-.ail-health:before {
+.aif-immunization:before {
   content: "\f163";
 }
 
-.ail-fillable_card:before {
+.aif-house:before {
   content: "\f164";
 }
 
-.ail-fast_track:before {
+.aif-history:before {
   content: "\f165";
 }
 
-.ail-family:before {
+.aif-help:before {
   content: "\f166";
 }
 
-.ail-expenditure:before {
+.aif-health:before {
   content: "\f167";
 }
 
-.ail-expand_content:before {
+.aif-fillable_card:before {
   content: "\f168";
 }
 
-.ail-e_application:before {
+.aif-fast_track:before {
   content: "\f169";
 }
 
-.ail-download:before {
+.aif-family:before {
   content: "\f16a";
 }
 
-.ail-documents:before {
+.aif-expenditure:before {
   content: "\f16b";
 }
 
-.ail-departure:before {
+.aif-error:before {
   content: "\f16c";
 }
 
-.ail-copy:before {
+.aif-e_application:before {
   content: "\f16d";
 }
 
-.ail-complete:before {
+.aif-download:before {
   content: "\f16e";
 }
 
-.ail-collapse_content:before {
+.aif-documents:before {
   content: "\f16f";
 }
 
-.ail-code_reader:before {
+.aif-departure:before {
   content: "\f170";
 }
 
-.ail-child:before {
+.aif-copy:before {
   content: "\f171";
 }
 
-.ail-check:before {
+.aif-complete:before {
   content: "\f172";
 }
 
-.ail-certification_with_seal:before {
+.aif-code_reader:before {
   content: "\f173";
 }
 
-.ail-certification:before {
+.aif-child:before {
   content: "\f174";
 }
 
-.ail-bank_account:before {
+.aif-certification_with_seal:before {
   content: "\f175";
 }
 
-.ail-authentication:before {
+.aif-certification:before {
   content: "\f176";
 }
 
-.ail-attention:before {
+.aif-bank_account:before {
   content: "\f177";
 }
 
-.ail-arrow_up:before {
+.aif-authentication:before {
   content: "\f178";
 }
 
-.ail-arrow_right:before {
+.aif-attention:before {
   content: "\f179";
 }
 
-.ail-arrow_left:before {
+.aif-arrow_up:before {
   content: "\f17a";
 }
 
-.ail-arrow_down:before {
+.aif-arrow_right:before {
   content: "\f17b";
 }
 
-.ail-arrival:before {
+.aif-arrow_left:before {
   content: "\f17c";
 }
 
-.ail-application:before {
+.aif-arrow_down:before {
   content: "\f17d";
 }
 
-.ail-add:before {
+.aif-arrival:before {
   content: "\f17e";
+}
+
+.aif-application:before {
+  content: "\f17f";
+}
+
+.aif-add:before {
+  content: "\f180";
 }
 
 /*# sourceMappingURL=asagaoui-icons.css.map */

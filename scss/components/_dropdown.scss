@@ -1,30 +1,15 @@
 @use "../styles/color";
+@use "sass:map";
 
-// TODO reform
 .dropdown {
-  height: 100%;
+  position-area: block-end span-inline-end;
 
-  &-area {
-    position: relative;
-  }
-
-  &-menu {
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
-    position: absolute;
-    z-index: 100; //FIXME reset z-index
-    background-color: color.$white;
-    border: 1px solid #949494;
-    //box-shadow: 0 4px 16px 0 rgba(26, 26, 28, 0.20);
-    //
-    padding: 16px 8px 24px 8px;
-  }
-
-  &-item {
-  }
-
-  &-link {
-    padding: 8px 20px;
-  }
+  width: max-content;
+  max-height: 18.875rem;
+  overflow-y: auto;
+  border-radius: .5rem 0 0 .5rem;
+  background-color: color.$white;
+  border: 1px solid map.get(color.$grey, 420);
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .1), 0 1px 5px 0 rgba(0, 0, 0, .3);
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ partialCached "head/css.html" . }}
+    {{ partialCached "head/js.html" . }}
+    <style>
+        .custom-header-area {
+            height: 56px;
+        }
+
+        .custom-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        [id] {
+            scroll-margin-top: 4rem;
+        }
+    </style>
+</head>
+<body class="aui">
+<div class="custom-header-area"></div>
+<div class="custom-header">
+    {{ partial "header.html" . }}
+</div>
+<aside class="custom-side-menu">
+    {{ partial "sidebar.html" . }}
+</aside>
+<div class="custom-layout-grid">
+    <main class="custom-main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    <aside class="custom-toc">
+        <details open="" class="custom-toc-container">
+            <summary class="mb-3">{{ T "table_of_contents" }}</summary>
+            {{ .TableOfContents }}
+        </details>
+    </aside>
+</div>
+{{ partial "footer-doc.html" . }}
+</body>
+</html>

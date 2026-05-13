@@ -1,79 +1,122 @@
-@use "../styles/color";
 @use "sass:map";
+@use "../styles/typography";
+@use "../styles/rounding";
+@use "../styles/color";
 
-.carousel {
-  position: relative;
-  display: grid;
-  grid-template-areas: "item item item" "left markers right";
-  grid-template-columns: 1fr 2fr 1fr;
-  row-gap: 1rem;
+.carousel-wrapper {
 }
 
-.carousel-inner {
-  grid-area: item;
+.carousel {
   display: flex;
-  flex-direction: row;
-  gap: 0;
-  overflow-x: hidden;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scroll-marker-group: after;
+  anchor-name: --my-carousel;
 
   &::scroll-button(*) {
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    position-anchor: --my-carousel;
+    padding: 0;
+    border: 1px solid map.get(color.$blue, 1000);
     border-radius: 50%;
+    background-color: unset;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+
+    &:hover {
+    }
+
+    &:focus {
+    }
+
+    &:active {
+    }
+
+    &:disabled {
+    }
   }
 
   &::scroll-button(left) {
-    content: "◀" / "前へ";
-    grid-area: left;
-    justify-self: end;
+    top: calc(anchor(bottom) + 1.4rem);
+    left: calc(anchor(left) + 200px);
+    content: "";
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="M14.4984 21L5.39844 12L14.4984 3L15.4984 4L7.59844 12L15.4984 20L14.4984 21Z"/></svg>');
   }
 
   &::scroll-button(right) {
-    content: "▶" / "次へ";
-    grid-area: right;
+    top: calc(anchor(bottom) + 1.4rem);
+    left: calc(anchor(left) + 240px);
+    content: "";
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="M9 21L8 20L16 12L8 4L9 3L18.1 12L9 21Z"/></svg>');
   }
-
-  &::scroll-marker-group {
-    grid-area: markers;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    align-items: center;
-  }
-
 }
 
-.carousel-item {
-  flex-shrink: 0;
-  display: flex;
-  width: 100%;
-  height: auto;
-
+.slide {
+  flex: 0 0 100%;
   scroll-snap-align: center;
+}
 
-  &:not(:last-child) {
-    margin-right: 2.5rem;
+.slide-body {
+}
+
+.carousel-others {
+  padding: 12px 0;
+
+  &[open] {
+    .carousel-control {
+      &::before {
+        background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="m12 6.03 12 11.939H0z"/></svg>');
+      }
+
+      &:hover {
+        &::before {
+          border: 3px solid map.get(color.$blue, 1000);
+          background-color: color.$white;
+          background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="m12 6.03 12 11.939H0z"/></svg>');
+        }
+      }
+    }
   }
+}
 
-  img {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
+.carousel-control {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+  color: map.get(color.$grey, 800);
+  padding: 8px 12px;
+  border: solid 1px map.get(color.$grey, 600);
+  border-radius: map.get(rounding.$rounding, 'm');
 
-  &::scroll-marker {
+  &:before {
     content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: map.get(color.$grey, 200);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    flex-shrink: 0;
+    color: map.get(color.$blue, 1000);
+    background-color: map.get(color.$blue, 1000);
+    width: 22px;
+    height: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M12 17.97 24 6.031H0z"/></svg>');
   }
 
-  &::scroll-marker:target-current {
-    background-color: map.get(color.$blue, 600);
+  &:hover {
+    text-decoration: underline;
+
+    &::before {
+      border: 3px solid map.get(color.$blue, 1000);
+      background-color: color.$white;
+      background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2300118F"><path d="M12 17.97 24 6.031H0z"/></svg>');
+    }
   }
 }

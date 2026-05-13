@@ -1,6 +1,5 @@
 @use "../styles/color";
 
-// TODO mobilemenu styles
 .mobilemenu {
   display: flex;
   flex-direction: column;
@@ -15,6 +14,23 @@
 }
 
 .mobilemenu-accordion {
-  display: flex;
-  padding: 8px 20px;
+  &[open] {
+    .mobilemenu-accordion-header {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231f1f1f"><path d="M12.0016 6.1001L2.60156 15.5001L4.00156 16.9001L12.0016 8.9001L20.0016 16.9001L21.4016 15.5001L12.0016 6.1001Z"/></svg>');
+    }
+  }
+
+  &-header {
+    display: flex;
+    padding: 8px 20px;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231f1f1f"><path d="M9.00156 2.6001L7.60156 4.0001L15.6016 12.0001L7.60156 20.0001L9.00156 21.4001L18.4016 12.0001L9.00156 2.6001Z"/></svg>');
+    background-position: right 1rem center;
+    cursor: default;
+  }
+
+  .mobilemenu {
+    padding: 0 0 0 1.5rem;
+  }
 }
