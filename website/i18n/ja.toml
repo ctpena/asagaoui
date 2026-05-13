@@ -46,7 +46,7 @@ icons-install-cdn-desc = '<a href="https://www.jsdelivr.com/package/npm/asagaoui
 
 table_of_contents = 'このページの目次'
 
-footer-description = '美しくアクセスしやすいデジタルサービスのためのUIフレームワーク。Sassと最小限のJavaScriptを使用してデジタルエージェンシーデザインシステムをベースに構築されており、標準ベースのデザインにより拡張性とシームレスな統合のバランスを実現しています。'
+footer-description = '美しくアクセスしやすいデジタルサービスのためのUIフレームワーク。Sassと最小限のJavaScriptを使用してデジタル庁デザインシステムを基にに構築されており、標準ベースのデザインにより拡張性とシームレスな統合のバランスを実現しています。'
 
 hero-title = '美しく使いやすいデジタルサービスのためのUI'
 hero-description = '美しく使いやすいデジタルサービスのためのUIフレームワーク。デジタル庁デザインシステムを基に、Sassと最小限のJavaScriptで構築され、標準に基づいた設計により、拡張性と統合性を両立します。'

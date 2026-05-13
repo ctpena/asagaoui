@@ -39,9 +39,9 @@ icons-install-desc = 'AsagaoUI Icons is included with AsagaoUI and can be used i
 icons-install-pkg-title = 'Package Manager'
 icons-install-pkg-desc = 'AsagaoUI Icons is included with AsagaoUI. Icon fonts and CSS files are provided.'
 icons-install-download-title = 'Download'
-icons-install-download-desc = 'Icon data is available on <a class=”link” rel=”external” href=”https://github.com/ctpena/asagaoui”>GitHub</a>, providing SVGs, icon fonts, and license files.'
+icons-install-download-desc = 'Icon data is available on <a class="link" rel="external" href="https://github.com/ctpena/asagaoui">GitHub</a>, providing SVGs, icon fonts, and license files.'
 icons-install-download-btn = 'Download'
-icons-install-cdn-desc = 'Available from <a href=”https://www.jsdelivr.com/package/npm/asagaoui” class=”link” rel=”external”>jsDelivr</a>.'
+icons-install-cdn-desc = 'Available from <a href="https://www.jsdelivr.com/package/npm/asagaoui" class="link" rel="external">jsDelivr</a>.'
 
 
 table_of_contents = 'On this page'

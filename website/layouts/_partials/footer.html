@@ -15,7 +15,9 @@
                 {{ with site.GetPage "icons" }}
                     <li><a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
-                <li><a class="utilitylink" href="">Illustrations</a></li>
+                {{ with site.GetPage "illustrations" }}
+                    <li><a class="utilitylink" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
                 <li><a class="utilitylink" href="">Admin Dashboard</a></li>
             </ul>
             <ul class="vstack g-1">
