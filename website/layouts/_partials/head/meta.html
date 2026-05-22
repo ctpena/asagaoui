@@ -1,0 +1,34 @@
+{{ if .IsHome }}
+    <title>{{ .Site.Title }} - {{ i18n "hero-title" }}</title>
+
+{{ else if eq .Section "docs" }}
+    {{ $parts := slice .Title }}
+    {{ $parent := .Parent }}
+    {{ range seq 10 }}
+        {{ if and $parent (not $parent.IsHome) }}
+            {{ $parts  = $parts | append $parent.Title }}
+            {{ $parent = $parent.Parent }}
+        {{ end }}
+    {{ end }}
+    {{ $parts = $parts | append $.Site.Title }}
+    <title>{{ delimit $parts " - " }}</title>
+{{ else if eq .Section "icons" }}
+    {{ if eq .Kind "section" }}
+        <title>{{ .Site.Title }} Icons</title>
+    {{ else -}}
+        <title>{{ .Title }} - {{ .Site.Title }} Icons</title>
+    {{ end }}
+{{ else }}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ end }}
+<meta name="description"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end }}
+{{ if not hugo.IsServer }}
+    {{ partialCached "head/analytics.html" . }}
+{{ end }}
+{{ partial "opengraph.html" . }}
+{{ partial "twitter_cards.html" . }}

@@ -14,7 +14,9 @@
                     <a class="btn btn-outline is-lg" rel="external" href="https://github.com/ctpena/asagaoui">
                         {{ i18n "hero-secondary-cta" }}
                     </a>
-                    <a href="" class="btn btn-fill is-lg">{{ i18n "get-started" }}</a>
+                    {{ with site.GetPage "/docs/getting-started/introduction/" }}
+                        <a href="{{ .RelPermalink }}" class="btn btn-fill is-lg">{{ i18n "get-started" }}</a>
+                    {{ end }}
                 </div>
             </section>
             <section class="container-lg my-7">
@@ -158,7 +160,9 @@
                         <h2 class="h2">{{ i18n "home-aui-title" }}</h2>
                         <p class="mt-2">{{ i18n "home-aui-description" }}</p>
                         <p class="mt-2">
-                            <a href="" class="link">{{ i18n "home-aui-cta" }}</a>
+                            {{ with site.GetPage "/icons/" }}
+                                <a href="{{ .RelPermalink }}" class="link">{{ i18n "home-aui-cta" }}</a>
+                            {{ end }}
                         </p>
                     </div>
                     <div class="col-12 col-md-6 d-flex justify-center align-items-center">

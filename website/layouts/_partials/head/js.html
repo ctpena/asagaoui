@@ -13,7 +13,7 @@
             {{ end }}
         {{ end }}
     {{ end }}
-    {{ with resources.Get "css/main.css" }}
+    {{ with resources.Get "js/main.js" }}
         {{ with . | js.Build (dict "minify" true) }}
             {{ with . | fingerprint }}
                 <script type="module" src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
