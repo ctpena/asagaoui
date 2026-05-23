@@ -50,7 +50,3 @@ asagaoui/
 │   └── components
 └── website
 ```
-
-## 主なディレクトリとその用途
-
-## まとめ

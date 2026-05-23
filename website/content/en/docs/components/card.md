@@ -1,10 +1,10 @@
 +++
 title = 'Card'
-summary = 'Used to display content related to a single subject.'
-weight = 50
+summary = 'A UI for emphasizing a group of content.'
+weight = 60
 +++
 
-Used to display content related to a single subject.
+A UI for emphasizing a group of content.
 
 ## Title and Text
 
@@ -17,7 +17,7 @@ Used to display content related to a single subject.
 </div>
 ```
 
-## Images
+## Image
 
 ### Top
 

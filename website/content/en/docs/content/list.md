@@ -5,12 +5,12 @@ summary = 'List'
 
 ```html {preview="true"}
 <ul class="list">
-    <li>リストアイテム1</li>
-    <li>リストアイテム2</li>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
     <li>
-        リストアイテム3
+        List Item 3
         <ul class="list">
-            <li>ネストされたアイテム</li>
+            <li>Nested Item</li>
         </ul>
     </li>
 </ul>
@@ -18,12 +18,12 @@ summary = 'List'
 
 ```html {preview="true"}
 <ul class="list">
-    <li><span>1. </span><span>リストアイテム1</span></li>
-    <li><span>2. </span><span>リストアイテム2</span></li>
+    <li><span>1. </span><span>List Item 1</span></li>
+    <li><span>2. </span><span>List Item 2</span></li>
     <li>
-        <span>3. </span><span>リストアイテム3</span>
+        <span>3. </span><span>List Item 3</span>
         <ul class="list">
-            <li>ネストされたアイテム</li>
+            <li>Nested Item</li>
         </ul>
     </li>
 </ul>

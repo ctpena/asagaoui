@@ -1,6 +1,6 @@
 +++
 title = 'Components'
-weight = 100
+weight = 125
 +++
 
-User-friendly and beautiful UI components with a strong focus on HTML
+HTML-first, easy-to-use, and beautiful UI components.

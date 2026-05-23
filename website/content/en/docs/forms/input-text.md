@@ -1,12 +1,9 @@
 +++
 title = 'Input Text'
-summary = 'The text input component is the most basic input component.'
-weight = 50
+summary = 'Input Text'
 +++
 
-The text input component is the most basic input component. It provides styling for text input components implemented with `<input>`, etc.
-
-## Example
+The text input component is the most basic input component. It provides design for text input components implemented with `<input>`, etc.
 
 Basically, just add the `input` class.
 
@@ -14,9 +11,9 @@ Basically, just add the `input` class.
 <input id="" type="text" class="input">
 ```
 
-## Sizes
+## Size
 
-You can change the size using classes such as `is-sm` or `is-md`.
+You can change the size using classes such as `is-sm` and `is-md`.
 
 ```html {preview="true"}
 <input id="" type="text" class="input is-lg">
@@ -30,7 +27,7 @@ You can change the size using classes such as `is-sm` or `is-md`.
 
 ### Disabled
 
-Adding the `disabled` attribute will gray out the input.
+Adding the `disabled` attribute grays out the input.
 
 ```html {preview="true"}
 <input id="" type="text" class="input" disabled>
@@ -38,7 +35,7 @@ Adding the `disabled` attribute will gray out the input.
 
 ### Read-only
 
-Using `readonly` will apply a specific design.
+Using `readonly` results in a specialized design.
 
 ```html {preview="true"}
 <input id="" type="text" class="input" readonly>
@@ -50,7 +47,7 @@ Feedback design after validating user input.
 
 ### Error
 
-Simply add the `is-error` class.
+Just add the `is-error` class.
 
 ```html {preview="true"}
 <input id="" type="text" class="input is-error">
@@ -62,10 +59,10 @@ Using `form-group` allows you to display error text at the same time.
 <div class="form-group">
     <label for="test" class="form-label">
         Label
-        <span class="form-necessity">* Required</span>
+        <span class="form-necessity">*Required</span>
     </label>
     <div class="form-support">Support text</div>
     <input id="test" type="text" class="input is-error">
-    <div class="form-error">* Error text</div>
+    <div class="form-error">*Error text</div>
 </div>
 ```

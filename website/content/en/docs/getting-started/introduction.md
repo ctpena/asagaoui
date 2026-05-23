@@ -3,15 +3,15 @@ title = 'Introduction'
 weight = 1
 +++
 
-AsagaoUI is a UI component framework for digital services that use a simple and beautiful UI.
-It is ideal for those seeking a simple yet elegant UI. Currently, AsagaoUI includes UI component implementations for websites. We plan to provide UI component implementations for Android in the future.
+AsagaoUI is a UI component framework for digital services using a simple and beautiful UI.
+It is ideal for everyone looking for a simple and beautiful UI.
 
 ## Quick Start
 
-To get started with AsagaoUI, be sure to make the following two important settings:
+To start using AsagaoUI, be sure to make the following two important settings.
 
 1. Add the `viewport` meta tag.
-2. Add the root class `.aui` to the `<body>`.
+2. Add the root class `.aui` to `<body>`.
 
 The template HTML for a quick start is as follows:
 
@@ -29,9 +29,9 @@ The template HTML for a quick start is as follows:
 </html>
 ```
 
-### Loading Required CSS and JS
+### Loading necessary CSS and JS
 
-The easiest way is to load the files distributed by jsdelivr using `<link>` and `<script>` tags.
+The easiest way is to load the files distributed from jsdelivr using `<link>` and `<script>` tags.
 
 #### CSS
 
@@ -42,7 +42,7 @@ The easiest way is to load the files distributed by jsdelivr using `<link>` and 
 #### JS
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
 ```
 
 The HTML after placing the tags is as follows:
@@ -55,19 +55,19 @@ The HTML after placing the tags is as follows:
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>quick start AsagaoUI</title>
     <link href="https://cdn.jsdelivr.net/npm/asagaoui/dist/css/asagaoui.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
 </head>
 <body class="aui">
 <h1>AsagaoUI</h1>
-<script src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
 </body>
 </html>
 ```
 
 ## CDN Links
 
-You can get the CSS and JS from [jsdelivr](https://www.jsdelivr.com/package/npm/asagaoui).
+You can get CSS and JS at [jsdelivr](https://www.jsdelivr.com/package/npm/asagaoui).
 
-## Offline (Self-hosted)
+## Offline (Self-hosting)
 
 The necessary CSS and JS are in the `dist` folder.
 
@@ -90,18 +90,18 @@ asagaoui/dist/
 ### JS
 
 ```html
-<script src="dist/js/asagaoui.js"></script>
+<script type="module" src="dist/js/asagaoui.js"></script>
 ```
 
 ## Important Global Settings
 
 ### HTML
 
-AsagaoUI is designed based on HTML markup compliant with the HTML Living Standard.
+AsagaoUI is designed with the assumption of HTML markup compliant with the HTML Living Standard.
 
 ### CSS Reset
 
-To achieve consistent styling, AsagaoUI uses [The New CSS Reset](https://github.com/elad2412/the-new-css-reset) to reset all default CSS.
+To achieve consistent styling, AsagaoUI resets all default CSS using [The New CSS Reset](https://github.com/elad2412/the-new-css-reset).
 
 ### Fonts
 
@@ -117,10 +117,9 @@ The font used in AsagaoUI is set to "Noto Sans Japanese". The font weights used 
 
 ### Box-sizing
 
-For easier UI layout calculations, `box-sizing` is set to `border-box`.
+To simplify UI layout calculations, `box-sizing` has been changed to `border-box`.
 
 ## Next Steps
 
-- For an explanation of the files included in AsagaoUI, refer to the [Directory Structure](/docs/getting-started/directory-structure/).
-- For icons available in AsagaoUI, refer to [AsagaoUI Icons](/icons/).
-
+- For an explanation of the files included in AsagaoUI, please refer to [Directory Structure](/docs/getting-started/directory-structure/).
+- For icons available in AsagaoUI, please refer to [AsagaoUI Icons](/icons/).

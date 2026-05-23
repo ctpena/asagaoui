@@ -1,12 +1,12 @@
 +++
 title = 'Button'
-summary = 'Used to trigger an action or event'
-weight = 40
+summary = 'Used to trigger actions or events.'
+weight = 50
 +++
 
-Buttons are the most fundamental building blocks of a UI. We provide buttons in various sizes and designs.
+Buttons are the most basic building block of a UI. We provide buttons of various sizes and designs.
 
-## Base Class
+## Basic Class
 
 The `btn` class provides the most basic appearance.
 
@@ -14,9 +14,9 @@ The `btn` class provides the most basic appearance.
 <button class="btn" type="button">Button</button>
 ```
 
-## Sizes
+## Size
 
-You can specify sizes using `is-lg` or `is-sm`.
+You can specify the size with `is-lg` or `is-sm`.
 
 - lg
 - md (default)
@@ -30,13 +30,13 @@ You can specify sizes using `is-lg` or `is-sm`.
 <button class="btn is-lg btn-fill" type="button">Button</button>
 ```
 
-## Types
+## Type
 
 There are three types of button designs. You can use them by adding classes.
 
-- Filled Button
-- Outline Button
-- Text Button
+- Filled button
+- Outline button
+- Text button
 
 ```html {preview="flex"}
 <button class="btn btn-fill" type="button">Button</button>
@@ -48,8 +48,8 @@ There are three types of button designs. You can use them by adding classes.
 
 ### Target Area
 
-The target area of the buttons is maintained at 44 CSSpx or more. When `is-xs` or `is-sm` is specified, the target area is expanded using `::after`.
+The target area of the button is designed to maintain 44CSSpx or more. When specifying `is-xs` or `is-sm`, the target area is expanded by `after`.
 
 ### Cursor
 
-`cursor: pointer;` is typically defined as a value indicating a link. While buttons may or may not be links, we uniformly change the cursor to a pointer for all buttons.
+`cursor: pointer;` is a value determined to indicate a link. A button may or may not be a link, but we uniformly change the cursor to a pointer.

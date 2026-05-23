@@ -1,18 +1,18 @@
 +++
 title = 'Banner'
-summary = 'We offer two types of banners: notification banners and emergency banners'
-weight = 20
+summary = 'Two types of UI: notification banners and emergency banners, designed to highlight information that requires attention.'
+weight = 30
 +++
 
-A UI component for making important information stand out. There are two types.
+Two types of UI: notification banners and emergency banners, designed to highlight information that requires attention.
 
 ## Notification Banner
 
-A notification banner is a UI that effectively presents content to the user, regardless of user interaction.
+A notification banner is a UI that effectively presents content to users, regardless of their operations.
 
-### Design Styles
+### Design Style
 
-Two design styles are available for notification banners. By adding `banner-chip`, you can change the design style to color chip.
+Two design styles are available for notification banners. By adding `banner-chip`, you can change the design style to a color chip.
 
 #### Standard
 
@@ -22,7 +22,7 @@ Two design styles are available for notification banners. By adding `banner-chip
     <span class="banner-title">Registration period has been extended</span>
     <div class="banner-body">
         <time class="banner-date">April 1, 2025</time>
-        <span class="banner-description">Dummy text is a placeholder text used when creating designs.</span>
+        <span class="banner-description">Dummy text is a placeholder used during design creation.</span>
     </div>
 </div>
 ```
@@ -35,16 +35,16 @@ Two design styles are available for notification banners. By adding `banner-chip
     <span class="banner-title">Registration period has been extended</span>
     <div class="banner-body">
         <time class="banner-date">April 1, 2025</time>
-        <span class="banner-description">Dummy text is a placeholder text used when creating designs.</span>
+        <span class="banner-description">Dummy text is a placeholder used during design creation.</span>
     </div>
 </div>
 ```
 
-### Design Types
+### Design Type
 
 #### Success
 
-Notification of successful completion of an operation, etc.
+Notification of smooth completion of operations, etc.
 
 ```html {preview="true"}
 <div class="banner banner-success">
@@ -52,42 +52,42 @@ Notification of successful completion of an operation, etc.
     <span class="banner-title">Registration process has been completed</span>
     <div class="banner-body">
         <time class="banner-date">April 1, 2025</time>
-        <span class="banner-description">Dummy text is a placeholder text used when creating designs.</span>
+        <span class="banner-description">Dummy text is a placeholder used during design creation.</span>
     </div>
 </div>
 ```
 
 #### Error
 
-Notification that an operation, etc. did not complete correctly.
+Notification that an operation etc. did not complete correctly.
 
 ```html {preview="true"}
 <div class="banner banner-error">
     <i class="banner-icon aif-error"></i>
-    <span class="banner-title">Operation could not be completed</span>
+    <span class="banner-title">Could not complete the operation</span>
     <div class="banner-body">
         <time class="banner-date">April 1, 2025</time>
-        <span class="banner-description">Dummy text is a placeholder text used when creating designs.</span>
+        <span class="banner-description">Dummy text is a placeholder used during design creation.</span>
     </div>
 </div>
 ```
 
 #### Warning
 
-Notification of warnings or alerts to call attention.
+Notification of warnings, alert information, etc., to draw attention.
 
 ```html {preview="true"}
 <div class="banner banner-warning">
     <i class="banner-icon aif-warning"></i>
-    <span class="banner-title">Beware of fake social media accounts</span>
+    <span class="banner-title">Please beware of fake SNS accounts</span>
     <div class="banner-body">
         <time class="banner-date">April 1, 2025</time>
-        <span class="banner-description">Dummy text is a placeholder text used when creating designs.</span>
+        <span class="banner-description">Dummy text is a placeholder used during design creation.</span>
     </div>
 </div>
 ```
 
-#### Info
+#### Information
 
 ```html {preview="true"}
 <div class="banner banner-info">
@@ -95,21 +95,21 @@ Notification of warnings or alerts to call attention.
     <span class="banner-title">Registration period has been extended</span>
     <div class="banner-body">
         <time class="banner-date">April 1, 2025</time>
-        <span class="banner-description">Dummy text is a placeholder text used when creating designs.</span>
+        <span class="banner-description">Dummy text is a placeholder used during design creation.</span>
     </div>
 </div>
 ```
 
 ## Emergency Banner
 
-A design for displaying information that should be communicated to the user with the highest priority.
+A design is prepared to display information that you want to convey to users with top priority.
 
 ```html {preview="true"}
 <div class="banner banner-emergency">
-    <span class="banner-title">[Emergency] Evacuation preparation information issued for District XX</span>
+    <span class="banner-title">[Emergency] Evacuation preparation information has been issued for the XX district</span>
     <div class="banner-body">
-        <time class="banner-date">Updated February 2, 2026 06:00</time>
-        <span class="banner-description">Evacuation preparation information was issued for District XX at 1:23. Those who take time to evacuate, such as the elderly, should move to designated shelters immediately.</span>
+        <time class="banner-date">2026/2/2 06:00 Update</time>
+        <span class="banner-description">Evacuation preparation information was issued for the XX district at 1:23. Those who take time to evacuate, such as the elderly, should move to the designated evacuation center immediately.</span>
     </div>
 </div>
 ```

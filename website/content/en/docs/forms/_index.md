@@ -1,6 +1,4 @@
 +++
 title = 'Forms'
-weight = 98
+weight = 100
 +++
-
-User-friendly and beautiful UI components with a strong focus on HTML
