@@ -2131,3 +2131,11 @@ const initTabs = () => {
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTabs);
 else initTabs();
 //#endregion
+//#region ts/asagaoui.ts
+/*!
+==================================================
+AsagaoUI
+Written in TypeScript, compiled to JavaScript
+==================================================
+*/
+//#endregion

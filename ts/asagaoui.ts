@@ -1,4 +1,4 @@
-/*
+/*!
 ==================================================
 AsagaoUI
 Written in TypeScript, compiled to JavaScript

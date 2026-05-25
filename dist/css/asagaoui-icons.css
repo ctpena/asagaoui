@@ -1,12 +1,15 @@
-/*
-@font-face {
-font-family: "asagaoui-icons";
-src: url("../icons/asagaoui-icons.woff2?07b499b28063138d84cfd6cab2dcf0ec") format("woff2");
-font-weight: normal;
-font-style: normal;
-font-display: block;
-}
+/*!
+* AsagaoUI Icons  v0.1.8
+* Copyright 2025 Hiroshi ISOBE
+* Licensed under MIT
 */
+@font-face {
+  font-family: "asagaoui-icons";
+  src: url("../icons/asagaoui-icons.woff2?07b499b28063138d84cfd6cab2dcf0ec") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 [class^=ail-],
 [class*=" ail-"], [class^=aif-],
 [class*=" aif-"], [class^=ai-],
