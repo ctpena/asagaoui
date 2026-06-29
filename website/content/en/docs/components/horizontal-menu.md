@@ -1,7 +1,7 @@
 +++
-title = 'Global Menu'
+title = 'Horizontal Menu'
 summary = 'A menu UI for clearly displaying large groups of content.'
-weight = 130
+weight = 155
 +++
 
 A menu UI for clearly displaying large groups of content.

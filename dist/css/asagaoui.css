@@ -2564,6 +2564,7 @@
   }
   .page-navigation-item {
     flex: 1;
+    min-width: 200px;
   }
   .page-navigation-item.prev, .page-navigation-item.next {
     background-repeat: no-repeat;
