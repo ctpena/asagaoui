@@ -1,0 +1,91 @@
+@use "../utilities/breakpoint";
+@use "../styles/color";
+@use "../styles/typography";
+@use "sass:map";
+
+.stepper {
+  display: flex;
+}
+
+.stepper-step {
+  position: relative;
+  width: 20rem;
+  min-width: 10rem;
+  padding: 0 1rem;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    border-bottom: 1px solid map.get(color.$grey, 800);
+    width: 50%;
+    top: 22px;
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  &::after {
+    left: 50%;
+  }
+
+  &:first-child::before {
+    display: none;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  &.current {
+    .stepper-number {
+      outline: 2px solid map.get(color.$grey, 800);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px color.$white;
+    }
+  }
+
+  &.reached {
+    .stepper-number {
+      background-color: map.get(color.$grey, 800);
+      color: color.$white;
+    }
+  }
+
+  &.skipped {
+    .stepper-number {
+      border: 1px dashed map.get(color.$grey, 800);
+    }
+  }
+}
+
+.stepper-number {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  @include typography.set(map.get(typography.$std, 'std-20b-150'));
+  color: map.get(color.$grey, 800);
+  background-color: color.$white;
+  border: 2px solid map.get(color.$grey, 800);
+}
+
+.stepper-title {
+  display: block;
+  margin-top: 24px;
+  color: map.get(color.$grey, 800);
+  @include typography.set(map.get(typography.$std, 'std-18b-160'));
+}
+
+.stepper-description {
+  display: block;
+  margin-top: 8px;
+  color: map.get(color.$grey, 800);
+  @include typography.set(map.get(typography.$std, 'std-16n-170'));
+}

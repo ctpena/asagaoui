@@ -1,0 +1,78 @@
+@use "../styles/typography";
+@use "../styles/color";
+@use "../styles/rounding";
+@use "sass:map";
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    width: 24px;
+    height: 24px;
+    background-color: map.get(color.$grey, 800);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &:has(.switch-input:checked)::after {
+    transform: translateX(20px);
+    background-color: map.get(color.$blue, 900);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="m8.992 19.379-6.992-7 1.75-1.742 5.242 5.242L20.25 4.621 22 6.371z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+  }
+
+  &:has(.switch-input:checked:hover:not(:disabled))::after,
+  &:has(.switch-input:checked:active:not(:disabled))::after {
+    background-color: map.get(color.$blue, 1100);
+  }
+
+  &:has(.switch-input:disabled)::after {
+    background-color: map.get(color.$grey, 300);
+  }
+}
+
+.switch-input {
+  width: 56px;
+  height: 36px;
+  border: .125rem solid map.get(color.$grey, 600);
+  border-radius: 18px;
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled) {
+    border: .125rem solid color.$black;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 0 0 4px map.get(color.$grey, 420);
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: 0 0 0 6px map.get(color.$grey, 600);
+  }
+
+  &:checked {
+    background: map.get(color.$blue, 50);
+    border-color: map.get(color.$blue, 900);
+
+    &:active:not(:disabled),
+    &:hover:not(:disabled) {
+      border-color: map.get(color.$blue, 1100);
+    }
+  }
+
+  &:disabled {
+    border: .125rem solid map.get(color.$grey, 300);
+    background-color: map.get(color.$grey, 50);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+}

@@ -61,6 +61,7 @@
   @include meta.load-css('components/search-box');
   @include meta.load-css('components/sidebar');
   @include meta.load-css('components/stat');
+  @include meta.load-css('components/step-navigation');
   @include meta.load-css('components/table');
   @include meta.load-css('components/tabs');
   @include meta.load-css('components/toc');
@@ -77,6 +78,7 @@
   @include meta.load-css('forms/label');
   @include meta.load-css('forms/radio');
   @include meta.load-css('forms/select');
+  @include meta.load-css('forms/switch');
   @include meta.load-css('forms/textarea');
 }
 
