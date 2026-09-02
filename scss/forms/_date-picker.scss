@@ -52,3 +52,21 @@
     background-color: color.$white;
   }
 }
+
+.is-sm {
+  &.date-picker {
+    height: 2.5rem;
+  }
+}
+
+.is-md {
+  &.date-picker {
+    height: 3rem;
+  }
+}
+
+.is-lg {
+  &.date-picker {
+    height: 3.5rem;
+  }
+}

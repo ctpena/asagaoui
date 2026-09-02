@@ -20,7 +20,7 @@
     margin-bottom: 1rem;
   }
 
-  table {
+  table:not([class]):not(code-snippet *) {
     @include table;
   }
 

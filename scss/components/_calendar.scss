@@ -1,0 +1,147 @@
+@use "sass:map";
+@use "../styles/typography";
+@use "../styles/rounding";
+@use "../styles/color";
+
+.calendar-btn {
+}
+
+.calendar-popover {
+  width: fit-content;
+  z-index: 1;
+  border: 1px solid map.get(color.$grey, 420);
+  background-color: color.$white;
+  box-shadow: 0 2px 8px 1px #0000001a, 0 1px 5px 0 #0000004d;
+  border-radius: map.get(rounding.$rounding, m);
+}
+
+.calendar-controls {
+  column-gap: .5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2.75rem;
+  height: 100%;
+  border-radius: .375rem;
+
+  color: map.get(color.$blue, 900);
+  border: 1px solid map.get(color.$blue, 900);
+  background-color: color.$white;
+
+  &:hover {
+    background-color: map.get(color.$blue, 200);
+    color: map.get(color.$blue, 1000);
+    border-width: .1875rem;
+  }
+
+  &:active {
+    background-color: map.get(color.$blue, 300);
+    color: map.get(color.$blue, 1200);
+    border-width: .1875rem;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+
+  &:disabled {
+    color: map.get(color.$grey, 300);
+    background-color: color.$white;
+    border: 1px solid map.get(color.$grey, 300);
+
+    &:hover {
+      border-width: .1875rem;
+    }
+  }
+}
+
+.calendar-nav-dp {
+  text-align: center;
+  width: 3.5rem;
+}
+
+.calendar-table {
+  border-collapse: collapse;
+  width: auto;
+  margin-bottom: .5rem;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+.calendar-table-body {
+  height: 15rem;
+}
+
+.calendar-cell {
+  width: 3rem;
+  height: 3rem;
+}
+
+.calendar-header-cell {
+  width: 3rem;
+  height: 3rem;
+  color: map.get(color.$grey, 700);
+  text-align: center;
+  vertical-align: middle;
+  font-weight: typography.$fw-b;
+}
+
+.calendar-date {
+  margin: .25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-underline-offset: calc(3 / 16 * 1rem);
+  background-color: color.$white;
+  border: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+
+  &:active {
+    background-color: map.get(color.$grey, 100);
+  }
+
+  &:focus {
+    background-color: map.get(color.$yellow, 300);
+    box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
+  }
+
+  &:hover {
+    border: 1px solid color.$black;
+    background-color: map.get(color.$grey, 50);
+    text-decoration: underline;
+  }
+
+  &.active {
+    background-color: map.get(color.$blue, 900);
+    color: color.$white;
+    text-decoration: none;
+
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.calendar-footer {
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
