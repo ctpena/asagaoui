@@ -1,3 +1,8 @@
+/*!
+* AsagaoUI  v0.1.9 (https://asagaoui.com)
+* Copyright 2026 Hiroshi ISOBE
+* Licensed under MIT (https://github.com/ctpena/asagaoui/blob/main/LICENSE)
+*/
 //#region \0rolldown/runtime.js
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -20,147 +25,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 	value: mod,
 	enumerable: true
 }) : target, mod));
-//#endregion
-//#region ts/components/calendar.ts
-var CalendarPopover = class {
-	#yearSelect;
-	#minYear;
-	#maxYear;
-	#prevBtn;
-	#nextBtn;
-	#monthLabel;
-	#cellTemplate;
-	#tbody;
-	#monthList;
-	#currentYear;
-	#currentMonth;
-	#selectedDate = null;
-	#clearBtn;
-	#todayBtn;
-	constructor(root) {
-		const yearSelect = root.querySelector(".calendar-controls select");
-		const navButtons = root.querySelectorAll(".calendar-nav-btn");
-		const monthLabel = root.querySelector(".calendar-nav-dp");
-		const tbody = root.querySelector(".calendar-table-body");
-		const cellTemplate = root.querySelector(".calendar-table-body template");
-		const footerButtons = root.querySelectorAll(".calendar-footer .btn");
-		const monthList = root.querySelector(".calendar-nav datalist");
-		if (!yearSelect || navButtons.length !== 2 || !monthLabel || !monthList || !tbody || !cellTemplate || footerButtons.length !== 2) throw new Error("CalendarPopover");
-		this.#monthList = monthList;
-		this.#yearSelect = yearSelect;
-		const yearValues = Array.from(this.#yearSelect.options).map((opt) => Number(opt.value)).filter((n) => Number.isFinite(n));
-		this.#minYear = Math.min(...yearValues);
-		this.#maxYear = Math.max(...yearValues);
-		const today = /* @__PURE__ */ new Date();
-		this.#currentYear = today.getFullYear();
-		this.#currentMonth = today.getMonth();
-		if (yearValues.includes(this.#currentYear)) this.#yearSelect.value = String(this.#currentYear);
-		else {
-			this.#currentYear = this.#minYear;
-			this.#yearSelect.value = String(this.#currentYear);
-		}
-		this.#prevBtn = navButtons[0];
-		this.#nextBtn = navButtons[1];
-		this.#monthLabel = monthLabel;
-		this.#tbody = tbody;
-		this.#cellTemplate = cellTemplate;
-		this.#prevBtn.addEventListener("click", () => {
-			this.#moveMonth(-1);
-		});
-		this.#nextBtn.addEventListener("click", () => {
-			this.#moveMonth(1);
-		});
-		this.#yearSelect.addEventListener("change", () => {
-			this.#changeYear();
-		});
-		this.#renderCalendar();
-		this.#clearBtn = footerButtons[0];
-		this.#todayBtn = footerButtons[1];
-		this.#clearBtn.addEventListener("click", () => {
-			this.#clearDate();
-		});
-		this.#todayBtn.addEventListener("click", () => {
-			this.#selectToday();
-		});
-	}
-	#moveMonth(diff) {
-		const date = new Date(this.#currentYear, this.#currentMonth + diff, 1);
-		const year = date.getFullYear();
-		const month = date.getMonth();
-		if (year < this.#minYear || year > this.#maxYear) return;
-		this.#currentYear = year;
-		this.#currentMonth = month;
-		this.#yearSelect.value = String(year);
-		this.#renderCalendar();
-	}
-	#changeYear() {
-		const year = Number(this.#yearSelect.value);
-		if (!Number.isFinite(year)) return;
-		if (year < this.#minYear || year > this.#maxYear) return;
-		this.#currentYear = year;
-		this.#renderCalendar();
-	}
-	#renderCalendar() {
-		const year = this.#currentYear;
-		const month = this.#currentMonth;
-		this.#tbody.replaceChildren();
-		this.#monthLabel.textContent = this.#getMonthLabel(month);
-		const firstDay = new Date(year, month, 1).getDay();
-		const lastDate = new Date(year, month + 1, 0).getDate();
-		let row = document.createElement("tr");
-		for (let i = 0; i < firstDay; i++) row.append(document.createElement("td"));
-		for (let date = 1; date <= lastDate; date++) {
-			const cell = this.#cellTemplate.content.cloneNode(true);
-			const button = cell.querySelector(".calendar-date");
-			button.textContent = String(date);
-			if (this.#selectedDate !== null && this.#selectedDate.getFullYear() === year && this.#selectedDate.getMonth() === month && this.#selectedDate.getDate() === date) button.classList.add("active");
-			button.addEventListener("click", () => {
-				this.#selectDate(year, month, date);
-			});
-			row.append(cell);
-			if (row.children.length === 7) {
-				this.#tbody.append(row);
-				row = document.createElement("tr");
-			}
-		}
-		if (row.children.length > 0) {
-			while (row.children.length < 7) row.append(document.createElement("td"));
-			this.#tbody.append(row);
-		}
-		this.#updateNavigation();
-	}
-	#selectDate(year, month, date) {
-		this.#selectedDate = new Date(year, month, date);
-		this.#renderCalendar();
-	}
-	#selectToday() {
-		const today = /* @__PURE__ */ new Date();
-		const year = today.getFullYear();
-		const month = today.getMonth();
-		const date = today.getDate();
-		if (year < this.#minYear || year > this.#maxYear) return;
-		this.#currentYear = year;
-		this.#currentMonth = month;
-		this.#selectedDate = new Date(year, month, date);
-		this.#yearSelect.value = String(year);
-		this.#renderCalendar();
-	}
-	#clearDate() {
-		this.#selectedDate = null;
-		this.#renderCalendar();
-	}
-	#updateNavigation() {
-		this.#prevBtn.disabled = this.#currentYear === this.#minYear && this.#currentMonth === 0;
-		this.#nextBtn.disabled = this.#currentYear === this.#maxYear && this.#currentMonth === 11;
-	}
-	#getMonthLabel(month) {
-		const value = String(month + 1);
-		return Array.from(this.#monthList.options).find((option) => option.value === value)?.textContent?.trim() ?? value;
-	}
-};
-document.querySelectorAll(".calendar-popover").forEach((root) => {
-	new CalendarPopover(root);
-});
 /**
 * Prism: Lightweight, robust, elegant syntax highlighting
 *
@@ -2223,6 +2087,35 @@ const initDropdowns = () => {
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initDropdowns);
 else initDropdowns();
 //#endregion
+//#region ts/components/tabs.ts
+const initTabs = () => {
+	const tabItems = document.querySelectorAll(".tab-item");
+	const tabsArea = document.querySelector(".tabs-area");
+	if (!tabItems.length || !tabsArea) return;
+	const activateTab = (tab) => {
+		const targetId = tab.getAttribute("href")?.slice(1);
+		if (!targetId) return;
+		const targetEl = document.getElementById(targetId);
+		if (!targetEl) return;
+		tabItems.forEach((t) => t.classList.remove("active"));
+		tab.classList.add("active");
+		const areaRect = tabsArea.getBoundingClientRect();
+		const elRect = targetEl.getBoundingClientRect();
+		tabsArea.scrollLeft += elRect.left - areaRect.left;
+	};
+	const handleClick = (e) => {
+		e.preventDefault();
+		activateTab(e.currentTarget);
+	};
+	tabItems.forEach((tab) => {
+		tab.addEventListener("click", handleClick);
+	});
+	const firstTab = tabItems[0];
+	if (firstTab && !document.querySelector(".tab-item.active")) firstTab.classList.add("active");
+};
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTabs);
+else initTabs();
+//#endregion
 //#region ts/forms/textarea.ts
 var Textarea = class extends HTMLTextAreaElement {
 	counter;
@@ -2248,6 +2141,147 @@ var Textarea = class extends HTMLTextAreaElement {
 	}
 };
 if (!customElements.get("au-textarea")) customElements.define("au-textarea", Textarea, { extends: "textarea" });
+//#endregion
+//#region ts/forms/calendar-popover.ts
+var CalendarPopover = class {
+	#yearSelect;
+	#minYear;
+	#maxYear;
+	#prevBtn;
+	#nextBtn;
+	#monthLabel;
+	#cellTemplate;
+	#tbody;
+	#monthList;
+	#currentYear;
+	#currentMonth;
+	#selectedDate = null;
+	#clearBtn;
+	#todayBtn;
+	constructor(root) {
+		const yearSelect = root.querySelector(".calendar-controls select");
+		const navButtons = root.querySelectorAll(".calendar-nav-btn");
+		const monthLabel = root.querySelector(".calendar-nav-dp");
+		const tbody = root.querySelector(".calendar-table-body");
+		const cellTemplate = root.querySelector(".calendar-table-body template");
+		const footerButtons = root.querySelectorAll(".calendar-footer .btn");
+		const monthList = root.querySelector(".calendar-nav datalist");
+		if (!yearSelect || navButtons.length !== 2 || !monthLabel || !monthList || !tbody || !cellTemplate || footerButtons.length !== 2) throw new Error("CalendarPopover");
+		this.#monthList = monthList;
+		this.#yearSelect = yearSelect;
+		const yearValues = Array.from(this.#yearSelect.options).map((opt) => Number(opt.value)).filter((n) => Number.isFinite(n));
+		this.#minYear = Math.min(...yearValues);
+		this.#maxYear = Math.max(...yearValues);
+		const today = /* @__PURE__ */ new Date();
+		this.#currentYear = today.getFullYear();
+		this.#currentMonth = today.getMonth();
+		if (yearValues.includes(this.#currentYear)) this.#yearSelect.value = String(this.#currentYear);
+		else {
+			this.#currentYear = this.#minYear;
+			this.#yearSelect.value = String(this.#currentYear);
+		}
+		this.#prevBtn = navButtons[0];
+		this.#nextBtn = navButtons[1];
+		this.#monthLabel = monthLabel;
+		this.#tbody = tbody;
+		this.#cellTemplate = cellTemplate;
+		this.#prevBtn.addEventListener("click", () => {
+			this.#moveMonth(-1);
+		});
+		this.#nextBtn.addEventListener("click", () => {
+			this.#moveMonth(1);
+		});
+		this.#yearSelect.addEventListener("change", () => {
+			this.#changeYear();
+		});
+		this.#renderCalendar();
+		this.#clearBtn = footerButtons[0];
+		this.#todayBtn = footerButtons[1];
+		this.#clearBtn.addEventListener("click", () => {
+			this.#clearDate();
+		});
+		this.#todayBtn.addEventListener("click", () => {
+			this.#selectToday();
+		});
+	}
+	#moveMonth(diff) {
+		const date = new Date(this.#currentYear, this.#currentMonth + diff, 1);
+		const year = date.getFullYear();
+		const month = date.getMonth();
+		if (year < this.#minYear || year > this.#maxYear) return;
+		this.#currentYear = year;
+		this.#currentMonth = month;
+		this.#yearSelect.value = String(year);
+		this.#renderCalendar();
+	}
+	#changeYear() {
+		const year = Number(this.#yearSelect.value);
+		if (!Number.isFinite(year)) return;
+		if (year < this.#minYear || year > this.#maxYear) return;
+		this.#currentYear = year;
+		this.#renderCalendar();
+	}
+	#renderCalendar() {
+		const year = this.#currentYear;
+		const month = this.#currentMonth;
+		this.#tbody.replaceChildren();
+		this.#monthLabel.textContent = this.#getMonthLabel(month);
+		const firstDay = new Date(year, month, 1).getDay();
+		const lastDate = new Date(year, month + 1, 0).getDate();
+		let row = document.createElement("tr");
+		for (let i = 0; i < firstDay; i++) row.append(document.createElement("td"));
+		for (let date = 1; date <= lastDate; date++) {
+			const cell = this.#cellTemplate.content.cloneNode(true);
+			const button = cell.querySelector(".calendar-date");
+			button.textContent = String(date);
+			if (this.#selectedDate !== null && this.#selectedDate.getFullYear() === year && this.#selectedDate.getMonth() === month && this.#selectedDate.getDate() === date) button.classList.add("active");
+			button.addEventListener("click", () => {
+				this.#selectDate(year, month, date);
+			});
+			row.append(cell);
+			if (row.children.length === 7) {
+				this.#tbody.append(row);
+				row = document.createElement("tr");
+			}
+		}
+		if (row.children.length > 0) {
+			while (row.children.length < 7) row.append(document.createElement("td"));
+			this.#tbody.append(row);
+		}
+		this.#updateNavigation();
+	}
+	#selectDate(year, month, date) {
+		this.#selectedDate = new Date(year, month, date);
+		this.#renderCalendar();
+	}
+	#selectToday() {
+		const today = /* @__PURE__ */ new Date();
+		const year = today.getFullYear();
+		const month = today.getMonth();
+		const date = today.getDate();
+		if (year < this.#minYear || year > this.#maxYear) return;
+		this.#currentYear = year;
+		this.#currentMonth = month;
+		this.#selectedDate = new Date(year, month, date);
+		this.#yearSelect.value = String(year);
+		this.#renderCalendar();
+	}
+	#clearDate() {
+		this.#selectedDate = null;
+		this.#renderCalendar();
+	}
+	#updateNavigation() {
+		this.#prevBtn.disabled = this.#currentYear === this.#minYear && this.#currentMonth === 0;
+		this.#nextBtn.disabled = this.#currentYear === this.#maxYear && this.#currentMonth === 11;
+	}
+	#getMonthLabel(month) {
+		const value = String(month + 1);
+		return Array.from(this.#monthList.options).find((option) => option.value === value)?.textContent?.trim() ?? value;
+	}
+};
+document.querySelectorAll(".calendar-popover").forEach((root) => {
+	new CalendarPopover(root);
+});
 //#endregion
 //#region ts/forms/date-picker.ts
 const SELECTOR_ROOT = ".date-picker";
@@ -2294,41 +2328,4 @@ function initAll(root = document) {
 	});
 }
 initAll();
-//#endregion
-//#region ts/components/tabs.ts
-const initTabs = () => {
-	const tabItems = document.querySelectorAll(".tab-item");
-	const tabsArea = document.querySelector(".tabs-area");
-	if (!tabItems.length || !tabsArea) return;
-	const activateTab = (tab) => {
-		const targetId = tab.getAttribute("href")?.slice(1);
-		if (!targetId) return;
-		const targetEl = document.getElementById(targetId);
-		if (!targetEl) return;
-		tabItems.forEach((t) => t.classList.remove("active"));
-		tab.classList.add("active");
-		const areaRect = tabsArea.getBoundingClientRect();
-		const elRect = targetEl.getBoundingClientRect();
-		tabsArea.scrollLeft += elRect.left - areaRect.left;
-	};
-	const handleClick = (e) => {
-		e.preventDefault();
-		activateTab(e.currentTarget);
-	};
-	tabItems.forEach((tab) => {
-		tab.addEventListener("click", handleClick);
-	});
-	const firstTab = tabItems[0];
-	if (firstTab && !document.querySelector(".tab-item.active")) firstTab.classList.add("active");
-};
-if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTabs);
-else initTabs();
-//#endregion
-//#region ts/asagaoui.ts
-/*!
-==================================================
-AsagaoUI
-Written in TypeScript, compiled to JavaScript
-==================================================
-*/
 //#endregion

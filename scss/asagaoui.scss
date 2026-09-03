@@ -1,10 +1,11 @@
 @use 'sass:meta';
 
 /*!
- * AsagaoUI  v0.1.9
+ * AsagaoUI  v0.1.9 (https://asagaoui.com)
  * Copyright 2026 Hiroshi ISOBE
- * Licensed under MIT
-*/
+ * Licensed under MIT (https://github.com/ctpena/asagaoui/blob/main/LICENSE)
+ */
+
 // ==========================================================================
 // Layer
 // ==========================================================================
@@ -37,7 +38,6 @@
   @include meta.load-css('components/blockquote');
   @include meta.load-css('components/breadcrumb');
   @include meta.load-css('components/button');
-  @include meta.load-css('components/calendar');
   @include meta.load-css('components/card');
   @include meta.load-css('components/carousel');
   @include meta.load-css('components/chip-tag');
@@ -71,6 +71,7 @@
 
 // Forms
 @layer forms {
+  @include meta.load-css('forms/calendar-popover');
   @include meta.load-css('forms/check');
   @include meta.load-css('forms/combobox');
   @include meta.load-css('forms/date-picker');

@@ -4,9 +4,79 @@
 @use "../styles/color";
 
 .calendar-btn {
+  background-color: color.$white;
+  border-radius: map.get(rounding.$rounding, l);
+  color: map.get(color.$blue, 900);
+  border: 1px solid map.get(color.$blue, 1000);
+  width: 4.375rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  column-gap: .25rem;
+  display: flex;
+
+  &:hover {
+    border-width: 0.1875rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%2300118F"><path d="M7.225 15.775Q6.499 15.05 6.5 14q0-1.05.725-1.775Q7.95 11.499 9 11.5q1.05 0 1.775.725T11.5 14t-.725 1.775A2.42 2.42 0 0 1 9 16.5q-1.05 0-1.775-.725M5 22q-.825 0-1.413-.588A1.93 1.93 0 0 1 3 20V6q0-.825.587-1.413A1.93 1.93 0 0 1 5 4h1V2h2v2h8V2h2v2h1q.825 0 1.412.587Q21 5.175 21 6v14q0 .825-.588 1.412A1.92 1.92 0 0 1 19 22zm0-2h14V10H5z"/></svg>');
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="%2300118F"><path d="M20.0016 6.6001L12.0016 14.6001L4.00156 6.6001L2.60156 8.0001L12.0016 17.4001L21.4016 8.0001L20.0016 6.6001Z"/></svg>');
+  }
+
+  &:disabled {
+    background-color: color.$white;
+    color: map.get(color.$grey, 300);
+    border: 1px solid map.get(color.$grey, 300);
+  }
+
+  &:has(+ .calendar-popover:popover-open) {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.is-sm {
+  &.calendar-btn {
+    width: 4.25rem;
+    height: 2.5rem;
+  }
+}
+
+.is-md {
+  &.calendar-btn {
+    width: 4.375rem;
+    height: 3rem;
+  }
+}
+
+.is-lg {
+  &.calendar-btn {
+    width: 4.25rem;
+    height: 3.5rem;
+  }
 }
 
 .calendar-popover {
+  position-area: bottom span-right;
   width: fit-content;
   z-index: 1;
   border: 1px solid map.get(color.$grey, 420);
@@ -68,6 +138,7 @@
 }
 
 .calendar-nav-dp {
+  @include typography.set(map.get(typography.$oln, 'oln-16b-100'));
   text-align: center;
   width: 3.5rem;
 }

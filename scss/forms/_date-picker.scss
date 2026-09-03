@@ -1,5 +1,12 @@
 @use "sass:map";
+@use "../styles/typography";
+@use "../styles/rounding";
 @use "../styles/color";
+
+.date-picker-area {
+  display: flex;
+  column-gap: 1rem;
+}
 
 .date-picker {
   display: inline-flex;

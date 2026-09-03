@@ -1,7 +1,6 @@
 +++
-title = 'Calendar'
+title = 'Popover Calendar'
 summary = 'A calendar UI available in a popover'
-weight = 55
 +++
 
 A simple, selectable calendar component displayed in a popover format. It comes with basic accessibility support and is a flexible component that can be used in multiple formats.
@@ -9,7 +8,8 @@ A simple, selectable calendar component displayed in a popover format. It comes 
 All the HTML shown below is required.
 
 ```html {preview="true"}
-<div class="calendar-popover">
+<button popovertarget="calendar-popover" class="calendar-btn" type="button"></button>
+<div popover id="calendar-popover" class="calendar-popover">
     <div class="calendar-controls">
         <select class="select is-sm">
             <option value="2025">2025</option>
@@ -77,9 +77,22 @@ You can add `option` tags to specify the range of years that can be selected (di
 </select>
 ```
 
+### HTML Popover API
+
+You can display a calendar UI using the HTML Popover API.
+
+```html
+<button popovertarget="calendar-popover" class="calendar-btn" type="button"></button>
+<div popover id="calendar-popover" class="calendar-popover">
+    <!-- calendar-popover -->
+</div>
+```
+
 ## Locale
 
 The `.calendar-popover` component supports internationalization. You can customize the HTML directly for flexible localization.
+
+### Chinese
 
 ### Japanese
 
@@ -137,3 +150,5 @@ The `.calendar-popover` component supports internationalization. You can customi
     </div>
 </div>
 ```
+
+### Korean

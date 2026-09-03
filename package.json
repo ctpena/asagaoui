@@ -27,13 +27,13 @@
     "sass": "sass ./scss:./dist/css",
     "watch:sass": "sass ./scss:./dist/css --watch",
     "min:sass": "sass ./scss/asagaoui.scss:./dist/css/asagaoui.min.css ./scss/asagaoui-icons.scss:./dist/css/asagaoui-icons.min.css --style=compressed --no-source-map",
-    "build": "rolldown ts/asagaoui.ts --file dist/js/asagaoui.js"
+    "build": "rolldown -c build/rolldown.config.ts"
   },
   "devDependencies": {
     "prismjs": "^1.30.0",
     "@types/prismjs": "^1.26.6",
     "fantasticon": "^4.1.0",
-    "rolldown": "^1.2.6",
+    "rolldown": "^1.2.7",
     "sass": "^1.103.1",
     "typescript": "^7.0.2"
   },

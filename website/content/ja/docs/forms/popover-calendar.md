@@ -1,7 +1,6 @@
 +++
-title = 'カレンダー'
+title = 'ポップオーバーカレンダー'
 summary = 'ポップオーバーで利用できるカレンダーUI'
-weight = 55
 +++
 
 ポップオーバー形式で表示し、選択できるシンプルなカレンダーコンポーネントです。基本的なアクセシビリティ対応を備えており、複数の形式で利用可能な柔軟なコンポーネントです。
@@ -9,7 +8,9 @@ weight = 55
 記述されているHTMLはすべてが必要です。
 
 ```html {preview="true"}
-<div class="calendar-popover">
+<button popovertarget="calendar-popover" class="calendar-btn" type="button"></button>
+<div popover id="calendar-popover" class="calendar-popover">
+    <input class="calendar-popover-value" type="hidden">
     <div class="calendar-controls">
         <select class="select is-sm">
             <option value="2025">2025年</option>
@@ -17,7 +18,7 @@ weight = 55
             <option value="2027">2027年</option>
         </select>
         <div class="calendar-nav">
-            <button class="calendar-nav-btn"><i class="ail-arrow_left"></i></button>
+            <button class="calendar-nav-btn" type="button"><i class="ail-arrow_left"></i></button>
             <p class="calendar-nav-dp"></p>
             <datalist>
                 <option value="1">1月</option>
@@ -33,7 +34,7 @@ weight = 55
                 <option value="11">11月</option>
                 <option value="12">12月</option>
             </datalist>
-            <button class="calendar-nav-btn"><i class="ail-arrow_right"></i></button>
+            <button class="calendar-nav-btn" type="button"><i class="ail-arrow_right"></i></button>
         </div>
     </div>
     <table class="calendar-table">
@@ -57,8 +58,8 @@ weight = 55
         </tbody>
     </table>
     <div class="calendar-footer">
-        <button class="btn is-sm btn-text">削除</button>
-        <button class="btn is-sm btn-outline">今日</button>
+        <button class="btn is-sm btn-text" type="button">削除</button>
+        <button class="btn is-sm btn-outline" type="button">今日</button>
     </div>
 </div>
 ```
@@ -77,14 +78,27 @@ weight = 55
 </select>
 ```
 
+### HTML Popover API
+
+HTML Popover APIを用いて、カレンダーUIをを表示することができます。
+
+```html
+<button popovertarget="calendar-popover" class="calendar-btn" type="button"></button>
+<div popover id="calendar-popover" class="calendar-popover">
+    <!-- calendar-popover -->
+</div>
+```
+
 ## ロケール
 
 `.calendar-popover`コンポーネントは、国際化に対応しています。HTMLを直接カスタマイズすることで柔軟に変更することが可能です。
 
-### 英語圏
+### 英語
 
 ```html {preview="true"}
-<div class="calendar-popover">
+<button popovertarget="calendar-popover" class="calendar-btn" type="button"></button>
+<div popover id="calendar-popover" class="calendar-popover">
+    <input class="calendar-popover-value" type="hidden">
     <div class="calendar-controls">
         <select class="select is-sm">
             <option value="2025">2025</option>
@@ -92,7 +106,7 @@ weight = 55
             <option value="2027">2027</option>
         </select>
         <div class="calendar-nav">
-            <button class="calendar-nav-btn"><i class="ail-arrow_left"></i></button>
+            <button class="calendar-nav-btn" type="button"><i class="ail-arrow_left"></i></button>
             <p class="calendar-nav-dp"></p>
             <datalist>
                 <option value="1">Jan</option>
@@ -108,7 +122,7 @@ weight = 55
                 <option value="11">Nov</option>
                 <option value="12">Dec</option>
             </datalist>
-            <button class="calendar-nav-btn"><i class="ail-arrow_right"></i></button>
+            <button class="calendar-nav-btn" type="button"><i class="ail-arrow_right"></i></button>
         </div>
     </div>
     <table class="calendar-table">
@@ -132,8 +146,12 @@ weight = 55
         </tbody>
     </table>
     <div class="calendar-footer">
-        <button class="btn is-sm btn-text">削除</button>
-        <button class="btn is-sm btn-outline">今日</button>
+        <button class="btn is-sm btn-text" type="button">Clear</button>
+        <button class="btn is-sm btn-outline" type="button">Today</button>
     </div>
 </div>
 ```
+
+### 中国語
+
+### 韓国語
