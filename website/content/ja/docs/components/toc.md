@@ -5,3 +5,20 @@ weight = 300
 +++
 
 長い文章のページに含まれる見出し要素を取り出して、ページの冒頭に目次として配置するためのコンポーネントです。「箇条書きリスト」と組み合わせて、階層化することもできます。
+
+```html {preview="true"}
+<nav class="toc">
+    <ul>
+        <li><a href="">Item</a></li>
+        <li>
+            <a href="">Item</a>
+            <ul>
+                <li><a href="">Item</a></li>
+                <li><a href="">Item</a></li>
+                <li><a href="">Item</a></li>
+            </ul>
+        </li>
+        <li><a href="">Item</a></li>
+    </ul>
+</nav>
+```

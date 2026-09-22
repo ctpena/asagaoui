@@ -1,2 +1,23 @@
 @use "../styles/color";
 
+.toc {
+  ul {
+    padding-left: 1.5rem;
+    list-style-type: revert;
+
+    li {
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+
+      a {
+        text-decoration: underline;
+        text-decoration-thickness: .0625rem;
+        text-underline-offset: .1875rem;
+
+        &:hover {
+          text-decoration-thickness: .1875rem;
+        }
+      }
+    }
+  }
+}
