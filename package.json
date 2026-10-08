@@ -33,8 +33,8 @@
     "prismjs": "^1.30.0",
     "@types/prismjs": "^1.26.6",
     "fantasticon": "^4.1.0",
-    "rolldown": "^1.2.9",
-    "sass": "^1.104.1",
+    "rolldown": "^1.2.13",
+    "sass": "^1.105.1",
     "typescript": "^7.0.2"
   },
   "files": [
