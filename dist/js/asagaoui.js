@@ -1,16 +1,16 @@
 /*!
-* AsagaoUI  v0.1.10 (https://asagaoui.com)
-* Copyright 2026 Hiroshi ISOBE
+* AsagaoUI v0.1.11 (https://asagaoui.com)
+* Copyright 2024-2026 Hiroshi ISOBE
 * Licensed under MIT (https://github.com/ctpena/asagaoui/blob/main/LICENSE)
 */
-//#region \0rolldown/runtime.js
+// \0rolldown/runtime.js
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __commonJSMin = (cb, mod) => () => (mod || (cb((mod = { exports: {} }).exports, mod), cb = null), mod.exports);
+var __commonJSMin = (cb, mod) => () => (mod || (cb((mod = { exports: {} }).exports, mod, mod.exports), cb = null), mod.exports);
 var __copyProps = (to, from, except, desc) => {
 	if (from && typeof from === "object" || typeof from === "function") for (var keys = __getOwnPropNames(from), i = 0, n = keys.length, key; i < n; i++) {
 		key = keys[i];
@@ -33,8 +33,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 * @namespace
 * @public
 */
-//#endregion
-//#region node_modules/prismjs/components/prism-typescript.js
+// node_modules/prismjs/components/prism-typescript.js
 var import_prism = /* @__PURE__ */ __toESM((/* @__PURE__ */ __commonJSMin(((exports, module) => {
 	var Prism = function(_self) {
 		var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i;
@@ -1496,8 +1495,7 @@ highlight: function highlight(container) {
 	});
 	Prism.languages.ts = Prism.languages.typescript;
 })(Prism);
-//#endregion
-//#region node_modules/prismjs/components/prism-css.js
+// node_modules/prismjs/components/prism-css.js
 (function(Prism) {
 	var string = /(?:"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|'(?:\\(?:\r\n|[\s\S])|[^'\\\r\n])*')/;
 	Prism.languages.css = {
@@ -1555,8 +1553,7 @@ highlight: function highlight(container) {
 		markup.tag.addAttribute("style", "css");
 	}
 })(Prism);
-//#endregion
-//#region node_modules/prismjs/components/prism-markup.js
+// node_modules/prismjs/components/prism-markup.js
 Prism.languages.markup = {
 	"comment": {
 		pattern: /<!--(?:(?!<!--)[\s\S])*?-->/,
@@ -1710,8 +1707,7 @@ Prism.languages.xml = Prism.languages.extend("markup", {});
 Prism.languages.ssml = Prism.languages.xml;
 Prism.languages.atom = Prism.languages.xml;
 Prism.languages.rss = Prism.languages.xml;
-//#endregion
-//#region node_modules/prismjs/components/prism-bash.js
+// node_modules/prismjs/components/prism-bash.js
 (function(Prism) {
 	var envVars = "\\b(?:BASH|BASHOPTS|BASH_ALIASES|BASH_ARGC|BASH_ARGV|BASH_CMDS|BASH_COMPLETION_COMPAT_DIR|BASH_LINENO|BASH_REMATCH|BASH_SOURCE|BASH_VERSINFO|BASH_VERSION|COLORTERM|COLUMNS|COMP_WORDBREAKS|DBUS_SESSION_BUS_ADDRESS|DEFAULTS_PATH|DESKTOP_SESSION|DIRSTACK|DISPLAY|EUID|GDMSESSION|GDM_LANG|GNOME_KEYRING_CONTROL|GNOME_KEYRING_PID|GPG_AGENT_INFO|GROUPS|HISTCONTROL|HISTFILE|HISTFILESIZE|HISTSIZE|HOME|HOSTNAME|HOSTTYPE|IFS|INSTANCE|JOB|LANG|LANGUAGE|LC_ADDRESS|LC_ALL|LC_IDENTIFICATION|LC_MEASUREMENT|LC_MONETARY|LC_NAME|LC_NUMERIC|LC_PAPER|LC_TELEPHONE|LC_TIME|LESSCLOSE|LESSOPEN|LINES|LOGNAME|LS_COLORS|MACHTYPE|MAILCHECK|MANDATORY_PATH|NO_AT_BRIDGE|OLDPWD|OPTERR|OPTIND|ORBIT_SOCKETDIR|OSTYPE|PAPERSIZE|PATH|PIPESTATUS|PPID|PS1|PS2|PS3|PS4|PWD|RANDOM|REPLY|SECONDS|SELINUX_INIT|SESSION|SESSIONTYPE|SESSION_MANAGER|SHELL|SHELLOPTS|SHLVL|SSH_AUTH_SOCK|TERM|UID|UPSTART_EVENTS|UPSTART_INSTANCE|UPSTART_JOB|UPSTART_SESSION|USER|WINDOWID|XAUTHORITY|XDG_CONFIG_DIRS|XDG_CURRENT_DESKTOP|XDG_DATA_DIRS|XDG_GREETER_DATA_DIR|XDG_MENU_PREFIX|XDG_RUNTIME_DIR|XDG_SEAT|XDG_SEAT_PATH|XDG_SESSION_DESKTOP|XDG_SESSION_ID|XDG_SESSION_PATH|XDG_SESSION_TYPE|XDG_VTNR|XMODIFIERS)\\b";
 	var commandAfterHeredoc = {
@@ -1891,8 +1887,7 @@ Prism.languages.rss = Prism.languages.xml;
 	Prism.languages.sh = Prism.languages.bash;
 	Prism.languages.shell = Prism.languages.bash;
 })(Prism);
-//#endregion
-//#region node_modules/prismjs/components/prism-json.js
+// node_modules/prismjs/components/prism-json.js
 Prism.languages.json = {
 	"property": {
 		pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
@@ -1918,8 +1913,7 @@ Prism.languages.json = {
 	}
 };
 Prism.languages.webmanifest = Prism.languages.json;
-//#endregion
-//#region node_modules/prismjs/components/prism-scss.js
+// node_modules/prismjs/components/prism-scss.js
 Prism.languages.scss = Prism.languages.extend("css", {
 	"comment": {
 		pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
@@ -1975,8 +1969,7 @@ Prism.languages.insertBefore("scss", "function", {
 	}
 });
 Prism.languages.scss["atrule"].inside.rest = Prism.languages.scss;
-//#endregion
-//#region ts/components/codesnippet.ts
+// ts/components/codesnippet.ts
 var CodeSnippet = class extends HTMLElement {
 	static observedAttributes = [
 		"lang",
@@ -2066,8 +2059,7 @@ var CodeSnippet = class extends HTMLElement {
 	}
 };
 if (!customElements.get("code-snippet")) customElements.define("code-snippet", CodeSnippet);
-//#endregion
-//#region ts/components/dropdown.ts
+// ts/components/dropdown.ts
 const isAuDropdownId = (id) => /^au-dropdown-.+$/.test(id);
 const assignAnchor = (trigger, popover) => {
 	const anchorName = `--${popover.id}`;
@@ -2086,8 +2078,7 @@ const initDropdowns = () => {
 };
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initDropdowns);
 else initDropdowns();
-//#endregion
-//#region ts/components/tabs.ts
+// ts/components/tabs.ts
 const initTabs = () => {
 	const tabItems = document.querySelectorAll(".tab-item");
 	const tabsArea = document.querySelector(".tabs-area");
@@ -2115,8 +2106,7 @@ const initTabs = () => {
 };
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initTabs);
 else initTabs();
-//#endregion
-//#region ts/forms/calendar-popover.ts
+// ts/forms/calendar-popover.ts
 var CalendarPopover = class {
 	#yearSelect;
 	#minYear;
@@ -2256,8 +2246,7 @@ var CalendarPopover = class {
 document.querySelectorAll(".calendar-popover").forEach((root) => {
 	new CalendarPopover(root);
 });
-//#endregion
-//#region ts/forms/date-picker.ts
+// ts/forms/date-picker.ts
 const SELECTOR_ROOT = ".date-picker";
 const SELECTOR_HIDDEN = ".date-picker-value";
 const SELECTOR_INPUT = ".date-picker-input";
@@ -2302,8 +2291,7 @@ function initAll(root = document) {
 	});
 }
 initAll();
-//#endregion
-//#region ts/forms/textarea.ts
+// ts/forms/textarea.ts
 var Textarea = class extends HTMLTextAreaElement {
 	counter;
 	constructor() {
@@ -2328,4 +2316,3 @@ var Textarea = class extends HTMLTextAreaElement {
 	}
 };
 if (!customElements.get("au-textarea")) customElements.define("au-textarea", Textarea, { extends: "textarea" });
-//#endregion
