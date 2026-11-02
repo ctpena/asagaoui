@@ -20,3 +20,5 @@ dist/js/asagaoui.js.*
 
 website/public
 website/.hugo_build.lock
+
+search/

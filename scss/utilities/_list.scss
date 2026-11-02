@@ -5,10 +5,12 @@
 
 .list {
   @include typography.set(map.get(typography.$std, 'std-16n-170'));
-  list-style-position: inside;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  padding-left: 2rem;
+  list-style-type: revert;
+
+  li {
+    padding: .25rem 0;
+  }
 }
 
 .list-unordered {
@@ -19,4 +21,22 @@
 .list-ordered {
   @extend .list;
   list-style-type: decimal
+}
+
+.list-marker {
+  &.list {
+    list-style-type: none;
+    padding: 0;
+
+    > li {
+      padding-left: 2rem;
+    }
+
+    > li > span:first-child {
+      margin-left: -2rem;
+      display: inline-block;
+      min-width: 2rem;
+      white-space: nowrap;
+    }
+  }
 }

@@ -1,0 +1,158 @@
+@use "sass:map";
+@use "../styles/color";
+@use "../styles/typography";
+@use "../styles/rounding";
+
+.search-dialog {
+  width: min(720px, calc(100% - 32px));
+  max-height: min(780px, calc(100dvh - 48px));
+  margin: 5svh auto auto;
+  padding: 0;
+  background: color.$white;
+  border: 1px solid color.$black;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 16px 3px #0000001a, 0 1px 6px 0 #0000004d;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / .6);
+  }
+}
+
+.search-dialog-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid map.get(color.$grey, 200);
+}
+
+.search-dialog-title {
+  font-size: typography.$fs-22;
+  font-weight: typography.$fw-b;
+  line-height: typography.$lh-150;
+}
+
+.search-dialog-body {
+  flex: 1 1 auto;
+  padding: 16px 24px 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+}
+
+.search-help {
+  font-size: typography.$fs-14;
+  margin: 1rem 0 .5rem 0;
+  font-weight: typography.$fw-b;
+}
+
+.search-dialog-result-count {
+  font-size: typography.$fs-14;
+  font-weight: typography.$fw-b;
+  color: map.get(color.$grey, 700);
+  margin-bottom: 8px;
+}
+
+.search-dialog-form-label {
+  font-weight: typography.$fw-b;
+  font-size: typography.$fs-14;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.search-dialog-form {
+  flex-shrink: 0;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid map.get(color.$grey, 200);
+}
+
+.search-dialog-result-empty {
+  padding: 24px 0;
+
+  h3 {
+    margin: 0 0 8px;
+    font-weight: typography.$fw-b;
+    font-size: 1.125rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+.search-dialog-result {
+  li {
+    padding: 16px 0;
+    border-bottom: 1px solid map.get(color.$grey, 200);
+
+    &:first-child {
+      padding-top: 8px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  mark {
+    color: inherit;
+    background-color: map.get(color.$yellow, 100);;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+.search-dialog-result-link {
+  font-size: 1.125rem;
+  font-weight: typography.$fw-b;
+  color: map.get(color.$blue, 1000);
+  text-decoration: underline;
+  text-decoration-thickness: calc(1 / 16 * 1rem);
+  text-underline-offset: calc(3 / 16 * 1rem);
+
+  &:hover {
+    color: map.get(color.$blue, 900);
+    text-decoration-thickness: calc(3 / 16 * 1rem);
+  }
+
+  &:active {
+    color: map.get(color.$orange, 800);
+    text-decoration-thickness: calc(1 / 16 * 1rem);
+  }
+
+  &:focus {
+    outline: calc(4 / 16 * 1rem) solid color.$black;
+    outline-offset: calc(2 / 16 * 1rem);
+    border-radius: calc(4 / 16 * 1rem);
+    background-color: map.get(color.$yellow, 300);
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) map.get(color.$yellow, 300);
+  }
+}
+
+.search-dialog-result-desc {
+  margin: .5rem 0 0 0;
+  font-size: typography.$fs-14;
+}
+
+.search-dialog-suggest-title {
+  color: map.get(color.$grey, 800);
+}
+
+.search-dialog-suggest-list {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 1rem;
+  grid-row-gap: .8rem;
+  flex-wrap: wrap;
+}
