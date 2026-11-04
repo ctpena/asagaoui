@@ -76,3 +76,84 @@
     box-shadow: 0 0 0 2px map.get(color.$yellow, 300), 0 0 0 6px color.$black;
   }
 }
+
+.mode-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: map.get(color.$grey, 800);
+  @include typography.set(map.get(typography.$oln, 'oln-16n-100'));
+  isolation: isolate;
+
+  &:hover {
+    &::before {
+      outline: 4px solid map.get(color.$grey, 420);
+      outline-offset: 6px;
+    }
+  }
+
+  &::before {
+    content: "";
+    order: 1;
+    width: calc(48 / 16 * 1rem);
+    height: calc(16 / 16 * 1rem);
+    border: 2px solid map.get(color.$blue, 900);
+    border-radius: calc(8 / 16 * 1rem);
+    background-color: map.get(color.$blue, 100);
+    flex-shrink: 0;
+  }
+
+  label {
+    position: relative;
+    user-select: none;
+
+    &:not(:has(input:checked)) {
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: calc(28 / 16 * 1rem);
+      transform: translateY(-50%);
+    }
+
+    &:first-of-type {
+      order: 0;
+
+      &::after {
+        pointer-events: none;
+        transform: translateY(-50%);
+        content: "";
+        width: calc(28 / 16 * 1rem);
+        height: calc(28 / 16 * 1rem);
+        border: 2px solid color.$white;
+        border-radius: 50%;
+        background-color: map.get(color.$blue, 900);
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 1rem - 6px);
+      }
+
+      &::before {
+        left: 0;
+        right: calc(-1 * (1rem + 48px + 6px));
+      }
+    }
+
+
+    &:last-of-type {
+      order: 2;
+
+      &::before {
+        right: 0;
+        left: calc(-1 * (1rem + 48px + 6px));
+      }
+    }
+  }
+
+  &:has(label:last-of-type input:checked) label:first-of-type::after {
+    left: calc(100% + 1rem - 6px + 32px);
+  }
+}

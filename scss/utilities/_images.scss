@@ -1,4 +1,51 @@
+@use "sass:map";
+@use "../styles/color";
+
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.figure {
+}
+
+.figure-image-area {
+  display: block;
+
+  &.bordered {
+    outline: 1px solid map.get(color.$grey, 420);
+    outline-offset: -1px;
+  }
+
+  &:any-link {
+    outline: 1px solid map.get(color.$blue, 900);
+    outline-offset: -1px;
+
+    &:hover {
+      outline-offset: -4px;
+      outline-width: 4px;
+    }
+
+    &:focus {
+      outline: 4px solid color.$black;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px map.get(color.$yellow, 300);
+    }
+  }
+}
+
+.figure-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figure-caption {
+  border: 1px dashed map.get(color.$grey, 700);
+  padding: .5rem 1.5rem;
+  margin-top: .5rem;
+
+  &.solid {
+    border: 1px solid map.get(color.$grey, 700);
+  }
 }

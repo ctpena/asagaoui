@@ -25,3 +25,18 @@ summary = 'スイッチ'
 
 ## Modeスイッチ
 
+2つの選択肢から切り替えるスイッチです。`<input type="radio"/>`を使用することでシンプルに実現しています。2つの選択肢を切り替える設計なので、初期状態で、`checked`を必ず使用して初期選択を確定させてください。
+
+```html {preview="true"}
+<fieldset class="mode-switch">
+    <legend class="visually-hidden">走行モード</legend>
+    <label>
+        モード1
+        <input type="radio" name="driving-mode" value="mode1">
+    </label>
+    <label>
+        モード2
+        <input type="radio" name="driving-mode" value="mode2" checked>
+    </label>
+</fieldset>
+```

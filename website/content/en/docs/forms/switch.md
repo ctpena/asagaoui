@@ -25,3 +25,18 @@ A switch is a control UI for settings that take effect immediately when toggled.
 
 ## Mode Switch
 
+This is a switch that toggles between two options. It is implemented simply using `<input type="radio"/>`. Since it is designed to toggle between two options, be sure to use the `checked` attribute in the initial state to set the default selection.
+
+```html {preview="true"}
+<fieldset class="mode-switch">
+    <legend class="visually-hidden">Driving Mode</legend>
+    <label>
+        Mode 1
+        <input type="radio" name="driving-mode" value="mode1"/>
+    </label>
+    <label>
+        Mode 2
+        <input type="radio" name="driving-mode" value="mode2" checked />
+    </label>
+</fieldset>
+```

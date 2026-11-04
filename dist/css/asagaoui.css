@@ -3842,6 +3842,75 @@
   .switch-input:focus {
     box-shadow: 0 0 0 2px #FFD43D, 0 0 0 6px #000000;
   }
+  .mode-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: #333333;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.02rem;
+    isolation: isolate;
+  }
+  .mode-switch:hover::before {
+    outline: 4px solid #949494;
+    outline-offset: 6px;
+  }
+  .mode-switch::before {
+    content: "";
+    order: 1;
+    width: 3rem;
+    height: 1rem;
+    border: 2px solid #0017C1;
+    border-radius: 0.5rem;
+    background-color: #D9E6FF;
+    flex-shrink: 0;
+  }
+  .mode-switch label {
+    position: relative;
+    user-select: none;
+  }
+  .mode-switch label:not(:has(input:checked)) {
+    z-index: 1;
+  }
+  .mode-switch label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1.75rem;
+    transform: translateY(-50%);
+  }
+  .mode-switch label:first-of-type {
+    order: 0;
+  }
+  .mode-switch label:first-of-type::after {
+    pointer-events: none;
+    transform: translateY(-50%);
+    content: "";
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: #0017C1;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1rem - 6px);
+  }
+  .mode-switch label:first-of-type::before {
+    left: 0;
+    right: calc(-1 * (1rem + 48px + 6px));
+  }
+  .mode-switch label:last-of-type {
+    order: 2;
+  }
+  .mode-switch label:last-of-type::before {
+    right: 0;
+    left: calc(-1 * (1rem + 48px + 6px));
+  }
+  .mode-switch:has(label:last-of-type input:checked) label:first-of-type::after {
+    left: calc(100% + 1rem - 6px + 32px);
+  }
   .textarea {
     padding: 1rem;
     border: solid 1px #666666;
@@ -5893,6 +5962,39 @@
   .img-fluid {
     max-width: 100%;
     height: auto;
+  }
+  .figure-image-area {
+    display: block;
+  }
+  .figure-image-area.bordered {
+    outline: 1px solid #949494;
+    outline-offset: -1px;
+  }
+  .figure-image-area:any-link {
+    outline: 1px solid #0017C1;
+    outline-offset: -1px;
+  }
+  .figure-image-area:any-link:hover {
+    outline-offset: -4px;
+    outline-width: 4px;
+  }
+  .figure-image-area:any-link:focus {
+    outline: 4px solid #000000;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #FFD43D;
+  }
+  .figure-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .figure-caption {
+    border: 1px dashed #4d4d4d;
+    padding: 0.5rem 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .figure-caption.solid {
+    border: 1px solid #4d4d4d;
   }
   .link {
     color: #00118F;
