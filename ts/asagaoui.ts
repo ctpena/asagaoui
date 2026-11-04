@@ -7,5 +7,6 @@ import './components/tabs.js';
 import './forms/calendar-popover.js';
 import './forms/date-picker.js';
 import './forms/date-picker-area-mediator.js';
+import './forms/file-upload.js';
 import './forms/textarea.js';
 import './forms/time-picker.js';

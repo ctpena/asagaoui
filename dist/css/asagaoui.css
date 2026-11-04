@@ -3595,6 +3595,31 @@
   .is-lg.date-picker {
     height: 3.5rem;
   }
+  .file-upload-area {
+    border: 1px solid #767676;
+    background-color: #f2f2f2;
+    border-radius: 0.5rem;
+    padding: 2rem;
+  }
+  .file-upload-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  .file-upload-btn-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+  .file-upload-option {
+    margin: 3rem 0 -1rem -0.25rem;
+  }
+  .file-upload-empty-message {
+    margin: 1rem 0 0;
+  }
   .form-group {
     display: flex;
     flex-direction: column;

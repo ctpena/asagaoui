@@ -2291,6 +2291,13 @@ function initAll(root = document) {
 	});
 }
 initAll();
+// ts/forms/file-upload.ts
+var FileUpload = class extends HTMLElement {
+	constructor() {
+		super();
+	}
+};
+if (!customElements.get("file-upload")) customElements.define("file-upload", FileUpload);
 // ts/forms/textarea.ts
 var Textarea = class extends HTMLTextAreaElement {
 	counter;
