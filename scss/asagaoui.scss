@@ -42,7 +42,6 @@
   @include meta.load-css('components/carousel');
   @include meta.load-css('components/chip-tag');
   @include meta.load-css('components/codesnippet');
-  @include meta.load-css('components/description-list');
   @include meta.load-css('components/dialog');
   @include meta.load-css('components/disclosure');
   @include meta.load-css('components/divider');
@@ -56,6 +55,7 @@
   @include meta.load-css('components/mega-menu');
   @include meta.load-css('components/menulist');
   @include meta.load-css('components/mobilemenu');
+  @include meta.load-css('components/notice-block');
   @include meta.load-css('components/page-navigation');
   @include meta.load-css('components/progress');
   @include meta.load-css('components/resource-list');
@@ -92,6 +92,7 @@
 @layer utilities {
   @include meta.load-css('utilities/code');
   @include meta.load-css('utilities/color');
+  @include meta.load-css('utilities/description-list');
   @include meta.load-css('utilities/display');
   @include meta.load-css('utilities/flex');
   @include meta.load-css('utilities/images');

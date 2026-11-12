@@ -2,7 +2,7 @@
 @use "../utilities/link" as *;
 @use "../utilities/typography" as *;
 @use "../components/table" as *;
-@use "../components/description-list" as *;
+@use "../utilities/description-list" as *;
 @use "../utilities/list" as *;
 @use "../utilities/code" as *;
 @use "../styles/spacing";
@@ -74,17 +74,5 @@
 
   code:not([class]):not(code-snippet *) {
     @extend .code;
-  }
-
-  dl:not([class]):not(code-snippet *) {
-    @extend .description-list;
-  }
-
-  dt:not([class]):not(code-snippet *) {
-    @extend .description-term;
-  }
-
-  dd:not([class]):not(code-snippet *) {
-    @extend .description-details;
   }
 }

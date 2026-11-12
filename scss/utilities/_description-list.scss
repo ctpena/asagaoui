@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "../styles/typography";
+
+.description-list {
+  dt {
+    font-weight: typography.$fw-b;
+  }
+
+  dd {
+    margin-left: 2rem;
+  }
+}

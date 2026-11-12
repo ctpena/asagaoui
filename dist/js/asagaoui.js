@@ -2314,7 +2314,7 @@ var Textarea = class extends HTMLTextAreaElement {
 	updateCount() {
 		const currentLength = this.value.length;
 		const maxAttr = this.getAttribute("max");
-		const maxLength = maxAttr ? parseInt(maxAttr, 10) : Infinity;
+		const maxLength = maxAttr ? parseInt(maxAttr, 10) : 1e400;
 		const displayMax = isFinite(maxLength) ? maxLength.toString() : "∞";
 		this.counter.textContent = `${currentLength} / ${displayMax}`;
 	}
